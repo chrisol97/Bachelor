@@ -35,10 +35,6 @@ Start(demoscene0);
 
 function demoscene0() {
     const startscreenobject = new Blocks.Image("Bilder/Karakterer/extraman.png", { x: 265, y: 150, width: 500, height: 500 });
-        const skipbutton = new Blocks.Image("Bilder/Objekter/heart.png", { x: 265, y: 500, width: 300, height: 500 });
-        Actions.Click(skipbutton, () => {
-            GaaTil(demoscene5);
-        })
     Actions.Click(startscreenobject, () => {
         giraffeTalking.play();
         flyingplanesound.play();
