@@ -99,5 +99,5 @@ function demoscene5() {
     //Actions.Colide(racecar, puzzle);                                                                                      Trenger hjelp med dette                                                                                            
     Actions.Tween(racecar, 8.0, 1.5);
     
-    // DING DING DING DING DING
+    
 }
