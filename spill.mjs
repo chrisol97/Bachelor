@@ -37,11 +37,16 @@ const Start = (maal) => {
     let catTalking2 = new Audio("Lydfiler/Karakterer/cattalking2.mp3");
     let manTalking = new Audio("Lydfiler/Karakterer/mantalking.mp3");
     let manTalking2 = new Audio("Lydfiler/Karakterer/mantalking2.mp3");
+    let manTalking3 = new Audio("Lydfiler/Karakterer/mantalking3.mp3");
 
 Start(startscreen);
 
 function startscreen() {
     const startscreenobject = new Blocks.Image("Bilder/Karakterer/extraman.png", { x: 265, y: 150, width: 500, height: 500 });
+    const skipbutton = new Blocks.Image("Bilder/Objekter/continueButton.png", { x: 500, y: 100, width: 200, height: 200});
+    Actions.Click(skipbutton, () => {
+        GaaTil(demoscene10);
+    })
     Actions.Click(startscreenobject, () => {
         GaaTil(titlescreen);
     })
@@ -170,7 +175,8 @@ function demoscene8() {
     Actions.Colide(brokenpuzzle2, brokenpuzzle3, () => {collision2 = true});
     Actions.Colide(brokenpuzzle3, brokenpuzzle4, () => {collision3 = true});
     Actions.Colide(brokenpuzzle4, brokenpuzzle1, () => {{
-        if (collision1 && collision2 && collision3) { 
+        if (collision1 && collision2 && collision3) {
+            manTalking3.play(); 
             GaaTil(demoscene9);
         }
     }});
@@ -181,6 +187,19 @@ function demoscene9() {
     const mantalking = new Blocks.CellAnimation(["Bilder/Karakterer/manClosedMouth.png", "Bilder/Karakterer/manClosedMouth.png", "Bilder/Karakterer/manClosedMouth.png", "Bilder/Karakterer/manOpenMouth.png"], { x: 10, y: 100, width: 500, height: 700, loop: true, auto: true});
     const cathappy = new Blocks.Image("Bilder/Karakterer/catClosedMouth.png", { x: 400, y: 150, width: 600, height: 800});
     const puzzlesolved = new Blocks.Image("Bilder/Objekter/puzzleSolved.png", { x: 320, y: 520, width: 120, height: 120});
+    manTalking3.onended = () => {
+        GaaTil(demoscene10);
+    }
+}
+
+function demoscene10() {
+    const kindergartenOutside = new Blocks.Image("Bilder/Bakgrunner/kindergartenOutside.png", { x: -8, y: -8, width: 1088, height: 818});
+    const man = new Blocks.Image("Bilder/Karakterer/manOpenMouth.png", { x: 200, y: 300, width: 200, height: 200});
+    const cat = new Blocks.Image("Bilder/Karakterer/catOpenMouth.png", { x: 350, y: 350, width: 170, height: 200});
+    const girafferoof = new Blocks.CellAnimation(["Bilder/Karakterer/giraffeClosedMouth.png", "Bilder/Karakterer/giraffeClosedMouth.png", "Bilder/Karakterer/giraffeClosedMouth.png", "Bilder/Karakterer/giraffeClosedMouth.png", "Bilder/Karakterer/giraffeOpenMouth.png", "Bilder/Karakterer/giraffeOpenMouth.png"], { x: 220, y: 190, width: 150, height: 150, loop: true, auto: true});
+    const biggestblock = new Blocks.Image("Bilder/Objekter/block1.png", { x: 400, y: 120, width: 100, height: 110});
+    const bigblock = new Blocks.Image("Bilder/Objekter/block2.png", { x: 100, y: 700, width: 80, height: 100});
+    const smallblock = new Blocks.Image("Bilder/Objekter/block3.png", { x: 800, y: 380, width: 40, height: 60});
 
 }
 
