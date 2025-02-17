@@ -90,9 +90,9 @@ function demoscene2() {
 
 function demoscene3() {
     const grillhutbackground = new Blocks.Image("Bilder/Bakgrunner/grillhut.png", { x: -8, y: -8, width: 1088, height: 1150});
-    const log1 = new Blocks.Image("Bilder/Objekter/logRound1.png", { x: 280, y: 678, width: 100, height: 100});
+    const log1 = new Blocks.Image("Bilder/Objekter/logRound1.png", { x: 280, y: 660, width: 100, height: 100});
     const log2 = new Blocks.Image("Bilder/Objekter/logRound2.png", { x: 69, y: 608, width: 100, height: 100});
-    const log3 = new Blocks.Image("Bilder/Objekter/logTriangle1.png", { x: 643, y: 691, width: 100, height: 100});
+    const log3 = new Blocks.Image("Bilder/Objekter/logTriangle1.png", { x: 643, y: 670, width: 100, height: 100});
     const log4 = new Blocks.Image("Bilder/Objekter/logTriangle2.png", { x: 896, y: 607, width: 100, height: 100});
     Actions.Drag(log1);
     Actions.Drag(log2);
@@ -161,7 +161,7 @@ function demoscene7() {
 function demoscene8() {
     const grillhutOutside = new Blocks.Image("Bilder/Bakgrunner/grillhutOutside.jpg", { x: -8, y: -8, width: 1088, height: 900});
     const brokenpuzzle1 = new Blocks.Image("Bilder/Objekter/puzzleUnsolved1.png", { x: 950, y: 500, width: 100, height: 100});
-    const brokenpuzzle2 = new Blocks.Image("Bilder/Objekter/puzzleUnsolved2.png", { x: 350, y: 700, width: 100, height: 100});
+    const brokenpuzzle2 = new Blocks.Image("Bilder/Objekter/puzzleUnsolved2.png", { x: 350, y: 650, width: 100, height: 100});
     const brokenpuzzle3 = new Blocks.Image("Bilder/Objekter/puzzleUnsolved3.png", { x: 600, y: 250, width: 100, height: 100});
     const brokenpuzzle4 = new Blocks.Image("Bilder/Objekter/puzzleUnsolved4.png", { x: 75, y: 400, width: 100, height: 100});
     Actions.Drag(brokenpuzzle1);
@@ -198,7 +198,7 @@ function demoscene10() {
     const cat = new Blocks.Image("Bilder/Karakterer/catOpenMouth.png", { x: 350, y: 350, width: 170, height: 200});
     const girafferoof = new Blocks.CellAnimation(["Bilder/Karakterer/giraffeClosedMouth.png", "Bilder/Karakterer/giraffeClosedMouth.png", "Bilder/Karakterer/giraffeClosedMouth.png", "Bilder/Karakterer/giraffeClosedMouth.png", "Bilder/Karakterer/giraffeOpenMouth.png", "Bilder/Karakterer/giraffeOpenMouth.png"], { x: 220, y: 190, width: 150, height: 150, loop: true, auto: true});
     const biggestblock = new Blocks.Image("Bilder/Objekter/block1.png", { x: 400, y: 120, width: 100, height: 110});
-    const bigblock = new Blocks.Image("Bilder/Objekter/block2.png", { x: 100, y: 700, width: 80, height: 100});
+    const bigblock = new Blocks.Image("Bilder/Objekter/block2.png", { x: 100, y: 670, width: 80, height: 100});
     const smallblock = new Blocks.Image("Bilder/Objekter/block3.png", { x: 800, y: 380, width: 40, height: 60});
 
 }
