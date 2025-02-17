@@ -35,6 +35,10 @@ Start(demoscene0);
 
 function demoscene0() {
     const startscreenobject = new Blocks.Image("Bilder/Karakterer/extraman.png", { x: 265, y: 150, width: 500, height: 500 });
+    const skipbutton = new Blocks.Image("Bilder/Objekter/continueButton.png", { x: 200, y: 500, width: 200, height: 200});
+    Actions.Click(skipbutton, () => {
+        GaaTil(demoscene5);
+    })
     Actions.Click(startscreenobject, () => {
         giraffeTalking.play();
         flyingplanesound.play();
@@ -92,8 +96,10 @@ function demoscene5() {
     const bilbanebackground = new Blocks.Image("Bilder/Bakgrunner/bilbane.jpg", { x: -8, y: -8, width: 1088, height: 1150});
     const racecar = new Blocks.Image("Bilder/Objekter/raceCar.png", { x: 300, y: 450, width: 150, height: 100});
     const puzzle = new Blocks.Image("Bilder/Objekter/puzzleSolved.png", { x: 800, y: 550, width: 100, height: 100});
-    //Actions.Colide(racecar, puzzle);                                                                                      Trenger hjelp med dette                                                                                            
+    Actions.Colide(racecar, puzzle, () => {Actions.Tween(puzzle, 1.0, -0.1)});
+    // Actions.Colide(racecar, puzzle, () => {console.log("CRASH")});                       Bruk dette som "sound.play", og led videre inn i en "sound.onended"                                                                                           
     Actions.Tween(racecar, 8.0, 1.5);
     
     
 }
+
