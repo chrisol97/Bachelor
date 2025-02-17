@@ -162,7 +162,18 @@ function demoscene8() {
     Actions.Drag(brokenpuzzle2);
     Actions.Drag(brokenpuzzle3);
     Actions.Drag(brokenpuzzle4);
-    // Actions.Colide(brokenpuzzle1, brokenpuzzle2, () => {GaaTil(demoscene9)});                                                       // trenger å få collision med fler objekter enn 2 
+    var collision1 = false 
+    var collision2 = false
+    var collision3 = false
+    Actions.Colide(brokenpuzzle1, brokenpuzzle2, () => {collision1 = true});
+    Actions.Colide(brokenpuzzle2, brokenpuzzle3, () => {collision2 = true});
+    Actions.Colide(brokenpuzzle3, brokenpuzzle4, () => {collision3 = true});
+    Actions.Colide(brokenpuzzle4, brokenpuzzle1, () => {{
+        if (collision1 && collision2 && collision3) { 
+            GaaTil(demoscene9);
+        }
+    }});
+
 }
 
 function demoscene9() {
