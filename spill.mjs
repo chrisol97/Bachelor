@@ -43,9 +43,6 @@ Start(startscreen);
 function startscreen() {
     const startscreenobject = new Blocks.Image("Bilder/Karakterer/extraman.png", { x: 265, y: 150, width: 500, height: 500 });
     const skipbutton = new Blocks.Image("Bilder/Objekter/continueButton.png", { x: 200, y: 500, width: 200, height: 200});
-    Actions.Click(skipbutton, () => {                                                                                                       // husk å fjerne dette
-        GaaTil(demoscene8);
-    })
     Actions.Click(startscreenobject, () => {
         GaaTil(titlescreen);
     })
