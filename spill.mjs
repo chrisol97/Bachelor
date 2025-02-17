@@ -85,7 +85,6 @@ function demoscene2() {
 
 function demoscene3() {
     const grillhutbackground = new Blocks.Image("Bilder/Bakgrunner/grillhut.png", { x: -8, y: -8, width: 1088, height: 1150});
-    const checkmarkbutton =  new Blocks.Image("Bilder/Objekter/continueButton.png", { x: 387, y: -50, width: 300, height: 300});
     const log1 = new Blocks.Image("Bilder/Objekter/logRound1.png", { x: 280, y: 678, width: 100, height: 100});
     const log2 = new Blocks.Image("Bilder/Objekter/logRound2.png", { x: 69, y: 608, width: 100, height: 100});
     const log3 = new Blocks.Image("Bilder/Objekter/logTriangle1.png", { x: 643, y: 691, width: 100, height: 100});
@@ -94,11 +93,18 @@ function demoscene3() {
     Actions.Drag(log2);
     Actions.Drag(log3);
     Actions.Drag(log4);
-    Actions.Click(checkmarkbutton, () => {
-        campfiresound.play();
-        catTalking2.play();
-        GaaTil(demoscene4);
-    })
+    var collision1 = false 
+    var collision2 = false
+    var collision3 = false
+    Actions.Colide(log1, log2, () => {collision1 = true});
+    Actions.Colide(log2, log3, () => {collision2 = true});
+    Actions.Colide(log3, log4, () => {collision3 = true});
+    Actions.Colide(log4, log1, () => {{ 
+        if (collision1 && collision2 && collision3) {
+            catTalking2.play();
+            GaaTil(demoscene4);
+        }
+    }});
 }
 
 function demoscene4() {
@@ -118,7 +124,6 @@ function demoscene5() {
     manTalking.onended = () => {
         GaaTil(demoscene6);
     }
-
 }
 
 function demoscene6() {
@@ -169,7 +174,6 @@ function demoscene8() {
             GaaTil(demoscene9);
         }
     }});
-
 }
 
 function demoscene9() {
