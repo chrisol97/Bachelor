@@ -38,7 +38,7 @@ function startscreen() {
     const startscreenobject = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 325, y: 150, width: 400, height:500 });
     const skipbutton = new Blocks.Image("Bilder/Objekter/continueButton.png", {x: 200, y: 200, width: 200, height: 200});                           // HUSK Å FJERNE DETTE
     Actions.Click(skipbutton, () => {
-        GaaTil(scene1);
+        GaaTil(demoscenetimer);
     })
     Actions.Click(startscreenobject, () => {
         GaaTil(titlescreen);
@@ -81,4 +81,20 @@ function scene1() {
 
 function scene2() {
     
+}
+
+function demoscenetimer() {
+    const kindergartenOutside2 = new Blocks.Image("Bilder/Bakgrunner/kindergartenOutside.png", { x: -8, y: -8, width: 1088, height: 818});
+    const giraffeRoof2 = new Blocks.Image("Bilder/Karakterer/giraffeClosedMouth.png", { x: 220, y: 190, width: 150, height: 150 });
+    const biggestblock = new Blocks.Image("Bilder/Objekter/block1.png", { x: 400, y: 120, width: 100, height: 110});
+    const bigblock = new Blocks.Image("Bilder/Objekter/block2.png", { x: 100, y: 670, width: 80, height: 100});
+    const smallblock = new Blocks.Image("Bilder/Objekter/block3.png", { x: 800, y: 380, width: 40, height: 60});
+    const continueButton = new Blocks.Image("Bilder/Objekter/continueButton.png", { x: 700, y: 0, width: 200, height: 200});
+    Actions.Drag(biggestblock);
+    Actions.Drag(bigblock);
+    Actions.Drag(smallblock);
+    Actions.Click(continueButton, () => {
+        giraffeHappy.play();
+        GaaTil(demoscene12);
+    })
 }
