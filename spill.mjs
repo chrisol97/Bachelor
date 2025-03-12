@@ -101,36 +101,35 @@ function demoscenetimer() {
     const bigblock = new Blocks.Image("Bilder/Objekter/block2.png", { x: 100, y: 670, width: 80, height: 100});
     const smallblock = new Blocks.Image("Bilder/Objekter/block3.png", { x: 800, y: 380, width: 40, height: 60});
     const continueButton = new Blocks.Image("Bilder/Objekter/continueButton.png", { x: 700, y: 0, width: 200, height: 200});
-    let timeleft = 299
-    const countdown = new Actions.CountDown(10, (complete) => {
-        if (countdown.remainingTime < 9000) {
+    const countdown = new Actions.CountDown(11, (complete) => {
+        if (countdown.remainingTime < 10000) {
             loadingbar10.hide();
         }
-        if (countdown.remainingTime < 8000) {
+        if (countdown.remainingTime < 9000) {
             loadingbar9.hide();
         }
-        if (countdown.remainingTime < 7000) {
+        if (countdown.remainingTime < 8000) {
             loadingbar8.hide();
         } 
-        if (countdown.remainingTime < 6000) {
+        if (countdown.remainingTime < 7000) {
             loadingbar7.hide();
         }
-        if (countdown.remainingTime < 5000) {
+        if (countdown.remainingTime < 6000) {
             loadingbar6.hide();
         }
-        if (countdown.remainingTime < 4000) {
+        if (countdown.remainingTime < 5000) {
             loadingbar5.hide();
         }
-        if (countdown.remainingTime < 3000) {
+        if (countdown.remainingTime < 4000) {
             loadingbar4.hide();
         }
-        if (countdown.remainingTime < 2000) {
+        if (countdown.remainingTime < 3000) {
             loadingbar3.hide();
         }
-        if (countdown.remainingTime < 1000) {
+        if (countdown.remainingTime < 2000) {
             loadingbar2.hide();
         }
-        if (countdown.remainingTime < 0) {
+        if (countdown.remainingTime < 1000) {
             loadingbar1.hide();
         }
         if (complete) {
