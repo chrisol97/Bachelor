@@ -85,7 +85,7 @@ function scene2() {
 
 function demoscenetimer() {
     const kindergartenOutside2 = new Blocks.Image("Bilder/Bakgrunner/kindergartenOutside.png", { x: -8, y: -8, width: 1088, height: 818});
-    const giraffeRoof2 = new Blocks.Image("Bilder/Karakterer/giraffeClosedMouth.png", { x: 220, y: 190, width: 150, height: 150 });
+    const giraffeRoof2 = new Blocks.Image("Bilder/Karakterer/giraffeClosedMouth.png", { x: 260, y: 210, width: 70, height: 120 });
     const biggestblock = new Blocks.Image("Bilder/Objekter/block1.png", { x: 400, y: 120, width: 100, height: 110});
     const bigblock = new Blocks.Image("Bilder/Objekter/block2.png", { x: 100, y: 670, width: 80, height: 100});
     const smallblock = new Blocks.Image("Bilder/Objekter/block3.png", { x: 800, y: 380, width: 40, height: 60});
