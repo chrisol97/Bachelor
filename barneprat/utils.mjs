@@ -30,7 +30,7 @@ const Bound = (item, bounds, callback) => {
             item.y = bounds.top;
             boundsViolation = true
         } else if (bounds.bottom < y) {
-           // item.y = bounds.bottom
+            item.y = bounds.bottom
             boundsViolation = true
         }
 
