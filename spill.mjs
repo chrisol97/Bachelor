@@ -27,10 +27,11 @@ const Start = (maal) => {
 
 // OBJEKTLYDER
     let flyingplanesound = new Audio("Lydfiler/Objektlyder/planesound.mp3");
+    let boingsound = new Audio("Lydfiler/Objektlyder/boing.mp3");
 
 // KARAKTERER
-
     let mainCharVoice1 = new Audio("Lydfiler/Karakterer/mainCharVoice1.mp3");
+    let mainCharVoice2 = new Audio("Lydfiler/Karakterer/mainCharVoice2.mp3");
 
 Start(startscreen);
 
@@ -38,7 +39,7 @@ function startscreen() {
     const startscreenobject = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 325, y: 150, width: 400, height:500 });
     const skipbutton = new Blocks.Image("Bilder/Objekter/continueButton.png", {x: 200, y: 200, width: 200, height: 200});                           // HUSK Å FJERNE DETTE
     Actions.Click(skipbutton, () => {
-        GaaTil(demoscenetimer);
+        GaaTil(scene2);
     })
     Actions.Click(startscreenobject, () => {
         GaaTil(titlescreen);
@@ -81,27 +82,38 @@ function scene1() {
 
 function scene2() {
     const background = new Blocks.Image("Bilder/Bakgrunner/sandbox.png", {x: -8, y: -8, width: 1088, height: 818});
+    const giraffeSandbox = new Blocks.Image("Bilder/Karakterer/giraffeClosedMouth.png", {x: 200, y: 200, width: 200, height: 400});
+    const mainChar = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 1100, y: 0, width: 200, height: 250});
+    const yellowball = new Blocks.Image("Bilder/Objekter/yellowBall1.png", {x: 550, y: 550, width: 100, height: 100});
+    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], {x: 595, y: 303, width: 200, height: 250, loop: true, auto: true});
+    const giraffeTalking = new Blocks.CellAnimation(["Bilder/Karakterer/giraffeClosedMouth.png", "Bilder/Karakterer/giraffeClosedMouth.png", "Bilder/Karakterer/giraffeClosedMouth.png", "Bilder/Karakterer/giraffeOpenMouth.png"], {x: 200, y: 200, width: 200, height: 400, loop: true, auto: true});
+    giraffeTalking.hide();
+    mainCharTalking.hide();
+    const mainCharMoving = Actions.Tween(mainChar, -5, 3);
+    Actions.Colide(mainChar, yellowball, () => {Actions.Tween(yellowball, -10, 10)});                       // Spørre hvordan jeg kan stoppe denne
+    Actions.Colide(mainChar, yellowball, () => {mainCharMoving.pause()});
+    Actions.Colide(mainChar, yellowball, () => {boingsound.play()});
+    boingsound.onended = () => {
+        mainChar.hide();
+        mainCharTalking.show();
+        mainCharVoice2.play();
+    mainCharVoice2.onended = () => {
+        mainCharTalking.hide();
+        mainChar.show();
+        giraffeSandbox.hide();
+        giraffeTalking.show();
+    }
+    }
 }
 
-function demoscenetimer() {
-    const kindergartenOutside2 = new Blocks.Image("Bilder/Bakgrunner/kindergartenOutside.png", { x: -8, y: -8, width: 1088, height: 818});
-    const loadingbar0 = new Blocks.Image("Bilder/Objekter/loadingbar0.png", {x: 30, y: 0, width: 1000, height: 70});
-    const loadingbar1 = new Blocks.Image("Bilder/Objekter/loadingbar1.png", {x: 30, y: 0, width: 1000, height: 70});
-    const loadingbar2 = new Blocks.Image("Bilder/Objekter/loadingbar2.png", {x: 30, y: 0, width: 1000, height: 70});
-    const loadingbar3 = new Blocks.Image("Bilder/Objekter/loadingbar3.png", {x: 30, y: 0, width: 1000, height: 70});
-    const loadingbar4 = new Blocks.Image("Bilder/Objekter/loadingbar4.png", {x: 30, y: 0, width: 1000, height: 70});
-    const loadingbar5 = new Blocks.Image("Bilder/Objekter/loadingbar5.png", {x: 30, y: 0, width: 1000, height: 70});
-    const loadingbar6 = new Blocks.Image("Bilder/Objekter/loadingbar6.png", {x: 30, y: 0, width: 1000, height: 70});
-    const loadingbar7 = new Blocks.Image("Bilder/Objekter/loadingbar7.png", {x: 30, y: 0, width: 1000, height: 70});
-    const loadingbar8 = new Blocks.Image("Bilder/Objekter/loadingbar8.png", {x: 30, y: 0, width: 1000, height: 70});
-    const loadingbar9 = new Blocks.Image("Bilder/Objekter/loadingbar9.png", {x: 30, y: 0, width: 1000, height: 70});
-    const loadingbar10 = new Blocks.Image("Bilder/Objekter/loadingbar10.png", {x: 30, y: 0, width: 1000, height: 70});
-    const giraffeRoof2 = new Blocks.Image("Bilder/Karakterer/giraffeClosedMouth.png", { x: 260, y: 210, width: 70, height: 120 });
-    const biggestblock = new Blocks.Image("Bilder/Objekter/block1.png", { x: 400, y: 120, width: 100, height: 110});
-    const bigblock = new Blocks.Image("Bilder/Objekter/block2.png", { x: 100, y: 670, width: 80, height: 100});
-    const smallblock = new Blocks.Image("Bilder/Objekter/block3.png", { x: 800, y: 380, width: 40, height: 60});
-    const continueButton = new Blocks.Image("Bilder/Objekter/continueButton.png", { x: 700, y: 0, width: 200, height: 200});
-    const countdown = new Actions.CountDown(11, (complete) => {
+function scene3() {
+    const background = new Blocks.Image("Bilder/Bakgrunner/sandbox.png", {x: -8, y: -8, width: 1088, height: 818});
+}
+
+
+
+/*
+const countdown = new Actions.CountDown(11, (complete) => {
         if (countdown.remainingTime < 10000) {
             loadingbar10.hide();
         }
@@ -135,13 +147,4 @@ function demoscenetimer() {
         if (complete) {
             GaaTil(scene2);
         }
-    }, {onTick: true, auto: true});
-
-    Actions.Drag(biggestblock);
-    Actions.Drag(bigblock);
-    Actions.Drag(smallblock);
-    Actions.Click(continueButton, () => {
-        giraffeHappy.play();
-        GaaTil(demoscene12);
-    })
-}
+    }, {onTick: true, auto: true}); */
