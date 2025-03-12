@@ -103,7 +103,6 @@ function demoscenetimer() {
     const continueButton = new Blocks.Image("Bilder/Objekter/continueButton.png", { x: 700, y: 0, width: 200, height: 200});
     let timeleft = 299
     const countdown = new Actions.CountDown(10, (complete) => {
-        console.log(countdown.remainingTime);
         if (countdown.remainingTime < 9000) {
             loadingbar10.hide();
         }
