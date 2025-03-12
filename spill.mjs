@@ -80,16 +80,65 @@ function scene1() {
 }
 
 function scene2() {
-    
+    const background = new Blocks.Image("Bilder/Bakgrunner/sandbox.png", {x: -8, y: -8, width: 1088, height: 818});
 }
 
 function demoscenetimer() {
     const kindergartenOutside2 = new Blocks.Image("Bilder/Bakgrunner/kindergartenOutside.png", { x: -8, y: -8, width: 1088, height: 818});
+    const loadingbar0 = new Blocks.Image("Bilder/Objekter/loadingbar0.png", {x: 30, y: 0, width: 1000, height: 70});
+    const loadingbar1 = new Blocks.Image("Bilder/Objekter/loadingbar1.png", {x: 30, y: 0, width: 1000, height: 70});
+    const loadingbar2 = new Blocks.Image("Bilder/Objekter/loadingbar2.png", {x: 30, y: 0, width: 1000, height: 70});
+    const loadingbar3 = new Blocks.Image("Bilder/Objekter/loadingbar3.png", {x: 30, y: 0, width: 1000, height: 70});
+    const loadingbar4 = new Blocks.Image("Bilder/Objekter/loadingbar4.png", {x: 30, y: 0, width: 1000, height: 70});
+    const loadingbar5 = new Blocks.Image("Bilder/Objekter/loadingbar5.png", {x: 30, y: 0, width: 1000, height: 70});
+    const loadingbar6 = new Blocks.Image("Bilder/Objekter/loadingbar6.png", {x: 30, y: 0, width: 1000, height: 70});
+    const loadingbar7 = new Blocks.Image("Bilder/Objekter/loadingbar7.png", {x: 30, y: 0, width: 1000, height: 70});
+    const loadingbar8 = new Blocks.Image("Bilder/Objekter/loadingbar8.png", {x: 30, y: 0, width: 1000, height: 70});
+    const loadingbar9 = new Blocks.Image("Bilder/Objekter/loadingbar9.png", {x: 30, y: 0, width: 1000, height: 70});
+    const loadingbar10 = new Blocks.Image("Bilder/Objekter/loadingbar10.png", {x: 30, y: 0, width: 1000, height: 70});
     const giraffeRoof2 = new Blocks.Image("Bilder/Karakterer/giraffeClosedMouth.png", { x: 260, y: 210, width: 70, height: 120 });
     const biggestblock = new Blocks.Image("Bilder/Objekter/block1.png", { x: 400, y: 120, width: 100, height: 110});
     const bigblock = new Blocks.Image("Bilder/Objekter/block2.png", { x: 100, y: 670, width: 80, height: 100});
     const smallblock = new Blocks.Image("Bilder/Objekter/block3.png", { x: 800, y: 380, width: 40, height: 60});
     const continueButton = new Blocks.Image("Bilder/Objekter/continueButton.png", { x: 700, y: 0, width: 200, height: 200});
+    let timeleft = 299
+    const countdown = new Actions.CountDown(10, (complete) => {
+        console.log(countdown.remainingTime);
+        if (countdown.remainingTime < 9000) {
+            loadingbar10.hide();
+        }
+        if (countdown.remainingTime < 8000) {
+            loadingbar9.hide();
+        }
+        if (countdown.remainingTime < 7000) {
+            loadingbar8.hide();
+        } 
+        if (countdown.remainingTime < 6000) {
+            loadingbar7.hide();
+        }
+        if (countdown.remainingTime < 5000) {
+            loadingbar6.hide();
+        }
+        if (countdown.remainingTime < 4000) {
+            loadingbar5.hide();
+        }
+        if (countdown.remainingTime < 3000) {
+            loadingbar4.hide();
+        }
+        if (countdown.remainingTime < 2000) {
+            loadingbar3.hide();
+        }
+        if (countdown.remainingTime < 1000) {
+            loadingbar2.hide();
+        }
+        if (countdown.remainingTime < 0) {
+            loadingbar1.hide();
+        }
+        if (complete) {
+            GaaTil(scene2);
+        }
+    }, {onTick: true, auto: true});
+
     Actions.Drag(biggestblock);
     Actions.Drag(bigblock);
     Actions.Drag(smallblock);
