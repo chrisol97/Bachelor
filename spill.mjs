@@ -126,6 +126,7 @@ function scene2() {
         mainCharTalking.hide();
         mainChar.show();
         Actions.Tween(mainChar, -10, 6);
+
     }
     Actions.Colide(mainChar, triggerObject, () => {
         GaaTil(scene3);
@@ -147,26 +148,30 @@ function scene3() {
     ouchCatMainChar.onended = () => {
         mainChar.hide(); 
         mainCharTalking.show();
-        mainCharVoiceIntro4.play()                              
+        mainCharVoiceIntro4.play()    
+
     } 
     mainCharVoiceIntro4.onended = () => {                       
         mainCharTalking.hide();
         mainChar.show();
         catStanding.hide();
         catTalking.show();
-        catVoiceIntro1.play();                                  
+        catVoiceIntro1.play();
+
     }
     catVoiceIntro1.onended = () => {                            
         catTalking.hide();
         catStanding.show();
         mainChar.hide();
         mainCharTalking.show();
-        mainCharVoiceIntro5.play();                             
+        mainCharVoiceIntro5.play();
+
     }
     mainCharVoiceIntro5.onended = () => {                       
         mainCharTalking.hide();
         mainChar.show();
         Actions.Tween(mainChar, 10, 0);
+        
     }
     Actions.Colide(mainChar, triggerObject, () => {
         GaaTil(scene4);
@@ -214,4 +219,4 @@ const countdown = new Actions.CountDown(11, (complete) => {
         if (complete) {
             GaaTil(scene2);
         }
-    }, {onTick: true, auto: true}); */
+        }, {onTick: true, auto: true}); */
