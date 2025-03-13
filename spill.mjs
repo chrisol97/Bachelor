@@ -136,7 +136,7 @@ function scene3() {
     const mainCharMoving = Actions.Tween(mainChar, -10, 0);
     Actions.Colide(mainChar, catStanding, () => {mainCharMoving.pause()});
     Actions.Colide(mainChar, catStanding, () => {crashsound.play()});             //Legg til/spill inn crashsound
-    crashsound.onended = () => {
+    crashsound.onended = () => {                                        // Leg til/spill inn crashsound
         mainChar.hide(); 
         mainCharTalking.show();
         mainCharVoiceIntro4.play()                              // Legg til/spill inn mainCharVoiceIntro4
@@ -155,7 +155,7 @@ function scene3() {
         mainCharTalking.show();
         mainCharVoiceIntro5.play();                             // Legg til/spill inn mainCharVoiceIntro5
     }
-    mainCharVoiceIntro5.onended = () => {
+    mainCharVoiceIntro5.onended = () => {                       // Legg til/spill inn mainCharVoiceIntro5
         
     }
 }
