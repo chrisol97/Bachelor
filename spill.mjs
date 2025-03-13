@@ -32,6 +32,12 @@ const Start = (maal) => {
 // KARAKTERER
     let mainCharVoiceIntro1 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro1.mp3");
     let mainCharVoiceIntro2 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro2.mp3");
+    let mainCharVoiceIntro3 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro3.mp3");
+    let mainCharVoiceIntro4 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro4.mp3");
+    let mainCharVoiceIntro5 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro5.mp3");
+    let giraffeVoiceIntro1 = new Audio("Lydfiler/Karakterer/giraffeVoiceIntro1.mp3");
+    let catVoiceIntro1 = new Audio("Lydfiler/Karakterer/catVoiceIntro1.mp3");
+    let ouchCatMainChar = new Audio("Lydfiler/Karakterer/ouchCatMainChar.mp3"); 
 
 Start(startscreen);
 
@@ -98,26 +104,25 @@ function scene2() {
         mainChar.hide();
         mainCharTalking.show();
         mainCharVoiceIntro2.play();
+
     }
     mainCharVoiceIntro2.onended = () => {
         mainCharTalking.hide();
         mainChar.show();
         giraffeSandbox.hide();
         giraffeTalking.show();
-        // giraffeVoiceIntro1.play();                      // Legg til/spill inn giraffeVoiceIntro1
-        flyingplanesound.play();                           // testlyd, fjern og erstatt med giraffeVoiceIntro1
+        giraffeVoiceIntro1.play();   
+
     }
-    // giraffeVoiceIntro1.onended = () => {
-    flyingplanesound.onended = () => {                          // testlyd, fjern og erstatt med giraffeVoiceIntro1
+    giraffeVoiceIntro1.onended = () => {                         
         giraffeTalking.hide();
         giraffeSandbox.show();
         mainChar.hide();
         mainCharTalking.show();
-       // mainCharVoiceIntro3.play();                     // Legg til/spill inn mainCharVoiceIntro3
-       mainCharVoiceIntro1.play();                        // testlyd, fjern og ersatt med mainCharVoiceIntro3
+        mainCharVoiceIntro3.play();                     
+       
     }
-    // mainCharVoiceIntro3.onended = () => {
-    mainCharVoiceIntro1.onended = () => {                          // testlyd, fjern og erstatt med mainCharVoiceIntro3
+    mainCharVoiceIntro3.onended = () => {
         mainCharTalking.hide();
         mainChar.show();
         Actions.Tween(mainChar, -10, 6);
@@ -133,32 +138,32 @@ function scene3() {
     const catStanding = new Blocks.Image("Bilder/Karakterer/catClosedMouth.png", {x: 200, y: 500, width: 300, height: 250});
     const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], {x: 490, y: 460, width: 220, height: 320, loop: true, auto: true});
     const catTalking = new Blocks.CellAnimation(["Bilder/Karakterer/catClosedMouth.png", "Bilder/Karakterer/catClosedMouth.png", "Bilder/Karakterer/catClosedMouth.png", "Bilder/Karakterer/catOpenMouth.png"], {x: 200, y: 500, width: 300, height: 250, auto: true, loop: true});
-    const triggerObject = new Blocks.Image("Bilder/Objekter/block3.png", {x: 1200, y: 450, width: 20, height: 20 });
+    const triggerObject = new Blocks.Image("Bilder/Objekter/block3.png", {x: 1400, y: 450, width: 20, height: 20 });
     mainCharTalking.hide();
     catTalking.hide();
     const mainCharMoving = Actions.Tween(mainChar, -10, 0);
     Actions.Colide(mainChar, catStanding, () => {mainCharMoving.pause()});
-    Actions.Colide(mainChar, catStanding, () => {crashsound.play()});             //Legg til/spill inn crashsound
-    crashsound.onended = () => {                                        // Leg til/spill inn crashsound
+    Actions.Colide(mainChar, catStanding, () => {ouchCatMainChar.play()});             
+    ouchCatMainChar.onended = () => {
         mainChar.hide(); 
         mainCharTalking.show();
-        mainCharVoiceIntro4.play()                              // Legg til/spill inn mainCharVoiceIntro4
+        mainCharVoiceIntro4.play()                              
     } 
-    mainCharVoiceIntro4.onended = () => {                       // Legg til/spill inn mainCharVoiceIntro4
+    mainCharVoiceIntro4.onended = () => {                       
         mainCharTalking.hide();
         mainChar.show();
         catStanding.hide();
         catTalking.show();
-        catVoiceIntro1.play();                                  // Legg til/spill inn catVoiceIntro1
+        catVoiceIntro1.play();                                  
     }
-    catVoiceIntro1.onended = () => {                            // Legg til/spill inn catVoiceIntro1
+    catVoiceIntro1.onended = () => {                            
         catTalking.hide();
         catStanding.show();
         mainChar.hide();
         mainCharTalking.show();
-        mainCharVoiceIntro5.play();                             // Legg til/spill inn mainCharVoiceIntro5
+        mainCharVoiceIntro5.play();                             
     }
-    mainCharVoiceIntro5.onended = () => {                       // Legg til/spill inn mainCharVoiceIntro5
+    mainCharVoiceIntro5.onended = () => {                       
         mainCharTalking.hide();
         mainChar.show();
         Actions.Tween(mainChar, 10, 0);
@@ -169,7 +174,7 @@ function scene3() {
 }
 
 function scene4() {
-    
+    const background = new Blocks.Image("Bilder/Bakgrunner/wardrobe.png", {x: -8, y: -8, width: 1088, height: 818});
 }
 
 
