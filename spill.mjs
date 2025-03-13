@@ -30,8 +30,8 @@ const Start = (maal) => {
     let boingsound = new Audio("Lydfiler/Objektlyder/boing.mp3");
 
 // KARAKTERER
-    let mainCharVoice1 = new Audio("Lydfiler/Karakterer/mainCharVoice1.mp3");
-    let mainCharVoice2 = new Audio("Lydfiler/Karakterer/mainCharVoice2.mp3");
+    let mainCharVoiceIntro1 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro1.mp3");
+    let mainCharVoiceIntro2 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro2.mp3");
 
 Start(startscreen);
 
@@ -39,7 +39,7 @@ function startscreen() {
     const startscreenobject = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 325, y: 150, width: 400, height:500 });
     const skipbutton = new Blocks.Image("Bilder/Objekter/continueButton.png", {x: 200, y: 200, width: 200, height: 200});                           // HUSK Å FJERNE DETTE
     Actions.Click(skipbutton, () => {
-        GaaTil(scene2);
+        GaaTil(scene3);
     })
     Actions.Click(startscreenobject, () => {
         GaaTil(titlescreen);
@@ -73,9 +73,9 @@ function scene1() {
         Actions.Tween(flyingplane, 6.5, 0);
         flyingplanesound.play();
         new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], {x: 420, y: 400, width: 250, height: 400, loop: true, auto: true});
-        mainCharVoice1.play();
+        mainCharVoiceIntro1.play();
     })
-    mainCharVoice1.onended = () => {
+    mainCharVoiceIntro1.onended = () => {
         GaaTil(scene2);
     }
 }
@@ -87,6 +87,7 @@ function scene2() {
     const yellowball = new Blocks.Image("Bilder/Objekter/yellowBall1.png", {x: 550, y: 550, width: 100, height: 100});
     const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], {x: 595, y: 303, width: 200, height: 250, loop: true, auto: true});
     const giraffeTalking = new Blocks.CellAnimation(["Bilder/Karakterer/giraffeClosedMouth.png", "Bilder/Karakterer/giraffeClosedMouth.png", "Bilder/Karakterer/giraffeClosedMouth.png", "Bilder/Karakterer/giraffeOpenMouth.png"], {x: 200, y: 200, width: 200, height: 400, loop: true, auto: true});
+    const triggerObject = new Blocks.Image("Bilder/Objekter/block3.png", {x: 50, y: 850, width: 20, height: 20});
     giraffeTalking.hide();
     mainCharTalking.hide();
     const mainCharMoving = Actions.Tween(mainChar, -5, 3);
@@ -96,18 +97,67 @@ function scene2() {
     boingsound.onended = () => {
         mainChar.hide();
         mainCharTalking.show();
-        mainCharVoice2.play();
-    mainCharVoice2.onended = () => {
+        mainCharVoiceIntro2.play();
+    }
+    mainCharVoiceIntro2.onended = () => {
         mainCharTalking.hide();
         mainChar.show();
         giraffeSandbox.hide();
         giraffeTalking.show();
+        // giraffeVoiceIntro1.play();                      // Legg til/spill inn giraffeVoiceIntro1
+        flyingplanesound.play();                           // testlyd, fjern og erstatt med giraffeVoiceIntro1
     }
+    // giraffeVoiceIntro1.onended = () => {
+    flyingplanesound.onended = () => {                          // testlyd, fjern og erstatt med giraffeVoiceIntro1
+        giraffeTalking.hide();
+        giraffeSandbox.show();
+        mainChar.hide();
+        mainCharTalking.show();
+       // mainCharVoiceIntro3.play();                     // Legg til/spill inn mainCharVoiceIntro3
+       mainCharVoiceIntro1.play();                        // testlyd, fjern og ersatt med mainCharVoiceIntro3
     }
+    // mainCharVoiceIntro3.onended = () => {
+    mainCharVoiceIntro1.onended = () => {                          // testlyd, fjern og erstatt med mainCharVoiceIntro3
+        mainCharTalking.hide();
+        mainChar.show();
+        Actions.Tween(mainChar, -10, 6);
+    }
+    Actions.Colide(mainChar, triggerObject, () => {GaaTil(scene3)});
 }
 
 function scene3() {
-    const background = new Blocks.Image("Bilder/Bakgrunner/sandbox.png", {x: -8, y: -8, width: 1088, height: 818});
+    const background = new Blocks.Image("Bilder/Bakgrunner/grillhutOutside.png", {x: -8, y: -8, width: 1088, height: 818});
+    const mainChar = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 1100, y: 460, width: 220, height: 320});
+    const catStanding = new Blocks.Image("Bilder/Karakterer/catClosedMouth.png", {x: 200, y: 500, width: 300, height: 250});
+    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], {x: 490, y: 460, width: 220, height: 320, loop: true, auto: true});
+    const catTalking = new Blocks.CellAnimation(["Bilder/Karakterer/catClosedMouth.png", "Bilder/Karakterer/catClosedMouth.png", "Bilder/Karakterer/catClosedMouth.png", "Bilder/Karakterer/catOpenMouth.png"], {x: 200, y: 500, width: 300, height: 250, auto: true, loop: true});
+    mainCharTalking.hide();
+    catTalking.hide();
+    const mainCharMoving = Actions.Tween(mainChar, -10, 0);
+    Actions.Colide(mainChar, catStanding, () => {mainCharMoving.pause()});
+    Actions.Colide(mainChar, catStanding, () => {crashsound.play()});             //Legg til/spill inn crashsound
+    crashsound.onended = () => {
+        mainChar.hide(); 
+        mainCharTalking.show();
+        mainCharVoiceIntro4.play()                              // Legg til/spill inn mainCharVoiceIntro4
+    } 
+    mainCharVoiceIntro4.onended = () => {                       // Legg til/spill inn mainCharVoiceIntro4
+        mainCharTalking.hide();
+        mainChar.show();
+        catStanding.hide();
+        catTalking.show();
+        catVoiceIntro1.play();                                  // Legg til/spill inn catVoiceIntro1
+    }
+    catVoiceIntro1.onended = () => {                            // Legg til/spill inn catVoiceIntro1
+        catTalking.hide();
+        catStanding.show();
+        mainChar.hide();
+        mainCharTalking.show();
+        mainCharVoiceIntro5.play();                             // Legg til/spill inn mainCharVoiceIntro5
+    }
+    mainCharVoiceIntro5.onended = () => {
+        
+    }
 }
 
 
