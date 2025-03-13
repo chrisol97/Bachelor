@@ -122,7 +122,9 @@ function scene2() {
         mainChar.show();
         Actions.Tween(mainChar, -10, 6);
     }
-    Actions.Colide(mainChar, triggerObject, () => {GaaTil(scene3)});
+    Actions.Colide(mainChar, triggerObject, () => {
+        GaaTil(scene3);
+    });
 }
 
 function scene3() {
@@ -131,6 +133,7 @@ function scene3() {
     const catStanding = new Blocks.Image("Bilder/Karakterer/catClosedMouth.png", {x: 200, y: 500, width: 300, height: 250});
     const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], {x: 490, y: 460, width: 220, height: 320, loop: true, auto: true});
     const catTalking = new Blocks.CellAnimation(["Bilder/Karakterer/catClosedMouth.png", "Bilder/Karakterer/catClosedMouth.png", "Bilder/Karakterer/catClosedMouth.png", "Bilder/Karakterer/catOpenMouth.png"], {x: 200, y: 500, width: 300, height: 250, auto: true, loop: true});
+    const triggerObject = new Blocks.Image("Bilder/Objekter/block3.png", {x: 1200, y: 450, width: 20, height: 20 });
     mainCharTalking.hide();
     catTalking.hide();
     const mainCharMoving = Actions.Tween(mainChar, -10, 0);
@@ -156,8 +159,17 @@ function scene3() {
         mainCharVoiceIntro5.play();                             // Legg til/spill inn mainCharVoiceIntro5
     }
     mainCharVoiceIntro5.onended = () => {                       // Legg til/spill inn mainCharVoiceIntro5
-        
+        mainCharTalking.hide();
+        mainChar.show();
+        Actions.Tween(mainChar, 10, 0);
     }
+    Actions.Colide(mainChar, triggerObject, () => {
+        GaaTil(scene4);
+    });
+}
+
+function scene4() {
+    
 }
 
 
