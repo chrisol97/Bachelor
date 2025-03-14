@@ -45,7 +45,7 @@ function startscreen() {
     const startscreenobject = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 325, y: 150, width: 400, height:500 });
     const skipbutton = new Blocks.Image("Bilder/Objekter/continueButton.png", {x: 200, y: 200, width: 200, height: 200});                           // HUSK Å FJERNE DETTE
     Actions.Click(skipbutton, () => {
-        GaaTil(scene3);
+        GaaTil(scene4);
     })
     Actions.Click(startscreenobject, () => {
         GaaTil(titlescreen);
@@ -72,7 +72,7 @@ function scene1() {
     const scene1background = new Blocks.Image("Bilder/Bakgrunner/kindergartenOutside.png", {x: -8, y: -8, width: 1088, height: 818});
     const mainChar = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 420, y: 800, width: 250, height: 400});
     const flyingplane = new Blocks.Image("Bilder/Objekter/plane.png", { x: -250, y: 0, width: 220, height: 150});
-    const mainCharMoving = Actions.Tween(mainChar, 0, -6);
+    const mainCharMoving = Actions.Tween(mainChar, 0, -9);
     Utils.Bound(mainChar, Utils.Bounds(0, 400 , 1000, 5000), () => {
         mainChar.hide();
         mainCharMoving.pause();
@@ -180,6 +180,47 @@ function scene3() {
 
 function scene4() {
     const background = new Blocks.Image("Bilder/Bakgrunner/wardrobe.png", {x: -8, y: -8, width: 1088, height: 818});
+    const mainChar = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 1100, y: 470, width: 220, height: 320});
+    const styrerPlaceholder = new Blocks.Image("Bilder/Karakterer/manClosedMouth.png", {x: 150, y: 300, width: 350, height: 450});
+    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], {x: 498, y: 470, width: 220, height: 320, auto: true, loop: true});
+    const styrerPlaceholderTalking = new Blocks.CellAnimation(["Bilder/Karakterer/manClosedMouth.png", "Bilder/Karakterer/manClosedMouth.png", "Bilder/Karakterer/manClosedMouth.png", "Bilder/Karakterer/manOpenMouth.png"], {x: 150, y: 300, width: 350, height: 450, auto: true, loop: true});
+    const mainCharTalking2 = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], {x: 350, y: 300, width: 420, height: 620, auto: true, loop: true});
+    mainCharTalking2.hide();
+    mainCharTalking.hide();
+    styrerPlaceholderTalking.hide();
+    const mainCharMoving = Actions.Tween(mainChar, -7, 0);
+    Actions.Colide(mainChar, styrerPlaceholder, () => {
+        mainCharMoving.pause();
+        mainChar.hide();
+        mainCharTalking.show();
+        mainCharVoiceIntro6.play();                             // Spill inn/legg til mainCharVoiceIntro6
+    })
+    mainCharVoiceIntro6.onended = () => {                       // Spill inn/legg til styrerVoiceIntro1
+        mainCharTalking.hide();
+        mainChar.show();
+        styrerPlaceholder.hide();
+        styrerPlaceholderTalking.show();
+        styrerVoiceIntro1.play();                               // Spill inn/legg til styrerVoiceIntro1
+    }
+    styrerVoiceIntro1.onended = () => {                         // Spill inn/legg til styrerVoiceIntro1
+        styrerPlaceholderTalking.hide();
+        styrerPlaceholder.show();
+        mainChar.hide();
+        mainCharTalking.show();
+        mainCharVoiceIntro7.play();                             //  Spill inn/legg til mainCharVoiceIntro7
+    }
+    mainCharVoiceIntro7.onended = () => {                       // Spill inn/legg til mainCharVoiceIntro7 
+        mainCharTalking.hide();
+        mainCharTalking2.show();
+        mainCharVoiceIntro8.play();                             // Spill inn/ legg til mainCharVoiceIntro8
+    } 
+    mainCharVoiceIntro8.onended = () => {                       // Spill inn/ legg til mainCharVoiceIntro8
+        GaaTil(scene5);
+    }
+}
+
+function scene5() {
+    
 }
 
 
