@@ -37,6 +37,7 @@ const Start = (maal) => {
     let mainCharVoiceIntro5 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro5.mp3");
     let mainCharVoiceIntro6 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro6.mp3");
     let mainCharVoiceIntro7 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro7.mp3");
+    let mainCharVoiceIntro8 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro8.mp3");
     let giraffeVoiceIntro1 = new Audio("Lydfiler/Karakterer/giraffeVoiceIntro1.mp3");
     let catVoiceIntro1 = new Audio("Lydfiler/Karakterer/catVoiceIntro1.mp3");
     let styrerVoiceIntro1 = new Audio("Lydfiler/Karakterer/styrerVoiceIntro1.mp3");
@@ -215,9 +216,9 @@ function scene4() {
     mainCharVoiceIntro7.onended = () => {
         mainCharTalking.hide();
         mainCharTalking2.show();
-        mainCharVoiceIntro8.play();                             // Spill inn/ legg til mainCharVoiceIntro8
+        mainCharVoiceIntro8.play();
     } 
-    mainCharVoiceIntro8.onended = () => {                       // Spill inn/ legg til mainCharVoiceIntro8
+    mainCharVoiceIntro8.onended = () => {
         GaaTil(scene5);
     }
 }
