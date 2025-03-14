@@ -47,10 +47,10 @@ Start(startscreen);
 
 function startscreen() {
     const startscreenobject = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 325, y: 150, width: 400, height:500 });
-    const skipbutton = new Blocks.Image("Bilder/Objekter/continueButton.png", {x: 200, y: 200, width: 200, height: 200});                           // HUSK Å FJERNE DETTE
+    /* const skipbutton = new Blocks.Image("Bilder/Objekter/continueButton.png", {x: 200, y: 200, width: 200, height: 200});                           // HUSK Å FJERNE DETTE
     Actions.Click(skipbutton, () => {
-        GaaTil(scene4);
-    })
+        GaaTil(scene2);
+    }) */
     Actions.Click(startscreenobject, () => {
         GaaTil(titlescreen);
     })
@@ -100,7 +100,7 @@ function scene2() {
     const triggerObject = new Blocks.Image("Bilder/Objekter/block3.png", {x: 50, y: 850, width: 20, height: 20});
     giraffeTalking.hide();
     mainCharTalking.hide();
-    const mainCharMoving = Actions.Tween(mainChar, -5, 3);
+    const mainCharMoving = Actions.Tween(mainChar, -10, 6);
     Actions.Colide(mainChar, yellowball, () => {Actions.Tween(yellowball, -10, 10)});                       // Spørre hvordan jeg kan stoppe denne
     Actions.Colide(mainChar, yellowball, () => {mainCharMoving.pause()});
     Actions.Colide(mainChar, yellowball, () => {boingsound.play()});
