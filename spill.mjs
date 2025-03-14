@@ -35,8 +35,11 @@ const Start = (maal) => {
     let mainCharVoiceIntro3 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro3.mp3");
     let mainCharVoiceIntro4 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro4.mp3");
     let mainCharVoiceIntro5 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro5.mp3");
+    let mainCharVoiceIntro6 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro6.mp3");
+    let mainCharVoiceIntro7 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro7.mp3");
     let giraffeVoiceIntro1 = new Audio("Lydfiler/Karakterer/giraffeVoiceIntro1.mp3");
     let catVoiceIntro1 = new Audio("Lydfiler/Karakterer/catVoiceIntro1.mp3");
+    let styrerVoiceIntro1 = new Audio("Lydfiler/Karakterer/styrerVoiceIntro1.mp3");
     let ouchCatMainChar = new Audio("Lydfiler/Karakterer/ouchCatMainChar.mp3"); 
 
 Start(startscreen);
@@ -193,23 +196,23 @@ function scene4() {
         mainCharMoving.pause();
         mainChar.hide();
         mainCharTalking.show();
-        mainCharVoiceIntro6.play();                             // Spill inn/legg til mainCharVoiceIntro6
+        mainCharVoiceIntro6.play();                             
     })
-    mainCharVoiceIntro6.onended = () => {                       // Spill inn/legg til styrerVoiceIntro1
+    mainCharVoiceIntro6.onended = () => {
         mainCharTalking.hide();
         mainChar.show();
         styrerPlaceholder.hide();
         styrerPlaceholderTalking.show();
-        styrerVoiceIntro1.play();                               // Spill inn/legg til styrerVoiceIntro1
+        styrerVoiceIntro1.play();
     }
-    styrerVoiceIntro1.onended = () => {                         // Spill inn/legg til styrerVoiceIntro1
+    styrerVoiceIntro1.onended = () => {
         styrerPlaceholderTalking.hide();
         styrerPlaceholder.show();
         mainChar.hide();
         mainCharTalking.show();
-        mainCharVoiceIntro7.play();                             //  Spill inn/legg til mainCharVoiceIntro7
+        mainCharVoiceIntro7.play();
     }
-    mainCharVoiceIntro7.onended = () => {                       // Spill inn/legg til mainCharVoiceIntro7 
+    mainCharVoiceIntro7.onended = () => {
         mainCharTalking.hide();
         mainCharTalking2.show();
         mainCharVoiceIntro8.play();                             // Spill inn/ legg til mainCharVoiceIntro8
