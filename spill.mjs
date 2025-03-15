@@ -47,10 +47,10 @@ Start(startscreen);
 
 function startscreen() {
     const startscreenobject = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 325, y: 150, width: 400, height:500 });
-    /* const skipbutton = new Blocks.Image("Bilder/Objekter/continueButton.png", {x: 200, y: 200, width: 200, height: 200});                           // HUSK Å FJERNE DETTE
+    const skipbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 200, y: 200, width: 200, height: 200});                           // HUSK Å FJERNE DETTE
     Actions.Click(skipbutton, () => {
-        GaaTil(scene2);
-    }) */
+        GaaTil(scene5);
+    })
     Actions.Click(startscreenobject, () => {
         GaaTil(titlescreen);
     })
@@ -224,10 +224,16 @@ function scene4() {
 }
 
 function scene5() {
-    
+    const mapBackground = new Blocks.Image("Bilder/Bakgrunner/mapBackground.jpg", {x: -8, y: -8, width: 1088, height: 818});
+    const beachText = new Blocks.Image("Bilder/Objekter/beachTitle.PNG", {x: 380, y: 50, width: 300, height: 70});
+    const cityText = new Blocks.Image("Bilder/Objekter/cityTitle.PNG", {x: 720, y: 550, width: 300, height: 70});
+    const forestText = new Blocks.Image("Bilder/Objekter/forestTitle.PNG", {x: 30, y: 550, width: 300, height: 70});
+    const kindergartenText = new Blocks.Image("Bilder/Objekter/kindergartenTitle.PNG", {x: 410, y: 415, width: 250, height: 50});
+    beachText.hide();
+    cityText.hide();
+    forestText.hide();
+    kindergartenText.hide();
 }
-
-
 
 /*
 const countdown = new Actions.CountDown(11, (complete) => {
@@ -265,3 +271,4 @@ const countdown = new Actions.CountDown(11, (complete) => {
             GaaTil(scene2);
         }
         }, {onTick: true, auto: true}); */
+

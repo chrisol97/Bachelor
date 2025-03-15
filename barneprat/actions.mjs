@@ -6,5 +6,4 @@ import Colide from "./actions/collision.mjs";
 
 
 
-
 export { CountDown, Click, Drag, Drop, Tween, Colide }
