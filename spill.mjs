@@ -267,6 +267,7 @@ function scene5() {
     cityText.hide();
     forestText.hide();
     kindergartenText.hide();
+    
 }
 
 /*
