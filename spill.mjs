@@ -47,10 +47,10 @@ Start(startscreen);
 
 function startscreen() {
     const startscreenobject = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 325, y: 150, width: 400, height:500 });
-    const skipbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 200, y: 200, width: 200, height: 200});                           // HUSK Å FJERNE DETTE
+   /* const skipbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 200, y: 200, width: 200, height: 200});                           // HUSK Å FJERNE DETTE
     Actions.Click(skipbutton, () => {
         GaaTil(scene5);
-    })
+    })*/
     Actions.Click(startscreenobject, () => {
         GaaTil(titlescreen);
     })
@@ -67,27 +67,36 @@ function titlescreen() {
     const cattitlescreen = new Blocks.Image("Bilder/Karakterer/catClosedMouth.png", {x: 600, y: 490, width: 350, height: 300});
     const mantitlescreen = new Blocks.Image("Bilder/Karakterer/manClosedMouth.png", {x: 780, y: 330, width: 50, height: 100});
     const mainchartitlescreen = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 200, y: 440, width: 200, height: 350});
-    titlescreenmusic.onended = () => {
+    const startbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 420, y: 500, width: 150, height: 150});
+    Actions.Click(startbutton, () => {
+        titlescreenmusic.pause();
         GaaTil(scene1);
-    }
+    })
+    
 }
 
 function scene1() {
+    mainCharVoiceIntro1.play();
+    flyingplanesound.play();
     const scene1background = new Blocks.Image("Bilder/Bakgrunner/kindergartenOutside.png", {x: -8, y: -8, width: 1088, height: 818});
-    const mainChar = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 420, y: 800, width: 250, height: 400});
     const flyingplane = new Blocks.Image("Bilder/Objekter/plane.png", { x: -250, y: 0, width: 220, height: 150});
-    const mainCharMoving = Actions.Tween(mainChar, 0, -9);
-    Utils.Bound(mainChar, Utils.Bounds(0, 400 , 1000, 5000), () => {
-        mainChar.hide();
-        mainCharMoving.pause();
-        Actions.Tween(flyingplane, 6.5, 0);
-        flyingplanesound.play();
-        new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], {x: 420, y: 400, width: 250, height: 400, loop: true, auto: true});
-        mainCharVoiceIntro1.play();
-    })
+    const mainChar = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 420, y: 400, width: 250, height: 400});
+    mainChar.hide();
+    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], {x: 420, y: 400, width: 250, height: 400, loop: true, auto: true});
+    const continuebutton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 800, y: 500, width: 150, height: 150});
+    continuebutton.hide();
+    Actions.Tween(flyingplane, 6.5, 0);
     mainCharVoiceIntro1.onended = () => {
-        GaaTil(scene2);
+        mainCharTalking.hide();
+        mainChar.show();
+        continuebutton.show();
     }
+    Actions.Click(continuebutton, () => {
+        flyingplanesound.pause();
+        mainCharVoiceIntro1.pause();
+        GaaTil(scene2);
+    })
+
 }
 
 function scene2() {
@@ -97,10 +106,11 @@ function scene2() {
     const yellowball = new Blocks.Image("Bilder/Objekter/yellowBall1.png", {x: 550, y: 550, width: 100, height: 100});
     const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], {x: 595, y: 303, width: 200, height: 250, loop: true, auto: true});
     const giraffeTalking = new Blocks.CellAnimation(["Bilder/Karakterer/giraffeClosedMouth.png", "Bilder/Karakterer/giraffeClosedMouth.png", "Bilder/Karakterer/giraffeClosedMouth.png", "Bilder/Karakterer/giraffeOpenMouth.png"], {x: 200, y: 200, width: 200, height: 400, loop: true, auto: true});
-    const triggerObject = new Blocks.Image("Bilder/Objekter/block3.png", {x: 50, y: 850, width: 20, height: 20});
     giraffeTalking.hide();
     mainCharTalking.hide();
+    const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 700, y: 50, width: 150, height: 150});
     const mainCharMoving = Actions.Tween(mainChar, -10, 6);
+    continueButton.hide();
     Actions.Colide(mainChar, yellowball, () => {Actions.Tween(yellowball, -10, 10)});                       // Spørre hvordan jeg kan stoppe denne
     Actions.Colide(mainChar, yellowball, () => {mainCharMoving.pause()});
     Actions.Colide(mainChar, yellowball, () => {boingsound.play()});
@@ -130,11 +140,16 @@ function scene2() {
         mainCharTalking.hide();
         mainChar.show();
         Actions.Tween(mainChar, -10, 6);
+        continueButton.show();
 
     }
-    Actions.Colide(mainChar, triggerObject, () => {
+    Actions.Click(continueButton, () => {
+        boingsound.pause();
+        mainCharVoiceIntro2.pause();
+        giraffeVoiceIntro1.pause();
+        mainCharVoiceIntro3.pause();
         GaaTil(scene3);
-    });
+    })
 }
 
 function scene3() {
@@ -143,16 +158,17 @@ function scene3() {
     const catStanding = new Blocks.Image("Bilder/Karakterer/catClosedMouth.png", {x: 200, y: 500, width: 300, height: 250});
     const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], {x: 490, y: 460, width: 220, height: 320, loop: true, auto: true});
     const catTalking = new Blocks.CellAnimation(["Bilder/Karakterer/catClosedMouth.png", "Bilder/Karakterer/catClosedMouth.png", "Bilder/Karakterer/catClosedMouth.png", "Bilder/Karakterer/catOpenMouth.png"], {x: 200, y: 500, width: 300, height: 250, auto: true, loop: true});
-    const triggerObject = new Blocks.Image("Bilder/Objekter/block3.png", {x: 1400, y: 450, width: 20, height: 20 });
     mainCharTalking.hide();
     catTalking.hide();
+    const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 550, y: 50, width: 150, height: 150});
+    continueButton.hide();
     const mainCharMoving = Actions.Tween(mainChar, -10, 0);
     Actions.Colide(mainChar, catStanding, () => {mainCharMoving.pause()});
     Actions.Colide(mainChar, catStanding, () => {ouchCatMainChar.play()});             
     ouchCatMainChar.onended = () => {
-        mainChar.hide(); 
+        mainChar.hide();
         mainCharTalking.show();
-        mainCharVoiceIntro4.play()    
+        mainCharVoiceIntro4.play();
 
     } 
     mainCharVoiceIntro4.onended = () => {                       
@@ -175,11 +191,16 @@ function scene3() {
         mainCharTalking.hide();
         mainChar.show();
         Actions.Tween(mainChar, 10, 0);
+        continueButton.show();
         
     }
-    Actions.Colide(mainChar, triggerObject, () => {
+    Actions.Click(continueButton, () => {
+        ouchCatMainChar.pause();
+        mainCharVoiceIntro4.pause();
+        catVoiceIntro1.pause();
+        mainCharVoiceIntro5.pause();
         GaaTil(scene4);
-    });
+    })
 }
 
 function scene4() {
@@ -189,9 +210,13 @@ function scene4() {
     const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], {x: 498, y: 470, width: 220, height: 320, auto: true, loop: true});
     const styrerPlaceholderTalking = new Blocks.CellAnimation(["Bilder/Karakterer/manClosedMouth.png", "Bilder/Karakterer/manClosedMouth.png", "Bilder/Karakterer/manClosedMouth.png", "Bilder/Karakterer/manOpenMouth.png"], {x: 150, y: 300, width: 350, height: 450, auto: true, loop: true});
     const mainCharTalking2 = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], {x: 350, y: 300, width: 420, height: 620, auto: true, loop: true});
+    const mainChar2 = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 350, y: 300, width: 420, height: 620});
+    mainChar2.hide();
     mainCharTalking2.hide();
     mainCharTalking.hide();
     styrerPlaceholderTalking.hide();
+    const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 700, y: 50, width: 150, height: 150});
+    continueButton.hide();
     const mainCharMoving = Actions.Tween(mainChar, -7, 0);
     Actions.Colide(mainChar, styrerPlaceholder, () => {
         mainCharMoving.pause();
@@ -219,8 +244,17 @@ function scene4() {
         mainCharVoiceIntro8.play();
     } 
     mainCharVoiceIntro8.onended = () => {
-        GaaTil(scene5);
+        mainCharTalking2.hide();
+        mainChar2.show();
+        continueButton.show();
     }
+    Actions.Click(continueButton, () => {
+        mainCharVoiceIntro6.pause();
+        styrerVoiceIntro1.pause();
+        mainCharVoiceIntro7.pause();
+        mainCharVoiceIntro8.pause();
+        GaaTil(scene5);
+    })
 }
 
 function scene5() {
@@ -271,4 +305,3 @@ const countdown = new Actions.CountDown(11, (complete) => {
             GaaTil(scene2);
         }
         }, {onTick: true, auto: true}); */
-
