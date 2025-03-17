@@ -263,12 +263,14 @@ function scene5() {
     const cityText = new Blocks.Image("Bilder/Objekter/cityTitle.PNG", {x: 720, y: 550, width: 300, height: 70});
     const forestText = new Blocks.Image("Bilder/Objekter/forestTitle.PNG", {x: 30, y: 550, width: 300, height: 70});
     const kindergartenText = new Blocks.Image("Bilder/Objekter/kindergartenTitle.PNG", {x: 410, y: 415, width: 250, height: 50});
-    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], {x: 200, y: 200, width: 250, height: 350, auto: true, loop: true});
+    const mainCharTalking1 = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], {x: 415, y: 550, width: 250, height: 350, auto: true, loop: true});
+    const mainChar = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 415, y: 550, width: 250, height: 350});
+    mainChar.hide();
     beachText.hide();
     cityText.hide();
     forestText.hide();
     kindergartenText.hide();
-
+    
 }
 
 /*
