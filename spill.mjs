@@ -49,7 +49,7 @@ function startscreen() {
     const startscreenobject = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 325, y: 150, width: 400, height:500 });
     const skipbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 200, y: 200, width: 200, height: 200});                           // HUSK Å FJERNE DETTE
     Actions.Click(skipbutton, () => {
-        GaaTil(scene5);
+        GaaTil(sceneBeachIntro1);
     })
     Actions.Click(startscreenobject, () => {
         GaaTil(titlescreen);
@@ -258,6 +258,7 @@ function scene4() {
 }
 
 function scene5() {
+    boingsound.play();                          //  Legg til/spill inn mainCharVoiceIntro9 (forklaring av "mappet", avslutt før man introduserer de forskjellige stedene på kartet) 
     const mapBackground = new Blocks.Image("Bilder/Bakgrunner/mapBackground.jpg", {x: -8, y: -8, width: 1088, height: 818});
     const beachText = new Blocks.Image("Bilder/Objekter/beachTitle.PNG", {x: 380, y: 50, width: 300, height: 70});
     const cityText = new Blocks.Image("Bilder/Objekter/cityTitle.PNG", {x: 720, y: 550, width: 300, height: 70});
@@ -270,10 +271,60 @@ function scene5() {
     cityText.hide();
     forestText.hide();
     kindergartenText.hide();
-    
+    boingsound.onended = () => {                // Legg til/spill inn mainCharVoiceIntro9 (forklaring av "mappet", avslutt før man introduserer de forskjellige stedene på kartet)
+        flyingplanesound.play();                // Legg til/spill inn mainCharVoiceIntro10 (forklaring av hva de forskjellige stedene på kartet er, og hva de innebærer)
+        beachText.show();
+        cityText.show();
+        forestText.show();
+        kindergartenText.show();
+    }
+    flyingplanesound.onended = () => {          // Legg til/spill inn mainCharVoiceIntro10 (forklaring av hva de forskjellige stedene på kartet er, og hva de innebærer)
+        mainCharTalking1.hide();
+    }
+    Actions.Click(beachText, () => {
+        GaaTil(sceneBeachIntro1);
+    })
+    Actions.Click(cityText, () => {
+        GaaTil(sceneCityIntro1);
+    })
+    Actions.Click(forestText, () => {
+        GaaTil(sceneForestIntro1);
+    })
+    Actions.Click(kindergartenText, () => {
+        GaaTil(sceneKindergartenIntro1);
+    })
 }
 
+function sceneBeachIntro1() {
+    flyingplanesound.play()                     // Spill inn/legg til mainCharVoiceBeachIntro1 (forklaring av hva som skjer på stranda)
+    const sceneBeachBackground = new Blocks.Image("Bilder/Bakgrunner/beach.png", {x: -8, y: -8, width: 1088, height: 818});
+    const qCardBack = new Blocks.Image("Bilder/Kort/questionCardBack.png", {x: 15, y: 200, width: 330, height: 450});
+    const chCardBack = new Blocks.Image("Bilder/Kort/challengeCardBack.png", {x: 370, y: 200, width: 330, height: 450});
+    const chanceCardBack = new Blocks.Image("Bilder/Kort/chanceCardBack.png", {x: 720, y: 200, width: 330, height: 450});
+    //const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], {x: 700, y: 550, width: 300, height: 400, auto: true, loop: true});
+    qCardBack.hide();
+    chCardBack.hide();
+    chanceCardBack.hide();
+    flyingplanesound.onended = () => {          // Spill inn/legg til mainCharVoiceBeachIntro1 (forklaring av hva som skjer på stranda)
+        
+    }
+
+}
+
+
+
 /*
+const loadingbar10 = new Blocks.Image("Bilder/Objekter/loadingbar10.png", {x: 140, y: 20, width: 800, height: 100});
+const loadingbar9 = new Blocks.Image("Bilder/Objekter/loadingbar9.png", {x: 140, y: 20, width: 800, height: 100});
+const loadingbar8 = new Blocks.Image("Bilder/Objekter/loadingbar8.png", {x: 140, y: 20, width: 800, height: 100});
+const loadingbar7 = new Blocks.Image("Bilder/Objekter/loadingbar7.png", {x: 140, y: 20, width: 800, height: 100});
+const loadingbar6 = new Blocks.Image("Bilder/Objekter/loadingbar6.png", {x: 140, y: 20, width: 800, height: 100});
+const loadingbar5 = new Blocks.Image("Bilder/Objekter/loadingbar5.png", {x: 140, y: 20, width: 800, height: 100});
+const loadingbar4 = new Blocks.Image("Bilder/Objekter/loadingbar4.png", {x: 140, y: 20, width: 800, height: 100});
+const loadingbar3 = new Blocks.Image("Bilder/Objekter/loadingbar3.png", {x: 140, y: 20, width: 800, height: 100});
+const loadingbar2 = new Blocks.Image("Bilder/Objekter/loadingbar2.png", {x: 140, y: 20, width: 800, height: 100});
+const loadingbar1 = new Blocks.Image("Bilder/Objekter/loadingbar1.png", {x: 140, y: 20, width: 800, height: 100});
+const loadingbar0 = new Blocks.Image("Bilder/Objekter/loadingbar0.png", {x: 140, y: 20, width: 800, height: 100});
 const countdown = new Actions.CountDown(11, (complete) => {
         if (countdown.remainingTime < 10000) {
             loadingbar10.hide();
