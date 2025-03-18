@@ -43,13 +43,14 @@ const Start = (maal) => {
     let styrerVoiceIntro1 = new Audio("Lydfiler/Karakterer/styrerVoiceIntro1.mp3");
     let ouchCatMainChar = new Audio("Lydfiler/Karakterer/ouchCatMainChar.mp3"); 
 
+
 Start(startscreen);
 
 function startscreen() {
     const startscreenobject = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 325, y: 150, width: 400, height:500 });
     const skipbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 200, y: 200, width: 200, height: 200});                           // HUSK Å FJERNE DETTE
     Actions.Click(skipbutton, () => {
-        GaaTil(sceneBeachIntro1);
+        GaaTil(sceneIntro5);
     })
     Actions.Click(startscreenobject, () => {
         GaaTil(titlescreen);
@@ -70,12 +71,14 @@ function titlescreen() {
     const startbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 420, y: 500, width: 150, height: 150});
     Actions.Click(startbutton, () => {
         titlescreenmusic.pause();
-        GaaTil(scene1);
+        GaaTil(sceneIntro1);
     })
+
+                                                                                            // Legg til knapper for å skippe intro hvis barna ønsker det
     
 }
 
-function scene1() {
+function sceneIntro1() {
     mainCharVoiceIntro1.play();
     flyingplanesound.play();
     const scene1background = new Blocks.Image("Bilder/Bakgrunner/kindergartenOutside.png", {x: -8, y: -8, width: 1088, height: 818});
@@ -94,12 +97,12 @@ function scene1() {
     Actions.Click(continuebutton, () => {
         flyingplanesound.pause();
         mainCharVoiceIntro1.pause();
-        GaaTil(scene2);
+        GaaTil(sceneIntro2);
     })
 
 }
 
-function scene2() {
+function sceneIntro2() {
     const background = new Blocks.Image("Bilder/Bakgrunner/sandbox.png", {x: -8, y: -8, width: 1088, height: 818});
     const giraffeSandbox = new Blocks.Image("Bilder/Karakterer/giraffeClosedMouth.png", {x: 200, y: 200, width: 200, height: 400});
     const mainChar = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 1100, y: 0, width: 200, height: 250});
@@ -148,11 +151,11 @@ function scene2() {
         mainCharVoiceIntro2.pause();
         giraffeVoiceIntro1.pause();
         mainCharVoiceIntro3.pause();
-        GaaTil(scene3);
+        GaaTil(sceneIntro3);
     })
 }
 
-function scene3() {
+function sceneIntro3() {
     const background = new Blocks.Image("Bilder/Bakgrunner/grillhutOutside.png", {x: -8, y: -8, width: 1088, height: 818});
     const mainChar = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 1100, y: 460, width: 220, height: 320});
     const catStanding = new Blocks.Image("Bilder/Karakterer/catClosedMouth.png", {x: 200, y: 500, width: 300, height: 250});
@@ -199,11 +202,11 @@ function scene3() {
         mainCharVoiceIntro4.pause();
         catVoiceIntro1.pause();
         mainCharVoiceIntro5.pause();
-        GaaTil(scene4);
+        GaaTil(sceneIntro4);
     })
 }
 
-function scene4() {
+function sceneIntro4() {
     const background = new Blocks.Image("Bilder/Bakgrunner/wardrobe.png", {x: -8, y: -8, width: 1088, height: 818});
     const mainChar = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 1100, y: 470, width: 220, height: 320});
     const styrerPlaceholder = new Blocks.Image("Bilder/Karakterer/manClosedMouth.png", {x: 150, y: 300, width: 350, height: 450});
@@ -253,11 +256,11 @@ function scene4() {
         styrerVoiceIntro1.pause();
         mainCharVoiceIntro7.pause();
         mainCharVoiceIntro8.pause();
-        GaaTil(scene5);
+        GaaTil(sceneIntro5);
     })
 }
 
-function scene5() {
+function sceneIntro5() {
     boingsound.play();                          //  Legg til/spill inn mainCharVoiceIntro9 (forklaring av "mappet", avslutt før man introduserer de forskjellige stedene på kartet) 
     const mapBackground = new Blocks.Image("Bilder/Bakgrunner/mapBackground.jpg", {x: -8, y: -8, width: 1088, height: 818});
     const beachText = new Blocks.Image("Bilder/Objekter/beachTitle.PNG", {x: 380, y: 50, width: 300, height: 70});
@@ -295,19 +298,155 @@ function scene5() {
     })
 }
 
+// BEACH - POTENSIELT I EGET .MJS-FIL
+
 function sceneBeachIntro1() {
     flyingplanesound.play()                     // Spill inn/legg til mainCharVoiceBeachIntro1 (forklaring av hva som skjer på stranda)
     const sceneBeachBackground = new Blocks.Image("Bilder/Bakgrunner/beach.png", {x: -8, y: -8, width: 1088, height: 818});
     const qCardBack = new Blocks.Image("Bilder/Kort/questionCardBack.png", {x: 15, y: 200, width: 330, height: 450});
     const chCardBack = new Blocks.Image("Bilder/Kort/challengeCardBack.png", {x: 370, y: 200, width: 330, height: 450});
     const chanceCardBack = new Blocks.Image("Bilder/Kort/chanceCardBack.png", {x: 720, y: 200, width: 330, height: 450});
-    //const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], {x: 700, y: 550, width: 300, height: 400, auto: true, loop: true});
+    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], {x: 700, y: 550, width: 300, height: 400, auto: true, loop: true});
+    const mainCharTalking2 = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], {x: 330, y: 330, width: 400, height: 550, auto: true, loop: true});
+    const cityButton = new Blocks.Image("Bilder/Knapper/cityButton.PNG", {x: 200, y: 20, width: 150, height: 150});
+    const forestButton = new Blocks.Image("Bilder/Knapper/forestButton.PNG", {x: 460, y: 20, width: 150, height: 150});
+    const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.PNG", {x: 717, y: 20, width: 150, height: 150});
+    cityButton.hide();
+    forestButton.hide();
+    kindergartenButton.hide();
+    mainCharTalking2.hide();
     qCardBack.hide();
     chCardBack.hide();
     chanceCardBack.hide();
     flyingplanesound.onended = () => {          // Spill inn/legg til mainCharVoiceBeachIntro1 (forklaring av hva som skjer på stranda)
-        
+        qCardBack.show();
+        chCardBack.show();
+        chanceCardBack.show();
+        boingsound.play();                      // Spill inn/legg til mainCharVoiceCardsExpl1 (forklaring av hvordan kortene fungerer)
     }
+    boingsound.onended = () => {                // Spill inn/legg til mainCharVoiceCardsExpl1 (forklaring av hvordan kortene fungerer)
+        cityButton.show();
+        forestButton.show();
+        kindergartenButton.show();
+        mainCharTalking.hide();
+        mainCharTalking2.show();
+        ouchCatMainChar.play();                 // Spill inn/legg til mainCharVoiceCardsExpl2 (forklare hvordan knappene fungerer, og ønske barna lykke til på reisen)
+    }
+    ouchCatMainChar.onended = () => {           // Spill inn/legg til mainCharVoiceCardsExpl2 (forklare hvordan knappene fungerer, og ønske barna lykke til på reisen)
+        GaaTil(sceneBeachHub)
+    }
+
+}
+
+function sceneBeachHub() {                                                                                                      // Spille inn bakgrunnsmusikk?
+    const sceneBeachBackground = new Blocks.Image("Bilder/Bakgrunner/beach.png", {x: -8, y: -8, width: 1088, height: 818});
+    const cityButton = new Blocks.Image("Bilder/Knapper/cityButton.PNG", {x: 200, y: 20, width: 150, height: 150});
+    const forestButton = new Blocks.Image("Bilder/Knapper/forestButton.PNG", {x: 460, y: 20, width: 150, height: 150});
+    const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.PNG", {x: 717, y: 20, width: 150, height: 150});
+    const qCardBack = new Blocks.Image("Bilder/Kort/questionCardBack.png", {x: 15, y: 200, width: 330, height: 450});
+    const chCardBack = new Blocks.Image("Bilder/Kort/challengeCardBack.png", {x: 370, y: 200, width: 330, height: 450});
+    const chanceCardBack = new Blocks.Image("Bilder/Kort/chanceCardBack.png", {x: 720, y: 200, width: 330, height: 450});
+
+}
+
+// FOREST - POTENSIELT I EGEN .MJS-FIL
+
+function sceneForestIntro1() {
+    flyingplanesound.play();                                                    // Spill inn/legg til mainCharVoiceForestIntro1 (forklaring av hva som skjer i skogen)
+    const sceneForestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", {x: -8, y: -8, width: 1088, height: 818});
+    const qCardBack = new Blocks.Image("Bilder/Kort/questionCardBack.png", {x: 15, y: 200, width: 330, height: 450});
+    const chCardBack = new Blocks.Image("Bilder/Kort/challengeCardBack.png", {x: 370, y: 200, width: 330, height: 450});
+    const chanceCardBack = new Blocks.Image("Bilder/Kort/chanceCardBack.png", {x: 720, y: 200, width: 330, height: 450});
+    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], {x: 700, y: 550, width: 300, height: 400, auto: true, loop: true});
+    const mainCharTalking2 = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], {x: 330, y: 330, width: 400, height: 550, auto: true, loop: true});
+    const cityButton = new Blocks.Image("Bilder/Knapper/cityButton.PNG", {x: 200, y: 20, width: 150, height: 150});
+    const beachButton = new Blocks.Image("Bilder/Knapper/beachButton.PNG", {x: 460, y: 20, width: 150, height: 150});
+    const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.PNG", {x: 717, y: 20, width: 150, height: 150});
+    cityButton.hide();
+    beachButton.hide();
+    kindergartenButton.hide();
+    mainCharTalking2.hide();
+    qCardBack.hide();
+    chCardBack.hide();
+    chanceCardBack.hide();
+    flyingplanesound.onended = () => {          // Spill inn/legg til mainCharVoiceForestIntro1 (forklaring av hva som skjer i skogen)
+        qCardBack.show();
+        chCardBack.show();
+        chanceCardBack.show();
+        boingsound.play();                      // Spill inn/legg til mainCharVoiceCardsExpl1 (forklaring av hvordan kortene fungerer)
+    }
+    boingsound.onended = () => {                // Spill inn/legg til mainCharVoiceCardsExpl1 (forklaring av hvordan kortene fungerer)
+        cityButton.show();
+        beachButton.show();
+        kindergartenButton.show();
+        mainCharTalking.hide();
+        mainCharTalking2.show();
+        ouchCatMainChar.play();                 // Spill inn/legg til mainCharVoiceCardsExpl2 (forklare hvordan knappene fungerer, og ønske barna lykke til på reisen)
+    }
+    ouchCatMainChar.onended = () => {           // Spill inn/legg til mainCharVoiceCardsExpl2 (forklare hvordan knappene fungerer, og ønske barna lykke til på reisen)
+        GaaTil(sceneForestHub)
+    }
+
+}
+
+function sceneForestHub() {                                                                                                      // Spille inn bakgrunnsmusikk?
+    const sceneForestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", {x: -8, y: -8, width: 1088, height: 818});
+    const cityButton = new Blocks.Image("Bilder/Knapper/cityButton.PNG", {x: 200, y: 20, width: 150, height: 150});
+    const beachButton = new Blocks.Image("Bilder/Knapper/beachButton.PNG", {x: 460, y: 20, width: 150, height: 150});
+    const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.PNG", {x: 717, y: 20, width: 150, height: 150});
+    const qCardBack = new Blocks.Image("Bilder/Kort/questionCardBack.png", {x: 15, y: 200, width: 330, height: 450});
+    const chCardBack = new Blocks.Image("Bilder/Kort/challengeCardBack.png", {x: 370, y: 200, width: 330, height: 450});
+    const chanceCardBack = new Blocks.Image("Bilder/Kort/chanceCardBack.png", {x: 720, y: 200, width: 330, height: 450});
+
+}
+
+// CITY - POTENSIELT I EGEN .MJS-FIL
+
+function sceneCityIntro1() {
+    flyingplanesound.play();                                                    // Spill inn/legg til mainCharVoiceCityIntro1 (forklaring av hva som skjer i byen)
+    const sceneCityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", {x: -8, y: -8, width: 1088, height: 818});
+    const qCardBack = new Blocks.Image("Bilder/Kort/questionCardBack.png", {x: 15, y: 200, width: 330, height: 450});
+    const chCardBack = new Blocks.Image("Bilder/Kort/challengeCardBack.png", {x: 370, y: 200, width: 330, height: 450});
+    const chanceCardBack = new Blocks.Image("Bilder/Kort/chanceCardBack.png", {x: 720, y: 200, width: 330, height: 450});
+    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], {x: 700, y: 550, width: 300, height: 400, auto: true, loop: true});
+    const mainCharTalking2 = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], {x: 330, y: 330, width: 400, height: 550, auto: true, loop: true});
+    const forestButton = new Blocks.Image("Bilder/Knapper/forestButton.PNG", {x: 200, y: 20, width: 150, height: 150});
+    const beachButton = new Blocks.Image("Bilder/Knapper/beachButton.PNG", {x: 460, y: 20, width: 150, height: 150});
+    const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.PNG", {x: 717, y: 20, width: 150, height: 150});
+    forestButton.hide();
+    beachButton.hide();
+    kindergartenButton.hide();
+    mainCharTalking2.hide();
+    qCardBack.hide();
+    chCardBack.hide();
+    chanceCardBack.hide();
+    flyingplanesound.onended = () => {          // Spill inn/legg til mainCharVoiceCityIntro1 (forklaring av hva som skjer i byen)
+        qCardBack.show();
+        chCardBack.show();
+        chanceCardBack.show();
+        boingsound.play();                      // Spill inn/legg til mainCharVoiceCardsExpl1 (forklaring av hvordan kortene fungerer)
+    }
+    boingsound.onended = () => {                // Spill inn/legg til mainCharVoiceCardsExpl1 (forklaring av hvordan kortene fungerer)
+        forestButton.show();
+        beachButton.show();
+        kindergartenButton.show();
+        mainCharTalking.hide();
+        mainCharTalking2.show();
+        ouchCatMainChar.play();                 // Spill inn/legg til mainCharVoiceCardsExpl2 (forklare hvordan knappene fungerer, og ønske barna lykke til på reisen)
+    }
+    ouchCatMainChar.onended = () => {           // Spill inn/legg til mainCharVoiceCardsExpl2 (forklare hvordan knappene fungerer, og ønske barna lykke til på reisen)
+        GaaTil(sceneCityHub)
+    }
+}
+
+function sceneCityHub() {                                                                                                   // Spille inn bakgrunnsmusikk?
+    const sceneCityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", {x: -8, y: -8, width: 1088, height: 818});
+    const forestButton = new Blocks.Image("Bilder/Knapper/forestButton.PNG", {x: 200, y: 20, width: 150, height: 150});
+    const beachButton = new Blocks.Image("Bilder/Knapper/beachButton.PNG", {x: 460, y: 20, width: 150, height: 150});
+    const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.PNG", {x: 717, y: 20, width: 150, height: 150});
+    const qCardBack = new Blocks.Image("Bilder/Kort/questionCardBack.png", {x: 15, y: 200, width: 330, height: 450});
+    const chCardBack = new Blocks.Image("Bilder/Kort/challengeCardBack.png", {x: 370, y: 200, width: 330, height: 450});
+    const chanceCardBack = new Blocks.Image("Bilder/Kort/chanceCardBack.png", {x: 720, y: 200, width: 330, height: 450});
 
 }
 
