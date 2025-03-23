@@ -346,6 +346,15 @@ function sceneBeachHub() {                                                      
     const qCardBack = new Blocks.Image("Bilder/Kort/questionCardBack.png", {x: 15, y: 200, width: 330, height: 450});
     const chCardBack = new Blocks.Image("Bilder/Kort/challengeCardBack.png", {x: 370, y: 200, width: 330, height: 450});
     const chanceCardBack = new Blocks.Image("Bilder/Kort/chanceCardBack.png", {x: 720, y: 200, width: 330, height: 450});
+    Actions.Click(forestButton, () => {
+        GaaTil(sceneForestHub);
+    });
+    Actions.Click(cityButton, () => {
+        GaaTil(sceneCityHub);
+    });
+    Actions.Click(kindergartenButton, () => {
+        GaaTil(sceneOutro1);
+    });
 
 }
 
@@ -397,6 +406,15 @@ function sceneForestHub() {                                                     
     const qCardBack = new Blocks.Image("Bilder/Kort/questionCardBack.png", {x: 15, y: 200, width: 330, height: 450});
     const chCardBack = new Blocks.Image("Bilder/Kort/challengeCardBack.png", {x: 370, y: 200, width: 330, height: 450});
     const chanceCardBack = new Blocks.Image("Bilder/Kort/chanceCardBack.png", {x: 720, y: 200, width: 330, height: 450});
+    Actions.Click(cityButton, () => {
+        GaaTil(sceneCityHub);
+    });
+    Actions.Click(beachButton, () => {
+        GaaTil(sceneBeachHub);
+    });
+    Actions.Click(kindergartenButton, () => {
+        GaaTil(sceneOutro1);
+    });
 
 }
 
@@ -447,8 +465,60 @@ function sceneCityHub() {                                                       
     const qCardBack = new Blocks.Image("Bilder/Kort/questionCardBack.png", {x: 15, y: 200, width: 330, height: 450});
     const chCardBack = new Blocks.Image("Bilder/Kort/challengeCardBack.png", {x: 370, y: 200, width: 330, height: 450});
     const chanceCardBack = new Blocks.Image("Bilder/Kort/chanceCardBack.png", {x: 720, y: 200, width: 330, height: 450});
+    Actions.Click(forestButton, () => {
+        GaaTil(sceneForestHub);
+    });
+    Actions.Click(beachButton, () => {
+        GaaTil(sceneBeachHub);
+    });
+    Actions.Click(kindergartenButton, () => {
+        GaaTil(sceneOutro1);
+    });
     
 }
+
+
+
+
+// CHANCE CARDS
+
+    // FOREST
+
+
+
+    // CITY
+
+
+
+    // BEACH
+
+
+
+// QUESION CARDS
+
+    // FOREST
+
+
+
+    // CITY
+
+
+
+    // BEACH
+
+
+
+// CHALLENGE CARDS
+
+    // FOREST
+
+
+
+    // CITY
+
+
+
+    // BEACH 
 
 
 
