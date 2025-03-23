@@ -179,10 +179,10 @@ function sceneIntro3() {
         mainChar.show();
         catStanding.hide();
         catTalking.show();
-        catVoiceIntro1.play();
+        catVoiceIntro1.play();                                                                                          // Malene?
 
     }
-    catVoiceIntro1.onended = () => {                            
+    catVoiceIntro1.onended = () => {                                                                                    // Malene?
         catTalking.hide();
         catStanding.show();
         mainChar.hide();
@@ -232,21 +232,21 @@ function sceneIntro4() {
         mainChar.show();
         styrerPlaceholder.hide();
         styrerPlaceholderTalking.show();
-        styrerVoiceIntro1.play();
+        styrerVoiceIntro1.play();                                                                   // Endre hva han sier
     }
-    styrerVoiceIntro1.onended = () => {
+    styrerVoiceIntro1.onended = () => {                                                             // Endre hva han sier
         styrerPlaceholderTalking.hide();
         styrerPlaceholder.show();
         mainChar.hide();
         mainCharTalking.show();
-        mainCharVoiceIntro7.play();
+        mainCharVoiceIntro7.play();                                                                 // Endre hva han sier
     }
-    mainCharVoiceIntro7.onended = () => {
+    mainCharVoiceIntro7.onended = () => {                                                           // Endre hva han sier
         mainCharTalking.hide();
         mainCharTalking2.show();
-        mainCharVoiceIntro8.play();
+        mainCharVoiceIntro8.play();                                                                 // Endre hva han sier
     } 
-    mainCharVoiceIntro8.onended = () => {
+    mainCharVoiceIntro8.onended = () => {                                                           // Endre hva han sier
         mainCharTalking2.hide();
         mainChar2.show();
         continueButton.show();
