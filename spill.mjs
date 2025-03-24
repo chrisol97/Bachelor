@@ -652,58 +652,74 @@ function sceneBeachChanceFront() {
     }
 }
 
-// QUESION CARDS
+// QUESION CARDS                                                                     // Spill inn lyder og legg til objektbilder til enkelte kort
 
     // FOREST
 
-function sceneForestQuestionFront() {
+function sceneForestQuestionFront() {                                                                                                          
     const forestbackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", {x: -8, y: -8, width: 1088, height: 818});
     let tall = Math.floor(Math.random() * 10);
     if (tall === 0) {
         const forestQuestion1 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFBiggestAnimal.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Legg til knapp for "riktig svar", og knapp for "feil svar"
+        // Legg til knapp for "riktig svar", og knapp for "feil svar" + objekter
 
     } else if (tall === 1) {
         const forestQuestion2 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFCountingSquirrels.png", {x:30, y: 10, width: 1020, height: 700});
-        // Legg til selve oppgaven
+        // Legg til selve oppgaven + objekter
 
     } else if (tall === 2) {
         const forestQuestion3 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFMikkelRev.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Legg til knapp for "riktig svar" og knapp for "feil svar"
+        // Legg til knapp for "riktig svar" og knapp for "feil svar" + objekter
 
     } else if (tall === 3) {
         const forestQuestion4 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFOddOneOut.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Legg til selve oppgaven
+        // Legg til selve oppgaven + objekter
 
     } else if (tall === 4) {
         const forestQuestion5 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFOwlSound.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Legg til en knapp for å spille av lyden, spill også inn lyden (uglelyd)
+        // Legg til en knapp for å spille av lyden, spill også inn lyden (uglelyd) + objekter
 
     } else if (tall === 5) {
         const forestQuestion6 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWhatTreeLosesLeaves.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Legg til knapp for "riktig svar", og knapp for "feil svar", evt selve oppgaven?
+        // Legg til knapp for "riktig svar", og knapp for "feil svar", evt selve oppgaven? + objekter
 
     } else if (tall === 6) {
         const forestQuestion7 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWhoEatsNuts.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Legg til knapp for "riktig svar", og knapp for "feil svar", evt selve oppgaven?
+        // Legg til knapp for "riktig svar", og knapp for "feil svar", evt selve oppgaven? + objekter
 
     } else if (tall === 7) {
         const forestQuestion8 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWhoHowls.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Legg til knapp for "riktig svar", og knapp for "feil svar"
+        // Legg til knapp for "riktig svar", og knapp for "feil svar" + objekter
 
     } else if (tall === 8) {
         const forestQuestion9 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWhoMakesHoney.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Legg til knapp for "riktig svar" og knapp for "feil svar"
+        // Legg til knapp for "riktig svar" og knapp for "feil svar" + objekter
 
     } else if (tall === 9) {
         const forestQuestion10 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWoodpecker.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Legg til knapp for "riktig svar" og knapp for "feil svar"
+        // Legg til knapp for "riktig svar" og knapp for "feil svar" + objekter
     }
 }
 
 
     // CITY
 
+function sceneCityQuestionFront() {
+    const cityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", {x: -8, y: -8, width: 1088, height: 818});
+    let tall = Math.floor(Math.random() * 10);
+    if (tall === 0) {
+        const cityQuestion1 = new Blocks.Image("Bilder/Kort/City/Question/qCardCCountingWindows.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Lag selve oppgaven
+
+    } else if (tall === 1) {
+        const cityQuestion2 = new Blocks.Image("Bilder/Kort/City/Question/qCardCRedLight.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Legg til knapp for "rett svar" og knapp for "feil svar" + objekter
+
+    } else if (tall === 2) {
+        const cityQuestion3 = new Blocks.Image("Bilder/Kort/City/Question/qCardCTwoThingsBaker.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Legg til knapp for "rett svar" og knapp for "feil svar?" + objekter
+    }
+}
 
 
     // BEACH
