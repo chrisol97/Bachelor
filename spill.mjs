@@ -50,7 +50,7 @@ function startscreen() {
     const startscreenobject = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 325, y: 150, width: 400, height:500 });
     const skipbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 200, y: 200, width: 200, height: 200});                           // HUSK Å FJERNE DETTE
     Actions.Click(skipbutton, () => {
-        GaaTil(sceneIntro5);
+        GaaTil(sceneForestHub);
     })
     Actions.Click(startscreenobject, () => {
         GaaTil(titlescreen);
@@ -355,7 +355,15 @@ function sceneBeachHub() {                                                      
     Actions.Click(kindergartenButton, () => {
         GaaTil(sceneOutro1);
     });
-
+    Actions.Click(qCardBack, () => {
+        GaaTil(sceneBeachQuestionFront);
+    });
+    Actions.Click(chCardBack, () => {
+        GaaTil(sceneBeachChallengeFront);
+    });
+    Actions.Click(chanceCardBack, () => {
+        GaaTil(sceneBeachChanceFront);
+    });
 }
 
 // FOREST - POTENSIELT I EGEN .MJS-FIL
@@ -415,7 +423,15 @@ function sceneForestHub() {                                                     
     Actions.Click(kindergartenButton, () => {
         GaaTil(sceneOutro1);
     });
-
+    Actions.Click(qCardBack, () => {
+        GaaTil(sceneForestQuestionFront);
+    });
+    Actions.Click(chCardBack, () => {
+        GaaTil(sceneForestChallengeFront);
+    });
+    Actions.Click(chanceCardBack, () => {
+        GaaTil(sceneForestChanceFront);
+    });
 }
 
 // CITY - POTENSIELT I EGEN .MJS-FIL
@@ -474,7 +490,15 @@ function sceneCityHub() {                                                       
     Actions.Click(kindergartenButton, () => {
         GaaTil(sceneOutro1);
     });
-    
+    Actions.Click(qCardBack, () => {
+        GaaTil(sceneCityQuestionFront);
+    });
+    Actions.Click(chCardBack, () => {
+        GaaTil(sceneCityChallengeFront);
+    });
+    Actions.Click(chanceCardBack, () => {
+        GaaTil(sceneCityChanceFront);
+    });
 }
 
 
@@ -484,6 +508,47 @@ function sceneCityHub() {                                                       
 
     // FOREST
 
+function sceneForestChanceFront() {
+    const forestmap = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", {x: -8, y: -8, width: 1088, height: 818});                     // Spill inn lyder, legg til objektbilder til enkelte bilder osv
+    let tall = Math.floor(Math.random() * 6);
+    if (tall === 0) {
+        const chanceCard0 = new Blocks.Image("Bilder/Kort/Forest/Chance/chanceCardF1.png", {x: 30, y: 10, width: 1020, height: 700});
+        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
+        Actions.Click(continueButton, () => {
+            GaaTil(sceneForestHub);
+        });
+    } else if (tall === 1) {
+        const chanceCard1 = new Blocks.Image("Bilder/Kort/Forest/Chance/chanceCardF2.png", {x: 30, y: 10, width: 1020, height: 700});
+        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
+        Actions.Click(continueButton, () => {
+            GaaTil(sceneForestHub);
+        });
+    } else if (tall === 2) {
+        const chanceCard2 = new Blocks.Image("Bilder/Kort/Forest/Chance/chanceCardF3.png", {x: 30, y: 10, width: 1020, height: 700});
+        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
+        Actions.Click(continueButton, () => {
+            GaaTil(sceneForestHub);
+        });
+    } else if (tall === 3) {
+        const chanceCard3 = new Blocks.Image("Bilder/Kort/Forest/Chance/chanceCardF4.png", {x: 30, y: 10, width: 1020, height: 700});
+        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
+        Actions.Click(continueButton, () => {
+            GaaTil(sceneForestHub);
+        });
+    } else if (tall === 4) {
+        const chanceCard4 = new Blocks.Image("Bilder/Kort/Forest/Chance/chanceCardF5.png", {x: 30, y: 10, width: 1020, height: 700});
+        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
+        Actions.Click(continueButton, () => {
+            GaaTil(sceneForestHub);
+        });
+    } else if (tall === 5) {
+        const chanceCard5 = new Blocks.Image("Bilder/Kort/Forest/Chance/chanceCardF6.png", {x: 30, y: 10, width: 1020, height: 700});
+        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
+        Actions.Click(continueButton, () => {
+            GaaTil(sceneForestHub);
+        });
+    }
+}
 
 
     // CITY
