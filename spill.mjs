@@ -513,36 +513,47 @@ function sceneForestChanceFront() {
     let tall = Math.floor(Math.random() * 6);
     if (tall === 0) {
         const chanceCard0 = new Blocks.Image("Bilder/Kort/Forest/Chance/chanceCardF1.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Spill inn lyd + legg inn objekter?
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             GaaTil(sceneForestHub);
         });
+
     } else if (tall === 1) {
         const chanceCard1 = new Blocks.Image("Bilder/Kort/Forest/Chance/chanceCardF2.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Spill inn lyd + legg inn objekter?
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             GaaTil(sceneForestHub);
         });
+
     } else if (tall === 2) {
         const chanceCard2 = new Blocks.Image("Bilder/Kort/Forest/Chance/chanceCardF3.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Spill inn lyd + legg inn objekter?
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             GaaTil(sceneForestHub);
         });
+
     } else if (tall === 3) {
         const chanceCard3 = new Blocks.Image("Bilder/Kort/Forest/Chance/chanceCardF4.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Spill inn lyd + legg inn objekter?
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             GaaTil(sceneForestHub);
         });
+
     } else if (tall === 4) {
         const chanceCard4 = new Blocks.Image("Bilder/Kort/Forest/Chance/chanceCardF5.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Spill inn lyd + legg inn objekter?
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             GaaTil(sceneForestHub);
         });
+
     } else if (tall === 5) {
         const chanceCard5 = new Blocks.Image("Bilder/Kort/Forest/Chance/chanceCardF6.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Spill inn lyd + legg inn objekter? 
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             GaaTil(sceneForestHub);
@@ -558,48 +569,63 @@ function sceneCityChanceFront() {
     let tall = Math.floor(Math.random() * 8);
     if (tall === 0) {
         const chanceCard0 = new Blocks.Image("Bilder/Kort/City/Chance/chanceCardC1.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Spill inn lyd + legg inn objekter?
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             GaaTil(sceneCityHub);
         });
+
     } else if (tall === 1) {
         const chanceCard1 = new Blocks.Image("Bilder/Kort/City/Chance/chanceCardC2.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Spill inn lyd + legg inn objekter?
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             GaaTil(sceneCityHub);
         });
+
     } else if (tall === 2) {
         const chanceCard2 = new Blocks.Image("Bilder/Kort/City/Chance/chanceCardC3.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Spill inn lyd + legg inn objekter?
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             GaaTil(sceneCityHub);
         });
+
     } else if (tall === 3) {
         const chanceCard3 = new Blocks.Image("Bilder/Kort/City/Chance/chanceCardC4.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Spill inn lyd + legg inn objekter?
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             GaaTil(sceneCityHub);
         });
+
     } else if (tall === 4) {
         const chanceCard4 = new Blocks.Image("Bilder/Kort/City/Chance/chanceCardC5.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Spill inn lyd + legg inn objekter?
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             GaaTil(sceneCityHub);
         });
+
     } else if (tall === 5) {
         const chanceCard5 = new Blocks.Image("Bilder/Kort/City/Chance/chanceCardC6.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Spill inn lyd + legg inn objekter?
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             GaaTil(sceneCityHub);
         });
+
     } else if (tall === 6) {
         const chanceCard6 = new Blocks.Image("Bilder/Kort/City/Chance/chanceCardC7.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Spill inn lyd + legg inn objekter?
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             GaaTil(sceneCityHub);
         });
+
     } else if (tall === 7) {
         const chanceCard7 = new Blocks.Image("Bilder/Kort/City/Chance/chanceCardC8.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Spill inn lyd + legg inn objekter?
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             GaaTil(sceneCityHub);
@@ -615,36 +641,47 @@ function sceneBeachChanceFront() {
     let tall = Math.floor(Math.random() * 6);
     if (tall === 0) {
         const chanceCard0 = new Blocks.Image("Bilder/Kort/Beach/Chance/chanceCardB1.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Spill inn lyd + legg inn objekter?
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             GaaTil(sceneBeachHub);
         });
+
     } else if (tall === 1) {
         const chanceCard1 = new Blocks.Image("Bilder/Kort/Beach/Chance/chanceCardB2.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Spill inn lyd + legg inn objekter?
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             GaaTil(sceneBeachHub);
         });
+
     } else if (tall === 2) {
         const chanceCard2 = new Blocks.Image("Bilder/Kort/Beach/Chance/chanceCardB3.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Spill inn lyd + legg inn objekter?
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             GaaTil(sceneBeachHub);
         });
+
     } else if (tall === 3) {
         const chanceCard3 = new Blocks.Image("Bilder/Kort/Beach/Chance/chanceCardB4.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Spill inn lyd + legg inn objekter?
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             GaaTil(sceneBeachHub);
         });
+
     } else if (tall === 4) {
         const chanceCard4 = new Blocks.Image("Bilder/Kort/Beach/Chance/chanceCardB5.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Spill inn lyd + legg inn objekter?
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             GaaTil(sceneBeachHub);
         });
+
     } else if (tall === 5) {
         const chanceCard5 = new Blocks.Image("Bilder/Kort/Beach/Chance/chanceCardB6.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Spill inn lyd + legg inn objekter?
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             GaaTil(sceneBeachHub);
@@ -661,43 +698,43 @@ function sceneForestQuestionFront() {
     let tall = Math.floor(Math.random() * 10);
     if (tall === 0) {
         const forestQuestion1 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFBiggestAnimal.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Legg til knapp for "riktig svar", og knapp for "feil svar" + objekter
+        // Legg til knapp for "riktig svar", og knapp for "feil svar" + objekter + lyd
 
     } else if (tall === 1) {
         const forestQuestion2 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFCountingSquirrels.png", {x:30, y: 10, width: 1020, height: 700});
-        // Legg til selve oppgaven + objekter
+        // Legg til selve oppgaven + objekter + lyd --> gå videre til en ny scene med selve oppgaven
 
     } else if (tall === 2) {
         const forestQuestion3 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFMikkelRev.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Legg til knapp for "riktig svar" og knapp for "feil svar" + objekter
+        // Legg til knapp for "riktig svar" og knapp for "feil svar" + objekter + lyd
 
     } else if (tall === 3) {
         const forestQuestion4 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFOddOneOut.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Legg til selve oppgaven + objekter
+        // Legg til selve oppgaven + objekter + lyd --> gå videre til en ny scene med selve oppgaven
 
     } else if (tall === 4) {
         const forestQuestion5 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFOwlSound.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Legg til en knapp for å spille av lyden, spill også inn lyden (uglelyd) + objekter
+        // Legg til en knapp for å spille av lyden, spill også inn lyden (uglelyd) + objekter + lyd
 
     } else if (tall === 5) {
         const forestQuestion6 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWhatTreeLosesLeaves.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Legg til knapp for "riktig svar", og knapp for "feil svar", evt selve oppgaven? + objekter
+        // Legg til knapp for "riktig svar", og knapp for "feil svar", evt selve oppgaven? + objekter + lyd
 
     } else if (tall === 6) {
         const forestQuestion7 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWhoEatsNuts.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Legg til knapp for "riktig svar", og knapp for "feil svar", evt selve oppgaven? + objekter
+        // Legg til knapp for "riktig svar", og knapp for "feil svar", evt selve oppgaven? + objekter + lyd
 
     } else if (tall === 7) {
         const forestQuestion8 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWhoHowls.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Legg til knapp for "riktig svar", og knapp for "feil svar" + objekter
+        // Legg til knapp for "riktig svar", og knapp for "feil svar" + objekter + lyd
 
     } else if (tall === 8) {
         const forestQuestion9 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWhoMakesHoney.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Legg til knapp for "riktig svar" og knapp for "feil svar" + objekter
+        // Legg til knapp for "riktig svar" og knapp for "feil svar" + objekter + lyd
 
     } else if (tall === 9) {
         const forestQuestion10 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWoodpecker.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Legg til knapp for "riktig svar" og knapp for "feil svar" + objekter
+        // Legg til knapp for "riktig svar" og knapp for "feil svar" + objekter + lyd
     }
 }
 
@@ -709,35 +746,215 @@ function sceneCityQuestionFront() {
     let tall = Math.floor(Math.random() * 10);
     if (tall === 0) {
         const cityQuestion1 = new Blocks.Image("Bilder/Kort/City/Question/qCardCCountingWindows.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Lag selve oppgaven
+        // Lag selve oppgaven + lyd --> gå videre til en ny scene med oppgaven
 
     } else if (tall === 1) {
         const cityQuestion2 = new Blocks.Image("Bilder/Kort/City/Question/qCardCRedLight.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Legg til knapp for "rett svar" og knapp for "feil svar" + objekter
+        // Legg til knapp for "rett svar" og knapp for "feil svar" + objekter + lyd
 
     } else if (tall === 2) {
         const cityQuestion3 = new Blocks.Image("Bilder/Kort/City/Question/qCardCTwoThingsBaker.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Legg til knapp for "rett svar" og knapp for "feil svar?" + objekter
+        // Legg til knapp for "rett svar" og knapp for "feil svar?" + objekter + lyd
+
+    } else if (tall === 3) {
+        const cityQuestion4 = new Blocks.Image("Bilder/Kort/City/Question/qCardCWhatColorTrafficLight.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Legg til knapp for "rett svar" og knapp for "feil svar" + objekter + lyd
+
+    } else if (tall === 4) {
+        const cityQuestion5 = new Blocks.Image("Bilder/Kort/City/Question/qCardCWhatIsABus.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Legg til knapp for "rett svar" og knapp for "feil svar" + objekter + lyd
+
+    } else if (tall === 5) {
+        const cityQuestio6 = new Blocks.Image("Bilder/Kort/City/Question/qCardCWhatIsDoctor.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Legg til knapp for "riktig svar" og knapp for "feil svar" + objekter + lyd
+
+    } else if (tall === 6) {
+        const cityQuestion7 = new Blocks.Image("Bilder/Kort/City/Question/qCardCWhatIsFireman.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Legg til knapp for "riktig svar" og knapp for "feil svar" + objekter + lyd
+
+    } else if (tall === 7) {
+        const cityQuestion8 = new Blocks.Image("Bilder/Kort/City/Question/qCardCWhatIsPolice.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Legg til knapp for "riktig svar" og knapp for "feil svar" + objekter + lyd
+
+    } else if (tall === 8) {
+        const cityQuestion9 = new Blocks.Image("Bilder/Kort/City/Question/qCardCWhatIsStore.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Legg til knapp for "riktig svar" og knapp for "feil svar" + objekter + lyd
+
+    } else if (tall === 9) {
+        const cityQuestion10 = new Blocks.Image("Bilder/Kort/City/Question/qCardCWheelsOnTheBus.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Legg til knapp for "riktig svar" og knapp for "feil svar" + objekter + lyd
+
     }
 }
 
 
     // BEACH
 
+function sceneBeachQuestionFront() {
+    const beachBackground = new Blocks.Image("Bilder/Bakgrunner/beach.png", {x: -8, y: -8, width: 1088, height: 818});
+    let tall = Math.floor(Math.random() * 11);
+    if (tall === 0) {
+        const beachQuestion1 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBBiggestSandCastle.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Lag selve oppgaven + lyd --> gå videre til en ny scene med oppgave
+
+    } else if (tall === 1) {
+        const beachQuestion2 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBGarbage.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Legg til knapp for "riktig svar" og knapp for "feil svar", evt videre til ny scene med svaralternativ + lyd
+
+    } else if (tall === 2) {
+        const beachQuestion3 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBJellyfishString.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Gå videre til ny scene med Maneten Martine + svaralternativ. Husk å spille inn lyd
+
+    } else if (tall === 3) {
+        const beachQuestion4 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBOddOneOut.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Gå videre til ny scene med bilder av forskjellige dyr/svaralternativ. Ett riktig svar. + lyd
+
+    } else if (tall === 4) {
+        const beachQuestion5 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBSandTracks.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Gå videre til ny scene med bilde av fotspor + svaralternativ. + lyd + objekter
+
+    } else if (tall === 5) {
+        const beachQuestion6 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBShark.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Legg til knapp for "riktig svar" og knapp for "feil svar", evt videre til ny scene med svaralternativ + lyd
+
+    } else if (tall === 6) {
+        const beachQuestion7 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBStarfish.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Legg til knapp for "riktig svar" og knapp for "feil svar", evt videre til ny scene med svaralternativ + lyd
+
+    } else if (tall === 7) {
+        const beachQuestion8 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBSunscreen.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Legg til knapp for "riktig svar" og knapp for "feil svar", evt videre til ny scene med svaralternativ + lyd
+
+    } else if (tall === 8) {
+        const beachQuestion9 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBSwimSafely.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Legg til knapp for "riktig svar" og knapp for "feil svar", evt videre til ny scene med svaralternativ + lyd + objekter
+
+    } else if (tall === 9) {
+        const beachQuestion10 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBThreeDifferentAnimals.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Legg til knapp for "riktig svar" og knapp for "feil svar" + lyd
+
+    } else if (tall === 10) {
+        const beachQuestion11 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBWhale.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Legg til knapp for "riktig svar" og knapp for "feil svar", evt videre til ny scene med svaralternativ + lyd + objekter
+
+    }
+}
 
 
 // CHALLENGE CARDS
 
     // FOREST
 
+function sceneForestChallengeFront() {
+    const forestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", {x: -8, y: -8, width: 1088, height: 818});
+    let tall = Math.floor(Math.random() * 10);
+    if (tall === 0) {
+        const forestChallenge1 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFFlood.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
+
+    } else if (tall === 1) {
+        const forestChallenge2 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFGiraffeLost.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
+
+    } else if (tall === 2) {
+        const forestChallenge3 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFHulkBabyPoop.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
+
+    } else if (tall === 3) {
+        const forestChallenge4 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFJumpLikeRabbit.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Knapp for gjennomført oppgave/ikke gjennomført oppgave + lyd
+
+    } else if (tall === 4) {
+        const forestChallenge5 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFMooseLaugh.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
+
+    } else if (tall === 5) {
+        const forestChallenge6 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFNameAnimals.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Knapp for gjennomført oppgave/ikke gjennomført oppgave + lyd
+
+    } else if (tall === 6) {
+        const forestChallenge7 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFRobotMushroom.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
+
+    } else if (tall === 7) {
+        const forestChallenge8 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFSongAboutTroll.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Knapp for gjennomført oppgave/ikke gjennomført oppgave + lyd
+
+    } else if (tall === 8) {
+        const forestChallenge9 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFStretchLikeTree.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Knapp for gjennomført oppgave/ikke gjennomført oppgave + lyd
+
+    } else if (tall === 9) {
+        const forestChallenge10 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFTadpole.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
+
+    }
+}
 
 
     // CITY
 
+function sceneCityChallengeFront() {
+    const cityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", {x: -8, y: -8, width: 1088, height: 818});
+    let tall = Math.floor(Math.random() * 5);
+    if (tall === 0) {
+        const cityChallenge1 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCBakeBread.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Knapp for gjennomført oppgave/ikke gjennomført oppgave + lyd
+
+    } else if (tall === 1) {
+        const cityChallenge2 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCBuildBuilding", {x: 30, y: 10, width: 1020, height: 700});
+        // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
+
+    } else if (tall === 2) {
+        const cityChallenge3 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCCatHiding.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
+
+    } else if (tall === 3) {
+        const cityChallenge4 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCCountCars.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
+
+    } else if (tall === 4) {
+        const cityChallenge5 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCDroppedGroceries.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
+
+    }
+}
 
 
     // BEACH 
 
+function sceneBeachChallengeFront() {
+    const beachBackground = new Blocks.Image("Bilder/Bakgrunner/beach.png", {x: -8, y: -8, width: 1088, height: 818});
+    let tall = Math.floor(Math.random() * 7);
+    if (tall === 0) {
+        const beachChallenge1 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBBiggestFish.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
+
+    } else if (tall === 1) {
+        const beachChallenge2 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBCatWater.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper evt knapp for gjennomført / ikke gjennomført oppgave
+
+    } else if (tall === 2) {
+        const beachChallenge3 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBCountFish.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
+
+    } else if (tall === 3) {
+        const beachChallenge4 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBMermaidCat.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
+
+    } else if (tall === 4) {
+        const beachChallenge5 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBSongAboutOcean.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Knapp for gjennomført oppgave/ikke gjennomført oppgave + lyd
+
+    } else if (tall === 5) {
+        const beachChallenge6 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBSunburntGiraffe.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
+
+    } else if (tall === 6) {
+        const beachChallenge7 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBWalkLikeCrab.png", {x: 30, y: 10, width: 1020, height: 700});
+        // Knapp for gjennomført oppgave/ikke gjennomført oppgave + lyd
+    }
+}
 
 
 /*
