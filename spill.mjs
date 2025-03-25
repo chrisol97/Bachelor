@@ -38,6 +38,8 @@ const Start = (maal) => {
     let mainCharVoiceIntro6 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro6.mp3");
     let mainCharVoiceIntro7 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro7.mp3");
     let mainCharVoiceIntro8 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro8.mp3");
+    let mainCharVoiceIntro9 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro9.mp3");
+    let mainCharVoiceIntro10 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro10.mp3");
     let giraffeVoiceIntro1 = new Audio("Lydfiler/Karakterer/giraffeVoiceIntro1.mp3");
     let catVoiceIntro1 = new Audio("Lydfiler/Karakterer/catVoiceIntro1.mp3");
     let styrerVoiceIntro1 = new Audio("Lydfiler/Karakterer/styrerVoiceIntro1.mp3");
@@ -50,7 +52,7 @@ function startscreen() {
     const startscreenobject = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 325, y: 150, width: 400, height:500 });
     const skipbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 200, y: 200, width: 200, height: 200});                           // HUSK Å FJERNE DETTE
     Actions.Click(skipbutton, () => {
-        GaaTil(sceneForestHub);
+        GaaTil(sceneIntro4);
     })
     Actions.Click(startscreenobject, () => {
         GaaTil(titlescreen);
@@ -68,13 +70,16 @@ function titlescreen() {
     const cattitlescreen = new Blocks.Image("Bilder/Karakterer/catClosedMouth.png", {x: 600, y: 490, width: 350, height: 300});
     const mantitlescreen = new Blocks.Image("Bilder/Karakterer/manClosedMouth.png", {x: 780, y: 330, width: 50, height: 100});
     const mainchartitlescreen = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 200, y: 440, width: 200, height: 350});
-    const startbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 420, y: 500, width: 150, height: 150});
-    Actions.Click(startbutton, () => {
+    const videobutton = new Blocks.Image("Bilder/Knapper/videoButton.png", {x: 750, y: 190, width: 250, height: 150});
+    const skipbutton = new Blocks.Image("Bilder/Knapper/playButton.png", {x: 60, y: 190, width: 250, height: 150});                                 // Legge til navn på spillet, og forklaring av hva knappene gjør
+    Actions.Click(skipbutton, () => {
+        titlescreenmusic.pause();
+        GaaTil(sceneIntro5)
+    })
+    Actions.Click(videobutton, () => {
         titlescreenmusic.pause();
         GaaTil(sceneIntro1);
     })
-
-                                                                                            // Legg til knapper for å skippe intro hvis barna ønsker det
     
 }
 
@@ -82,6 +87,9 @@ function sceneIntro1() {
     mainCharVoiceIntro1.play();
     flyingplanesound.play();
     const scene1background = new Blocks.Image("Bilder/Bakgrunner/kindergartenOutside.png", {x: -8, y: -8, width: 1088, height: 818});
+    const sign1 = new Blocks.Image("Bilder/Objekter/signHumlekollen.png", {x: 100, y: 350, width: 120, height: 150});
+    const sign2 = new Blocks.Image("Bilder/Objekter/signMarihønehula.png", {x: 475, y: 350, width: 75, height: 90});
+    const sign3 = new Blocks.Image("Bilder/Objekter/signMaurtua.png", {x: 940, y: 320, width: 100, height: 150});
     const flyingplane = new Blocks.Image("Bilder/Objekter/plane.png", { x: -250, y: 0, width: 220, height: 150});
     const mainChar = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 420, y: 400, width: 250, height: 400});
     mainChar.hide();
@@ -232,21 +240,21 @@ function sceneIntro4() {
         mainChar.show();
         styrerPlaceholder.hide();
         styrerPlaceholderTalking.show();
-        styrerVoiceIntro1.play();                                                                   // Endre hva han sier
+        styrerVoiceIntro1.play();                                                                   
     }
-    styrerVoiceIntro1.onended = () => {                                                             // Endre hva han sier
+    styrerVoiceIntro1.onended = () => {                                                             
         styrerPlaceholderTalking.hide();
         styrerPlaceholder.show();
         mainChar.hide();
         mainCharTalking.show();
-        mainCharVoiceIntro7.play();                                                                 // Endre hva han sier
+        mainCharVoiceIntro7.play();                                                                 
     }
-    mainCharVoiceIntro7.onended = () => {                                                           // Endre hva han sier
+    mainCharVoiceIntro7.onended = () => {                                                           
         mainCharTalking.hide();
         mainCharTalking2.show();
-        mainCharVoiceIntro8.play();                                                                 // Endre hva han sier
+        mainCharVoiceIntro8.play();                                                                 
     } 
-    mainCharVoiceIntro8.onended = () => {                                                           // Endre hva han sier
+    mainCharVoiceIntro8.onended = () => {                                                           
         mainCharTalking2.hide();
         mainChar2.show();
         continueButton.show();
@@ -261,7 +269,7 @@ function sceneIntro4() {
 }
 
 function sceneIntro5() {
-    boingsound.play();                          //  Legg til/spill inn mainCharVoiceIntro9 (forklaring av "mappet", avslutt før man introduserer de forskjellige stedene på kartet) 
+    mainCharVoiceIntro9.play();
     const mapBackground = new Blocks.Image("Bilder/Bakgrunner/mapBackground.jpg", {x: -8, y: -8, width: 1088, height: 818});
     const beachText = new Blocks.Image("Bilder/Objekter/beachTitle.PNG", {x: 380, y: 50, width: 300, height: 70});
     const cityText = new Blocks.Image("Bilder/Objekter/cityTitle.PNG", {x: 720, y: 550, width: 300, height: 70});
@@ -274,14 +282,14 @@ function sceneIntro5() {
     cityText.hide();
     forestText.hide();
     kindergartenText.hide();
-    boingsound.onended = () => {                // Legg til/spill inn mainCharVoiceIntro9 (forklaring av "mappet", avslutt før man introduserer de forskjellige stedene på kartet)
-        flyingplanesound.play();                // Legg til/spill inn mainCharVoiceIntro10 (forklaring av hva de forskjellige stedene på kartet er, og hva de innebærer)
+    mainCharVoiceIntro9.onended = () => {
+        mainCharVoiceIntro10.play();
         beachText.show();
         cityText.show();
         forestText.show();
         kindergartenText.show();
     }
-    flyingplanesound.onended = () => {          // Legg til/spill inn mainCharVoiceIntro10 (forklaring av hva de forskjellige stedene på kartet er, og hva de innebærer)
+    mainCharVoiceIntro10.onended = () => {
         mainCharTalking1.hide();
     }
     Actions.Click(beachText, () => {
@@ -309,8 +317,8 @@ function sceneBeachIntro1() {
     const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], {x: 700, y: 550, width: 300, height: 400, auto: true, loop: true});
     const mainCharTalking2 = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], {x: 330, y: 330, width: 400, height: 550, auto: true, loop: true});
     const cityButton = new Blocks.Image("Bilder/Knapper/cityButton.PNG", {x: 200, y: 20, width: 150, height: 150});
-    const forestButton = new Blocks.Image("Bilder/Knapper/forestButton.PNG", {x: 460, y: 20, width: 150, height: 150});
-    const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.PNG", {x: 717, y: 20, width: 150, height: 150});
+    const forestButton = new Blocks.Image("Bilder/Knapper/forestButton.PNG", {x: 717, y: 20, width: 150, height: 150});
+    const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.PNG", {x: 460, y: 20, width: 150, height: 150});
     cityButton.hide();
     forestButton.hide();
     kindergartenButton.hide();
@@ -341,8 +349,8 @@ function sceneBeachIntro1() {
 function sceneBeachHub() {                                                                                                      // Spille inn bakgrunnsmusikk?
     const sceneBeachBackground = new Blocks.Image("Bilder/Bakgrunner/beach.png", {x: -8, y: -8, width: 1088, height: 818});
     const cityButton = new Blocks.Image("Bilder/Knapper/cityButton.PNG", {x: 200, y: 20, width: 150, height: 150});
-    const forestButton = new Blocks.Image("Bilder/Knapper/forestButton.PNG", {x: 460, y: 20, width: 150, height: 150});
-    const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.PNG", {x: 717, y: 20, width: 150, height: 150});
+    const forestButton = new Blocks.Image("Bilder/Knapper/forestButton.PNG", {x: 717, y: 20, width: 150, height: 150});
+    const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.PNG", {x: 460, y: 20, width: 150, height: 150});
     const qCardBack = new Blocks.Image("Bilder/Kort/questionCardBack.png", {x: 15, y: 200, width: 330, height: 450});
     const chCardBack = new Blocks.Image("Bilder/Kort/challengeCardBack.png", {x: 370, y: 200, width: 330, height: 450});
     const chanceCardBack = new Blocks.Image("Bilder/Kort/chanceCardBack.png", {x: 720, y: 200, width: 330, height: 450});
@@ -377,8 +385,8 @@ function sceneForestIntro1() {
     const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], {x: 700, y: 550, width: 300, height: 400, auto: true, loop: true});
     const mainCharTalking2 = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], {x: 330, y: 330, width: 400, height: 550, auto: true, loop: true});
     const cityButton = new Blocks.Image("Bilder/Knapper/cityButton.PNG", {x: 200, y: 20, width: 150, height: 150});
-    const beachButton = new Blocks.Image("Bilder/Knapper/beachButton.PNG", {x: 460, y: 20, width: 150, height: 150});
-    const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.PNG", {x: 717, y: 20, width: 150, height: 150});
+    const beachButton = new Blocks.Image("Bilder/Knapper/beachButton.PNG", {x: 717, y: 20, width: 150, height: 150});
+    const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.PNG", {x: 460, y: 20, width: 150, height: 150});
     cityButton.hide();
     beachButton.hide();
     kindergartenButton.hide();
@@ -409,8 +417,8 @@ function sceneForestIntro1() {
 function sceneForestHub() {                                                                                                      // Spille inn bakgrunnsmusikk?
     const sceneForestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", {x: -8, y: -8, width: 1088, height: 818});
     const cityButton = new Blocks.Image("Bilder/Knapper/cityButton.PNG", {x: 200, y: 20, width: 150, height: 150});
-    const beachButton = new Blocks.Image("Bilder/Knapper/beachButton.PNG", {x: 460, y: 20, width: 150, height: 150});
-    const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.PNG", {x: 717, y: 20, width: 150, height: 150});
+    const beachButton = new Blocks.Image("Bilder/Knapper/beachButton.PNG", {x: 717, y: 20, width: 150, height: 150});
+    const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.PNG", {x: 460, y: 20, width: 150, height: 150});
     const qCardBack = new Blocks.Image("Bilder/Kort/questionCardBack.png", {x: 15, y: 200, width: 330, height: 450});
     const chCardBack = new Blocks.Image("Bilder/Kort/challengeCardBack.png", {x: 370, y: 200, width: 330, height: 450});
     const chanceCardBack = new Blocks.Image("Bilder/Kort/chanceCardBack.png", {x: 720, y: 200, width: 330, height: 450});
@@ -445,8 +453,8 @@ function sceneCityIntro1() {
     const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], {x: 700, y: 550, width: 300, height: 400, auto: true, loop: true});
     const mainCharTalking2 = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], {x: 330, y: 330, width: 400, height: 550, auto: true, loop: true});
     const forestButton = new Blocks.Image("Bilder/Knapper/forestButton.PNG", {x: 200, y: 20, width: 150, height: 150});
-    const beachButton = new Blocks.Image("Bilder/Knapper/beachButton.PNG", {x: 460, y: 20, width: 150, height: 150});
-    const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.PNG", {x: 717, y: 20, width: 150, height: 150});
+    const beachButton = new Blocks.Image("Bilder/Knapper/beachButton.PNG", {x: 717, y: 20, width: 150, height: 150});
+    const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.PNG", {x: 460, y: 20, width: 150, height: 150});
     forestButton.hide();
     beachButton.hide();
     kindergartenButton.hide();
@@ -476,8 +484,8 @@ function sceneCityIntro1() {
 function sceneCityHub() {                                                                                                   // Spille inn bakgrunnsmusikk?
     const sceneCityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", {x: -8, y: -8, width: 1088, height: 818});
     const forestButton = new Blocks.Image("Bilder/Knapper/forestButton.PNG", {x: 200, y: 20, width: 150, height: 150});
-    const beachButton = new Blocks.Image("Bilder/Knapper/beachButton.PNG", {x: 460, y: 20, width: 150, height: 150});
-    const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.PNG", {x: 717, y: 20, width: 150, height: 150});
+    const beachButton = new Blocks.Image("Bilder/Knapper/beachButton.PNG", {x: 717, y: 20, width: 150, height: 150});
+    const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.PNG", {x: 460, y: 20, width: 150, height: 150});
     const qCardBack = new Blocks.Image("Bilder/Kort/questionCardBack.png", {x: 15, y: 200, width: 330, height: 450});
     const chCardBack = new Blocks.Image("Bilder/Kort/challengeCardBack.png", {x: 370, y: 200, width: 330, height: 450});
     const chanceCardBack = new Blocks.Image("Bilder/Kort/chanceCardBack.png", {x: 720, y: 200, width: 330, height: 450});
