@@ -52,7 +52,7 @@ function startscreen() {
     const startscreenobject = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 325, y: 150, width: 400, height:500 });
     const skipbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 200, y: 200, width: 200, height: 200});                           // HUSK Å FJERNE DETTE
     Actions.Click(skipbutton, () => {
-        GaaTil(sceneIntro4);
+        GaaTil(sceneForestChanceFront);
     })
     Actions.Click(startscreenobject, () => {
         GaaTil(titlescreen);
@@ -529,7 +529,8 @@ function sceneForestChanceFront() {
 
     } else if (tall === 1) {
         const chanceCard1 = new Blocks.Image("Bilder/Kort/Forest/Chance/chanceCardF2.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Spill inn lyd + legg inn objekter?
+        const bootMud = new Blocks.Image("Bilder/Objekter/bootInMud.png", {x: 600, y: 460, width: 400, height: 250});
+        // Spill inn lyd
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             GaaTil(sceneForestHub);
@@ -545,7 +546,8 @@ function sceneForestChanceFront() {
 
     } else if (tall === 3) {
         const chanceCard3 = new Blocks.Image("Bilder/Kort/Forest/Chance/chanceCardF4.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Spill inn lyd + legg inn objekter?
+        const troll = new Blocks.Image("Bilder/Karakterer/troll.png", {x: 700, y: 400, width: 300, height: 300});
+        // Spill inn lyd
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             GaaTil(sceneForestHub);
