@@ -521,7 +521,8 @@ function sceneForestChanceFront() {
     let tall = Math.floor(Math.random() * 6);
     if (tall === 0) {
         const chanceCard0 = new Blocks.Image("Bilder/Kort/Forest/Chance/chanceCardF1.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Spill inn lyd + legg inn objekter?
+        const seagull = new Blocks.Image("Bilder/Objekter/seagull.png", {x: 0, y: 460, width: 400, height: 250});
+        // Spill inn lyd 
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             GaaTil(sceneForestHub);
@@ -734,10 +735,15 @@ function sceneForestQuestionFront() {
 
     } else if (tall === 3) {
         const forestQuestion4 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFOddOneOut.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Legg til selve oppgaven + objekter + lyd --> gå videre til en ny scene med selve oppgaven
+        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
+        Actions.Click(continueButton, () => {
+            GaaTil(sceneForestQ3Answer);
+        })
+        // Legg til lyd 
 
     } else if (tall === 4) {
         const forestQuestion5 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFOwlSound.png", {x: 30, y: 10, width: 1020, height: 700});
+
         // Legg til en knapp for å spille av lyden, spill også inn lyden (uglelyd) + objekter + lyd
 
     } else if (tall === 5) {
@@ -988,7 +994,7 @@ function sceneBeachChallengeFront() {
 
 // ANSWERS/TASKS
 
-    // FOREST
+    // FOREST - QUESTIONS
 
 function sceneForestQ1Answer() {
     const forestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground3.png", {x: -8, y: -8, width: 1088, height: 818});
@@ -1027,9 +1033,61 @@ function sceneForestQ2Answer() {
     const sq3 = new Blocks.Image("Bilder/Karakterer/squirrel.png", {x: 180, y: 100, width: 100, height: 100});
     const sq4 = new Blocks.Image("Bilder/Karakterer/squirrel.png", {x: 300, y: 400, width: 100, height: 100});
     const sq5 = new Blocks.Image("Bilder/Karakterer/squirrel.png", {x: 770, y: 220, width: 150, height: 150});
+    const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 360, y: 20, width: 325, height: 225});
+    const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 420, y: 280, width: 325, height: 225});
+    const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 480, y: 540, width: 325, height: 225});
+    const placeholderWrong1 = new Blocks.Image("Bilder/Objekter/plum.png", {x: 450, y: 55, width: 150, height: 150});                                           // HUSK Å 
+    const placeholderWrong2 = new Blocks.Image("Bilder/Objekter/milk.png", {x: 500, y: 315, width: 150, height: 150});                                          // BYTTE UT 
+    const placeholderCorrect3 = new Blocks.Image("Bilder/Objekter/tomato.png", {x: 570, y: 575, width: 150, height: 150});                                      // PLACEHOLDERS
+    Actions.Click(placeholderWrong1, () => {
+        wrongAnswerSound1.play();                       // spill inn wrongAnswerSound1.play()
+        wrongAnswerSound1.onended = () => {
+            GaaTil(sceneForestHub);
+        }
+    })
+    Actions.Click(placeholderWrong2, () => {
+        wrongAnswerSound2.play();                       // spill inn wrongAnswerSound2.play();
+        wrongAnswerSound2.onended = () => {
+            GaaTil(sceneForestHub);
+        }
+    })
+    Actions.Click(placeholderCorrect3, () => {
+        applause.play();                                // spill inn applause.play();
+        applause.onended = () => {
+            GaaTil(sceneForestHub);
+        }
+    })
 
 }
 
+function sceneForestQ3Answer() {
+    const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground3.png", {x: -8, y: -8, width: 1088, height: 818});
+    const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 100, y: 100, width: 375, height: 275});
+    const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 600, y: 250, width: 375, height: 275});
+    const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 150, y: 470, width: 375, height: 275});
+    const correctanswer = new Blocks.Image("Bilder/Karakterer/whale.png", {x: 190, y: 135, width: 200, height: 200});
+    const wronganswer2 = new Blocks.Image("Bilder/Karakterer/mooseClosedMouth.png", {x: 680, y: 285, width: 200, height: 200});
+    const wronganswer1 = new Blocks.Image("Bilder/Karakterer/bearSleeping.png", {x: 240, y: 535, width: 200, height: 150});
+    Actions.Click(wronganswer1, () => {
+        notQuiteCorrect.play();                         // spill inn notQuiteCorrect.play
+        notQuiteCorrect.onended = () => {
+            GaaTil(sceneForestHub);
+        }
+    })
+    Actions.Click(wronganswer2, () => {
+        wronganswer2.play();                            // spill inn wronganswer2.play
+        wronganswer2.onended = () => {
+            GaaTil(sceneForestHub);
+        }
+    })
+    Actions.Click(correctanswer, () => {
+        applause.play();                                // spill inn applause.play
+        applause.onended = () => {
+            GaaTil(sceneForestHub);
+        }
+    })
+
+}
 
 function sceneForestQ9Answer() {
     const forestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", {x: -8, y: -8, width: 1088, height: 818});
@@ -1038,7 +1096,7 @@ function sceneForestQ9Answer() {
     const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 150, y: 470, width: 375, height: 275});
     const wronganswer1 = new Blocks.Image("Bilder/Karakterer/squirrel.png", {x: 190, y: 135, width: 200, height: 200});
     const wronganswer2 = new Blocks.Image("Bilder/Karakterer/turtle.png", {x: 680, y: 285, width: 200, height: 200});
-    const correctanswer = new Blocks.Image("Bilder/Objekter/beeCube.png", {x: 240, y: 505, width: 200, height: 200});  // PLACEHOLDER, TRENGER EN BIE
+    const correctanswer = new Blocks.Image("Bilder/Objekter/bee.png", {x: 240, y: 505, width: 200, height: 200});  // PLACEHOLDER, TRENGER EN BIE
     Actions.Click(wronganswer1, () => {
         wrongAnswerSound1.play();                       // spill inn wrongAnswerSound1.play
         wrongAnswerSound1.onended = () => {
