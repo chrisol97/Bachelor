@@ -1096,7 +1096,7 @@ function sceneForestQ9Answer() {
     const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 150, y: 470, width: 375, height: 275});
     const wronganswer1 = new Blocks.Image("Bilder/Karakterer/squirrel.png", {x: 190, y: 135, width: 200, height: 200});
     const wronganswer2 = new Blocks.Image("Bilder/Karakterer/turtle.png", {x: 680, y: 285, width: 200, height: 200});
-    const correctanswer = new Blocks.Image("Bilder/Objekter/bee.png", {x: 240, y: 505, width: 200, height: 200});  // PLACEHOLDER, TRENGER EN BIE
+    const correctanswer = new Blocks.Image("Bilder/Objekter/bee.png", {x: 240, y: 505, width: 200, height: 200});
     Actions.Click(wronganswer1, () => {
         wrongAnswerSound1.play();                       // spill inn wrongAnswerSound1.play
         wrongAnswerSound1.onended = () => {
