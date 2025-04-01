@@ -40,10 +40,26 @@ const Start = (maal) => {
     let mainCharVoiceIntro8 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro8.mp3");
     let mainCharVoiceIntro9 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro9.mp3");
     let mainCharVoiceIntro10 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro10.mp3");
+    let mainCharVoiceBeachIntro1 = new Audio("Lydfiler/Karakterer/mainCharVoiceBeachIntro1.mp3");
+    let mainCharVoiceForestIntro1 = new Audio("Lydfiler/Karakterer/mainCharVoiceForestIntro1.mp3");
+    let mainCharVoiceCityIntro1 = new Audio("Lydfiler/Karakterer/mainCharVoiceCityIntro1.mp3");
+    let mainCharVoiceCardsExpl1 = new Audio("Lydfiler/Karakterer/mainCharVoiceCardsExpl1.mp3");
+    let mainCharVoiceCardsExpl2 = new Audio("Lydfiler/Karakterer/mainCharVoiceCardsExpl2.mp3");
     let giraffeVoiceIntro1 = new Audio("Lydfiler/Karakterer/giraffeVoiceIntro1.mp3");
     let catVoiceIntro1 = new Audio("Lydfiler/Karakterer/catVoiceIntro1.mp3");
     let styrerVoiceIntro1 = new Audio("Lydfiler/Karakterer/styrerVoiceIntro1.mp3");
     let ouchCatMainChar = new Audio("Lydfiler/Karakterer/ouchCatMainChar.mp3"); 
+
+// KORT
+    
+    // FOREST
+
+
+    // CITY
+
+
+    // BEACH
+
 
 
 Start(startscreen);
@@ -309,7 +325,7 @@ function sceneIntro5() {
 // BEACH - POTENSIELT I EGET .MJS-FIL
 
 function sceneBeachIntro1() {
-    flyingplanesound.play()                     // Spill inn/legg til mainCharVoiceBeachIntro1 (forklaring av hva som skjer på stranda)
+    mainCharVoiceBeachIntro1.play()                     
     const sceneBeachBackground = new Blocks.Image("Bilder/Bakgrunner/beach.png", {x: -8, y: -8, width: 1088, height: 818});
     const qCardBack = new Blocks.Image("Bilder/Kort/questionCardBack.png", {x: 15, y: 200, width: 330, height: 450});
     const chCardBack = new Blocks.Image("Bilder/Kort/challengeCardBack.png", {x: 370, y: 200, width: 330, height: 450});
@@ -326,21 +342,21 @@ function sceneBeachIntro1() {
     qCardBack.hide();
     chCardBack.hide();
     chanceCardBack.hide();
-    flyingplanesound.onended = () => {          // Spill inn/legg til mainCharVoiceBeachIntro1 (forklaring av hva som skjer på stranda)
+    mainCharVoiceBeachIntro1.onended = () => {         
         qCardBack.show();
         chCardBack.show();
         chanceCardBack.show();
-        boingsound.play();                      // Spill inn/legg til mainCharVoiceCardsExpl1 (forklaring av hvordan kortene fungerer)
+        mainCharVoiceCardsExpl1.play();                      
     }
-    boingsound.onended = () => {                // Spill inn/legg til mainCharVoiceCardsExpl1 (forklaring av hvordan kortene fungerer)
+    mainCharVoiceCardsExpl1.onended = () => {             
         cityButton.show();
         forestButton.show();
         kindergartenButton.show();
         mainCharTalking.hide();
         mainCharTalking2.show();
-        ouchCatMainChar.play();                 // Spill inn/legg til mainCharVoiceCardsExpl2 (forklare hvordan knappene fungerer, og ønske barna lykke til på reisen)
+        mainCharVoiceCardsExpl2.play();                 
     }
-    ouchCatMainChar.onended = () => {           // Spill inn/legg til mainCharVoiceCardsExpl2 (forklare hvordan knappene fungerer, og ønske barna lykke til på reisen)
+    mainCharVoiceCardsExpl2.onended = () => {           
         GaaTil(sceneBeachHub)
     }
 
@@ -377,7 +393,7 @@ function sceneBeachHub() {                                                      
 // FOREST - POTENSIELT I EGEN .MJS-FIL
 
 function sceneForestIntro1() {
-    flyingplanesound.play();                                                    // Spill inn/legg til mainCharVoiceForestIntro1 (forklaring av hva som skjer i skogen)
+    mainCharVoiceForestIntro1.play();                                                    
     const sceneForestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", {x: -8, y: -8, width: 1088, height: 818});
     const qCardBack = new Blocks.Image("Bilder/Kort/questionCardBack.png", {x: 15, y: 200, width: 330, height: 450});
     const chCardBack = new Blocks.Image("Bilder/Kort/challengeCardBack.png", {x: 370, y: 200, width: 330, height: 450});
@@ -394,21 +410,21 @@ function sceneForestIntro1() {
     qCardBack.hide();
     chCardBack.hide();
     chanceCardBack.hide();
-    flyingplanesound.onended = () => {          // Spill inn/legg til mainCharVoiceForestIntro1 (forklaring av hva som skjer i skogen)
+    mainCharVoiceForestIntro1.onended = () => {          
         qCardBack.show();
         chCardBack.show();
         chanceCardBack.show();
-        boingsound.play();                      // Spill inn/legg til mainCharVoiceCardsExpl1 (forklaring av hvordan kortene fungerer)
+        mainCharVoiceCardsExpl1.play();
     }
-    boingsound.onended = () => {                // Spill inn/legg til mainCharVoiceCardsExpl1 (forklaring av hvordan kortene fungerer)
+    mainCharVoiceCardsExpl1.onended = () => {                
         cityButton.show();
         beachButton.show();
         kindergartenButton.show();
         mainCharTalking.hide();
         mainCharTalking2.show();
-        ouchCatMainChar.play();                 // Spill inn/legg til mainCharVoiceCardsExpl2 (forklare hvordan knappene fungerer, og ønske barna lykke til på reisen)
+        mainCharVoiceCardsExpl2.play();                 
     }
-    ouchCatMainChar.onended = () => {           // Spill inn/legg til mainCharVoiceCardsExpl2 (forklare hvordan knappene fungerer, og ønske barna lykke til på reisen)
+    mainCharVoiceCardsExpl2.onended = () => {           
         GaaTil(sceneForestHub)
     }
 
@@ -445,7 +461,7 @@ function sceneForestHub() {                                                     
 // CITY - POTENSIELT I EGEN .MJS-FIL
 
 function sceneCityIntro1() {
-    flyingplanesound.play();                                                    // Spill inn/legg til mainCharVoiceCityIntro1 (forklaring av hva som skjer i byen)
+    mainCharVoiceCityIntro1.play();
     const sceneCityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", {x: -8, y: -8, width: 1088, height: 818});
     const qCardBack = new Blocks.Image("Bilder/Kort/questionCardBack.png", {x: 15, y: 200, width: 330, height: 450});
     const chCardBack = new Blocks.Image("Bilder/Kort/challengeCardBack.png", {x: 370, y: 200, width: 330, height: 450});
@@ -462,21 +478,21 @@ function sceneCityIntro1() {
     qCardBack.hide();
     chCardBack.hide();
     chanceCardBack.hide();
-    flyingplanesound.onended = () => {          // Spill inn/legg til mainCharVoiceCityIntro1 (forklaring av hva som skjer i byen)
+    mainCharVoiceCityIntro1.onended = () => {
         qCardBack.show();
         chCardBack.show();
         chanceCardBack.show();
-        boingsound.play();                      // Spill inn/legg til mainCharVoiceCardsExpl1 (forklaring av hvordan kortene fungerer)
+        mainCharVoiceCardsExpl1.play();                      
     }
-    boingsound.onended = () => {                // Spill inn/legg til mainCharVoiceCardsExpl1 (forklaring av hvordan kortene fungerer)
+    mainCharVoiceCardsExpl1.onended = () => {                
         forestButton.show();
         beachButton.show();
         kindergartenButton.show();
         mainCharTalking.hide();
         mainCharTalking2.show();
-        ouchCatMainChar.play();                 // Spill inn/legg til mainCharVoiceCardsExpl2 (forklare hvordan knappene fungerer, og ønske barna lykke til på reisen)
+        mainCharVoiceCardsExpl2.play();                 
     }
-    ouchCatMainChar.onended = () => {           // Spill inn/legg til mainCharVoiceCardsExpl2 (forklare hvordan knappene fungerer, og ønske barna lykke til på reisen)
+    mainCharVoiceCardsExpl2.onended = () => {           
         GaaTil(sceneCityHub)
     }
 }
