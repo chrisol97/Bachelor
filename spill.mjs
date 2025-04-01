@@ -24,6 +24,7 @@ const Start = (maal) => {
 
 // MUSIKK
     let titlescreenmusic = new Audio("Lydfiler/Musikk/titlescreenmusic.mp3");
+    let forestBackgroundMusic = new Audio("Lydfiler/Musikk/forestBackgroundMusic.mp3");
 
 // OBJEKTLYDER
     let flyingplanesound = new Audio("Lydfiler/Objektlyder/planesound.mp3");
@@ -430,7 +431,9 @@ function sceneForestIntro1() {
 
 }
 
-function sceneForestHub() {                                                                                                      // Spille inn bakgrunnsmusikk?
+function sceneForestHub() {
+    forestBackgroundMusic.play();
+    forestBackgroundMusic.loop=true;
     const sceneForestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", {x: -8, y: -8, width: 1088, height: 818});
     const cityButton = new Blocks.Image("Bilder/Knapper/cityButton.PNG", {x: 200, y: 20, width: 150, height: 150});
     const beachButton = new Blocks.Image("Bilder/Knapper/beachButton.PNG", {x: 717, y: 20, width: 150, height: 150});
@@ -439,21 +442,27 @@ function sceneForestHub() {                                                     
     const chCardBack = new Blocks.Image("Bilder/Kort/challengeCardBack.png", {x: 370, y: 200, width: 330, height: 450});
     const chanceCardBack = new Blocks.Image("Bilder/Kort/chanceCardBack.png", {x: 720, y: 200, width: 330, height: 450});
     Actions.Click(cityButton, () => {
+        forestBackgroundMusic.pause();
         GaaTil(sceneCityHub);
     });
     Actions.Click(beachButton, () => {
+        forestBackgroundMusic.pause();
         GaaTil(sceneBeachHub);
     });
     Actions.Click(kindergartenButton, () => {
+        forestBackgroundMusic.pause();
         GaaTil(sceneOutro1);
     });
     Actions.Click(qCardBack, () => {
+        forestBackgroundMusic.pause();
         GaaTil(sceneForestQuestionFront);
     });
     Actions.Click(chCardBack, () => {
+        forestBackgroundMusic.pause();
         GaaTil(sceneForestChallengeFront);
     });
     Actions.Click(chanceCardBack, () => {
+        forestBackgroundMusic.pause();
         GaaTil(sceneForestChanceFront);
     });
 }
