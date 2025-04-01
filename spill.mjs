@@ -25,6 +25,7 @@ const Start = (maal) => {
 // MUSIKK
     let titlescreenmusic = new Audio("Lydfiler/Musikk/titlescreenmusic.mp3");
     let forestBackgroundMusic = new Audio("Lydfiler/Musikk/forestBackgroundMusic.mp3");
+    let beachBackgroundMusic = new Audio("Lydfiler/Musikk/beachBackgroundMusic.mp3");
 
 // OBJEKTLYDER
     let flyingplanesound = new Audio("Lydfiler/Objektlyder/planesound.mp3");
@@ -69,7 +70,7 @@ function startscreen() {
     const startscreenobject = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 325, y: 150, width: 400, height:500 });
     const skipbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 200, y: 200, width: 200, height: 200});                           // HUSK Å FJERNE DETTE
     Actions.Click(skipbutton, () => {
-        GaaTil(sceneForestHub);
+        GaaTil(sceneBeachHub);
     })
     Actions.Click(startscreenobject, () => {
         GaaTil(titlescreen);
@@ -363,7 +364,9 @@ function sceneBeachIntro1() {
 
 }
 
-function sceneBeachHub() {                                                                                                      // Spille inn bakgrunnsmusikk?
+function sceneBeachHub() {
+    beachBackgroundMusic.play();
+    beachBackgroundMusic.loop = true;
     const sceneBeachBackground = new Blocks.Image("Bilder/Bakgrunner/beach.png", {x: -8, y: -8, width: 1088, height: 818});
     const cityButton = new Blocks.Image("Bilder/Knapper/cityButton.PNG", {x: 200, y: 20, width: 150, height: 150});
     const forestButton = new Blocks.Image("Bilder/Knapper/forestButton.PNG", {x: 717, y: 20, width: 150, height: 150});
@@ -372,21 +375,27 @@ function sceneBeachHub() {                                                      
     const chCardBack = new Blocks.Image("Bilder/Kort/challengeCardBack.png", {x: 370, y: 200, width: 330, height: 450});
     const chanceCardBack = new Blocks.Image("Bilder/Kort/chanceCardBack.png", {x: 720, y: 200, width: 330, height: 450});
     Actions.Click(forestButton, () => {
+        beachBackgroundMusic.pause();
         GaaTil(sceneForestHub);
     });
     Actions.Click(cityButton, () => {
+        beachBackgroundMusic.pause();
         GaaTil(sceneCityHub);
     });
     Actions.Click(kindergartenButton, () => {
+        beachBackgroundMusic.pause();
         GaaTil(sceneOutro1);
     });
     Actions.Click(qCardBack, () => {
+        beachBackgroundMusic.pause();
         GaaTil(sceneBeachQuestionFront);
     });
     Actions.Click(chCardBack, () => {
+        beachBackgroundMusic.pause();
         GaaTil(sceneBeachChallengeFront);
     });
     Actions.Click(chanceCardBack, () => {
+        beachBackgroundMusic.pause();
         GaaTil(sceneBeachChanceFront);
     });
 }
@@ -433,7 +442,7 @@ function sceneForestIntro1() {
 
 function sceneForestHub() {
     forestBackgroundMusic.play();
-    forestBackgroundMusic.loop=true;
+    forestBackgroundMusic.loop = true;
     const sceneForestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", {x: -8, y: -8, width: 1088, height: 818});
     const cityButton = new Blocks.Image("Bilder/Knapper/cityButton.PNG", {x: 200, y: 20, width: 150, height: 150});
     const beachButton = new Blocks.Image("Bilder/Knapper/beachButton.PNG", {x: 717, y: 20, width: 150, height: 150});
