@@ -62,6 +62,14 @@ const Start = (maal) => {
 
     // BEACH
 
+        // CHANCE
+        let chanceCardB1Voice = new Audio("Lydfiler/Kort/Beach/Chance/chanceCardB1Voice.mp3");
+        let chanceCardB2Voice = new Audio("Lydfiler/Kort/Beach/Chance/chanceCardB2Voice.mp3");
+        let chanceCardB3Voice = new Audio("Lydfiler/Kort/Beach/Chance/chanceCardB3Voice.mp3");
+        let chanceCardB4Voice = new Audio("Lydfiler/Kort/Beach/Chance/chanceCardB4Voice.mp3");
+        let chanceCardB5Voice = new Audio("Lydfiler/Kort/Beach/Chance/chanceCardB5Voice.mp3");
+        let chanceCardB6Voice = new Audio("Lydfiler/Kort/Beach/Chance/chanceCardB6Voice.mp3");
+
 
 
 Start(startscreen);
@@ -689,51 +697,63 @@ function sceneBeachChanceFront() {
     const beachmap = new Blocks.Image("Bilder/Bakgrunner/beach.png", {x: -8, y: -8, width: 1088, height: 818});
     let tall = Math.floor(Math.random() * 6);
     if (tall === 0) {
+        chanceCardB1Voice.play();
         const chanceCard0 = new Blocks.Image("Bilder/Kort/Beach/Chance/chanceCardB1.png", {x: 30, y: 10, width: 1020, height: 700});
         // Spill inn lyd + legg inn objekter?
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
+            chanceCardB1Voice.pause();
             GaaTil(sceneBeachHub);
         });
 
     } else if (tall === 1) {
+        chanceCardB2Voice.play();
         const chanceCard1 = new Blocks.Image("Bilder/Kort/Beach/Chance/chanceCardB2.png", {x: 30, y: 10, width: 1020, height: 700});
         // Spill inn lyd + legg inn objekter?
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
+            chanceCardB2Voice.pause();
             GaaTil(sceneBeachHub);
         });
 
     } else if (tall === 2) {
+        chanceCardB3Voice.play();
         const chanceCard2 = new Blocks.Image("Bilder/Kort/Beach/Chance/chanceCardB3.png", {x: 30, y: 10, width: 1020, height: 700});
         const plane = new Blocks.Image("Bilder/Objekter/plane.png", {x: 600, y: 450, width: 400, height: 220});
         // Spill inn lyd 
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
+            chanceCardB3Voice.pause();
             GaaTil(sceneBeachHub);
         });
 
     } else if (tall === 3) {
+        chanceCardB4Voice.play();
         const chanceCard3 = new Blocks.Image("Bilder/Kort/Beach/Chance/chanceCardB4.png", {x: 30, y: 10, width: 1020, height: 700});
         // Spill inn lyd + legg inn objekter?
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
+            chanceCardB4Voice.pause();
             GaaTil(sceneBeachHub);
         });
 
     } else if (tall === 4) {
+        chanceCardB5Voice.play();
         const chanceCard4 = new Blocks.Image("Bilder/Kort/Beach/Chance/chanceCardB5.png", {x: 30, y: 10, width: 1020, height: 700});
         // Spill inn lyd + legg inn objekter?
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 120, height: 110});
         Actions.Click(continueButton, () => {
+            chanceCardB5Voice.pause();
             GaaTil(sceneBeachHub);
         });
 
     } else if (tall === 5) {
+        chanceCardB6Voice.play();
         const chanceCard5 = new Blocks.Image("Bilder/Kort/Beach/Chance/chanceCardB6.png", {x: 30, y: 10, width: 1020, height: 700});
         // Spill inn lyd + legg inn objekter?
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
+            chanceCardB6Voice.pause();
             GaaTil(sceneBeachHub);
         });
     }
