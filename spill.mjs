@@ -777,7 +777,6 @@ function sceneForestQuestionFront() {
 
     } else if (tall === 4) {
         const forestQuestion5 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFOwlSound.png", {x: 30, y: 10, width: 1020, height: 700});
-
         // Legg til en knapp for å spille av lyden, spill også inn lyden (uglelyd) + objekter + lyd
 
     } else if (tall === 5) {
