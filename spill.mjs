@@ -58,6 +58,11 @@ const Start = (maal) => {
     let applause = new Audio("Lydfiler/Kort/Responses/applause.mp3");
     let notQuiteCorrect = new Audio("Lydfiler/Kort/Responses/notQuiteCorrect.mp3");
     let wrongAnswerSound1 = new Audio("Lydfiler/Kort/Responses/wrongAnswerSound1.mp3");
+    let wrongAnswerSound2 = new Audio("Lydfiler/Kort/Responses/wrongAnswerSound2.mp3");
+    let challengeCompleted1 = new Audio("Lydfiler/Kort/Responses/challengeCompleted1.mp3");
+    let challengeCompleted2 = new Audio("Lydfiler/Kort/Responses/challengeCompleted2.mp3");
+    let challengeNotCompleted1 = new Audio("Lydfiler/Kort/Responses/challengeNotCompleted1.mp3");
+    let yesCorrect = new Audio("Lydfiler/Kort/Responses/yesCorrect.mp3");
 
     // FOREST
 
@@ -68,6 +73,30 @@ const Start = (maal) => {
         let chanceCardF4Voice = new Audio("Lydfiler/Kort/Forest/Chance/chanceCardF4Voice.mp3");
         let chanceCardF5Voice = new Audio("Lydfiler/Kort/Forest/Chance/chanceCardF5Voice.mp3");
         let chanceCardF6Voice = new Audio("Lydfiler/Kort/Forest/Chance/chanceCardF6Voice.mp3");
+
+        // QUESTION
+        let qCardFBiggestAnimalVoice = new Audio("Lydfiler/Kort/Forest/Question/qCardFBiggestAnimalVoice.mp3");
+        let qCardFCountingSquirrelsVoice = new Audio("Lydfiler/Kort/Forest/Question/qCardFCountingSquirrelsVoice.mp3");
+        let qCardFMikkelRevVoice = new Audio("Lydfiler/Kort/Forest/Question/qCardFMikkelRevVoice.mp3");
+        let qCardFOddOneOutVoice = new Audio("Lydfiler/Kort/Forest/Question/qCardFOddOneOutVoice.mp3");
+        let qCardFOwlSoundVoice = new Audio("Lydfiler/Kort/Forest/Question/qCardFOwlSoundVoice.mp3");
+        let qCardFWhatTreeLosesLeavesVoice = new Audio("Lydfiler/Kort/Forest/Question/qCardFWhatTreeLosesLeavesVoice.mp3");
+        let qCardFWhoEatsNutsVoice = new Audio("Lydfiler/Kort/Forest/Question/qCardFWhoEatsNutsVoice.mp3");
+        let qCardFWhoHowlsVoice = new Audio("Lydfiler/Kort/Forest/Question/qCardFWhoHowlsVoice.mp3");
+        let qCardFWhoMakesHoneyVoice = new Audio("Lydfiler/Kort/Forest/Question/qCardFWhoMakesHoneyVoice.mp3");
+        let qCardFWoodpeckerVoice = new Audio("Lydfiler/Kort/Forest/Question/qCardFWoodpeckerVoice.mp3");
+
+        // CHALLENGE
+        let chCardFFloodVoice = new Audio("Lydfiler/Kort/Forest/Challenge/chCardFFloodVoice.mp3");
+        let chCardFGiraffeLostVoice = new Audio("Lydfiler/Kort/Forest/Challenge/chCardFGiraffeLostVoice.mp3");
+        let chCardFHulkBabyPoopVoice = new Audio("Lydfiler/Kort/Forest/Challenge/chCardFHulkBabyPoopVoice.mp3");
+        let chCardFJumpLikeRabbitVoice = new Audio("Lydfiler/Kort/Forest/Challenge/chCardFJumpLikeRabbitVoice.mp3");
+        let chCardFMooseLaughVoice = new Audio("Lydfiler/Kort/Forest/Challenge/chCardFMooseLaughVoice.mp3");
+        let chCardFNameAnimalsVoice = new Audio("Lydfiler/Kort/Forest/Challenge/chCardFNameAnimalsVoice.mp3");
+        let chCardFRobotMushroomVoice = new Audio("Lydfiler/Kort/Forest/Challenge/chCardFRobotMushroomVoice.mp3");
+        let chCardFSongAboutTrollVoice = new Audio("Lydfiler/Kort/Forest/Challenge/chCardFSongAboutTrollVoice.mp3");
+        let chCardFStretchLikeTreeVoice = new Audio("Lydfiler/Kort/Forest/Challenge/chCardFStretchLikeTreeVoice.mp3");
+        let chCardFTadpoleVoice = new Audio("Lydfiler/Kort/Forest/Challenge/chCardFTadpoleVoice.mp3");
 
     // CITY
 
@@ -81,6 +110,25 @@ const Start = (maal) => {
         let chanceCardC7Voice = new Audio("Lydfiler/Kort/City/Chance/chanceCardC7Voice.mp3");
         let chanceCardC8Voice = new Audio("Lydfiler/Kort/City/Chance/chanceCardC8Voice.mp3");
 
+        // QUESTION
+        let qCardCCountingWindowsVoice = new Audio("Lydfiler/Kort/City/Question/qCardCCountingWindowsVoice.mp3");
+        let qCardCRedLightVoice = new Audio("Lydfiler/Kort/City/Question/qCardCRedLightVoice.mp3");
+        let qCardCTwoThingsBakerVoice = new Audio("Lydfiler/Kort/City/Question/qCardCTwoThingsBakerVoice.mp3");
+        let qCardCWhatColorTrafficLightVoice = new Audio("Lydfiler/Kort/City/Question/qCardCWhatColorTrafficLightVoice.mp3");
+        let qCardCWhatIsABusVoice = new Audio("Lydfiler/Kort/City/Question/qCardCWhatIsABusVoice.mp3");
+        let qCardCWhatIsDoctorVoice = new Audio("Lydfiler/Kort/City/Question/qCardCWhatIsDoctorVoice.mp3");
+        let qCardCWhatIsFiremanVoice = new Audio("Lydfiler/Kort/City/Question/qCardCWhatIsFiremanVoice.mp3");
+        let qCardCWhatIsPoliceVoice = new Audio("Lydfiler/Kort/City/Question/qCardCWhatIsPoliceVoice.mp3");
+        let qCardCWhatIsStoreVoice = new Audio("Lydfiler/Kort/City/Question/qCardCWhatIsStoreVoice.mp3");
+        let qCardCWheelsOnTheBusVoice = new Audio("Lydfiler/Kort/City/Question/qCardCWheelsOnTheBusVoice.mp3");
+
+        // CHALLENGE
+        let chCardCBakeBreadVoice = new Audio("Lydfiler/Kort/City/Challenge/chCardCBakeBreadVoice.mp3");
+        let chCardCBuildBuildingVoice = new Audio("Lydfiler/Kort/City/Challenge/chCardCBuildBuildingVoice.mp3");
+        let chCardCCatHidingVoice = new Audio("Lydfiler/Kort/City/Challenge/chCardCCatHidingVoice.mp3");
+        let chCardCCountCarsVoice = new Audio("Lydfiler/Kort/City/Challenge/chCardCCountCarsVoice.mp3");
+        let chCardCDroppedGroceriesVoice = new Audio("Lydfiler/Kort/City/Challenge/chCardCDroppedGroceriesVoice.mp3");
+
     // BEACH
 
         // CHANCE
@@ -90,6 +138,28 @@ const Start = (maal) => {
         let chanceCardB4Voice = new Audio("Lydfiler/Kort/Beach/Chance/chanceCardB4Voice.mp3");
         let chanceCardB5Voice = new Audio("Lydfiler/Kort/Beach/Chance/chanceCardB5Voice.mp3");
         let chanceCardB6Voice = new Audio("Lydfiler/Kort/Beach/Chance/chanceCardB6Voice.mp3");
+
+        // QUESTION
+        let qCardBBiggestSandCastleVoice = new Audio("Lydfiler/Kort/Beach/Question/qCardBBiggestSandCastleVoice.mp3");
+        let qCardBGarbageVoice = new Audio("Lydfiler/Kort/Beach/Question/qCardBGarbageVoice.mp3");
+        let qCardBJellyfishStringVoice = new Audio("Lydfiler/Kort/Beach/Question/qCardBJellyfishStringVoice.mp3");
+        let qCardBOddOneOutVoice = new Audio("Lydfiler/Kort/Beach/Question/qCardBOddOneOutVoice.mp3");
+        let qCardBSandTracksVoice = new Audio("Lydfiler/Kort/Beach/Question/qCardBSandTracksVoice.mp3");
+        let qCardBSharkVoice = new Audio("Lydfiler/Kort/Beach/Question/qCardBSharkVoice.mp3");
+        let qCardBStarfishVoice = new Audio("Lydfiler/Kort/Beach/Question/qCardBStarfishVoice.mp3");
+        let qCardBSunscreenVoice = new Audio("Lydfiler/Kort/Beach/Question/qCardBSunscreenVoice.mp3");
+        let qCardBSwimSafelyVoice = new Audio("Lydfiler/Kort/Beach/Question/qCardBSwimSafelyVoice.mp3");
+        let qCardBThreeDifferentAnimalsVoice = new Audio("Lydfiler/Kort/Beach/Question/qCardBThreeDifferentAnimalsVoice.mp3");
+        let qCardBWhaleVoice = new Audio("Lydfiler/Kort/Beach/Question/qCardBWhaleVoice.mp3");
+
+        // CHALLENGE
+        let chCardBBiggestFishVoice = new Audio("Lydfiler/Kort/Beach/Challenge/chCardBBiggestFishVoice.mp3");
+        let chCardBCatWaterVoice = new Audio("Lydfiler/Kort/Beach/Challenge/chCardBCatWaterVoice.mp3");
+        let chCardBCountFishVoice = new Audio("Lydfiler/Kort/Beach/Challenge/chCardBCountFishVoice.mp3");
+        let chCardBMermaidCatVoice = new Audio("Lydfiler/Kort/Beach/Challenge/chCardBMermaidCatVoice.mp3");
+        let chCardBSongAboutOceanVoice = new Audio("Lydfiler/Kort/Beach/Challenge/chCardBSongAboutOceanVoice.mp3");
+        let chCardBSunburntGiraffeVoice = new Audio("Lydfiler/Kort/Beach/Challenge/chCardBSunburntGiraffeVoice.mp3");
+        let chCardBWalkLikeCrabVoice = new Audio("Lydfiler/Kort/Beach/Challenge/chCardBWalkLikeCrabVoice.mp3");
 
 
 
@@ -584,53 +654,59 @@ function sceneForestChanceFront() {
     let tall = Math.floor(Math.random() * 6);
     if (tall === 0) {
         const chanceCard0 = new Blocks.Image("Bilder/Kort/Forest/Chance/chanceCardF1.png", {x: 30, y: 10, width: 1020, height: 700});
+        chanceCardF1Voice.play();
         const seagull = new Blocks.Image("Bilder/Objekter/seagull.png", {x: 0, y: 460, width: 400, height: 250});
-        // Spill inn lyd 
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
+            chanceCardF1Voice.pause();
             GaaTil(sceneForestHub);
         });
 
     } else if (tall === 1) {
         const chanceCard1 = new Blocks.Image("Bilder/Kort/Forest/Chance/chanceCardF2.png", {x: 30, y: 10, width: 1020, height: 700});
+        chanceCardF2Voice.play();
         const bootMud = new Blocks.Image("Bilder/Objekter/bootInMud.png", {x: 600, y: 460, width: 400, height: 250});
-        // Spill inn lyd
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
+            chanceCardF2Voice.pause();
             GaaTil(sceneForestHub);
         });
 
     } else if (tall === 2) {
         const chanceCard2 = new Blocks.Image("Bilder/Kort/Forest/Chance/chanceCardF3.png", {x: 30, y: 10, width: 1020, height: 700});
+        chanceCardF3Voice.play();
         const rocks = new Blocks.Image("Bilder/Objekter/rocks1.png", {x: 600, y: 400, width: 300, height: 250});
-        // Spill inn lyd
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
+            chanceCardF3Voice.pause();
             GaaTil(sceneForestHub);
         });
 
     } else if (tall === 3) {
         const chanceCard3 = new Blocks.Image("Bilder/Kort/Forest/Chance/chanceCardF4.png", {x: 30, y: 10, width: 1020, height: 700});
+        chanceCardF4Voice.play();
         const troll = new Blocks.Image("Bilder/Karakterer/troll.png", {x: 700, y: 400, width: 300, height: 300});
-        // Spill inn lyd
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
+            chanceCardF4Voice.pause();
             GaaTil(sceneForestHub);
         });
 
     } else if (tall === 4) {
         const chanceCard4 = new Blocks.Image("Bilder/Kort/Forest/Chance/chanceCardF5.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Spill inn lyd 
+        chanceCardF5Voice.play();
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
+            chanceCardF5Voice.pause();
             GaaTil(sceneForestHub);
         });
 
     } else if (tall === 5) {
         const chanceCard5 = new Blocks.Image("Bilder/Kort/Forest/Chance/chanceCardF6.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Spill inn lyd  
+        chanceCardF6Voice.play();
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
+            chanceCardF6Voice.pause();
             GaaTil(sceneForestHub);
         });
     }
@@ -644,68 +720,76 @@ function sceneCityChanceFront() {
     let tall = Math.floor(Math.random() * 8);
     if (tall === 0) {
         const chanceCard0 = new Blocks.Image("Bilder/Kort/City/Chance/chanceCardC1.png", {x: 30, y: 10, width: 1020, height: 700});
+        chanceCardC1Voice.play();
         const redLight = new Blocks.Image("Bilder/Objekter/redLight.png", {x: 800, y: 450, width: 150, height: 250});
-        // Spill inn lyd
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
+            chanceCardC1Voice.pause();
             GaaTil(sceneCityHub);
         });
 
     } else if (tall === 1) {
         const chanceCard1 = new Blocks.Image("Bilder/Kort/City/Chance/chanceCardC2.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Spill inn lyd 
+        chanceCardC2Voice.play();
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
+            chanceCardC2Voice.pause();
             GaaTil(sceneCityHub);
         });
 
     } else if (tall === 2) {
         const chanceCard2 = new Blocks.Image("Bilder/Kort/City/Chance/chanceCardC3.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Spill inn lyd 
+        chanceCardC3Voice.play();
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
+            chanceCardC3Voice.pause();
             GaaTil(sceneCityHub);
         });
 
     } else if (tall === 3) {
         const chanceCard3 = new Blocks.Image("Bilder/Kort/City/Chance/chanceCardC4.png", {x: 30, y: 10, width: 1020, height: 700})
+        chanceCardC4Voice.play();
         const bus = new Blocks.Image("Bilder/Objekter/bus.png", {x: 650, y: 480, width: 300, height: 200});
-        // Spill inn lyd 
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
+            chanceCardC4Voice.pause();
             GaaTil(sceneCityHub);
         });
 
     } else if (tall === 4) {
         const chanceCard4 = new Blocks.Image("Bilder/Kort/City/Chance/chanceCardC5.png", {x: 30, y: 10, width: 1020, height: 700});
+        chanceCardC5Voice.play();
         const racecar = new Blocks.Image("Bilder/Objekter/raceCar.png", {x: 700, y: 500, width: 300, height: 200});
-        // Spill inn lyd 
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
+            chanceCardC5Voice.pause();
             GaaTil(sceneCityHub);
         });
 
     } else if (tall === 5) {
         const chanceCard5 = new Blocks.Image("Bilder/Kort/City/Chance/chanceCardC6.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Spill inn lyd 
+        chanceCardC6Voice.play();
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
+            chanceCardC6Voice.pause();
             GaaTil(sceneCityHub);
         });
 
     } else if (tall === 6) {
         const chanceCard6 = new Blocks.Image("Bilder/Kort/City/Chance/chanceCardC7.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Spill inn lyd 
+        chanceCardC7Voice.play();
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 120, height: 110});
         Actions.Click(continueButton, () => {
+            chanceCardC7Voice.pause();
             GaaTil(sceneCityHub);
         });
 
     } else if (tall === 7) {
         const chanceCard7 = new Blocks.Image("Bilder/Kort/City/Chance/chanceCardC8.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Spill inn lyd 
+        chanceCardC8Voice.play();
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 120, height: 110});
         Actions.Click(continueButton, () => {
+            chanceCardC8Voice.pause();
             GaaTil(sceneCityHub);
         });
     }
@@ -1085,13 +1169,13 @@ function sceneForestQ1Answer() {
         }
     })
     Actions.Click(wronganswer2, () => {
-        wrongAnswerSound2.play();                       // spill inn wrongAnswerSound2.play
+        wrongAnswerSound2.play();
         wrongAnswerSound2.onended = () => {
             GaaTil(sceneForestHub);
         }
     })
     Actions.Click(correctanswer, () => {
-        yesCorrect.play();                              // spill inn yesCorrect.play
+        yesCorrect.play();
         yesCorrect.onended = () => {
             GaaTil(sceneForestHub);
         }
@@ -1120,7 +1204,7 @@ function sceneForestQ2Answer() {
         }
     })
     Actions.Click(placeholderWrong2, () => {
-        wrongAnswerSound2.play();                       // spill inn wrongAnswerSound2.play();
+        wrongAnswerSound2.play();
         wrongAnswerSound2.onended = () => {
             GaaTil(sceneForestHub);
         }
@@ -1149,8 +1233,8 @@ function sceneForestQ3Answer() {
         }
     })
     Actions.Click(wronganswer2, () => {
-        wronganswer2.play();                            // spill inn wronganswer2.play
-        wronganswer2.onended = () => {
+        wrongAnswerSound2.play();
+        wrongAnswerSound2.onended = () => {
             GaaTil(sceneForestHub);
         }
     })
@@ -1172,7 +1256,7 @@ function sceneForestQ9Answer() {
     const wronganswer2 = new Blocks.Image("Bilder/Karakterer/turtle.png", {x: 680, y: 285, width: 200, height: 200});
     const correctanswer = new Blocks.Image("Bilder/Objekter/bee.png", {x: 240, y: 505, width: 200, height: 200});
     Actions.Click(wronganswer1, () => {
-        wrongAnswerSound1.play();                       // spill inn wrongAnswerSound1.play
+        wrongAnswerSound1.play();
         wrongAnswerSound1.onended = () => {
             GaaTil(sceneForestHub);
         }
@@ -1184,7 +1268,7 @@ function sceneForestQ9Answer() {
         }
     })
     Actions.Click(correctanswer, () => {
-        applause.play();                                // spill inn applause.play
+        applause.play();
         applause.onended = () => {
             GaaTil(sceneForestHub);
         }
