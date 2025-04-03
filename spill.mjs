@@ -53,12 +53,33 @@ const Start = (maal) => {
     let ouchCatMainChar = new Audio("Lydfiler/Karakterer/ouchCatMainChar.mp3"); 
 
 // KORT
-    
+
+    // RESPONSES
+    let applause = new Audio("Lydfiler/Kort/Responses/applause.mp3");
+    let notQuiteCorrect = new Audio("Lydfiler/Kort/Responses/notQuiteCorrect.mp3");
+    let wrongAnswerSound1 = new Audio("Lydfiler/Kort/Responses/wrongAnswerSound1.mp3");
+
     // FOREST
 
+        // CHANCE
+        let chanceCardF1Voice = new Audio("Lydfiler/Kort/Forest/Chance/chanceCardF1Voice.mp3");
+        let chanceCardF2Voice = new Audio("Lydfiler/Kort/Forest/Chance/chanceCardF2Voice.mp3");
+        let chanceCardF3Voice = new Audio("Lydfiler/Kort/Forest/Chance/chanceCardF3Voice.mp3");
+        let chanceCardF4Voice = new Audio("Lydfiler/Kort/Forest/Chance/chanceCardF4Voice.mp3");
+        let chanceCardF5Voice = new Audio("Lydfiler/Kort/Forest/Chance/chanceCardF5Voice.mp3");
+        let chanceCardF6Voice = new Audio("Lydfiler/Kort/Forest/Chance/chanceCardF6Voice.mp3");
 
     // CITY
 
+        // CHANCE
+        let chanceCardC1Voice = new Audio("Lydfiler/Kort/City/Chance/chanceCardC1Voice.mp3");
+        let chanceCardC2Voice = new Audio("Lydfiler/Kort/City/Chance/chanceCardC2Voice.mp3");
+        let chanceCardC3Voice = new Audio("Lydfiler/Kort/City/Chance/chanceCardC3Voice.mp3");
+        let chanceCardC4Voice = new Audio("Lydfiler/Kort/City/Chance/chanceCardC4Voice.mp3");
+        let chanceCardC5Voice = new Audio("Lydfiler/Kort/City/Chance/chanceCardC5Voice.mp3");
+        let chanceCardC6Voice = new Audio("Lydfiler/Kort/City/Chance/chanceCardC6Voice.mp3");
+        let chanceCardC7Voice = new Audio("Lydfiler/Kort/City/Chance/chanceCardC7Voice.mp3");
+        let chanceCardC8Voice = new Audio("Lydfiler/Kort/City/Chance/chanceCardC8Voice.mp3");
 
     // BEACH
 
@@ -148,7 +169,7 @@ function sceneIntro2() {
     const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 700, y: 50, width: 150, height: 150});
     const mainCharMoving = Actions.Tween(mainChar, -10, 6);
     continueButton.hide();
-    Actions.Colide(mainChar, yellowball, () => {Actions.Tween(yellowball, -10, 10)});                       // Spørre hvordan jeg kan stoppe denne
+    Actions.Colide(mainChar, yellowball, () => {Actions.Tween(yellowball, -10, 10)});
     Actions.Colide(mainChar, yellowball, () => {mainCharMoving.pause()});
     Actions.Colide(mainChar, yellowball, () => {boingsound.play()});
     boingsound.onended = () => {
@@ -1058,7 +1079,7 @@ function sceneForestQ1Answer() {
     const wronganswer2 = new Blocks.Image("Bilder/Karakterer/fish1.png", {x: 680, y: 285, width: 200, height: 200});
     const correctanswer = new Blocks.Image("Bilder/Karakterer/mooseClosedMouth.png", {x: 270, y: 505, width: 150, height: 200});
     Actions.Click(wronganswer1, () => {
-        notQuiteCorrect.play();                         // spill inn notQuiteCorrect.play
+        notQuiteCorrect.play();
         notQuiteCorrect.onended = () => {
             GaaTil(sceneForestHub);
         }
@@ -1093,7 +1114,7 @@ function sceneForestQ2Answer() {
     const placeholderWrong2 = new Blocks.Image("Bilder/Objekter/milk.png", {x: 500, y: 315, width: 150, height: 150});                                          // BYTTE UT 
     const placeholderCorrect3 = new Blocks.Image("Bilder/Objekter/tomato.png", {x: 570, y: 575, width: 150, height: 150});                                      // PLACEHOLDERS
     Actions.Click(placeholderWrong1, () => {
-        wrongAnswerSound1.play();                       // spill inn wrongAnswerSound1.play()
+        wrongAnswerSound1.play();
         wrongAnswerSound1.onended = () => {
             GaaTil(sceneForestHub);
         }
@@ -1105,7 +1126,7 @@ function sceneForestQ2Answer() {
         }
     })
     Actions.Click(placeholderCorrect3, () => {
-        applause.play();                                // spill inn applause.play();
+        applause.play();
         applause.onended = () => {
             GaaTil(sceneForestHub);
         }
@@ -1122,7 +1143,7 @@ function sceneForestQ3Answer() {
     const wronganswer2 = new Blocks.Image("Bilder/Karakterer/mooseClosedMouth.png", {x: 680, y: 285, width: 200, height: 200});
     const wronganswer1 = new Blocks.Image("Bilder/Karakterer/bearSleeping.png", {x: 240, y: 535, width: 200, height: 150});
     Actions.Click(wronganswer1, () => {
-        notQuiteCorrect.play();                         // spill inn notQuiteCorrect.play
+        notQuiteCorrect.play();
         notQuiteCorrect.onended = () => {
             GaaTil(sceneForestHub);
         }
@@ -1134,7 +1155,7 @@ function sceneForestQ3Answer() {
         }
     })
     Actions.Click(correctanswer, () => {
-        applause.play();                                // spill inn applause.play
+        applause.play();
         applause.onended = () => {
             GaaTil(sceneForestHub);
         }
