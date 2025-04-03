@@ -169,7 +169,7 @@ function startscreen() {
     const startscreenobject = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 325, y: 150, width: 400, height:500 });
     const skipbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 200, y: 200, width: 200, height: 200});                           // HUSK Å FJERNE DETTE
     Actions.Click(skipbutton, () => {
-        GaaTil(sceneBeachHub);
+        GaaTil(sceneForestQ2Answer);
     })
     Actions.Click(startscreenobject, () => {
         GaaTil(titlescreen);
@@ -1194,22 +1194,22 @@ function sceneForestQ2Answer() {
     const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 360, y: 20, width: 325, height: 225});
     const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 420, y: 280, width: 325, height: 225});
     const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 480, y: 540, width: 325, height: 225});
-    const placeholderWrong1 = new Blocks.Image("Bilder/Objekter/plum.png", {x: 450, y: 55, width: 150, height: 150});                                           // HUSK Å 
-    const placeholderWrong2 = new Blocks.Image("Bilder/Objekter/milk.png", {x: 500, y: 315, width: 150, height: 150});                                          // BYTTE UT 
-    const placeholderCorrect3 = new Blocks.Image("Bilder/Objekter/tomato.png", {x: 570, y: 575, width: 150, height: 150});                                      // PLACEHOLDERS
-    Actions.Click(placeholderWrong1, () => {
+    const wronganswer1 = new Blocks.Image("Bilder/Objekter/handFourFinger.png", {x: 450, y: 55, width: 150, height: 150});
+    const wronganswer2 = new Blocks.Image("Bilder/Objekter/handOneFinger.png", {x: 500, y: 315, width: 150, height: 150});
+    const correctanswer = new Blocks.Image("Bilder/Objekter/handFiveFinger.png", {x: 570, y: 575, width: 150, height: 150});
+    Actions.Click(wronganswer1, () => {
         wrongAnswerSound1.play();
         wrongAnswerSound1.onended = () => {
             GaaTil(sceneForestHub);
         }
     })
-    Actions.Click(placeholderWrong2, () => {
+    Actions.Click(wronganswer2, () => {
         wrongAnswerSound2.play();
         wrongAnswerSound2.onended = () => {
             GaaTil(sceneForestHub);
         }
     })
-    Actions.Click(placeholderCorrect3, () => {
+    Actions.Click(correctanswer, () => {
         applause.play();
         applause.onended = () => {
             GaaTil(sceneForestHub);
