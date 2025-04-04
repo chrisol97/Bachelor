@@ -169,7 +169,7 @@ function startscreen() {
     const startscreenobject = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 325, y: 150, width: 400, height:500 });
     const skipbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 200, y: 200, width: 200, height: 200});                           // HUSK Å FJERNE DETTE
     Actions.Click(skipbutton, () => {
-        GaaTil(sceneForestQ2Answer);
+        GaaTil(sceneForestQ10Answer);
     })
     Actions.Click(startscreenobject, () => {
         GaaTil(titlescreen);
@@ -893,6 +893,11 @@ function sceneForestQuestionFront() {
     } else if (tall === 2) {
         const forestQuestion3 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFMikkelRev.png", {x: 30, y: 10, width: 1020, height: 700});
         qCardFMikkelRevVoice.play();
+        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
+        Actions.Click(continueButton, () => {
+            qCardFMikkelRevVoice.pause();
+            GaaTil(sceneForestQ3Answer)
+        })
         // Legg til knapp for "riktig svar" og knapp for "feil svar" + objekter + lyd
 
     } else if (tall === 3) {
@@ -901,27 +906,47 @@ function sceneForestQuestionFront() {
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             qCardFOddOneOutVoice.pause();
-            GaaTil(sceneForestQ3Answer);
+            GaaTil(sceneForestQ4Answer);
         })
 
     } else if (tall === 4) {
         const forestQuestion5 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFOwlSound.png", {x: 30, y: 10, width: 1020, height: 700});
         qCardFOwlSoundVoice.play();
+        const continueButton = new Blocks.Image("Bilder/Kort/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
+        Actions.Click(continueButton, () => {
+            qCardFOwlSoundVoice.pause();
+            GaaTil(sceneForestQ5Answer);
+        })
         // Legg til en knapp for å spille av lyden, spill også inn lyden (uglelyd) + objekter + lyd
 
     } else if (tall === 5) {
         const forestQuestion6 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWhatTreeLosesLeaves.png", {x: 30, y: 10, width: 1020, height: 700});
         qCardFWhatTreeLosesLeavesVoice.play();
+        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
+        Actions.Click(continueButton, () => {
+            qCardFWhatTreeLosesLeavesVoice.pause();
+            GaaTil(sceneForestQ6Answer);
+        })
         // Legg til knapp for "riktig svar", og knapp for "feil svar", evt selve oppgaven? + objekter + lyd
 
     } else if (tall === 6) {
         const forestQuestion7 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWhoEatsNuts.png", {x: 30, y: 10, width: 1020, height: 700});
         qCardFWhoEatsNutsVoice.play();
+        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
+        Actions.Click(continueButton, () => {
+            qCardFWhoEatsNutsVoice.pause();
+            GaaTil(sceneForestQ7Answer);
+        })
         // Legg til knapp for "riktig svar", og knapp for "feil svar", evt selve oppgaven? + objekter + lyd
 
     } else if (tall === 7) {
         const forestQuestion8 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWhoHowls.png", {x: 30, y: 10, width: 1020, height: 700});
         qCardFWhoHowlsVoice.play();
+        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
+        Actions.Click(continueButton, () => {
+            qCardFWhoHowlsVoice.pause();
+            GaaTil(sceneForestQ8Answer);
+        })
         // Legg til knapp for "riktig svar", og knapp for "feil svar" + objekter + lyd
 
     } else if (tall === 8) {
@@ -937,6 +962,11 @@ function sceneForestQuestionFront() {
     } else if (tall === 9) {
         const forestQuestion10 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWoodpecker.png", {x: 30, y: 10, width: 1020, height: 700});
         qCardFWoodpeckerVoice.play();
+        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
+        Actions.Click(continueButton, () => {
+            qCardFWoodpeckerVoice.pause();
+            GaaTil(sceneForestQ10Answer);
+        })
         // Legg til knapp for "riktig svar" og knapp for "feil svar" + objekter + lyd
     }
 }
@@ -1272,6 +1302,34 @@ function sceneForestQ2Answer() {
 }
 
 function sceneForestQ3Answer() {
+    const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground2.png", {x: -8, y:  -8, width: 1088, height: 818});
+    const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 100, y: 100, width: 375, height: 275});
+    const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 600, y: 250, width: 375, height: 275});
+    const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 150, y: 470, width: 375, height: 275});
+    const wronganswer1 = new Blocks.Image("Bilder/Kort/KortSvar/Forest/Question/qCardFMikkelRevWrong1.png", {x: 180, y: 130, width: 210, height: 210});
+    const wronganswer2 = new Blocks.Image("Bilder/Kort/KortSvar/Forest/Question/qCardFMikkelRevWrong2.png", {x: 235, y: 510, width: 210, height: 200});
+    const correctanswer = new Blocks.Image("Bilder/Kort/KortSvar/Forest/Question/qCardFMikkelRevCorrect.png", {x: 680, y: 280, width: 210, height: 210});
+    Actions.Click(wronganswer1, () => {
+        wrongAnswerSound1.play();
+        wrongAnswerSound1.onended = () => {
+            GaaTil(sceneForestHub);
+        }
+    })
+    Actions.Click(wronganswer2, () => {
+        notQuiteCorrect.play();
+        notQuiteCorrect.onended = () => {
+            GaaTil(sceneForestHub);
+        }
+    })
+    Actions.Click(correctanswer, () => {
+        applause.play();
+        applause.onended = () => {
+            GaaTil(sceneForestHub);
+        }
+    })
+}
+
+function sceneForestQ4Answer() {
     const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground3.png", {x: -8, y: -8, width: 1088, height: 818});
     const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 100, y: 100, width: 375, height: 275});
     const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 600, y: 250, width: 375, height: 275});
@@ -1300,6 +1358,112 @@ function sceneForestQ3Answer() {
 
 }
 
+function sceneForestQ5Answer() {
+    const background = new Blocks.Image("Bilder/Bakgrunner/forestBackgroundRiver.png", {x: -8, y: -8, width: 1088, height: 818});
+    const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 100, y: 100, width: 375, height: 275});
+    const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 600, y: 250, width: 375, height: 275});
+    const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 150, y: 470, width: 375, height: 275});
+    const wronganswer1 = new Blocks.Image("Bilder/Objekter/placeholderWrong.png", {x: 650, y: 320, width: 280, height: 150});
+    const wronganswer2 = new Blocks.Image("Bilder/Objekter/placeholderWrong.png", {x: 200, y: 540, width: 280, height: 150});
+    const correctanswer = new Blocks.Image("Bilder/Objekter/placeholderCorrect.png", {x: 150, y: 160, width: 280, height: 150});
+    Actions.Click(wronganswer1, () => {
+        notQuiteCorrect.play();
+        notQuiteCorrect.onended = () => {
+            GaaTil(sceneForestHub);
+        }
+    })
+    Actions.Click(wronganswer2, () => {
+        wrongAnswerSound2.play();
+        wrongAnswerSound2.onended = () => {
+            GaaTil(sceneForestHub);
+        }
+    })
+    Actions.Click(correctanswer, () => {
+        yesCorrect.play();
+        yesCorrect.onended = () => {
+            GaaTil(sceneForestHub);
+        }
+    })
+
+}
+
+function sceneForestQ6Answer() {
+    const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", {x: -8, y: -8, width: 1088, height: 818});
+    const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 10, y: 200, width: 500, height: 400});
+    const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 560, y: 200, width: 500, height: 400});
+    const wronganswer1 = new Blocks.Image("Bilder/Objekter/pineTree.png", {x: 140, y: 240, width: 250, height: 300});
+    const correctanswer = new Blocks.Image("Bilder/Objekter/oakTree.png", {x: 700, y: 240, width: 250, height: 310});
+    Actions.Click(wronganswer1, () => {
+        notQuiteCorrect.play();
+        notQuiteCorrect.onended = () => {
+            GaaTil(sceneForestHub);
+        }
+    })
+    Actions.Click(correctanswer, () => {
+        applause.play();
+        applause.onended = () => {
+            GaaTil(sceneForestHub);
+        }
+    })
+}
+
+function sceneForestQ7Answer() {
+    const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground2.png", {x: -8, y: -8, width: 1088, height: 818});
+    const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 100, y: 100, width: 400, height: 300});
+    const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 600, y: 250, width: 400, height: 300});
+    const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 150, y: 470, width: 400, height: 300});
+    const wronganswer1 = new Blocks.Image("Bilder/Karakterer/monkeyClosedMouth.png", {x: 250, y: 500, width: 230, height: 230});
+    const wronganswer2 = new Blocks.Image("Bilder/Karakterer/troll.png", {x: 690, y: 282, width: 230, height: 230});
+    const correctanswer = new Blocks.Image("Bilder/Karakterer/squirrel.png", {x: 200, y: 134, width: 230, height: 230});
+    Actions.Click(wronganswer1, () => {
+        wrongAnswerSound2.play();
+        wrongAnswerSound2.onended = () => {
+            GaaTil(sceneForestHub);
+        }
+    })
+    Actions.Click(wronganswer2, () => {
+        notQuiteCorrect.play();
+        notQuiteCorrect.onended = () => {
+            GaaTil(sceneForestHub);
+        }
+    })
+    Actions.Click(correctanswer, () => {
+        yesCorrect.play();
+        yesCorrect.onended = () => {
+            GaaTil(sceneForestHub);
+        }
+    })
+
+}
+
+function sceneForestQ8Answer() {
+    const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground3.png", {x: -8, y: -8, width: 1088, height: 818});
+    const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 100, y: 100, width: 400, height: 300});
+    const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 600, y: 250, width: 400, height: 300});
+    const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 150, y: 470, width: 400, height: 300});
+    const wronganswer1 = new Blocks.Image("Bilder/Karakterer/bearSleeping.png", {x: 188, y: 150, width: 230, height: 200});
+    const wronganswer2 = new Blocks.Image("Bilder/Karakterer/giraffeClosedMouth.png", {x: 280, y: 500, width: 150, height: 230});
+    const correctanswer = new Blocks.Image("Bilder/Objekter/placeholderCorrect.png", {x: 690, y: 282, width: 230, height: 230});
+    Actions.Click(wronganswer1, () => {
+        wrongAnswerSound1.play();
+        wrongAnswerSound1.onended = () => {
+            GaaTil(sceneForestHub);
+        }
+    })
+    Actions.Click(wronganswer2, () => {
+        notQuiteCorrect.play();
+        notQuiteCorrect.onended = () => {
+            GaaTil(sceneForestHub);
+        }
+    })
+    Actions.Click(correctanswer, () => {
+        applause.play();
+        applause.onended = () => {
+            GaaTil(sceneForestHub);
+        }
+    })
+}
+
 function sceneForestQ9Answer() {
     const forestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", {x: -8, y: -8, width: 1088, height: 818});
     const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 100, y: 100, width: 375, height: 275});
@@ -1308,6 +1472,34 @@ function sceneForestQ9Answer() {
     const wronganswer1 = new Blocks.Image("Bilder/Karakterer/squirrel.png", {x: 190, y: 135, width: 200, height: 200});
     const wronganswer2 = new Blocks.Image("Bilder/Karakterer/turtle.png", {x: 680, y: 285, width: 200, height: 200});
     const correctanswer = new Blocks.Image("Bilder/Objekter/bee.png", {x: 240, y: 505, width: 200, height: 200});
+    Actions.Click(wronganswer1, () => {
+        wrongAnswerSound1.play();
+        wrongAnswerSound1.onended = () => {
+            GaaTil(sceneForestHub);
+        }
+    })
+    Actions.Click(wronganswer2, () => {
+        wrongAnswerSound2.play();
+        wrongAnswerSound2.onended = () => {
+            GaaTil(sceneForestHub);
+        }
+    })
+    Actions.Click(correctanswer, () => {
+        applause.play();
+        applause.onended = () => {
+            GaaTil(sceneForestHub);
+        }
+    })
+}
+
+function sceneForestQ10Answer() {
+    const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground3.png", {x: -8, y: -8, width: 1088, height: 818});
+    const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 100, y: 100, width: 400, height: 300});
+    const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 600, y: 250, width: 400, height: 300});
+    const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 150, y: 470, width: 400, height: 300});
+    const wronganswer1 = new Blocks.Image("Bilder/Karakterer/mooseClosedMouth.png", {x: 200, y: 133, width: 200, height: 230});
+    const wronganswer2 = new Blocks.Image("Bilder/Karakterer/monkeyClosedMouth.png", {x: 690, y: 285, width: 230, height: 220});
+    const correctanswer = new Blocks.Image("Bilder/Objekter/placeholderCorrect.png", {x: 250, y: 520, width: 200, height: 200});
     Actions.Click(wronganswer1, () => {
         wrongAnswerSound1.play();
         wrongAnswerSound1.onended = () => {
