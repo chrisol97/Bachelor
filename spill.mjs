@@ -869,62 +869,77 @@ function sceneBeachChanceFront() {
 function sceneForestQuestionFront() {                                                                                                          
     const forestbackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", {x: -8, y: -8, width: 1088, height: 818});
     let tall = Math.floor(Math.random() * 10);
+    //tall = 6; //For Debugging
     if (tall === 0) {
         const forestQuestion1 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFBiggestAnimal.png", {x: 30, y: 10, width: 1020, height: 700});
+        qCardFBiggestAnimalVoice.play();
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
+            qCardFBiggestAnimalVoice.pause();
             GaaTil(sceneForestQ1Answer);
         })
         // Legg til lyd
 
     } else if (tall === 1) {
         const forestQuestion2 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFCountingSquirrels.png", {x:30, y: 10, width: 1020, height: 700});
+        qCardFCountingSquirrelsVoice.play();
         const squirrel = new Blocks.Image("Bilder/Karakterer/squirrel.png", {x: 50, y: 400, width: 300, height: 300});
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
+            qCardFCountingSquirrelsVoice.pause();
             GaaTil(sceneForestQ2Answer);
         })
         // Legg til lyd
 
     } else if (tall === 2) {
         const forestQuestion3 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFMikkelRev.png", {x: 30, y: 10, width: 1020, height: 700});
+        qCardFMikkelRevVoice.play();
         // Legg til knapp for "riktig svar" og knapp for "feil svar" + objekter + lyd
 
     } else if (tall === 3) {
         const forestQuestion4 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFOddOneOut.png", {x: 30, y: 10, width: 1020, height: 700});
+        qCardFOddOneOutVoice.play();
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
+            qCardFOddOneOutVoice.pause();
             GaaTil(sceneForestQ3Answer);
         })
         // Legg til lyd 
 
     } else if (tall === 4) {
         const forestQuestion5 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFOwlSound.png", {x: 30, y: 10, width: 1020, height: 700});
+        qCardFOwlSoundVoice.play();
         // Legg til en knapp for å spille av lyden, spill også inn lyden (uglelyd) + objekter + lyd
 
     } else if (tall === 5) {
         const forestQuestion6 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWhatTreeLosesLeaves.png", {x: 30, y: 10, width: 1020, height: 700});
+        qCardFWhatTreeLosesLeavesVoice.play();
         // Legg til knapp for "riktig svar", og knapp for "feil svar", evt selve oppgaven? + objekter + lyd
 
     } else if (tall === 6) {
         const forestQuestion7 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWhoEatsNuts.png", {x: 30, y: 10, width: 1020, height: 700});
+        qCardFWhoEatsNutsVoice.play();
         // Legg til knapp for "riktig svar", og knapp for "feil svar", evt selve oppgaven? + objekter + lyd
 
     } else if (tall === 7) {
         const forestQuestion8 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWhoHowls.png", {x: 30, y: 10, width: 1020, height: 700});
+        qCardFWhoHowlsVoice.play();
         // Legg til knapp for "riktig svar", og knapp for "feil svar" + objekter + lyd
 
     } else if (tall === 8) {
         const forestQuestion9 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWhoMakesHoney.png", {x: 30, y: 10, width: 1020, height: 700});
+        qCardFWhoMakesHoneyVoice.play();
         const beeCube = new Blocks.Image("Bilder/Objekter/beeCube.png", {x: 750, y: 450, width: 200, height: 200});
         const continuebutton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continuebutton, () => {
+            qCardFWhoMakesHoneyVoice.pause();
             GaaTil(sceneForestQ9Answer);
         })
         // Legg til lyd
 
     } else if (tall === 9) {
         const forestQuestion10 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWoodpecker.png", {x: 30, y: 10, width: 1020, height: 700});
+        qCardFWoodpeckerVoice.play();
         // Legg til knapp for "riktig svar" og knapp for "feil svar" + objekter + lyd
     }
 }
@@ -937,42 +952,52 @@ function sceneCityQuestionFront() {
     let tall = Math.floor(Math.random() * 10);
     if (tall === 0) {
         const cityQuestion1 = new Blocks.Image("Bilder/Kort/City/Question/qCardCCountingWindows.png", {x: 30, y: 10, width: 1020, height: 700});
+        qCardCCountingWindowsVoice.play();
         // Lag selve oppgaven + lyd --> gå videre til en ny scene med oppgaven
 
     } else if (tall === 1) {
         const cityQuestion2 = new Blocks.Image("Bilder/Kort/City/Question/qCardCRedLight.png", {x: 30, y: 10, width: 1020, height: 700});
+        qCardCRedLightVoice.play();
         // Legg til knapp for "rett svar" og knapp for "feil svar" + objekter + lyd
 
     } else if (tall === 2) {
         const cityQuestion3 = new Blocks.Image("Bilder/Kort/City/Question/qCardCTwoThingsBaker.png", {x: 30, y: 10, width: 1020, height: 700});
+        qCardCTwoThingsBakerVoice.play();
         // Legg til knapp for "rett svar" og knapp for "feil svar?" + objekter + lyd
 
     } else if (tall === 3) {
         const cityQuestion4 = new Blocks.Image("Bilder/Kort/City/Question/qCardCWhatColorTrafficLight.png", {x: 30, y: 10, width: 1020, height: 700});
+        qCardCWhatColorTrafficLightVoice.play();
         // Legg til knapp for "rett svar" og knapp for "feil svar" + objekter + lyd
 
     } else if (tall === 4) {
         const cityQuestion5 = new Blocks.Image("Bilder/Kort/City/Question/qCardCWhatIsABus.png", {x: 30, y: 10, width: 1020, height: 700});
+        qCardCWhatIsABusVoice.play();
         // Legg til knapp for "rett svar" og knapp for "feil svar" + objekter + lyd
 
     } else if (tall === 5) {
         const cityQuestio6 = new Blocks.Image("Bilder/Kort/City/Question/qCardCWhatIsDoctor.png", {x: 30, y: 10, width: 1020, height: 700});
+        qCardCWhatIsDoctorVoice.play();
         // Legg til knapp for "riktig svar" og knapp for "feil svar" + objekter + lyd
 
     } else if (tall === 6) {
         const cityQuestion7 = new Blocks.Image("Bilder/Kort/City/Question/qCardCWhatIsFireman.png", {x: 30, y: 10, width: 1020, height: 700});
+        qCardCWhatIsFiremanVoice.play();
         // Legg til knapp for "riktig svar" og knapp for "feil svar" + objekter + lyd
 
     } else if (tall === 7) {
         const cityQuestion8 = new Blocks.Image("Bilder/Kort/City/Question/qCardCWhatIsPolice.png", {x: 30, y: 10, width: 1020, height: 700});
+        qCardCWhatIsPoliceVoice.play();
         // Legg til knapp for "riktig svar" og knapp for "feil svar" + objekter + lyd
 
     } else if (tall === 8) {
         const cityQuestion9 = new Blocks.Image("Bilder/Kort/City/Question/qCardCWhatIsStore.png", {x: 30, y: 10, width: 1020, height: 700});
+        qCardCWhatIsStoreVoice.play();
         // Legg til knapp for "riktig svar" og knapp for "feil svar" + objekter + lyd
 
     } else if (tall === 9) {
         const cityQuestion10 = new Blocks.Image("Bilder/Kort/City/Question/qCardCWheelsOnTheBus.png", {x: 30, y: 10, width: 1020, height: 700});
+        qCardCWheelsOnTheBusVoice.play();
         // Legg til knapp for "riktig svar" og knapp for "feil svar" + objekter + lyd
 
     }
@@ -986,46 +1011,57 @@ function sceneBeachQuestionFront() {
     let tall = Math.floor(Math.random() * 11);
     if (tall === 0) {
         const beachQuestion1 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBBiggestSandCastle.png", {x: 30, y: 10, width: 1020, height: 700});
+        qCardBBiggestSandCastleVoice.play();
         // Lag selve oppgaven + lyd --> gå videre til en ny scene med oppgave
 
     } else if (tall === 1) {
         const beachQuestion2 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBGarbage.png", {x: 30, y: 10, width: 1020, height: 700});
+        qCardBGarbageVoice.play();
         // Legg til knapp for "riktig svar" og knapp for "feil svar", evt videre til ny scene med svaralternativ + lyd
 
     } else if (tall === 2) {
         const beachQuestion3 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBJellyfishString.png", {x: 30, y: 10, width: 1020, height: 700});
+        qCardBJellyfishStringVoice.play();
         // Gå videre til ny scene med Maneten Martine + svaralternativ. Husk å spille inn lyd
 
     } else if (tall === 3) {
         const beachQuestion4 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBOddOneOut.png", {x: 30, y: 10, width: 1020, height: 700});
+        qCardBOddOneOutVoice.play();
         // Gå videre til ny scene med bilder av forskjellige dyr/svaralternativ. Ett riktig svar. + lyd
 
     } else if (tall === 4) {
         const beachQuestion5 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBSandTracks.png", {x: 30, y: 10, width: 1020, height: 700});
+        qCardBSandTracksVoice.play();
         // Gå videre til ny scene med bilde av fotspor + svaralternativ. + lyd + objekter
 
     } else if (tall === 5) {
         const beachQuestion6 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBShark.png", {x: 30, y: 10, width: 1020, height: 700});
+        qCardBSharkVoice.play();
         // Legg til knapp for "riktig svar" og knapp for "feil svar", evt videre til ny scene med svaralternativ + lyd
 
     } else if (tall === 6) {
         const beachQuestion7 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBStarfish.png", {x: 30, y: 10, width: 1020, height: 700});
+        qCardBStarfishVoice.play();
         // Legg til knapp for "riktig svar" og knapp for "feil svar", evt videre til ny scene med svaralternativ + lyd
 
     } else if (tall === 7) {
         const beachQuestion8 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBSunscreen.png", {x: 30, y: 10, width: 1020, height: 700});
+        qCardBSunscreenVoice.play();
         // Legg til knapp for "riktig svar" og knapp for "feil svar", evt videre til ny scene med svaralternativ + lyd
 
     } else if (tall === 8) {
         const beachQuestion9 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBSwimSafely.png", {x: 30, y: 10, width: 1020, height: 700});
+        qCardBSwimSafelyVoice.play();
         // Legg til knapp for "riktig svar" og knapp for "feil svar", evt videre til ny scene med svaralternativ + lyd + objekter
 
     } else if (tall === 9) {
         const beachQuestion10 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBThreeDifferentAnimals.png", {x: 30, y: 10, width: 1020, height: 700});
+        qCardBThreeDifferentAnimalsVoice.play();
         // Legg til knapp for "riktig svar" og knapp for "feil svar" + lyd
 
     } else if (tall === 10) {
         const beachQuestion11 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBWhale.png", {x: 30, y: 10, width: 1020, height: 700});
+        qCardBWhaleVoice.play();
         // Legg til knapp for "riktig svar" og knapp for "feil svar", evt videre til ny scene med svaralternativ + lyd + objekter
 
     }
@@ -1041,42 +1077,52 @@ function sceneForestChallengeFront() {
     let tall = Math.floor(Math.random() * 10);
     if (tall === 0) {
         const forestChallenge1 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFFlood.png", {x: 30, y: 10, width: 1020, height: 700});
+        chCardFFloodVoice.play();
         // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
 
     } else if (tall === 1) {
         const forestChallenge2 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFGiraffeLost.png", {x: 30, y: 10, width: 1020, height: 700});
+        chCardFGiraffeLostVoice.play();
         // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
 
     } else if (tall === 2) {
         const forestChallenge3 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFHulkBabyPoop.png", {x: 30, y: 10, width: 1020, height: 700});
+        chCardFHulkBabyPoopVoice.play();
         // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
 
     } else if (tall === 3) {
         const forestChallenge4 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFJumpLikeRabbit.png", {x: 30, y: 10, width: 1020, height: 700});
+        chCardFJumpLikeRabbitVoice.play();
         // Knapp for gjennomført oppgave/ikke gjennomført oppgave + lyd
 
     } else if (tall === 4) {
         const forestChallenge5 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFMooseLaugh.png", {x: 30, y: 10, width: 1020, height: 700});
+        chCardFMooseLaughVoice.play();
         // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
 
     } else if (tall === 5) {
         const forestChallenge6 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFNameAnimals.png", {x: 30, y: 10, width: 1020, height: 700});
+        chCardFNameAnimalsVoice.play();
         // Knapp for gjennomført oppgave/ikke gjennomført oppgave + lyd
 
     } else if (tall === 6) {
         const forestChallenge7 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFRobotMushroom.png", {x: 30, y: 10, width: 1020, height: 700});
+        chCardFRobotMushroomVoice.play();
         // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
 
     } else if (tall === 7) {
         const forestChallenge8 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFSongAboutTroll.png", {x: 30, y: 10, width: 1020, height: 700});
+        chCardFSongAboutTrollVoice.play();
         // Knapp for gjennomført oppgave/ikke gjennomført oppgave + lyd
 
     } else if (tall === 8) {
         const forestChallenge9 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFStretchLikeTree.png", {x: 30, y: 10, width: 1020, height: 700});
+        chCardFStretchLikeTreeVoice.play();
         // Knapp for gjennomført oppgave/ikke gjennomført oppgave + lyd
 
     } else if (tall === 9) {
         const forestChallenge10 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFTadpole.png", {x: 30, y: 10, width: 1020, height: 700});
+        chCardFTadpoleVoice.play();
         // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
 
     }
@@ -1090,22 +1136,27 @@ function sceneCityChallengeFront() {
     let tall = Math.floor(Math.random() * 5);
     if (tall === 0) {
         const cityChallenge1 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCBakeBread.png", {x: 30, y: 10, width: 1020, height: 700});
+        chCardCBakeBreadVoice.play();
         // Knapp for gjennomført oppgave/ikke gjennomført oppgave + lyd
 
     } else if (tall === 1) {
         const cityChallenge2 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCBuildBuilding", {x: 30, y: 10, width: 1020, height: 700});
+        chCardCBuildBuildingVoice.play();
         // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
 
     } else if (tall === 2) {
         const cityChallenge3 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCCatHiding.png", {x: 30, y: 10, width: 1020, height: 700});
+        chCardCCatHidingVoice.play();
         // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
 
     } else if (tall === 3) {
         const cityChallenge4 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCCountCars.png", {x: 30, y: 10, width: 1020, height: 700});
+        chCardCCountCarsVoice.play();
         // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
 
     } else if (tall === 4) {
         const cityChallenge5 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCDroppedGroceries.png", {x: 30, y: 10, width: 1020, height: 700});
+        chCardCDroppedGroceriesVoice.play();
         // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
 
     }
@@ -1119,30 +1170,37 @@ function sceneBeachChallengeFront() {
     let tall = Math.floor(Math.random() * 7);
     if (tall === 0) {
         const beachChallenge1 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBBiggestFish.png", {x: 30, y: 10, width: 1020, height: 700});
+        chCardBBiggestFishVoice.play();
         // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
 
     } else if (tall === 1) {
         const beachChallenge2 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBCatWater.png", {x: 30, y: 10, width: 1020, height: 700});
+        chCardBCatWaterVoice.play();
         // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper evt knapp for gjennomført / ikke gjennomført oppgave
 
     } else if (tall === 2) {
         const beachChallenge3 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBCountFish.png", {x: 30, y: 10, width: 1020, height: 700});
+        chCardBCountFishVoice.play();
         // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
 
     } else if (tall === 3) {
         const beachChallenge4 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBMermaidCat.png", {x: 30, y: 10, width: 1020, height: 700});
+        chCardBMermaidCatVoice.play();
         // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
 
     } else if (tall === 4) {
         const beachChallenge5 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBSongAboutOcean.png", {x: 30, y: 10, width: 1020, height: 700});
+        chCardBSongAboutOceanVoice.play();
         // Knapp for gjennomført oppgave/ikke gjennomført oppgave + lyd
 
     } else if (tall === 5) {
         const beachChallenge6 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBSunburntGiraffe.png", {x: 30, y: 10, width: 1020, height: 700});
+        chCardBSunburntGiraffeVoice.play();
         // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
 
     } else if (tall === 6) {
         const beachChallenge7 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBWalkLikeCrab.png", {x: 30, y: 10, width: 1020, height: 700});
+        chCardBWalkLikeCrabVoice.play();
         // Knapp for gjennomført oppgave/ikke gjennomført oppgave + lyd
     }
 }
