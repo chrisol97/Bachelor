@@ -889,7 +889,6 @@ function sceneForestQuestionFront() {
             qCardFCountingSquirrelsVoice.pause();
             GaaTil(sceneForestQ2Answer);
         })
-        // Legg til lyd
 
     } else if (tall === 2) {
         const forestQuestion3 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFMikkelRev.png", {x: 30, y: 10, width: 1020, height: 700});
@@ -904,7 +903,6 @@ function sceneForestQuestionFront() {
             qCardFOddOneOutVoice.pause();
             GaaTil(sceneForestQ3Answer);
         })
-        // Legg til lyd 
 
     } else if (tall === 4) {
         const forestQuestion5 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFOwlSound.png", {x: 30, y: 10, width: 1020, height: 700});
@@ -935,7 +933,6 @@ function sceneForestQuestionFront() {
             qCardFWhoMakesHoneyVoice.pause();
             GaaTil(sceneForestQ9Answer);
         })
-        // Legg til lyd
 
     } else if (tall === 9) {
         const forestQuestion10 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWoodpecker.png", {x: 30, y: 10, width: 1020, height: 700});
@@ -1318,7 +1315,7 @@ function sceneForestQ9Answer() {
         }
     })
     Actions.Click(wronganswer2, () => {
-        wrongAnswerSound2.play();                       // spill inn wrongAnswerSound2.play
+        wrongAnswerSound2.play();
         wrongAnswerSound2.onended = () => {
             GaaTil(sceneForestHub);
         }
