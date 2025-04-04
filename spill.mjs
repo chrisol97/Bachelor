@@ -643,8 +643,6 @@ function sceneCityHub() {                                                       
 }
 
 
-
-
 // CHANCE CARDS
 
     // FOREST
