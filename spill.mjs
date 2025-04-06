@@ -171,7 +171,7 @@ function startscreen() {
     const startscreenobject = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 325, y: 150, width: 400, height:500 });
     const skipbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 200, y: 200, width: 200, height: 200});                           // HUSK Å FJERNE DETTE
     Actions.Click(skipbutton, () => {
-        GaaTil(sceneForestHub);
+        GaaTil(sceneCityHub);
     })
     Actions.Click(startscreenobject, () => {
         GaaTil(titlescreen);
@@ -652,9 +652,8 @@ function sceneCityHub() {                                                       
     // FOREST
 
 function sceneForestChanceFront() {
-    const forestmap = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", {x: -8, y: -8, width: 1088, height: 818});                     // Spill inn lyder, legg til objektbilder til enkelte kort osv.
+    const forestmap = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", {x: -8, y: -8, width: 1088, height: 818});
     let tall = Math.floor(Math.random() * 6);
-    tall = 0; 
     if (tall === 0) {
         const chanceCard0 = new Blocks.Image("Bilder/Kort/Forest/Chance/chanceCardF1.png", {x: 30, y: 10, width: 1020, height: 700});
         chanceCardF1Voice.play();
@@ -874,7 +873,6 @@ function sceneBeachChanceFront() {
     } else if (tall === 5) {
         chanceCardB6Voice.play();
         const chanceCard5 = new Blocks.Image("Bilder/Kort/Beach/Chance/chanceCardB6.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Spill inn lyd + legg inn objekter?
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             chanceCardB6Voice.pause();
@@ -901,7 +899,6 @@ function sceneForestQuestionFront() {
             qCardFBiggestAnimalVoice.currentTime = 0;
             GaaTil(sceneForestQ1Answer);
         })
-        // Legg til lyd
 
     } else if (tall === 1) {
         const forestQuestion2 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFCountingSquirrels.png", {x:30, y: 10, width: 1020, height: 700});
@@ -1004,30 +1001,70 @@ function sceneForestQuestionFront() {
 function sceneCityQuestionFront() {
     const cityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", {x: -8, y: -8, width: 1088, height: 818});
     let tall = Math.floor(Math.random() * 10);
+    tall = 4; // For debugging
     if (tall === 0) {
         const cityQuestion1 = new Blocks.Image("Bilder/Kort/City/Question/qCardCCountingWindows.png", {x: 30, y: 10, width: 1020, height: 700});
         qCardCCountingWindowsVoice.play();
-        // Lag selve oppgaven + lyd --> gå videre til en ny scene med oppgaven
+        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
+        Actions.Click(continueButton, () => {
+            qCardCCountingWindowsVoice.pause();
+            qCardCCountingWindowsVoice.currentTime = 0;
+            GaaTil(sceneCityQ1Answer);
+        })
 
     } else if (tall === 1) {
         const cityQuestion2 = new Blocks.Image("Bilder/Kort/City/Question/qCardCRedLight.png", {x: 30, y: 10, width: 1020, height: 700});
         qCardCRedLightVoice.play();
-        // Legg til knapp for "rett svar" og knapp for "feil svar" + objekter + lyd
+        const redLight = new Blocks.Image("Bilder/Objekter/redLight.png", {x: 50, y: 480, width: 200, height: 350});
+        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
+        Actions.Click(continueButton, () => {
+            qCardCRedLightVoice.pause();
+            qCardCRedLightVoice.currentTime = 0;
+            GaaTil(sceneCityQ2Answer);
+        })
 
     } else if (tall === 2) {
         const cityQuestion3 = new Blocks.Image("Bilder/Kort/City/Question/qCardCTwoThingsBaker.png", {x: 30, y: 10, width: 1020, height: 700});
         qCardCTwoThingsBakerVoice.play();
-        // Legg til knapp for "rett svar" og knapp for "feil svar?" + objekter + lyd
+        const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", {x: 40, y: 554, width: 150, height: 150});
+        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongbutton.png", {x: 891, y: 554, width: 150, height: 150});
+        Actions.Click(donebutton, () => {
+            qCardCRedLightVoice.pause();
+            qCardCRedLightVoice.currentTime = 0;
+            applause.play();
+            applause.onended = () => {
+                GaaTil(sceneCityHub);
+            }
+        })
+        Actions.Click(notdonebutton, () => {
+            qCardCRedLightVoice.pause();
+            qCardCRedLightVoice.currentTime = 0;
+            challengeNotCompleted1.play();
+            challengeNotCompleted1.onended = () => {
+                GaaTil(sceneCityHub);
+            }
+        })
 
     } else if (tall === 3) {
         const cityQuestion4 = new Blocks.Image("Bilder/Kort/City/Question/qCardCWhatColorTrafficLight.png", {x: 30, y: 10, width: 1020, height: 700});
         qCardCWhatColorTrafficLightVoice.play();
-        // Legg til knapp for "rett svar" og knapp for "feil svar" + objekter + lyd
+        const car = new Blocks.Image("Bilder/Objekter/car.png", {x: 35, y: 500, width: 300, height: 200});
+        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
+        Actions.Click(continueButton, () => {
+            qCardCWhatColorTrafficLightVoice.pause();
+            qCardCWhatColorTrafficLightVoice.currentTime = 0;
+            GaaTil(sceneCityQ3Answer);
+        })
 
     } else if (tall === 4) {
         const cityQuestion5 = new Blocks.Image("Bilder/Kort/City/Question/qCardCWhatIsABus.png", {x: 30, y: 10, width: 1020, height: 700});
         qCardCWhatIsABusVoice.play();
-        // Legg til knapp for "rett svar" og knapp for "feil svar" + objekter + lyd
+        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 620, width: 150, height: 150});
+        Actions.Click(continueButton, () => {
+            qCardCWhatIsABusVoice.pause();
+            qCardCWhatIsABusVoice.currentTime = 0;
+            GaaTil(sceneCityQ4Answer);
+        })
 
     } else if (tall === 5) {
         const cityQuestio6 = new Blocks.Image("Bilder/Kort/City/Question/qCardCWhatIsDoctor.png", {x: 30, y: 10, width: 1020, height: 700});
@@ -1063,6 +1100,7 @@ function sceneCityQuestionFront() {
 function sceneBeachQuestionFront() {
     const beachBackground = new Blocks.Image("Bilder/Bakgrunner/beach.png", {x: -8, y: -8, width: 1088, height: 818});
     let tall = Math.floor(Math.random() * 11);
+    // tall = 0; // For debugging
     if (tall === 0) {
         const beachQuestion1 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBBiggestSandCastle.png", {x: 30, y: 10, width: 1020, height: 700});
         qCardBBiggestSandCastleVoice.play();
@@ -1129,7 +1167,7 @@ function sceneBeachQuestionFront() {
 function sceneForestChallengeFront() {
     const forestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", {x: -8, y: -8, width: 1088, height: 818});
     let tall = Math.floor(Math.random() * 10);
-    tall = 9;
+    //tall = 9; // For debugging
     if (tall === 0) {
         const forestChallenge1 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFFlood.png", {x: 30, y: 10, width: 1020, height: 700});
         chCardFFloodVoice.play();
@@ -1295,6 +1333,7 @@ function sceneForestChallengeFront() {
 function sceneCityChallengeFront() {
     const cityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", {x: -8, y: -8, width: 1088, height: 818});
     let tall = Math.floor(Math.random() * 5);
+    // tall = 0; // For debugging
     if (tall === 0) {
         const cityChallenge1 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCBakeBread.png", {x: 30, y: 10, width: 1020, height: 700});
         chCardCBakeBreadVoice.play();
@@ -1329,6 +1368,7 @@ function sceneCityChallengeFront() {
 function sceneBeachChallengeFront() {
     const beachBackground = new Blocks.Image("Bilder/Bakgrunner/beach.png", {x: -8, y: -8, width: 1088, height: 818});
     let tall = Math.floor(Math.random() * 7);
+    // tall = 0; // For debugging
     if (tall === 0) {
         const beachChallenge1 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBBiggestFish.png", {x: 30, y: 10, width: 1020, height: 700});
         chCardBBiggestFishVoice.play();
@@ -1779,6 +1819,113 @@ function sceneForestCh6Answer() {
     })
 }
 
+    // CITY - QUESTIONS
+
+function sceneCityQ1Answer() {
+    const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground2.png", {x: -8, y: -8, width: 1088, height: 818});
+    const house = new Blocks.Image("Bilder/Objekter/houseDrawing.png", {x: 580, y: 300, width: 450, height: 400});
+    const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 50, y: 10, width: 400, height: 300});
+    const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 610, y: 10, width: 400, height: 300});
+    const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 50, y: 330, width: 400, height: 300});
+    const wronganswer1 = new Blocks.Image("Bilder/Objekter/handOneFinger.png", {x: 180, y: 50, width: 150, height: 200});
+    const wronganswer2 = new Blocks.Image("Bilder/Objekter/handFourFinger.png", {x: 740, y: 50, width: 150, height: 200});
+    const correctanswer = new Blocks.Image("Bilder/Objekter/handThreeFinger.png", {x: 170, y: 380, width: 160, height: 200});
+    Actions.Click(wronganswer1, () => {
+        notQuiteCorrect.play();
+        notQuiteCorrect.onended = () => {
+            GaaTil(sceneCityHub);
+        }
+    })
+    Actions.Click(wronganswer2, () => {
+        wrongAnswerSound1.play();
+        wrongAnswerSound1.onended = () => {
+            GaaTil(sceneCityHub);
+        }
+    })
+    Actions.Click(correctanswer, () => {
+        applause.play();
+        applause.onended = () => {
+            GaaTil(sceneCityHub);
+        }
+    })
+
+}
+
+function sceneCityQ2Answer() {
+    const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", {x: -8, y: -8, width: 1088, height: 818});
+    const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 100, y: 100, width: 400, height: 300});
+    const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 600, y: 250, width: 400, height: 300});
+    const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 150, y: 470, width: 400, height: 300});
+    const wronganswer1 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCRedLightWrong1.png", {x: 680, y: 290, width: 240, height: 220})
+    const wronganswer2 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCRedLightWrong2.png", {x: 230, y: 510, width: 240, height: 220});
+    const correctanswer = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCRedLightCorrect.png", {x: 205, y: 147, width: 200, height: 200});
+    Actions.Click(wronganswer1, () => {
+        notQuiteCorrect.play();
+        notQuiteCorrect.onended = () => {
+            GaaTil(sceneCityHub);
+        }
+    })
+    Actions.Click(wronganswer2, () => {
+        wrongAnswerSound2.play();
+        wrongAnswerSound2.onended = () => {
+            GaaTil(sceneCityHub);
+        }
+    })
+    Actions.Click(correctanswer, () => {
+        yesCorrect.play();
+        yesCorrect.onended = () => {
+            GaaTil(sceneCityHub);
+        }
+    })
+}
+
+function sceneCityQ3Answer() {
+    const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", {x: -8, y: -8, width: 1088, height: 818});
+    const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 100, y: 100, width: 400, height: 300});
+    const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 600, y: 250, width: 400, height: 300});
+    const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 150, y: 470, width: 400, height: 300});
+    const wronganswer1 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatColorTrafficLightWrong1.png", {x: 200, y: 517, width: 300, height: 200});
+    const wronganswer2 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatColorTrafficLightWrong2.png", {x: 150, y: 150, width: 300, height: 200});
+    const correctanswer = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatColorTrafficLightCorrect.png", {x: 650, y: 297, width: 300, height: 200});
+    Actions.Click(wronganswer1, () => {
+        wrongAnswerSound1.play();
+        wrongAnswerSound1.onended = () => {
+            GaaTil(sceneCityHub);
+        }
+    })
+    Actions.Click(wronganswer2, () => {
+        wrongAnswerSound2.play();
+        wrongAnswerSound2.onended = () => {
+            GaaTil(sceneCityHub);
+        }
+    })
+    Actions.Click(correctanswer, () => {
+        yesCorrect.play();
+        yesCorrect.onended = () => {
+            GaaTil(sceneCityHub);
+        }
+    })
+}
+
+function sceneCityQ4Answer() {
+    const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground3.png", {x: -8, y: -8, width: 1088, height: 818});
+    const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 100, y: 100, width: 400, height: 300});
+    const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 600, y: 250, width: 400, height: 300});
+    const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 150, y: 470, width: 400, height: 300});
+    const wronganswer1 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatIsABusWrong1.png", {x: 150, y: 150, width: 200, height: 200});
+    const wronganswer2 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatIsABusWrong2.png", {x: 645, y: 287, width: 310, height: 220});
+    const correctanswer = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatIsABusCorrect.png", {x: 220, y: 500, width: 230, height: 200});
+    const plane = new Blocks.Image("Bilder/Objekter/plane.png", {x: 270, y: 200, width: 240, height: 200});
+    const bus = new Blocks.Image("Bilder/Objekter/bus.png", {x: 350, y: 630, width: 130, height: 100});
+}
+
+function sceneCityQ5Answer() {
+
+}
+
+function sceneCityQ6Answer() {
+
+}
 
 
 /*
