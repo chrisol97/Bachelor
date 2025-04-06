@@ -935,7 +935,7 @@ function sceneForestQuestionFront() {
     } else if (tall === 4) {
         const forestQuestion5 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFOwlSound.png", {x: 30, y: 10, width: 1020, height: 700});
         qCardFOwlSoundVoice.play();
-        const continueButton = new Blocks.Image("Bilder/Kort/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
+        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             qCardFOwlSoundVoice.pause();
             qCardFOwlSoundVoice.currentTime = 0;
@@ -1027,7 +1027,7 @@ function sceneCityQuestionFront() {
         const cityQuestion3 = new Blocks.Image("Bilder/Kort/City/Question/qCardCTwoThingsBaker.png", {x: 30, y: 10, width: 1020, height: 700});
         qCardCTwoThingsBakerVoice.play();
         const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", {x: 40, y: 554, width: 150, height: 150});
-        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongbutton.png", {x: 891, y: 554, width: 150, height: 150});
+        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", {x: 891, y: 554, width: 150, height: 150});
         Actions.Click(donebutton, () => {
             qCardCRedLightVoice.pause();
             qCardCRedLightVoice.currentTime = 0;
@@ -1234,7 +1234,7 @@ function sceneForestChallengeFront() {
         const forestChallenge4 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFJumpLikeRabbit.png", {x: 30, y: 10, width: 1020, height: 700});
         chCardFJumpLikeRabbitVoice.play();
         const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", {x: 150, y: 520, width: 150, height: 150});
-        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongbutton.png", {x: 788, y: 520, width: 150, height: 150});
+        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", {x: 788, y: 520, width: 150, height: 150});
         Actions.Click(donebutton, () => {
             chCardFJumpLikeRabbitVoice.pause();
             chCardFJumpLikeRabbitVoice.currentTime = 0;
@@ -1267,7 +1267,7 @@ function sceneForestChallengeFront() {
         const forestChallenge6 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFNameAnimals.png", {x: 30, y: 10, width: 1020, height: 700});
         chCardFNameAnimalsVoice.play();
         const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", {x: 150, y: 520, width: 150, height: 150});
-        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongbutton.png", {x: 788, y: 520, width: 150, height: 150});
+        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", {x: 788, y: 520, width: 150, height: 150});
         Actions.Click(donebutton, () => {
             chCardFNameAnimalsVoice.pause();
             chCardFNameAnimalsVoice.currentTime = 0;
@@ -1301,7 +1301,7 @@ function sceneForestChallengeFront() {
         const forestChallenge8 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFSongAboutTroll.png", {x: 30, y: 10, width: 1020, height: 700});
         chCardFSongAboutTrollVoice.play();
         const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", {x: 50, y: 20, width: 150, height: 150});
-        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongbutton.png", {x: 883, y: 20, width: 150, height: 150});
+        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", {x: 883, y: 20, width: 150, height: 150});
         Actions.Click(donebutton, () => {
             chCardFSongAboutTrollVoice.pause();
             chCardFSongAboutTrollVoice.currentTime = 0;
@@ -1324,7 +1324,7 @@ function sceneForestChallengeFront() {
         const forestChallenge9 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFStretchLikeTree.png", {x: 30, y: 10, width: 1020, height: 700});
         chCardFStretchLikeTreeVoice.play();
         const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", {x: 150, y: 520, width: 150, height: 150});
-        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongbutton.png", {x: 788, y: 520, width: 150, height: 150});
+        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", {x: 788, y: 520, width: 150, height: 150});
         Actions.Click(donebutton, () => {
             chCardFStretchLikeTreeVoice.pause();
             chCardFStretchLikeTreeVoice.currentTime = 0;
@@ -1368,7 +1368,7 @@ function sceneCityChallengeFront() {
         const cityChallenge1 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCBakeBread.png", {x: 30, y: 10, width: 1020, height: 700});
         chCardCBakeBreadVoice.play();
         const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", {x: 150, y: 520, width: 150, height: 150});
-        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongbutton.png", {x: 788, y: 520, width: 150, height: 150});
+        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", {x: 788, y: 520, width: 150, height: 150});
         Actions.Click(donebutton, () => {
             chCardCBakeBreadVoice.pause();
             chCardCBakeBreadVoice.currentTime = 0;
