@@ -1001,7 +1001,7 @@ function sceneForestQuestionFront() {
 function sceneCityQuestionFront() {
     const cityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", {x: -8, y: -8, width: 1088, height: 818});
     let tall = Math.floor(Math.random() * 10);
-    tall = 9; // For debugging
+    //tall = 9; // For debugging
     if (tall === 0) {
         const cityQuestion1 = new Blocks.Image("Bilder/Kort/City/Question/qCardCCountingWindows.png", {x: 30, y: 10, width: 1020, height: 700});
         qCardCCountingWindowsVoice.play();
@@ -1363,21 +1363,52 @@ function sceneForestChallengeFront() {
 function sceneCityChallengeFront() {
     const cityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", {x: -8, y: -8, width: 1088, height: 818});
     let tall = Math.floor(Math.random() * 5);
-    // tall = 0; // For debugging
+    tall = 2; // For debugging
     if (tall === 0) {
         const cityChallenge1 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCBakeBread.png", {x: 30, y: 10, width: 1020, height: 700});
         chCardCBakeBreadVoice.play();
-        // Knapp for gjennomført oppgave/ikke gjennomført oppgave + lyd
+        const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", {x: 150, y: 520, width: 150, height: 150});
+        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongbutton.png", {x: 788, y: 520, width: 150, height: 150});
+        Actions.Click(donebutton, () => {
+            chCardCBakeBreadVoice.pause();
+            chCardCBakeBreadVoice.currentTime = 0;
+            challengeCompleted1.play();
+            challengeCompleted1.onended = () => {
+                GaaTil(sceneCityHub);
+            }
+        })
+        Actions.Click(notdonebutton, () => {
+            chCardCBakeBreadVoice.pause();
+            chCardCBakeBreadVoice.currentTime = 0;
+            challengeNotCompleted1.play();
+            challengeNotCompleted1.onended = () => {
+                GaaTil(sceneCityHub);
+            }
+        })
 
     } else if (tall === 1) {
-        const cityChallenge2 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCBuildBuilding", {x: 30, y: 10, width: 1020, height: 700});
+        const cityChallenge2 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCBuildBuilding.png", {x: 30, y: 10, width: 1020, height: 700});
         chCardCBuildBuildingVoice.play();
-        // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
+        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 620, width: 150, height: 150});
+        const blocks1 = new Blocks.Image("Bilder/Objekter/block1.png", {x: 30, y: 500, width: 200, height: 200});
+        const blocks2 = new Blocks.Image("Bilder/Objekter/block2.png", {x: 30, y: 412, width: 200, height: 200});
+        const blocks3 = new Blocks.Image("Bilder/Objekter/block3.png", {x: 30, y: 320, width: 200, height: 200});
+        Actions.Click(continueButton, () => {
+            chCardCBuildBuildingVoice.pause();
+            chCardCBuildBuildingVoice.currentTime = 0;
+            GaaTil(sceneCityCh1Answer);
+        })
 
     } else if (tall === 2) {
         const cityChallenge3 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCCatHiding.png", {x: 30, y: 10, width: 1020, height: 700});
         chCardCCatHidingVoice.play();
-        // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
+        const cat = new Blocks.Image("Bilder/Karakterer/catClosedMouth.png", {x: 650, y: 420, width: 400, height: 300});
+        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
+        Actions.Click(continueButton, () => {
+            chCardCCatHidingVoice.pause();
+            chCardCCatHidingVoice.currentTime = 0;
+            GaaTil(sceneCityCh2Answer);
+        })
 
     } else if (tall === 3) {
         const cityChallenge4 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCCountCars.png", {x: 30, y: 10, width: 1020, height: 700});
@@ -2112,10 +2143,47 @@ function sceneCityQ9Answer() {
     // CITY - CHALLENGES
 
 function sceneCityCh1Answer() {
-
+    const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground2.png", {x: -8, y: -8, width: 1088, height: 818});
+    const blocks1 = new Blocks.Image("Bilder/Kort/KortSvar/City/Challenge/chCardCBuildBuildingBlock1.png", {x: 440, y: 615, width: 200, height: 200});
+    const blocks2 = new Blocks.Image("Bilder/Kort/KortSvar/City/Challenge/chCardCBuildBuildingBlock2.png", {x: 358, y: 277, width: 200, height: 200});
+    const blocks3 = new Blocks.Image("Bilder/Kort/KortSvar/City/Challenge/chCardCBuildBuildingBlock3.png", {x: 54, y: 421, width: 200, height: 200});
+    const blocks4 = new Blocks.Image("Bilder/Kort/KortSvar/City/Challenge/chCardCBuildBuildingBlock4.png", {x: 28, y: 27, width: 200, height: 200});
+    const blocks5 = new Blocks.Image("Bilder/Kort/KortSvar/City/Challenge/chCardCBuildBuildingBlock5.png", {x: 804, y: 248, width: 200, height: 200});
+    const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
+    continueButton.hide();
+    const countdown = new Actions.CountDown(8, (complete) => {
+        if (complete) {
+            continueButton.show();
+        }
+    }, {onTick: true, auto: true});
+    Actions.Drag(blocks1);
+    Actions.Drag(blocks2);
+    Actions.Drag(blocks3);
+    Actions.Drag(blocks4);
+    Actions.Drag(blocks5);
+    Actions.Click(continueButton, () => {
+        applause.play();
+        applause.onended = () => {
+            GaaTil(sceneCityHub);
+        }
+    })
 }
 
 function sceneCityCh2Answer() {
+    const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", {x: -8, y: -8, width: 1088, height: 818});
+    const cat = new Blocks.Image("Bilder/Karakterer/catClosedMouth.png", {x: 625, y: 530, width: 60, height: 50});
+    const man = new Blocks.Image("Bilder/Karakterer/manClosedMouth.png", {x: 485, y: 600, width: 50, height: 70});
+    const giraffe = new Blocks.Image("Bilder/Karakterer/giraffeClosedMouth.png", {x: 300, y: 340, width: 70, height: 140});
+    const car = new Blocks.Image("Bilder/Objekter/car.png", {x: 500, y: 720, width: 100, height: 80});
+    const girl = new Blocks.Image("Bilder/Karakterer/humanGirlClosedMouth.png", {x: 750, y: 670, width: 50, height: 70});
+    const hulk = new Blocks.Image("Bilder/Karakterer/hulkClosedMouth.png", {x: 100, y: 650, width: 100, height: 100});
+    const mainChar = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 700, y: 670, width: 50, height: 70});
+    Actions.Click(cat, () => {
+        applause.play();
+        applause.onended = () => {
+            GaaTil(sceneCityHub);
+        }
+    })
 
 }
 
@@ -2128,7 +2196,7 @@ function sceneCityCh4Answer() {
 }
 
 function sceneCityCh5Answer() {
-    
+
 }
 
 /*
