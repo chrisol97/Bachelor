@@ -1363,7 +1363,7 @@ function sceneForestChallengeFront() {
 function sceneCityChallengeFront() {
     const cityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", {x: -8, y: -8, width: 1088, height: 818});
     let tall = Math.floor(Math.random() * 5);
-    tall = 2; // For debugging
+    tall = 3; // For debugging
     if (tall === 0) {
         const cityChallenge1 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCBakeBread.png", {x: 30, y: 10, width: 1020, height: 700});
         chCardCBakeBreadVoice.play();
@@ -1413,7 +1413,13 @@ function sceneCityChallengeFront() {
     } else if (tall === 3) {
         const cityChallenge4 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCCountCars.png", {x: 30, y: 10, width: 1020, height: 700});
         chCardCCountCarsVoice.play();
-        // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
+        const car = new Blocks.Image("Bilder/Objekter/bus.png", {x: 40, y: 500, width: 300, height: 200});
+        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
+        Actions.Click(continueButton, () => {
+            chCardCCountCarsVoice.pause();
+            chCardCCountCarsVoice.currentTime = 0;
+            GaaTil(sceneCityCh3Answer);
+        })
 
     } else if (tall === 4) {
         const cityChallenge5 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCDroppedGroceries.png", {x: 30, y: 10, width: 1020, height: 700});
@@ -1538,9 +1544,9 @@ function sceneForestQ2Answer() {
 
 function sceneForestQ3Answer() {
     const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground2.png", {x: -8, y:  -8, width: 1088, height: 818});
-    const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 100, y: 100, width: 375, height: 275});
-    const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 600, y: 250, width: 375, height: 275});
-    const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 150, y: 470, width: 375, height: 275});
+    const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 100, y: 100, width: 400, height: 300});
+    const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 600, y: 250, width: 400, height: 300});
+    const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 150, y: 470, width: 400, height: 300});
     const wronganswer1 = new Blocks.Image("Bilder/Kort/KortSvar/Forest/Question/qCardFMikkelRevWrong1.png", {x: 180, y: 130, width: 210, height: 210});
     const wronganswer2 = new Blocks.Image("Bilder/Kort/KortSvar/Forest/Question/qCardFMikkelRevWrong2.png", {x: 235, y: 510, width: 210, height: 200});
     const correctanswer = new Blocks.Image("Bilder/Kort/KortSvar/Forest/Question/qCardFMikkelRevCorrect.png", {x: 680, y: 280, width: 210, height: 210});
@@ -2188,7 +2194,34 @@ function sceneCityCh2Answer() {
 }
 
 function sceneCityCh3Answer() {
-
+    const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", {x: -8, y: -8, width: 1088, height: 818});
+    const answercard1 = new Blocks.Image("Bilder/Kort/challengeCardFront.png", {x: 30, y: 30, width: 400, height: 300});
+    const answercard2 = new Blocks.Image("Bilder/Kort/challengeCardFront.png", {x: 630, y: 30, width: 400, height: 300});
+    const answercard3 = new Blocks.Image("Bilder/Kort/challengeCardFront.png", {x: 630, y: 370, width: 400, height: 300});
+    const car1 = new Blocks.Image("Bilder/Objekter/bus.png", {x: 200, y: 720, width: 130, height: 80});
+    const car2 = new Blocks.Image("Bilder/Objekter/bus.png", {x: 700, y: 700, width: 130, height: 80});
+    const car3 = new Blocks.Image("Bilder/Objekter/bus.png", {x: 300, y: 430, width: 80, height: 50});
+    const wronganswer1 = new Blocks.Image("Bilder/Objekter/handTwoFinger.png", {x: 750, y: 80, width: 150, height: 200});
+    const wronganswer2 = new Blocks.Image("Bilder/Objekter/handFiveFinger.png", {x: 155, y: 90, width: 170, height: 200});
+    const correctanswer = new Blocks.Image("Bilder/Objekter/handThreeFinger.png", {x: 750, y: 420, width: 150, height: 200});
+    Actions.Click(wronganswer1, () => {
+        notQuiteCorrect.play();
+        notQuiteCorrect.onended = () => {
+            GaaTil(sceneCityHub);
+        }
+    })
+    Actions.Click(wronganswer2, () => {
+        wrongAnswerSound2.play();
+        wrongAnswerSound2.onended = () => {
+            GaaTil(sceneCityHub);
+        }
+    })
+    Actions.Click(correctanswer, () => {
+        applause.play();
+        applause.onended = () => {
+            GaaTil(sceneCityHub);
+        }
+    })
 }
 
 function sceneCityCh4Answer() {
