@@ -50,7 +50,8 @@ const Start = (maal) => {
     let giraffeVoiceIntro1 = new Audio("Lydfiler/Karakterer/giraffeVoiceIntro1.mp3");
     let catVoiceIntro1 = new Audio("Lydfiler/Karakterer/catVoiceIntro1.mp3");
     let styrerVoiceIntro1 = new Audio("Lydfiler/Karakterer/styrerVoiceIntro1.mp3");
-    let ouchCatMainChar = new Audio("Lydfiler/Karakterer/ouchCatMainChar.mp3"); 
+    let ouchCatMainChar = new Audio("Lydfiler/Karakterer/ouchCatMainChar.mp3");
+    let mooseLaugh = new Audio("Lydfiler/Karakterer/mooseLaugh.mp3"); 
 
 // KORT
 
@@ -169,7 +170,7 @@ function startscreen() {
     const startscreenobject = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 325, y: 150, width: 400, height:500 });
     const skipbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 200, y: 200, width: 200, height: 200});                           // HUSK Å FJERNE DETTE
     Actions.Click(skipbutton, () => {
-        GaaTil(sceneForestQ10Answer);
+        GaaTil(sceneForestHub);
     })
     Actions.Click(startscreenobject, () => {
         GaaTil(titlescreen);
@@ -466,6 +467,7 @@ function sceneBeachIntro1() {
 function sceneBeachHub() {
     beachBackgroundMusic.play();
     beachBackgroundMusic.loop = true;
+    beachBackgroundMusic.currentTime = 0;
     const sceneBeachBackground = new Blocks.Image("Bilder/Bakgrunner/beach.png", {x: -8, y: -8, width: 1088, height: 818});
     const cityButton = new Blocks.Image("Bilder/Knapper/cityButton.PNG", {x: 200, y: 20, width: 150, height: 150});
     const forestButton = new Blocks.Image("Bilder/Knapper/forestButton.PNG", {x: 717, y: 20, width: 150, height: 150});
@@ -542,6 +544,7 @@ function sceneForestIntro1() {
 function sceneForestHub() {
     forestBackgroundMusic.play();
     forestBackgroundMusic.loop = true;
+    forestBackgroundMusic.currentTime = 0;
     const sceneForestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", {x: -8, y: -8, width: 1088, height: 818});
     const cityButton = new Blocks.Image("Bilder/Knapper/cityButton.PNG", {x: 200, y: 20, width: 150, height: 150});
     const beachButton = new Blocks.Image("Bilder/Knapper/beachButton.PNG", {x: 717, y: 20, width: 150, height: 150});
@@ -650,6 +653,7 @@ function sceneCityHub() {                                                       
 function sceneForestChanceFront() {
     const forestmap = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", {x: -8, y: -8, width: 1088, height: 818});                     // Spill inn lyder, legg til objektbilder til enkelte kort osv.
     let tall = Math.floor(Math.random() * 6);
+    tall = 0; 
     if (tall === 0) {
         const chanceCard0 = new Blocks.Image("Bilder/Kort/Forest/Chance/chanceCardF1.png", {x: 30, y: 10, width: 1020, height: 700});
         chanceCardF1Voice.play();
@@ -657,6 +661,7 @@ function sceneForestChanceFront() {
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             chanceCardF1Voice.pause();
+            chanceCardF1Voice.currentTime = 0;
             GaaTil(sceneForestHub);
         });
 
@@ -667,6 +672,7 @@ function sceneForestChanceFront() {
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             chanceCardF2Voice.pause();
+            chanceCardF2Voice.currentTime = 0;
             GaaTil(sceneForestHub);
         });
 
@@ -677,6 +683,7 @@ function sceneForestChanceFront() {
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             chanceCardF3Voice.pause();
+            chanceCardF3Voice.currentTime = 0;
             GaaTil(sceneForestHub);
         });
 
@@ -687,6 +694,7 @@ function sceneForestChanceFront() {
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             chanceCardF4Voice.pause();
+            chanceCardF4Voice.currentTime = 0;
             GaaTil(sceneForestHub);
         });
 
@@ -696,6 +704,7 @@ function sceneForestChanceFront() {
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             chanceCardF5Voice.pause();
+            chanceCardF5Voice.currentTime = 0;
             GaaTil(sceneForestHub);
         });
 
@@ -705,6 +714,7 @@ function sceneForestChanceFront() {
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             chanceCardF6Voice.pause();
+            chanceCardF6Voice.currentTime = 0;
             GaaTil(sceneForestHub);
         });
     }
@@ -723,6 +733,7 @@ function sceneCityChanceFront() {
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             chanceCardC1Voice.pause();
+            chanceCardC1Voice.currentTime = 0;
             GaaTil(sceneCityHub);
         });
 
@@ -732,6 +743,7 @@ function sceneCityChanceFront() {
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             chanceCardC2Voice.pause();
+            chanceCardC2Voice.currentTime = 0;
             GaaTil(sceneCityHub);
         });
 
@@ -741,6 +753,7 @@ function sceneCityChanceFront() {
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             chanceCardC3Voice.pause();
+            chanceCardC3Voice.currentTime = 0;
             GaaTil(sceneCityHub);
         });
 
@@ -751,6 +764,7 @@ function sceneCityChanceFront() {
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             chanceCardC4Voice.pause();
+            chanceCardC4Voice.currentTime = 0;
             GaaTil(sceneCityHub);
         });
 
@@ -761,6 +775,7 @@ function sceneCityChanceFront() {
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             chanceCardC5Voice.pause();
+            chanceCardC5Voice.currentTime = 0;
             GaaTil(sceneCityHub);
         });
 
@@ -770,6 +785,7 @@ function sceneCityChanceFront() {
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             chanceCardC6Voice.pause();
+            chanceCardC6Voice.currentTime = 0;
             GaaTil(sceneCityHub);
         });
 
@@ -779,6 +795,7 @@ function sceneCityChanceFront() {
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 120, height: 110});
         Actions.Click(continueButton, () => {
             chanceCardC7Voice.pause();
+            chanceCardC7Voice.currentTime = 0;
             GaaTil(sceneCityHub);
         });
 
@@ -788,6 +805,7 @@ function sceneCityChanceFront() {
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 120, height: 110});
         Actions.Click(continueButton, () => {
             chanceCardC8Voice.pause();
+            chanceCardC8Voice.currentTime = 0;
             GaaTil(sceneCityHub);
         });
     }
@@ -802,20 +820,20 @@ function sceneBeachChanceFront() {
     if (tall === 0) {
         chanceCardB1Voice.play();
         const chanceCard0 = new Blocks.Image("Bilder/Kort/Beach/Chance/chanceCardB1.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Spill inn lyd + legg inn objekter?
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             chanceCardB1Voice.pause();
+            chanceCardB1Voice.currentTime = 0;
             GaaTil(sceneBeachHub);
         });
 
     } else if (tall === 1) {
         chanceCardB2Voice.play();
         const chanceCard1 = new Blocks.Image("Bilder/Kort/Beach/Chance/chanceCardB2.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Spill inn lyd + legg inn objekter?
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             chanceCardB2Voice.pause();
+            chanceCardB2Voice.currentTime = 0;
             GaaTil(sceneBeachHub);
         });
 
@@ -823,30 +841,32 @@ function sceneBeachChanceFront() {
         chanceCardB3Voice.play();
         const chanceCard2 = new Blocks.Image("Bilder/Kort/Beach/Chance/chanceCardB3.png", {x: 30, y: 10, width: 1020, height: 700});
         const plane = new Blocks.Image("Bilder/Objekter/plane.png", {x: 600, y: 450, width: 400, height: 220});
-        // Spill inn lyd 
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             chanceCardB3Voice.pause();
+            chanceCardB3Voice.currentTime = 0;
             GaaTil(sceneBeachHub);
         });
 
     } else if (tall === 3) {
         chanceCardB4Voice.play();
         const chanceCard3 = new Blocks.Image("Bilder/Kort/Beach/Chance/chanceCardB4.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Spill inn lyd + legg inn objekter?
+        const crab = new Blocks.Image("Bilder/Objekter/crab.png", {x: 720, y: 500, width: 250, height: 205});
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             chanceCardB4Voice.pause();
+            chanceCardB4Voice.currentTime = 0;
             GaaTil(sceneBeachHub);
         });
 
     } else if (tall === 4) {
         chanceCardB5Voice.play();
         const chanceCard4 = new Blocks.Image("Bilder/Kort/Beach/Chance/chanceCardB5.png", {x: 30, y: 10, width: 1020, height: 700});
-        // Spill inn lyd + legg inn objekter?
+        const seagull = new Blocks.Image("Bilder/Objekter/seagull.png", {x: 750, y: 490, width: 300, height: 150});
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 120, height: 110});
         Actions.Click(continueButton, () => {
             chanceCardB5Voice.pause();
+            chanceCardB5Voice.currentTime = 0;
             GaaTil(sceneBeachHub);
         });
 
@@ -857,6 +877,7 @@ function sceneBeachChanceFront() {
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             chanceCardB6Voice.pause();
+            chanceCardB6Voice.currentTime = 0;
             GaaTil(sceneBeachHub);
         });
     }
@@ -869,13 +890,14 @@ function sceneBeachChanceFront() {
 function sceneForestQuestionFront() {                                                                                                          
     const forestbackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", {x: -8, y: -8, width: 1088, height: 818});
     let tall = Math.floor(Math.random() * 10);
-    //tall = 6; //For Debugging
+    //tall = 2; //For Debugging
     if (tall === 0) {
         const forestQuestion1 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFBiggestAnimal.png", {x: 30, y: 10, width: 1020, height: 700});
         qCardFBiggestAnimalVoice.play();
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             qCardFBiggestAnimalVoice.pause();
+            qCardFBiggestAnimalVoice.currentTime = 0;
             GaaTil(sceneForestQ1Answer);
         })
         // Legg til lyd
@@ -887,18 +909,20 @@ function sceneForestQuestionFront() {
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             qCardFCountingSquirrelsVoice.pause();
+            qCardFCountingSquirrelsVoice.currentTime = 0;
             GaaTil(sceneForestQ2Answer);
         })
 
     } else if (tall === 2) {
         const forestQuestion3 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFMikkelRev.png", {x: 30, y: 10, width: 1020, height: 700});
         qCardFMikkelRevVoice.play();
+        const letter = new Blocks.Image("Bilder/Objekter/mikkelRevLetter.png", {x: 50, y: 450, width: 350, height: 200});
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             qCardFMikkelRevVoice.pause();
+            qCardFMikkelRevVoice.currentTime = 0;
             GaaTil(sceneForestQ3Answer)
         })
-        // Legg til knapp for "riktig svar" og knapp for "feil svar" + objekter + lyd
 
     } else if (tall === 3) {
         const forestQuestion4 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFOddOneOut.png", {x: 30, y: 10, width: 1020, height: 700});
@@ -906,6 +930,7 @@ function sceneForestQuestionFront() {
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             qCardFOddOneOutVoice.pause();
+            qCardFOddOneOutVoice.currentTime = 0;
             GaaTil(sceneForestQ4Answer);
         })
 
@@ -915,9 +940,9 @@ function sceneForestQuestionFront() {
         const continueButton = new Blocks.Image("Bilder/Kort/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             qCardFOwlSoundVoice.pause();
+            qCardFOwlSoundVoice.currentTime = 0;
             GaaTil(sceneForestQ5Answer);
         })
-        // Legg til en knapp for å spille av lyden, spill også inn lyden (uglelyd) + objekter + lyd
 
     } else if (tall === 5) {
         const forestQuestion6 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWhatTreeLosesLeaves.png", {x: 30, y: 10, width: 1020, height: 700});
@@ -925,9 +950,9 @@ function sceneForestQuestionFront() {
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             qCardFWhatTreeLosesLeavesVoice.pause();
+            qCardFWhatTreeLosesLeavesVoice.currentTime = 0;
             GaaTil(sceneForestQ6Answer);
         })
-        // Legg til knapp for "riktig svar", og knapp for "feil svar", evt selve oppgaven? + objekter + lyd
 
     } else if (tall === 6) {
         const forestQuestion7 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWhoEatsNuts.png", {x: 30, y: 10, width: 1020, height: 700});
@@ -935,9 +960,9 @@ function sceneForestQuestionFront() {
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             qCardFWhoEatsNutsVoice.pause();
+            qCardFWhoEatsNutsVoice.currentTime = 0;
             GaaTil(sceneForestQ7Answer);
         })
-        // Legg til knapp for "riktig svar", og knapp for "feil svar", evt selve oppgaven? + objekter + lyd
 
     } else if (tall === 7) {
         const forestQuestion8 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWhoHowls.png", {x: 30, y: 10, width: 1020, height: 700});
@@ -945,9 +970,9 @@ function sceneForestQuestionFront() {
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             qCardFWhoHowlsVoice.pause();
+            qCardFWhoHowlsVoice.currentTime = 0;
             GaaTil(sceneForestQ8Answer);
         })
-        // Legg til knapp for "riktig svar", og knapp for "feil svar" + objekter + lyd
 
     } else if (tall === 8) {
         const forestQuestion9 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWhoMakesHoney.png", {x: 30, y: 10, width: 1020, height: 700});
@@ -956,6 +981,7 @@ function sceneForestQuestionFront() {
         const continuebutton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continuebutton, () => {
             qCardFWhoMakesHoneyVoice.pause();
+            qCardFWhoMakesHoneyVoice.currentTime = 0;
             GaaTil(sceneForestQ9Answer);
         })
 
@@ -965,9 +991,9 @@ function sceneForestQuestionFront() {
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             qCardFWoodpeckerVoice.pause();
+            qCardFWoodpeckerVoice.currentTime = 0;
             GaaTil(sceneForestQ10Answer);
         })
-        // Legg til knapp for "riktig svar" og knapp for "feil svar" + objekter + lyd
     }
 }
 
@@ -1102,29 +1128,71 @@ function sceneBeachQuestionFront() {
 function sceneForestChallengeFront() {
     const forestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", {x: -8, y: -8, width: 1088, height: 818});
     let tall = Math.floor(Math.random() * 10);
+    tall = 4;
     if (tall === 0) {
         const forestChallenge1 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFFlood.png", {x: 30, y: 10, width: 1020, height: 700});
         chCardFFloodVoice.play();
-        // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
+        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
+        Actions.Click(continueButton, () => {
+            chCardFFloodVoice.pause();
+            chCardFFloodVoice.currentTime = 0;
+            GaaTil(sceneForestCh1Answer);
+        })
 
     } else if (tall === 1) {
         const forestChallenge2 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFGiraffeLost.png", {x: 30, y: 10, width: 1020, height: 700});
         chCardFGiraffeLostVoice.play();
-        // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
+        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
+        const giraffe = new Blocks.Image("Bilder/Karakterer/giraffeClosedMouth.png", {x: 800, y: 310, width: 220, height: 400});
+        Actions.Click(continueButton, () => {
+            chCardFGiraffeLostVoice.pause();
+            chCardFGiraffeLostVoice.currentTime = 0;
+            GaaTil(sceneForestCh2Answer);
+        })
 
     } else if (tall === 2) {
         const forestChallenge3 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFHulkBabyPoop.png", {x: 30, y: 10, width: 1020, height: 700});
         chCardFHulkBabyPoopVoice.play();
-        // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
+        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
+        const hulkbaby = new Blocks.Image("Bilder/Karakterer/hulkbaby.png", {x: 50, y: 400, width: 250, height: 300});
+        Actions.Click(continueButton, () => {
+            chCardFHulkBabyPoopVoice.pause();
+            chCardFHulkBabyPoopVoice.currentTime = 0;
+            GaaTil(sceneForestCh3Answer);
+        })
 
     } else if (tall === 3) {
         const forestChallenge4 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFJumpLikeRabbit.png", {x: 30, y: 10, width: 1020, height: 700});
         chCardFJumpLikeRabbitVoice.play();
-        // Knapp for gjennomført oppgave/ikke gjennomført oppgave + lyd
+        const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", {x: 150, y: 520, width: 150, height: 150});
+        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongbutton.png", {x: 788, y: 520, width: 150, height: 150});
+        Actions.Click(donebutton, () => {
+            chCardFJumpLikeRabbitVoice.pause();
+            chCardFJumpLikeRabbitVoice.currentTime = 0;
+            challengeCompleted2.play();
+            challengeCompleted2.onended = () => {
+                GaaTil(sceneForestHub);
+            }
+        })
+        Actions.Click(notdonebutton, () => {
+            chCardFJumpLikeRabbitVoice.pause();
+            chCardFJumpLikeRabbitVoice.currentTime = 0;
+            challengeNotCompleted1.play();
+            challengeNotCompleted1.onended = () => {
+                GaaTil(sceneForestHub);
+            }
+        })
 
     } else if (tall === 4) {
         const forestChallenge5 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFMooseLaugh.png", {x: 30, y: 10, width: 1020, height: 700});
         chCardFMooseLaughVoice.play();
+        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
+        const moose = new Blocks.Image("Bilder/Karakterer/mooseClosedMouth.png", {x: 100, y: 450, width: 350, height: 450});
+        Actions.Click(continueButton, () => {
+            chCardFMooseLaughVoice.pause();
+            chCardFMooseLaughVoice.currentTime = 0;
+            GaaTil(sceneForestCh4Answer);
+        })
         // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
 
     } else if (tall === 5) {
@@ -1518,6 +1586,92 @@ function sceneForestQ10Answer() {
             GaaTil(sceneForestHub);
         }
     })
+}
+
+    // FOREST - CHALLENGES
+
+function sceneForestCh1Answer() {
+    const background = new Blocks.Image("Bilder/Bakgrunner/forestBackgroundRiver.png", {x: -8, y: -8, width: 1088, height: 1088});
+    const log1 = new Blocks.Image("Bilder/Objekter/logRound1.png", {x: 637, y: 195, width: 100, height: 100});
+    const log2 = new Blocks.Image("Bilder/Objekter/logTriangle2.png", {x: 765, y: 710, width: 100, height: 100});
+    const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
+    Actions.Drag(log1);
+    Actions.Drag(log2);
+    Actions.Click(continueButton, () => {
+        applause.play();
+        applause.onended = () => {
+            GaaTil(sceneForestHub);
+        }
+    })
+}
+
+function sceneForestCh2Answer() {
+    const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", {x: -8, y: -8, width: 1088, height: 818});
+    const giraffe1 = new Blocks.Image("Bilder/Karakterer/giraffeClosedMouth.png", {x: 270, y: 170, width: 200, height: 650});
+    const rocks1 = new Blocks.Image("Bilder/Objekter/rocks1.png", {x: 700, y: 650, width: 200, height: 150});
+    const rocks2 = new Blocks.Image("Bilder/Objekter/rocks2.png", {x: 600, y: 600, width: 100, height: 100});
+    const tree1 = new Blocks.Image("Bilder/Objekter/oakTree.png", {x: 250, y: 330, width: 300, height: 550});
+    const treestump = new Blocks.Image("Bilder/Objekter/treeStump.png", {x: 570, y: 560, width: 50, height: 50});
+    const rocks3 = new Blocks.Image("Bilder/Objekter/rocks1.png", {x: 30, y: 650, width: 100, height: 100});
+    const squirrel = new Blocks.Image("Bilder/Karakterer/squirrel.png", {x: 710, y: 200, width: 50, height: 50});
+    Actions.Click(giraffe1, () => {
+        challengeCompleted1.play();
+        challengeCompleted1.onended = () => {
+            GaaTil(sceneForestHub);
+        }
+    })
+}
+
+function sceneForestCh3Answer() {
+    const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", {x: -8, y: -8, width: 1088, height: 818});
+    const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 50, y: 50, width: 400, height: 300});
+    const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 610, y: 50, width: 400, height: 300});
+    const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 610, y: 400, width: 400, height: 300});
+    const poop = new Blocks.Image("Bilder/Objekter/poop.png", {x: 100, y: 400, width: 350, height: 300});
+    const wronganswer1 = new Blocks.Image("Bilder/Karakterer/bearSleeping.png", {x: 130, y: 100, width: 250, height: 200});
+    const wronganswer2 = new Blocks.Image("Bilder/Karakterer/giraffeClosedMouth.png", {x: 730, y: 430, width: 150, height: 230});
+    const correctanswer = new Blocks.Image("Bilder/Objekter/placeholderCorrect.png", {x: 690, y: 100, width: 250, height: 200});
+    Actions.Click(correctanswer, () => {
+        yesCorrect.play();
+        yesCorrect.onended = () => {
+            GaaTil(sceneForestHub);
+        }
+    })
+}
+
+function sceneForestCh4Answer() {
+    const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground2.png", {x: -8, y: -8, width: 1088, height: 818});
+    const moose1 = new Blocks.Image("Bilder/Karakterer/mooseClosedMouth.png", {x: 270, y: 200, width: 500, height: 800});
+    const moose2 = new Blocks.CellAnimation(["Bilder/Karakterer/mooseClosedmouth.png", "Bilder/Karakterer/mooseClosedMouth.png", "Bilder/Karakterer/mooseClosedMouth.png", "Bilder/Karakterer/mooseOpenMouth.png"], {x: 270, y: 200, width: 500, height: 800, auto: true, loop: true});
+    moose2.hide();
+    const countdown1 = new Actions.CountDown(5, (complete) => {
+        if (complete) {
+            moose1.hide();
+            moose2.show();
+            mooseLaugh.play();
+            mooseLaugh.onended = () => {
+                moose2.hide();
+                moose1.show();
+                challengeCompleted1.play();
+                challengeCompleted1.onended = () => {
+                    GaaTil(sceneForestHub);
+                }
+            }
+        }
+    }, {onTick: true, auto: true});
+
+}
+
+function sceneForestCh5Answer() {
+
+}
+
+function sceneForestCh6Answer() {
+
+}
+
+function sceneForestCh7Answer() {
+
 }
 
 
