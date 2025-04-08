@@ -17,6 +17,7 @@
     color: greenyellow;
 }
 
-body {
-    position: fixed;
+html, body {
+    overflow: hidden;
+    overscroll-behavior-y: contain;
 }
