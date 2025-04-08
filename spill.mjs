@@ -2252,9 +2252,6 @@ function sceneCityCh4Answer() {
     Actions.Colide(plum, shoppingBag, () => {plum.hide();});
     Actions.Colide(strawberry, shoppingBag, () => {strawberry.hide();});
     
-
-
-
 }
 
 function sceneCityCh5Answer() {
