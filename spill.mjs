@@ -2245,12 +2245,14 @@ function sceneCityCh4Answer() {
     Actions.Drag(milk);
     Actions.Drag(plum);
     Actions.Drag(strawberry);
-    Actions.Colide(cheese, shoppingBag, () => {cheese.hide()});
-    Actions.Colide(kiwi, shoppingBag, () => {kiwi.hide()});
-    Actions.Colide(lemon, shoppingBag, () => {lemon.hide()});
-    Actions.Colide(milk, shoppingBag, () => {milk.hide()});
-    Actions.Colide(plum, shoppingBag, () => {plum.hide()});
-    Actions.Colide(strawberry, shoppingBag, () => {strawberry.hide()});
+    Actions.Colide(cheese, shoppingBag, () => {cheese.hide();});
+    Actions.Colide(kiwi, shoppingBag, () => {kiwi.hide();});
+    Actions.Colide(lemon, shoppingBag, () => {lemon.hide();});
+    Actions.Colide(milk, shoppingBag, () => {milk.hide();});
+    Actions.Colide(plum, shoppingBag, () => {plum.hide();});
+    Actions.Colide(strawberry, shoppingBag, () => {strawberry.hide();});
+    
+
 
 
 }
