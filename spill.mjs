@@ -1119,7 +1119,6 @@ function sceneCityQuestionFront() {
             qCardCWheelsOnTheBusVoice.currentTime = 0;
             GaaTil(sceneCityQ9Answer);
         })
-        // Legg til knapp for "riktig svar" og knapp for "feil svar" + objekter + lyd
 
     }
 }
@@ -1363,7 +1362,7 @@ function sceneForestChallengeFront() {
 function sceneCityChallengeFront() {
     const cityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", {x: -8, y: -8, width: 1088, height: 818});
     let tall = Math.floor(Math.random() * 5);
-    //tall = 1; // For debugging
+    tall = 4; // For debugging
     if (tall === 0) {
         const cityChallenge1 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCBakeBread.png", {x: 30, y: 10, width: 1020, height: 700});
         chCardCBakeBreadVoice.play();
@@ -1424,7 +1423,13 @@ function sceneCityChallengeFront() {
     } else if (tall === 4) {
         const cityChallenge5 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCDroppedGroceries.png", {x: 30, y: 10, width: 1020, height: 700});
         chCardCDroppedGroceriesVoice.play();
-        // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
+        const hulk = new Blocks.Image("Bilder/Karakterer/hulkClosedMouth.png", {x: -90, y: 470, width: 550, height: 400});
+        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
+        Actions.Click(continueButton, () => {
+            chCardCDroppedGroceriesVoice.pause();
+            chCardCDroppedGroceriesVoice.currentTime = 0;
+            GaaTil(sceneCityCh4Answer);
+        })
 
     }
 }
@@ -2225,6 +2230,28 @@ function sceneCityCh3Answer() {
 }
 
 function sceneCityCh4Answer() {
+    const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground2.png", {x: -8, y: -8, width: 1088, height: 818});
+    const hulkShopping = new Blocks.Image("Bilder/Karakterer/hulkShopping.png", {x: 270, y: -10, width: 600, height: 450});
+    const shoppingBag = new Blocks.Image("Bilder/Objekter/shoppingBagElement.png", {x: 292, y: 284, width: 130, height: 100});
+    const cheese = new Blocks.Image("Bilder/Objekter/cheese.png", {x: 271, y: 648, width: 90, height: 90});
+    const kiwi = new Blocks.Image("Bilder/Objekter/kiwi.png", {x: 651, y: 595, width: 90, height: 90});
+    const lemon = new Blocks.Image("Bilder/Objekter/lemon.png", {x: 433, y: 534, width: 90, height: 90});
+    const milk = new Blocks.Image("Bilder/Objekter/milk.png", {x: 930, y: 577, width: 90, height: 120});
+    const plum = new Blocks.Image("Bilder/Objekter/plum.png", {x: 856, y: 380, width: 90, height: 120});
+    const strawberry = new Blocks.Image("Bilder/Objekter/strawberry.png", {x: 67, y: 525, width: 90, height: 90});
+    Actions.Drag(cheese);
+    Actions.Drag(kiwi);
+    Actions.Drag(lemon);
+    Actions.Drag(milk);
+    Actions.Drag(plum);
+    Actions.Drag(strawberry);
+    Actions.Colide(cheese, shoppingBag, () => {cheese.hide()});
+    Actions.Colide(kiwi, shoppingBag, () => {kiwi.hide()});
+    Actions.Colide(lemon, shoppingBag, () => {lemon.hide()});
+    Actions.Colide(milk, shoppingBag, () => {milk.hide()});
+    Actions.Colide(plum, shoppingBag, () => {plum.hide()});
+    Actions.Colide(strawberry, shoppingBag, () => {strawberry.hide()});
+
 
 }
 
