@@ -18,5 +18,5 @@
 }
 
 html, body {
-    overscroll-behavior: contain;
+    overscroll-behavior-y: contain;
 }
