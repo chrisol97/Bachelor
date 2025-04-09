@@ -303,6 +303,7 @@ const addResourcesToCache = async (resources) => {
         "/Bilder/Objekter/fluesopp.png",
         "/Bilder/Objekter/forestTitle.PNG",
         "/Bilder/Objekter/fredrikBall.png",
+        "/Bilder/Objekter/gameTitle.png",
         "/Bilder/Objekter/handFiveFinger.png",
         "/Bilder/Objekter/handFourFinger.png",
         "/Bilder/Objekter/handOneFinger.png",

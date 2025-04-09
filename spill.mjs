@@ -169,8 +169,8 @@ Start(startscreen);
 
 function startscreen() {
     const startscreenobject = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 325, y: 150, width: 400, height:500 });
-    const skipbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 200, y: 200, width: 200, height: 200});                           // HUSK Å FJERNE DETTE
-    /*Actions.Click(skipbutton, () => {
+    /*const skipbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 200, y: 200, width: 200, height: 200});                           // HUSK Å FJERNE DETTE
+    Actions.Click(skipbutton, () => {
         GaaTil(sceneBeachHub); 
     }) */
     Actions.Click(startscreenobject, () => {
@@ -189,8 +189,9 @@ function titlescreen() {
     const cattitlescreen = new Blocks.Image("Bilder/Karakterer/catClosedMouth.png", {x: 600, y: 490, width: 350, height: 300});
     const mantitlescreen = new Blocks.Image("Bilder/Karakterer/manClosedMouth.png", {x: 780, y: 330, width: 50, height: 100});
     const mainchartitlescreen = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", {x: 200, y: 440, width: 200, height: 350});
-    const videobutton = new Blocks.Image("Bilder/Knapper/videoButton.png", {x: 750, y: 190, width: 250, height: 150});
-    const skipbutton = new Blocks.Image("Bilder/Knapper/playButton.png", {x: 60, y: 190, width: 250, height: 150});                                 // Legge til navn på spillet, og forklaring av hva knappene gjør
+    const videobutton = new Blocks.Image("Bilder/Knapper/videoButton.png", {x: 765, y: 320, width: 250, height: 150});
+    const skipbutton = new Blocks.Image("Bilder/Knapper/playButton.png", {x: 60, y: 320, width: 250, height: 150});                                 // Legge til navn på spillet, og forklaring av hva knappene gjør
+    const title = new Blocks.Image("Bilder/Objekter/gameTitle.png", {x: 280, y: 20, width: 540, height: 200});
     Actions.Click(skipbutton, () => {
         titlescreenmusic.pause();
         GaaTil(sceneIntro5)
@@ -347,7 +348,7 @@ function sceneIntro4() {
     styrerPlaceholderTalking.hide();
     const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 700, y: 50, width: 150, height: 150});
     continueButton.hide();
-    const mainCharMoving = Actions.Tween(mainChar, -7, 0);
+    const mainCharMoving = Actions.Tween(mainChar, -9, 0);
     Actions.Colide(mainChar, styrerPlaceholder, () => {
         mainCharMoving.pause();
         mainChar.hide();
