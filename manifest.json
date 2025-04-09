@@ -5,7 +5,7 @@
     {
       "src": "/Bilder/Knapper/kindergartenButton-192x192.png",
       "sizes": "192x192",
-      "type": "Bilder/Knapper"
+      "type": "image/png"
     },
     {
       "src": "/Bilder/Knapper/kindergartenButton-512x512.png",
