@@ -1,0 +1,20 @@
+{
+  "short_name": "MDN",
+  "name": "MDN Web Docs",
+  "icons": [
+    {
+      "src": "/Bilder/Knapper/kindergartenButton-192x192.png",
+      "sizes": "192x192",
+      "type": "Bilder/Knapper"
+    },
+    {
+      "src": "/Bilder/Knapper/kindergartenButton-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "https://chrisol97.github.io/Bachelor/spill.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

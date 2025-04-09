@@ -889,7 +889,7 @@ function sceneBeachChanceFront() {
 function sceneForestQuestionFront() {                                                                                                          
     const forestbackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", {x: -8, y: -8, width: 1088, height: 818});
     let tall = Math.floor(Math.random() * 10);
-    //tall = 2; //For Debugging
+    //tall = 9; //For Debugging
     if (tall === 0) {
         const forestQuestion1 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFBiggestAnimal.png", {x: 30, y: 10, width: 1020, height: 700});
         qCardFBiggestAnimalVoice.play();
@@ -966,6 +966,7 @@ function sceneForestQuestionFront() {
         const forestQuestion8 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWhoHowls.png", {x: 30, y: 10, width: 1020, height: 700});
         qCardFWhoHowlsVoice.play();
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
+        const moon = new Blocks.Image("Bilder/Objekter/moon.png", {x: 0, y: 400, width: 250, height: 250});
         Actions.Click(continueButton, () => {
             qCardFWhoHowlsVoice.pause();
             qCardFWhoHowlsVoice.currentTime = 0;
@@ -1129,11 +1130,13 @@ function sceneCityQuestionFront() {
 function sceneBeachQuestionFront() {
     const beachBackground = new Blocks.Image("Bilder/Bakgrunner/beach.png", {x: -8, y: -8, width: 1088, height: 818});
     let tall = Math.floor(Math.random() * 11);
-    tall = 10; // For debugging
+    //tall = 5; // For debugging
     if (tall === 0) {
-        const beachQuestion1 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBBiggestSandCastle.png", {x: 30, y: 10, width: 1020, height: 700});                // Bruker placeholders enn så lenge
+        const beachQuestion1 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBBiggestSandCastle.png", {x: 30, y: 10, width: 1020, height: 700});
         qCardBBiggestSandCastleVoice.play();
         const girl = new Blocks.Image("Bilder/Karakterer/humanGirlClosedMouth.png", {x: 96, y: 451, width: 200, height: 250});
+        const sandCastle = new Blocks.Image("Bilder/Objekter/sandcastle.png", {x: 816, y: 566, width: 250, height: 300});
+        Actions.Drag(sandCastle)
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
         Actions.Click(continueButton, () => {
             qCardBBiggestSandCastleVoice.pause();
@@ -1267,7 +1270,7 @@ function sceneBeachQuestionFront() {
 function sceneForestChallengeFront() {
     const forestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", {x: -8, y: -8, width: 1088, height: 818});
     let tall = Math.floor(Math.random() * 10);
-    //tall = 9; // For debugging
+    //tall = 2; // For debugging
     if (tall === 0) {
         const forestChallenge1 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFFlood.png", {x: 30, y: 10, width: 1020, height: 700});
         chCardFFloodVoice.play();
@@ -1433,7 +1436,7 @@ function sceneForestChallengeFront() {
 function sceneCityChallengeFront() {
     const cityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", {x: -8, y: -8, width: 1088, height: 818});
     let tall = Math.floor(Math.random() * 5);
-    tall = 4; // For debugging
+    //tall = 4; // For debugging
     if (tall === 0) {
         const cityChallenge1 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCBakeBread.png", {x: 30, y: 10, width: 1020, height: 700});
         chCardCBakeBreadVoice.play();
@@ -1511,41 +1514,102 @@ function sceneCityChallengeFront() {
 function sceneBeachChallengeFront() {
     const beachBackground = new Blocks.Image("Bilder/Bakgrunner/beach.png", {x: -8, y: -8, width: 1088, height: 818});
     let tall = Math.floor(Math.random() * 7);
-    // tall = 0; // For debugging
+    //tall = 6; // For debugging
     if (tall === 0) {
         const beachChallenge1 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBBiggestFish.png", {x: 30, y: 10, width: 1020, height: 700});
         chCardBBiggestFishVoice.play();
-        // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
+        const jellyfish = new Blocks.Image("Bilder/Karakterer/jellyfish.png", {x: 731, y: 419, width: 300, height: 350});
+        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
+        Actions.Click(continueButton, () => {
+            chCardBBiggestFishVoice.pause();
+            chCardBBiggestFishVoice.currentTime = 0;
+            GaaTil(sceneBeachCh1Answer);
+        })
 
     } else if (tall === 1) {
         const beachChallenge2 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBCatWater.png", {x: 30, y: 10, width: 1020, height: 700});
         chCardBCatWaterVoice.play();
-        // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper evt knapp for gjennomført / ikke gjennomført oppgave
+        const cat = new Blocks.Image("Bilder/Karakterer/catClosedMouth.png", {x: 18, y: 487, width: 350, height: 250});
+        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 620, width: 150, height: 150});
+        Actions.Click(continueButton, () => {
+            chCardBCatWaterVoice.pause();
+            chCardBCatWaterVoice.currentTime = 0;
+            GaaTil(sceneBeachCh2Answer);
+        })
 
     } else if (tall === 2) {
         const beachChallenge3 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBCountFish.png", {x: 30, y: 10, width: 1020, height: 700});
         chCardBCountFishVoice.play();
-        // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
+        const fish1 = new Blocks.Image("Bilder/Karakterer/fish1.png", {x: 825, y: 500, width: 200, height: 200});
+        const fish2 = new Blocks.Image("Bilder/Karakterer/fish2.png", {x: 53, y: 500, width: 200, height: 200});
+        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
+        Actions.Click(continueButton, () => {
+            chCardBCountFishVoice.pause();
+            chCardBCountFishVoice.currentTime = 0;
+            GaaTil(sceneBeachCh3Answer);
+        })
 
     } else if (tall === 3) {
         const beachChallenge4 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBMermaidCat.png", {x: 30, y: 10, width: 1020, height: 700});
         chCardBMermaidCatVoice.play();
-        // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
+        const mermaidCat = new Blocks.Image("Bilder/Karakterer/mermaidCat.png", {x: 729, y: 438, width: 300, height: 250});
+        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
+        Actions.Click(continueButton, () => {
+            chCardBMermaidCatVoice.pause();
+            chCardBMermaidCatVoice.currentTime = 0;
+            GaaTil(sceneBeachCh4Answer);
+        })
 
     } else if (tall === 4) {
         const beachChallenge5 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBSongAboutOcean.png", {x: 30, y: 10, width: 1020, height: 700});
         chCardBSongAboutOceanVoice.play();
-        // Knapp for gjennomført oppgave/ikke gjennomført oppgave + lyd
+        const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", {x: 43, y: 547, width: 150, height: 150});
+        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", {x: 885, y: 547, width: 150, height: 150});
+        Actions.Click(donebutton, () => {
+            challengeCompleted1.play();
+            challengeCompleted1.onended = () => {
+                GaaTil(sceneBeachHub);
+            }
+        })
+        Actions.Click(notdonebutton, () => {
+            challengeNotCompleted1.play();
+            challengeNotCompleted1.onended = () => {
+                GaaTil(sceneBeachHub);
+            }
+        })
 
     } else if (tall === 5) {
         const beachChallenge6 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBSunburntGiraffe.png", {x: 30, y: 10, width: 1020, height: 700});
         chCardBSunburntGiraffeVoice.play();
-        // Gå videre til ny scene hvor den faktiske oppgaven utføres + lyd + objekter + knapper
+        const giraffe = new Blocks.Image("Bilder/Karakterer/giraffeClosedMouth.png", {x: 817, y: 277, width: 220, height: 400});
+        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 475, y: 10, width: 150, height: 150});
+        Actions.Click(continueButton, () => {
+            chCardBSunburntGiraffeVoice.pause();
+            chCardBSunburntGiraffeVoice.currentTime = 0;
+            GaaTil(sceneBeachCh5Answer);
+        })
 
     } else if (tall === 6) {
         const beachChallenge7 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBWalkLikeCrab.png", {x: 30, y: 10, width: 1020, height: 700});
         chCardBWalkLikeCrabVoice.play();
-        // Knapp for gjennomført oppgave/ikke gjennomført oppgave + lyd
+        const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", {x: 40, y: 554, width: 150, height: 150});
+        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", {x: 891, y: 554, width: 150, height: 150});
+        Actions.Click(donebutton, () => {
+            chCardBWalkLikeCrabVoice.pause();
+            chCardBWalkLikeCrabVoice.currentTime = 0;
+            challengeCompleted2.play();
+            challengeCompleted2.onended = () => {
+                GaaTil(sceneBeachHub);
+            }
+        })
+        Actions.Click(notdonebutton, () => {
+            chCardBWalkLikeCrabVoice.pause();
+            chCardBWalkLikeCrabVoice.currentTime = 0;
+            challengeNotCompleted1.play();
+            challengeNotCompleted1.onended = () => {
+                GaaTil(sceneBeachHub);
+            }
+        })
     }
 }
 
@@ -1680,9 +1744,9 @@ function sceneForestQ5Answer() {
     const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 100, y: 100, width: 375, height: 275});
     const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 600, y: 250, width: 375, height: 275});
     const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 150, y: 470, width: 375, height: 275});
-    const wronganswer1 = new Blocks.Image("Bilder/Objekter/placeholderWrong.png", {x: 650, y: 320, width: 280, height: 150});
-    const wronganswer2 = new Blocks.Image("Bilder/Objekter/placeholderWrong.png", {x: 200, y: 540, width: 280, height: 150});
-    const correctanswer = new Blocks.Image("Bilder/Objekter/placeholderCorrect.png", {x: 150, y: 160, width: 280, height: 150});
+    const wronganswer1 = new Blocks.Image("Bilder/Karakterer/woodPecker.png", {x: 680, y: 295, width: 180, height: 180});
+    const wronganswer2 = new Blocks.Image("Bilder/Objekter/seagull.png", {x: 200, y: 540, width: 280, height: 150});
+    const correctanswer = new Blocks.Image("Bilder/Karakterer/owl.png", {x: 180, y: 145, width: 230, height: 180});
     Actions.Click(wronganswer1, () => {
         notQuiteCorrect.play();
         notQuiteCorrect.onended = () => {
@@ -1760,7 +1824,7 @@ function sceneForestQ8Answer() {
     const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 150, y: 470, width: 400, height: 300});
     const wronganswer1 = new Blocks.Image("Bilder/Karakterer/bearSleeping.png", {x: 188, y: 150, width: 230, height: 200});
     const wronganswer2 = new Blocks.Image("Bilder/Karakterer/giraffeClosedMouth.png", {x: 280, y: 500, width: 150, height: 230});
-    const correctanswer = new Blocks.Image("Bilder/Objekter/placeholderCorrect.png", {x: 690, y: 282, width: 230, height: 230});                    // Placeholder
+    const correctanswer = new Blocks.Image("Bilder/Karakterer/wolf.png", {x: 690, y: 282, width: 230, height: 230});
     Actions.Click(wronganswer1, () => {
         wrongAnswerSound1.play();
         wrongAnswerSound1.onended = () => {
@@ -1816,7 +1880,7 @@ function sceneForestQ10Answer() {
     const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 150, y: 470, width: 400, height: 300});
     const wronganswer1 = new Blocks.Image("Bilder/Karakterer/mooseClosedMouth.png", {x: 200, y: 133, width: 200, height: 230});
     const wronganswer2 = new Blocks.Image("Bilder/Karakterer/monkeyClosedMouth.png", {x: 690, y: 285, width: 230, height: 220});
-    const correctanswer = new Blocks.Image("Bilder/Objekter/placeholderCorrect.png", {x: 250, y: 520, width: 200, height: 200});
+    const correctanswer = new Blocks.Image("Bilder/Karakterer/woodPecker.png", {x: 250, y: 520, width: 200, height: 200});
     Actions.Click(wronganswer1, () => {
         wrongAnswerSound1.play();
         wrongAnswerSound1.onended = () => {
@@ -1879,7 +1943,7 @@ function sceneForestCh3Answer() {
     const poop = new Blocks.Image("Bilder/Objekter/poop.png", {x: 100, y: 400, width: 350, height: 300});
     const wronganswer1 = new Blocks.Image("Bilder/Karakterer/bearSleeping.png", {x: 130, y: 100, width: 250, height: 200});
     const wronganswer2 = new Blocks.Image("Bilder/Karakterer/giraffeClosedMouth.png", {x: 730, y: 430, width: 150, height: 230});
-    const correctanswer = new Blocks.Image("Bilder/Objekter/placeholderCorrect.png", {x: 690, y: 100, width: 250, height: 200});
+    const correctanswer = new Blocks.Image("Bilder/Objekter/rabbit.png", {x: 690, y: 100, width: 250, height: 200});
     Actions.Click(correctanswer, () => {
         yesCorrect.play();
         yesCorrect.onended = () => {
@@ -2329,9 +2393,9 @@ function sceneCityCh4Answer() {                                                 
 
 function sceneBeachQ1Answer() {
     const background = new Blocks.Image("Bilder/Bakgrunner/beachBackground4.png", {x: -8, y: -8, width: 1088, height: 818});            
-    const correctanswer = new Blocks.Image("Bilder/Objekter/houseDrawing.png", {x: 49, y: 437, width: 400, height: 300});               // Placeholder
-    const wronganswer2 = new Blocks.Image("Bilder/Objekter/houseDrawing.png", {x: 596, y: 441, width: 300, height: 250});               // Placeholder
-    const wronganswer1 = new Blocks.Image("Bilder/Objekter/houseDrawing.png", {x: 504, y: 152, width: 250, height: 200});              // Placeholder
+    const correctanswer = new Blocks.Image("Bilder/Objekter/sandcastle.png", {x: 49, y: 437, width: 400, height: 300});
+    const wronganswer2 = new Blocks.Image("Bilder/Objekter/sandcastle.png", {x: 596, y: 441, width: 300, height: 250});
+    const wronganswer1 = new Blocks.Image("Bilder/Objekter/sandcastle.png", {x: 504, y: 152, width: 250, height: 200});
     Actions.Click(correctanswer, () => {
         applause.play();
         applause.onended = () => {
@@ -2449,7 +2513,7 @@ function sceneBeachQ5Answer() {
     const wronganswer1 = new Blocks.Image("Bilder/Objekter/crab.png", {x: 130, y: 91, width: 240, height: 220});
     const wronganswer2 = new Blocks.Image("Bilder/Objekter/seagull.png", {x: 101, y: 505, width: 300, height: 220});
     const correctanswer = new Blocks.Image("Bilder/Karakterer/humanGirlClosedMouth.png", {x: 719, y: 82, width: 200, height: 230});
-    const placeholder = new Blocks.Image("Bilder/Objekter/placeholderCorrect.png", {x: 600, y: 400, width: 400, height: 250});                  // Dette skal være fotspor
+    const sandTracks = new Blocks.Image("Bilder/Kort/KortSvar/Beach/Question/qCardBSandTracksTracks.png", {x: 470, y: 360, width: 600, height: 400});                  // Dette skal være fotspor
     Actions.Click(wronganswer1, () => {
         wrongAnswerSound2.play();
         wrongAnswerSound2.onended = () => {
@@ -2478,7 +2542,7 @@ function sceneBeachQ6Answer() {
     const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 150, y: 470, width: 400, height: 300});
     const wronganswer1 = new Blocks.Image("Bilder/Karakterer/whale.png", {x: 180, y: 135, width: 250, height: 220});
     const wronganswer2 = new Blocks.Image("Bilder/Karakterer/fish2.png", {x: 673, y: 295, width: 250, height: 200});
-    const correctanswer = new Blocks.Image("Bilder/Objekter/placeholderCorrect.png", {x: 226, y: 511, width: 250, height: 200});
+    const correctanswer = new Blocks.Image("Bilder/Karakterer/shark.png", {x: 226, y: 511, width: 250, height: 200});
     Actions.Click(wronganswer1, () => {
         notQuiteCorrect.play();
         notQuiteCorrect.onended = () => {
@@ -2565,10 +2629,12 @@ function sceneBeachQ9Answer() {
     const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 100, y: 100, width: 400, height: 300});
     const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 600, y: 250, width: 400, height: 300});
     const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", {x: 150, y: 470, width: 400, height: 300});
-    const wronganswer1 = new Blocks.Image("Bilder/Objekter/placeholderWrong.png", {x: 652, y: 301, width: 300, height: 200});
-    const wronganswer2 = new Blocks.Image("Bilder/Objekter/placeholderWrong.png", {x: 200, y: 523, width: 300, height: 200});
-    const correctanswer = new Blocks.Image("Bilder/Kort/KortSvar/Beach/Question/qCardBSwimSafelyCorrect.png", {x: 205, y: 129, width: 250, height: 200});
-    const girl = new Blocks.Image("Bilder/Karakterer/humanGirlSwimming.png", {x: 84, y: 148, width: 150, height: 240});
+    const wronganswer1 = new Blocks.Image("Bilder/Objekter/snorkel.png", {x: 720, y: 291, width: 180, height: 220});
+    const wronganswer2 = new Blocks.Image("Bilder/Objekter/swimmingFeet.png", {x: 265, y: 513, width: 180, height: 220});
+    const correctanswer = new Blocks.Image("Bilder/Karakterer/humanGirlSwimming.png", {x: 215, y: 137, width: 180, height: 220});
+    Actions.Drag(wronganswer1)
+    Actions.Drag(wronganswer2)
+    Actions.Drag(correctanswer)
     Actions.Click(wronganswer1, () => {
         notQuiteCorrect.play();
         notQuiteCorrect.onended = () => {
@@ -2615,6 +2681,176 @@ function sceneBeachQ10Answer() {
     Actions.Click(correctanswer, () => {
         yesCorrect.play();
         yesCorrect.onended = () => {
+            GaaTil(sceneBeachHub);
+        }
+    })
+
+}
+
+    // BEACH - CHALLENGE
+
+function sceneBeachCh1Answer() {
+    const background = new Blocks.Image("Bilder/Bakgrunner/beachBackground3.png", {x: -8, y: -8, width: 1088, height: 818});
+    const jellyfish = new Blocks.Image("Bilder/Karakterer/jellyfish.png", {x: -305, y: -10, width: 300, height: 400});
+    const wronganswer1 = new Blocks.Image("Bilder/Karakterer/fish1.png", {x: 57, y: 467, width: 130, height: 130});
+    const wronganswer2 = new Blocks.Image("Bilder/Karakterer/fish2.png", {x: 247, y: 601, width: 180, height: 180});
+    const wronganswer3 = new Blocks.Image("Bilder/Karakterer/fish1.png", {x: 438, y: 526, width: 50, height: 50});
+    const correctanswer = new Blocks.Image("Bilder/Karakterer/fish2.png", {x: 763, y: 527, width: 220, height: 220});
+    Actions.Tween(jellyfish, 5, 0);
+    Actions.Click(wronganswer1, () => {
+        wrongAnswerSound1.play();
+        wrongAnswerSound1.onended = () => {
+            GaaTil(sceneBeachHub);
+        }
+    })
+    Actions.Click(wronganswer2, () => {
+        wrongAnswerSound2.play();
+        wrongAnswerSound2.onended = () => {
+            GaaTil(sceneBeachHub);
+        }
+    })
+    Actions.Click(wronganswer3, () => {
+        notQuiteCorrect.play();
+        notQuiteCorrect.onended = () => {
+            GaaTil(sceneBeachHub);
+        }
+    })
+    Actions.Click(correctanswer, () => {
+        applause.play();
+        applause.onended = () => {
+            GaaTil(sceneBeachHub);
+        }
+    })
+
+}
+
+function sceneBeachCh2Answer() {
+    const background = new Blocks.Image("Bilder/Bakgrunner/beach.png", {x: -8, y: -8, width: 1088, height: 818});
+    const answercard1 = new Blocks.Image("Bilder/Kort/challengeCardFront.png", {x: 100, y: 100, width: 400, height: 300});
+    const answercard2 = new Blocks.Image("Bilder/Kort/challengeCardFront.png", {x: 600, y: 250, width: 400, height: 300});
+    const answercard3 = new Blocks.Image("Bilder/Kort/challengeCardFront.png", {x: 150, y: 470, width: 400, height: 300});
+    const wronganswer1 = new Blocks.Image("Bilder/Objekter/sunscreen.png", {x: 213, y: 139, width: 170, height: 200});
+    const wronganswer2 = new Blocks.Image("Bilder/Objekter/bucket.png", {x: 697, y: 290, width: 200, height: 200});
+    const correctanswer = new Blocks.Image("Bilder/Objekter/towel.png", {x: 219, y: 515, width: 250, height: 200});
+    Actions.Click(wronganswer1, () => {
+        notQuiteCorrect.play();
+        notQuiteCorrect.onended = () => {
+            GaaTil(sceneBeachHub);
+        }
+    })
+    Actions.Click(wronganswer2, () => {
+        wrongAnswerSound2.play();
+        wrongAnswerSound2.onended = () => {
+            GaaTil(sceneBeachHub);
+        }
+    })
+    Actions.Click(correctanswer, () => {
+        yesCorrect.play();
+        yesCorrect.onended = () => {
+            GaaTil(sceneBeachHub);
+        }
+    })
+
+}
+
+function sceneBeachCh3Answer() {
+    const background = new Blocks.Image("Bilder/Bakgrunner/beachBackground3.png", {x: -8, y: -8, width: 1088, height: 818});
+    const answercard1 = new Blocks.Image("Bilder/Kort/challengeCardFront.png", {x: 100, y: 100, width: 400, height: 300});
+    const answercard2 = new Blocks.Image("Bilder/Kort/challengeCardFront.png", {x: 600, y: 250, width: 400, height: 300});
+    const answercard3 = new Blocks.Image("Bilder/Kort/challengeCardFront.png", {x: 150, y: 470, width: 400, height: 300});
+    const wronganswer1 = new Blocks.Image("Bilder/Objekter/handTwoFinger.png", {x: 262, y: 514, width: 150, height: 200});
+    const wronganswer2 = new Blocks.Image("Bilder/Objekter/handFourFinger.png", {x: 704, y: 298, width: 200, height: 200});
+    const correctanswer = new Blocks.Image("Bilder/Objekter/handFiveFinger.png", {x: 218, y: 141, width: 200, height: 200});
+    const fish1 = new Blocks.Image("Bilder/Karakterer/fish1.png", {x: 1090, y: 290, width: 120, height: 120});
+    const fish2 = new Blocks.Image("Bilder/Karakterer/fish2.png", {x: -216, y: -22, width: 200, height: 200});
+    const fish3 = new Blocks.Image("Bilder/Karakterer/fish1.png", {x: 1087, y: 256, width: 100, height: 100});
+    const fish4 = new Blocks.Image("Bilder/Karakterer/fish2.png", {x: -166, y: 455, width: 150, height: 150});
+    const fish5 = new Blocks.Image("Bilder/Karakterer/fish1.png", {x: 1100, y: 620, width: 200, height: 200});
+    answercard1.hide();
+    answercard2.hide();
+    answercard3.hide();
+    wronganswer1.hide();
+    wronganswer2.hide();
+    correctanswer.hide();
+    Actions.Tween(fish1, -6, 0);
+    Actions.Tween(fish2, 7, 0);
+    Actions.Tween(fish3, -5, -1);
+    Actions.Tween(fish4, 9, 0);
+    Actions.Tween(fish5, -8, 0);
+    const countdown = new Actions.CountDown(8.4, (complete) => {
+        if (complete) {
+            answercard1.show();
+            answercard2.show();
+            answercard3.show();
+            wronganswer1.show();
+            wronganswer2.show();
+            correctanswer.show();
+        }
+    }, {onTick: true, auto: true});
+
+    Actions.Click(wronganswer1, () => {
+        wrongAnswerSound1.play();
+        wrongAnswerSound1.onended = () => {
+            GaaTil(sceneBeachHub);
+        }
+    })
+    Actions.Click(wronganswer2, () => {
+        notQuiteCorrect.play();
+        notQuiteCorrect.onended = () => {
+            GaaTil(sceneBeachHub);
+        }
+    })
+    Actions.Click(correctanswer, () => {
+        applause.play();
+        applause.onended = () => {
+            GaaTil(sceneBeachHub);
+        }
+    })
+
+}
+
+function sceneBeachCh4Answer() {
+    const background = new Blocks.Image("Bilder/Bakgrunner/beachBackground3.png", {x: -8, y: -8, width: 1088, height: 818});
+    const crab = new Blocks.Image("Bilder/Objekter/crab.png", {x: 593, y: 723, width: 60, height: 60});
+    const fish1 = new Blocks.Image("Bilder/Karakterer/fish1.png", {x: 812, y: 95, width: 200, height: 200});
+    const rocks = new Blocks.Image("Bilder/Objekter/rocks2.png", {x: 136, y: 653, width: 300, height: 200});
+    const jellyfish = new Blocks.Image("Bilder/Karakterer/jellyfish.png", {x: 318, y: 142, width: 220, height: 330});
+    const starFish = new Blocks.Image("Bilder/Objekter/starFish.png", {x: 362, y: 192, width: 60, height: 60});
+    Actions.Click(starFish, () => {
+        challengeCompleted1.play();
+        challengeCompleted1.onended = () => {
+            GaaTil(sceneBeachHub);
+        }
+    })
+
+}
+
+function sceneBeachCh5Answer() {
+    const background = new Blocks.Image("Bilder/Bakgrunner/beach.png", {x: -8, y: -8, width: 1088, height: 818});
+    const answercard1 = new Blocks.Image("Bilder/Kort/challengeCardFront.png", {x: 100, y: 100, width: 400, height: 300});
+    const answercard2 = new Blocks.Image("Bilder/Kort/challengeCardFront.png", {x: 600, y: 250, width: 400, height: 300});
+    const answercard3 = new Blocks.Image("Bilder/Kort/challengeCardFront.png", {x: 150, y: 470, width: 400, height: 300});
+    const wronganswer1 = new Blocks.Image("Bilder/Kort/KortSvar/Beach/Challenge/chCardBSunburntGiraffeWrong1.png", {x: 649, y: 287, width: 220, height: 200});
+    const wronganswer2 = new Blocks.Image("Bilder/Kort/KortSvar/Beach/Challenge/chCardBSunburntGiraffeWrong2.png", {x: 195, y: 500, width: 220, height: 200});
+    const correctanswer = new Blocks.Image("Bilder/Kort/KortSvar/Beach/Challenge/chCardBSunburntGiraffeCorrect.png", {x: 152, y: 137, width: 220, height: 200});
+    const sunscreen = new Blocks.Image("Bilder/Objekter/sunscreen.png", {x: 350, y: 136, width: 100, height: 170});
+    const milk = new Blocks.Image("Bilder/Objekter/milk.png", {x: 834, y: 341, width: 120, height: 170});
+    const tomato = new Blocks.Image("Bilder/Objekter/tomato.png", {x: 381, y: 557, width: 120, height: 120});
+    Actions.Click(wronganswer1, () => {
+        notQuiteCorrect.play();
+        notQuiteCorrect.onended = () => {
+            GaaTil(sceneBeachHub);
+        }
+    })
+    Actions.Click(wronganswer2, () => {
+        wrongAnswerSound2.play();
+        wrongAnswerSound2.onended = () => {
+            GaaTil(sceneBeachHub);
+        }
+    })
+    Actions.Click(correctanswer, () => {
+        applause.play();
+        applause.onended = () => {
             GaaTil(sceneBeachHub);
         }
     })
