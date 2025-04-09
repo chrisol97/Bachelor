@@ -1,19 +1,19 @@
 {
-  "short_name": "MDN",
-  "name": "MDN Web Docs",
+  "short_name": "SiDBhg",
+  "name": "Skattejakt i Dyrebarnehagen",
   "icons": [
     {
-      "src": "/Bilder/Knapper/kindergartenButton-192x192.png",
+      "src": "/Bilder/Knapper/kindergartenButton.PNG",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/Bilder/Knapper/kindergartenButton-512x512.png",
+      "src": "/Bilder/Knapper/kindergartenButton.PNG",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
-  "start_url": "https://chrisol97.github.io/Bachelor/spill.html",
+  "start_url": "/index.html",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
