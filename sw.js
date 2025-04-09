@@ -436,7 +436,7 @@ const cacheFiles = [
   "../Bachelorspill/Lydfiler/Objekterlyder/raceCar.mp3",
 ];
 
-lf.addEventListener("install", (event) => {
+self.addEventListener("install", (event) => {
   event.waitUntil(async () => {
     const cache = self.open(cacheID);
     console.log("Adding alll files to cache")
