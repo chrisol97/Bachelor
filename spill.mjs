@@ -438,7 +438,7 @@ function sceneBeachIntro1() {
     const mainCharTalking2 = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 330, y: 330, width: 400, height: 550, auto: true, loop: true });
     const cityButton = new Blocks.Image("Bilder/Knapper/cityButton.PNG", { x: 200, y: 20, width: 150, height: 150 });
     const forestButton = new Blocks.Image("Bilder/Knapper/forestButton.PNG", { x: 717, y: 20, width: 150, height: 150 });
-    const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.PNG", { x: 460, y: 20, width: 150, height: 150 });
+    const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.png", { x: 460, y: 20, width: 150, height: 150 });
     cityButton.hide();
     forestButton.hide();
     kindergartenButton.hide();
@@ -473,7 +473,7 @@ function sceneBeachHub() {
     const sceneBeachBackground = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: -8, y: -8, width: 1088, height: 818 });
     const cityButton = new Blocks.Image("Bilder/Knapper/cityButton.PNG", { x: 200, y: 20, width: 150, height: 150 });
     const forestButton = new Blocks.Image("Bilder/Knapper/forestButton.PNG", { x: 717, y: 20, width: 150, height: 150 });
-    const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.PNG", { x: 460, y: 20, width: 150, height: 150 });
+    const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.png", { x: 460, y: 20, width: 150, height: 150 });
     const qCardBack = new Blocks.Image("Bilder/Kort/questionCardBack.png", { x: 15, y: 200, width: 330, height: 450 });
     const chCardBack = new Blocks.Image("Bilder/Kort/challengeCardBack.png", { x: 370, y: 200, width: 330, height: 450 });
     const chanceCardBack = new Blocks.Image("Bilder/Kort/chanceCardBack.png", { x: 720, y: 200, width: 330, height: 450 });
@@ -515,7 +515,7 @@ function sceneForestIntro1() {
     const mainCharTalking2 = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 330, y: 330, width: 400, height: 550, auto: true, loop: true });
     const cityButton = new Blocks.Image("Bilder/Knapper/cityButton.PNG", { x: 200, y: 20, width: 150, height: 150 });
     const beachButton = new Blocks.Image("Bilder/Knapper/beachButton.PNG", { x: 717, y: 20, width: 150, height: 150 });
-    const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.PNG", { x: 460, y: 20, width: 150, height: 150 });
+    const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.png", { x: 460, y: 20, width: 150, height: 150 });
     cityButton.hide();
     beachButton.hide();
     kindergartenButton.hide();
@@ -550,7 +550,7 @@ function sceneForestHub() {
     const sceneForestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: -8, y: -8, width: 1088, height: 818 });
     const cityButton = new Blocks.Image("Bilder/Knapper/cityButton.PNG", { x: 200, y: 20, width: 150, height: 150 });
     const beachButton = new Blocks.Image("Bilder/Knapper/beachButton.PNG", { x: 717, y: 20, width: 150, height: 150 });
-    const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.PNG", { x: 460, y: 20, width: 150, height: 150 });
+    const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.png", { x: 460, y: 20, width: 150, height: 150 });
     const qCardBack = new Blocks.Image("Bilder/Kort/questionCardBack.png", { x: 15, y: 200, width: 330, height: 450 });
     const chCardBack = new Blocks.Image("Bilder/Kort/challengeCardBack.png", { x: 370, y: 200, width: 330, height: 450 });
     const chanceCardBack = new Blocks.Image("Bilder/Kort/chanceCardBack.png", { x: 720, y: 200, width: 330, height: 450 });
@@ -592,7 +592,7 @@ function sceneCityIntro1() {
     const mainCharTalking2 = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 330, y: 330, width: 400, height: 550, auto: true, loop: true });
     const forestButton = new Blocks.Image("Bilder/Knapper/forestButton.PNG", { x: 200, y: 20, width: 150, height: 150 });
     const beachButton = new Blocks.Image("Bilder/Knapper/beachButton.PNG", { x: 717, y: 20, width: 150, height: 150 });
-    const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.PNG", { x: 460, y: 20, width: 150, height: 150 });
+    const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.png", { x: 460, y: 20, width: 150, height: 150 });
     forestButton.hide();
     beachButton.hide();
     kindergartenButton.hide();
@@ -623,7 +623,7 @@ function sceneCityHub() {                                                       
     const sceneCityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: -8, y: -8, width: 1088, height: 818 });
     const forestButton = new Blocks.Image("Bilder/Knapper/forestButton.PNG", { x: 200, y: 20, width: 150, height: 150 });
     const beachButton = new Blocks.Image("Bilder/Knapper/beachButton.PNG", { x: 717, y: 20, width: 150, height: 150 });
-    const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.PNG", { x: 460, y: 20, width: 150, height: 150 });
+    const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.png", { x: 460, y: 20, width: 150, height: 150 });
     const qCardBack = new Blocks.Image("Bilder/Kort/questionCardBack.png", { x: 15, y: 200, width: 330, height: 450 });
     const chCardBack = new Blocks.Image("Bilder/Kort/challengeCardBack.png", { x: 370, y: 200, width: 330, height: 450 });
     const chanceCardBack = new Blocks.Image("Bilder/Kort/chanceCardBack.png", { x: 720, y: 200, width: 330, height: 450 });
