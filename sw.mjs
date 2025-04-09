@@ -66,7 +66,7 @@ const addResourcesToCache = async (resources) => {
     event.waitUntil(
       addResourcesToCache([
         "/gameEngine.mjs",
-        "/mainfest.json",
+        "/manifest.json",
         "/spill.html",
         "/spill.mjs",
         "/style.css",
