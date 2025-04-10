@@ -1,16 +1,38 @@
 {
+  "id": "/",
   "manifest_version": 3,
   "short_name": "SiDBhg",
   "name": "Skattejakt i Dyrebarnehagen",
   "icons": [
     {
-      "src": "/Bilder/Knapper/icon.png",
+      "src": "/Bilder/Knapper/icon_128.png",
       "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/Bilder/Knapper/icon_512.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ],
-  "start_url": "Bachelor/index.html",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "screenshots": [
+    {
+      "src": "/Bilder/Knapper/icon_1280.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Home screen showing main navigation and featured content"
+    },
+    {
+      "src": "/Bilder/Knapper/icon_720.png",
+      "sizes": "720x1280",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Home screen showing main navigation and featured content"
+    }
+  ]
 }
