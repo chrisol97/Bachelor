@@ -169,10 +169,10 @@ Start(startscreen);
 
 function startscreen() {
     const startscreenobject = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", { x: 325, y: 150, width: 400, height: 500 });
-    /*const skipbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", {x: 200, y: 200, width: 200, height: 200});                           // HUSK Å FJERNE DETTE
-    Actions.Click(skipbutton, () => {
-        GaaTil(sceneBeachHub); 
-    }) */
+    /* const skipbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", { x: 200, y: 200, width: 200, height: 200 });                           // HUSK Å FJERNE DETTE
+     Actions.Click(skipbutton, () => {
+         GaaTil(sceneCityHub);
+     }) */
     Actions.Click(startscreenobject, () => {
         GaaTil(titlescreen);
     })
@@ -2366,7 +2366,7 @@ function sceneCityCh3Answer() {
     })
 }
 
-function sceneCityCh4Answer() {                                                                                                             // Bli ferdig med denne 
+/*function sceneCityCh4Answer() {                                                                                                             // Bli ferdig med denne 
     const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground2.png", { x: -8, y: -8, width: 1088, height: 818 });
     const hulkShopping = new Blocks.Image("Bilder/Karakterer/hulkShopping.png", { x: 270, y: -10, width: 600, height: 450 });
     const shoppingBag = new Blocks.Image("Bilder/Objekter/shoppingBagElement.png", { x: 292, y: 284, width: 130, height: 100 });
@@ -2387,9 +2387,9 @@ function sceneCityCh4Answer() {                                                 
     Actions.Colide(lemon, shoppingBag, () => { lemon.hide(); });
     Actions.Colide(milk, shoppingBag, () => { milk.hide(); });
     Actions.Colide(plum, shoppingBag, () => { plum.hide(); });
-    Actions.Colide(strawberry, shoppingBag, () => { strawberry.hide(); });
+    Actions.Colide(strawberry, shoppingBag, () => { strawberry.hide(); }); 
 
-}
+} */
 
 // BEACH - QUESTIONS
 
