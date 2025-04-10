@@ -1,12 +1,9 @@
 {
   "short_name": "SiDBhg",
   "name": "Skattejakt i Dyrebarnehagen",
-  "icons": [
-    {
-      "src": "/Bilder/Knapper/icon.png",
-      "sizes": "192x192"
-    }
-  ],
+  "icons": {
+    "192": "Bilder/Knapper/icon.png"
+  },
   "start_url": "/index.html",
   "display": "standalone",
   "theme_color": "#000000",
