@@ -1,4 +1,4 @@
-const cacheID = "cacheSKattejakt_1";
+const cacheID = "cacheSkattejakt_1";
 const cacheFiles = [
   "./gameEngine.mjs",
   "./manifest.json",
