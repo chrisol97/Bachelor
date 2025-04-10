@@ -93,6 +93,7 @@ const cacheFiles = [
   "./Bilder/Knapper/continueButton.png",
   "./Bilder/Knapper/correctButton.png",
   "./Bilder/Knapper/forestButton.PNG",
+  "./Bilder/Knapper/icon.png",
   "./Bilder/Knapper/kindergartenButton.png",
   "./Bilder/Knapper/playButton.png",
   "./Bilder/Knapper/videoButton.png",

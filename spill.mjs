@@ -169,10 +169,10 @@ Start(startscreen);
 
 function startscreen() {
     const startscreenobject = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", { x: 325, y: 150, width: 400, height: 500 });
-    /* const skipbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", { x: 200, y: 200, width: 200, height: 200 });                           // HUSK Å FJERNE DETTE
-     Actions.Click(skipbutton, () => {
-         GaaTil(sceneCityHub);
-     }) */
+    const skipbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", { x: 200, y: 200, width: 200, height: 200 });                           // HUSK Å FJERNE DETTE
+    Actions.Click(skipbutton, () => {
+        GaaTil(sceneCityHub);
+    })
     Actions.Click(startscreenobject, () => {
         GaaTil(titlescreen);
     })
@@ -1003,7 +1003,7 @@ function sceneForestQuestionFront() {
 function sceneCityQuestionFront() {
     const cityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: -8, y: -8, width: 1088, height: 818 });
     let tall = Math.floor(Math.random() * 10);
-    //tall = 9; // For debugging
+    tall = 9; // For debugging
     if (tall === 0) {
         const cityQuestion1 = new Blocks.Image("Bilder/Kort/City/Question/qCardCCountingWindows.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardCCountingWindowsVoice.play();
@@ -1436,7 +1436,7 @@ function sceneForestChallengeFront() {
 
 function sceneCityChallengeFront() {
     const cityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: -8, y: -8, width: 1088, height: 818 });
-    let tall = Math.floor(Math.random() * 4);
+    let tall = Math.floor(Math.random() * 5);
     //tall = 4; // For debugging
     if (tall === 0) {
         const cityChallenge1 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCBakeBread.png", { x: 30, y: 10, width: 1020, height: 700 });
@@ -1495,7 +1495,7 @@ function sceneCityChallengeFront() {
             GaaTil(sceneCityCh3Answer);
         })
 
-    } /*else if (tall === 4) {
+    } else if (tall === 4) {
         const cityChallenge5 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCDroppedGroceries.png", { x: 30, y: 10, width: 1020, height: 700 });
         chCardCDroppedGroceriesVoice.play();
         const hulk = new Blocks.Image("Bilder/Karakterer/hulkClosedMouth.png", { x: -90, y: 470, width: 550, height: 400 });
@@ -1506,7 +1506,7 @@ function sceneCityChallengeFront() {
             GaaTil(sceneCityCh4Answer);
         })
 
-    }*/
+    }
 }
 
 
@@ -2366,7 +2366,7 @@ function sceneCityCh3Answer() {
     })
 }
 
-/*function sceneCityCh4Answer() {                                                                                                             // Bli ferdig med denne 
+function sceneCityCh4Answer() {                                                                                                             // Bli ferdig med denne 
     const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground2.png", { x: -8, y: -8, width: 1088, height: 818 });
     const hulkShopping = new Blocks.Image("Bilder/Karakterer/hulkShopping.png", { x: 270, y: -10, width: 600, height: 450 });
     const shoppingBag = new Blocks.Image("Bilder/Objekter/shoppingBagElement.png", { x: 292, y: 284, width: 130, height: 100 });
@@ -2387,9 +2387,9 @@ function sceneCityCh3Answer() {
     Actions.Colide(lemon, shoppingBag, () => { lemon.hide(); });
     Actions.Colide(milk, shoppingBag, () => { milk.hide(); });
     Actions.Colide(plum, shoppingBag, () => { plum.hide(); });
-    Actions.Colide(strawberry, shoppingBag, () => { strawberry.hide(); }); 
+    Actions.Colide(strawberry, shoppingBag, () => { strawberry.hide(); });
 
-} */
+}
 
 // BEACH - QUESTIONS
 
