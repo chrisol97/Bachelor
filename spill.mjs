@@ -2388,6 +2388,8 @@ function sceneCityCh4Answer() {                                                 
     Actions.Colide(milk, shoppingBag, () => { milk.hide(); });
     Actions.Colide(plum, shoppingBag, () => { plum.hide(); });
     Actions.Colide(strawberry, shoppingBag, () => { strawberry.hide(); });
+    //const pictureArray = [cheese, kiwi, lemon, milk, plum, strawberry];
+
 
 }
 
