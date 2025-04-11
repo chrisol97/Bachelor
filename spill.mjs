@@ -190,7 +190,7 @@ function titlescreen() {
     const mantitlescreen = new Blocks.Image("Bilder/Karakterer/manClosedMouth.png", { x: 780, y: 330, width: 50, height: 100 });
     const mainchartitlescreen = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", { x: 200, y: 440, width: 200, height: 350 });
     const videobutton = new Blocks.Image("Bilder/Knapper/videoButton.png", { x: 765, y: 320, width: 250, height: 150 });
-    const skipbutton = new Blocks.Image("Bilder/Knapper/playButton.png", { x: 60, y: 320, width: 250, height: 150 });                                 // Legge til navn på spillet, og forklaring av hva knappene gjør
+    const skipbutton = new Blocks.Image("Bilder/Knapper/playButton.png", { x: 60, y: 320, width: 250, height: 150 });
     const title = new Blocks.Image("Bilder/Objekter/gameTitle.png", { x: 280, y: 20, width: 540, height: 200 });
     Actions.Click(skipbutton, () => {
         titlescreenmusic.pause();
@@ -883,7 +883,7 @@ function sceneBeachChanceFront() {
     }
 }
 
-// QUESION CARDS                                                                     // Spill inn lyder og legg til objektbilder til enkelte kort
+// QUESION CARDS
 
 // FOREST
 
@@ -1003,7 +1003,7 @@ function sceneForestQuestionFront() {
 function sceneCityQuestionFront() {
     const cityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: -8, y: -8, width: 1088, height: 818 });
     let tall = Math.floor(Math.random() * 10);
-    tall = 9; // For debugging
+    //tall = 9; // For debugging
     if (tall === 0) {
         const cityQuestion1 = new Blocks.Image("Bilder/Kort/City/Question/qCardCCountingWindows.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardCCountingWindowsVoice.play();
