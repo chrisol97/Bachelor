@@ -917,23 +917,23 @@ function sceneForestQuestionFront() {
             correctanswer.show();
         }
         Actions.Click(wronganswer1, () => {
-        notQuiteCorrect.play();
-        notQuiteCorrect.onended = () => {
-            GaaTil(sceneForestHub);
-        }
-    })
+            notQuiteCorrect.play();
+            notQuiteCorrect.onended = () => {
+                GaaTil(sceneForestHub);
+            }
+        })
         Actions.Click(wronganswer2, () => {
-        wrongAnswerSound2.play();
-        wrongAnswerSound2.onended = () => {
-            GaaTil(sceneForestHub);
-        }
-    })
+            wrongAnswerSound2.play();
+            wrongAnswerSound2.onended = () => {
+                GaaTil(sceneForestHub);
+            }
+        })
         Actions.Click(correctanswer, () => {
-        yesCorrect.play();
-        yesCorrect.onended = () => {
-            GaaTil(sceneForestHub);
-        }
-    })
+            yesCorrect.play();
+            yesCorrect.onended = () => {
+                GaaTil(sceneForestHub);
+            }
+        })
 
     } else if (tall === 1) {
         const forestQuestion2 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFCountingSquirrels.png", { x: 30, y: 10, width: 1020, height: 700 });
@@ -982,7 +982,7 @@ function sceneForestQuestionFront() {
             wronganswer1.show();
             wronganswer2.show();
             correctanswer.show();
-    }
+        }
         Actions.Click(wronganswer1, () => {
             wrongAnswerSound1.play();
             wrongAnswerSound1.onended = () => {
@@ -1047,7 +1047,7 @@ function sceneForestQuestionFront() {
                 GaaTil(sceneForestHub);
             }
         })
-        
+
     } else if (tall === 3) {
         const forestQuestion4 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFOddOneOut.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardFOddOneOutVoice.play();
@@ -1178,7 +1178,7 @@ function sceneForestQuestionFront() {
                 GaaTil(sceneForestHub);
             }
         })
-        
+
 
     } else if (tall === 6) {
         const forestQuestion7 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWhoEatsNuts.png", { x: 30, y: 10, width: 1020, height: 700 });
@@ -1270,7 +1270,7 @@ function sceneForestQuestionFront() {
                 GaaTil(sceneForestHub);
             }
         })
-        
+
     } else if (tall === 8) {
         const forestQuestion9 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWhoMakesHoney.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardFWhoMakesHoneyVoice.play();
@@ -1766,7 +1766,7 @@ function sceneCityQuestionFront() {
                 GaaTil(sceneCityHub);
             }
         })
-        
+
 
     } else if (tall === 9) {
         const cityQuestion10 = new Blocks.Image("Bilder/Kort/City/Question/qCardCWheelsOnTheBus.png", { x: 30, y: 10, width: 1020, height: 700 });
@@ -2051,7 +2051,7 @@ function sceneBeachQuestionFront() {
                 GaaTil(sceneBeachHub);
             }
         })
-        
+
 
     } else if (tall === 5) {
         const beachQuestion6 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBShark.png", { x: 30, y: 10, width: 1020, height: 700 });
@@ -2909,39 +2909,6 @@ function sceneCityCh4Answer() {                                                 
 
 }
 
-// BEACH - QUESTIONS                                                                                                                    // Anchor
-
-function sceneBeachQ10Answer() {
-    const background = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: -8, y: -8, width: 1088, height: 818 });
-    const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
-    const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
-    const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
-    const wronganswer1 = new Blocks.Image("Bilder/Kort/KortSvar/Beach/Question/qCardBWhaleWrong1.png", { x: 244, y: 509, width: 250, height: 200 });
-    const wronganswer2 = new Blocks.Image("Bilder/Kort/KortSvar/Beach/Question/qCardBWhaleWrong2.png", { x: 705, y: 278, width: 250, height: 200 });
-    const correctanswer = new Blocks.Image("Bilder/Kort/KortSvar/Beach/Question/qCardBWhaleCorrect.png", { x: 151, y: 135, width: 250, height: 200 });
-    const crab = new Blocks.Image("Bilder/Objekter/crab.png", { x: 621, y: 408, width: 120, height: 120 });
-    const fish = new Blocks.Image("Bilder/Karakterer/fish1.png", { x: 165, y: 602, width: 150, height: 150 });
-    const whale = new Blocks.Image("Bilder/Karakterer/whale.png", { x: 333, y: 232, width: 150, height: 150 });
-    Actions.Click(wronganswer1, () => {
-        wrongAnswerSound2.play();
-        wrongAnswerSound2.onended = () => {
-            GaaTil(sceneBeachHub);
-        }
-    })
-    Actions.Click(wronganswer2, () => {
-        notQuiteCorrect.play();
-        notQuiteCorrect.onended = () => {
-            GaaTil(sceneBeachHub);
-        }
-    })
-    Actions.Click(correctanswer, () => {
-        yesCorrect.play();
-        yesCorrect.onended = () => {
-            GaaTil(sceneBeachHub);
-        }
-    })
-
-}
 
 // BEACH - CHALLENGE
 
