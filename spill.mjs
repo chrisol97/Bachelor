@@ -1370,7 +1370,7 @@ function sceneForestQuestionFront() {
 function sceneCityQuestionFront() {
     const cityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: -8, y: -8, width: 1088, height: 818 });
     let tall = Math.floor(Math.random() * 10);
-    tall = 1; // For debugging                                                                                                                    Anchor
+    tall = 9; // For debugging
     if (tall === 0) {
         const cityQuestion1 = new Blocks.Image("Bilder/Kort/City/Question/qCardCCountingWindows.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardCCountingWindowsVoice.play();
@@ -1491,77 +1491,328 @@ function sceneCityQuestionFront() {
         const cityQuestion4 = new Blocks.Image("Bilder/Kort/City/Question/qCardCWhatColorTrafficLight.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardCWhatColorTrafficLightVoice.play();
         const car = new Blocks.Image("Bilder/Objekter/car.png", { x: 35, y: 500, width: 300, height: 200 });
-        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", { x: 475, y: 10, width: 150, height: 150 });
-        Actions.Click(continueButton, () => {
-            qCardCWhatColorTrafficLightVoice.pause();
-            qCardCWhatColorTrafficLightVoice.currentTime = 0;
-            GaaTil(sceneCityQ3Answer);
+        const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
+        const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
+        const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
+        const wronganswer1 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatColorTrafficLightWrong1.png", { x: 200, y: 517, width: 300, height: 200 });
+        const wronganswer2 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatColorTrafficLightWrong2.png", { x: 150, y: 150, width: 300, height: 200 });
+        const correctanswer = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatColorTrafficLightCorrect.png", { x: 650, y: 297, width: 300, height: 200 });
+        background.hide();
+        answercard1.hide();
+        answercard2.hide();
+        answercard3.hide();
+        wronganswer1.hide();
+        wronganswer2.hide();
+        correctanswer.hide();
+        qCardCWhatColorTrafficLightVoice.onended = () => {
+            background.show();
+            answercard1.show();
+            answercard2.show();
+            answercard3.show();
+            wronganswer1.show();
+            wronganswer2.show();
+            correctanswer.show();
+        }
+        Actions.Click(wronganswer1, () => {
+            wrongAnswerSound1.play();
+            wrongAnswerSound1.onended = () => {
+                GaaTil(sceneCityHub);
+            }
+        })
+        Actions.Click(wronganswer2, () => {
+            wrongAnswerSound2.play();
+            wrongAnswerSound2.onended = () => {
+                GaaTil(sceneCityHub);
+            }
+        })
+        Actions.Click(correctanswer, () => {
+            yesCorrect.play();
+            yesCorrect.onended = () => {
+                GaaTil(sceneCityHub);
+            }
         })
 
     } else if (tall === 4) {
         const cityQuestion5 = new Blocks.Image("Bilder/Kort/City/Question/qCardCWhatIsABus.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardCWhatIsABusVoice.play();
-        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", { x: 475, y: 620, width: 150, height: 150 });
-        Actions.Click(continueButton, () => {
-            qCardCWhatIsABusVoice.pause();
-            qCardCWhatIsABusVoice.currentTime = 0;
-            GaaTil(sceneCityQ4Answer);
+        const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground3.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
+        const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
+        const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
+        const wronganswer1 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatIsABusWrong1.png", { x: 150, y: 150, width: 200, height: 200 });
+        const wronganswer2 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatIsABusWrong2.png", { x: 645, y: 287, width: 310, height: 220 });
+        const correctanswer = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatIsABusCorrect.png", { x: 220, y: 500, width: 230, height: 200 });
+        const plane = new Blocks.Image("Bilder/Objekter/plane.png", { x: 270, y: 200, width: 240, height: 200 });
+        const bus = new Blocks.Image("Bilder/Objekter/bus.png", { x: 350, y: 630, width: 130, height: 100 });
+        background.hide();
+        answercard1.hide();
+        answercard2.hide();
+        answercard3.hide();
+        wronganswer1.hide();
+        wronganswer2.hide();
+        correctanswer.hide();
+        plane.hide();
+        bus.hide();
+        qCardCWhatIsABusVoice.onended = () => {
+            background.show();
+            answercard1.show();
+            answercard2.show();
+            answercard3.show();
+            wronganswer1.show();
+            wronganswer2.show();
+            correctanswer.show();
+            plane.show();
+            bus.show();
+        }
+        Actions.Click(wronganswer1, () => {
+            wrongAnswerSound1.play();
+            wrongAnswerSound1.onended = () => {
+                GaaTil(sceneCityHub);
+            }
+        })
+        Actions.Click(wronganswer2, () => {
+            notQuiteCorrect.play();
+            notQuiteCorrect.onended = () => {
+                GaaTil(sceneCityHub);
+            }
+        })
+        Actions.Click(correctanswer, () => {
+            yesCorrect.play();
+            yesCorrect.onended = () => {
+                GaaTil(sceneCityHub);
+            }
         })
 
     } else if (tall === 5) {
         const cityQuestio6 = new Blocks.Image("Bilder/Kort/City/Question/qCardCWhatIsDoctor.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardCWhatIsDoctorVoice.play();
-        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", { x: 475, y: 10, width: 150, height: 150 });
-        Actions.Click(continueButton, () => {
-            qCardCWhatIsDoctorVoice.pause();
-            qCardCWhatIsDoctorVoice.currentTime = 0;
-            GaaTil(sceneCityQ5Answer);
+        const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground3.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
+        const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
+        const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
+        const wronganswer1 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatIsDoctorWrong1.png", { x: 200, y: 510, width: 300, height: 220 });
+        const wronganswer2 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatIsDoctorWrong2.png", { x: 650, y: 283, width: 300, height: 230 });
+        const correctanswer = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatIsDoctorCorrect.png", { x: 145, y: 135, width: 310, height: 215 });
+        background.hide();
+        answercard1.hide();
+        answercard2.hide();
+        answercard3.hide();
+        wronganswer1.hide();
+        wronganswer2.hide();
+        correctanswer.hide();
+        qCardCWhatIsDoctorVoice.onended = () => {
+            background.show();
+            answercard1.show();
+            answercard2.show();
+            answercard3.show();
+            wronganswer1.show();
+            wronganswer2.show();
+            correctanswer.show();
+        }
+        Actions.Click(wronganswer1, () => {
+            notQuiteCorrect.play();
+            notQuiteCorrect.onended = () => {
+                GaaTil(sceneCityHub);
+            }
+        })
+        Actions.Click(wronganswer2, () => {
+            wrongAnswerSound2.play();
+            wrongAnswerSound2.onended = () => {
+                GaaTil(sceneCityHub);
+            }
+        })
+        Actions.Click(correctanswer, () => {
+            applause.play();
+            applause.onended = () => {
+                GaaTil(sceneCityHub);
+            }
         })
 
     } else if (tall === 6) {
         const cityQuestion7 = new Blocks.Image("Bilder/Kort/City/Question/qCardCWhatIsFireman.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardCWhatIsFiremanVoice.play();
-        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", { x: 475, y: 10, width: 150, height: 150 });
-        Actions.Click(continueButton, () => {
-            qCardCWhatIsFiremanVoice.pause();
-            qCardCWhatIsFiremanVoice.currentTime = 0;
-            GaaTil(sceneCityQ6Answer);
+        const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground3.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
+        const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
+        const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
+        const wronganswer1 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatIsDoctorWrong1.png", { x: 200, y: 510, width: 300, height: 220 });
+        const correctanswer = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatIsDoctorWrong2.png", { x: 650, y: 283, width: 300, height: 230 });
+        const wronganswer2 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatIsDoctorCorrect.png", { x: 145, y: 135, width: 310, height: 215 });
+        background.hide();
+        answercard1.hide();
+        answercard2.hide();
+        answercard3.hide();
+        wronganswer1.hide();
+        correctanswer.hide();
+        wronganswer2.hide();
+        qCardCWhatIsFiremanVoice.onended = () => {
+            background.show();
+            answercard1.show();
+            answercard2.show();
+            answercard3.show();
+            wronganswer1.show();
+            correctanswer.show();
+            wronganswer2.show();
+        }
+        Actions.Click(wronganswer1, () => {
+            notQuiteCorrect.play();
+            notQuiteCorrect.onended = () => {
+                GaaTil(sceneCityHub);
+            }
+        })
+        Actions.Click(wronganswer2, () => {
+            wrongAnswerSound2.play();
+            wrongAnswerSound2.onended = () => {
+                GaaTil(sceneCityHub);
+            }
+        })
+        Actions.Click(correctanswer, () => {
+            yesCorrect.play();
+            yesCorrect.onended = () => {
+                GaaTil(sceneCityHub);
+            }
         })
 
     } else if (tall === 7) {
         const cityQuestion8 = new Blocks.Image("Bilder/Kort/City/Question/qCardCWhatIsPolice.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardCWhatIsPoliceVoice.play();
-        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", { x: 475, y: 10, width: 150, height: 150 });
-        Actions.Click(continueButton, () => {
-            qCardCWhatIsPoliceVoice.pause();
-            qCardCWhatIsPoliceVoice.currentTime = 0;
-            GaaTil(sceneCityQ7Answer);
+        const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground3.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
+        const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
+        const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
+        const correctanswer = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatIsDoctorWrong1.png", { x: 200, y: 510, width: 300, height: 220 });
+        const wronganswer1 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatIsDoctorWrong2.png", { x: 650, y: 283, width: 300, height: 230 });
+        const wronganswer2 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatIsDoctorCorrect.png", { x: 145, y: 135, width: 310, height: 215 });
+        background.hide();
+        answercard1.hide();
+        answercard2.hide();
+        answercard3.hide();
+        correctanswer.hide();
+        wronganswer1.hide();
+        wronganswer2.hide();
+        qCardCWhatIsPoliceVoice.onended = () => {
+            background.show();
+            answercard1.show();
+            answercard2.show();
+            answercard3.show();
+            correctanswer.show();
+            wronganswer1.show();
+            wronganswer2.show();
+        }
+        Actions.Click(wronganswer1, () => {
+            notQuiteCorrect.play();
+            notQuiteCorrect.onended = () => {
+                GaaTil(sceneCityHub);
+            }
+        })
+        Actions.Click(wronganswer2, () => {
+            wrongAnswerSound2.play();
+            wrongAnswerSound2.onended = () => {
+                GaaTil(sceneCityHub);
+            }
+        })
+        Actions.Click(correctanswer, () => {
+            yesCorrect.play();
+            yesCorrect.onended = () => {
+                GaaTil(sceneCityHub);
+            }
         })
 
     } else if (tall === 8) {
         const cityQuestion9 = new Blocks.Image("Bilder/Kort/City/Question/qCardCWhatIsStore.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardCWhatIsStoreVoice.play();
-        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", { x: 475, y: 10, width: 150, height: 150 });
         const icecream = new Blocks.Image("Bilder/Objekter/iceCream.png", { x: 50, y: 50, width: 200, height: 280 });
         const lemon = new Blocks.Image("Bilder/Objekter/lemon.png", { x: 50, y: 500, width: 200, height: 200 });
         const strawberry = new Blocks.Image("Bilder/Objekter/strawberry.png", { x: 820, y: 500, width: 200, height: 200 });
-        Actions.Click(continueButton, () => {
-            qCardCWhatIsStoreVoice.pause();
-            qCardCWhatIsStoreVoice.currentTime = 0;
-            GaaTil(sceneCityQ8Answer);
+        const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground2.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
+        const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
+        const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
+        const wronganswer1 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatIsStoreWrong1.png", { x: 200, y: 520, width: 300, height: 200 });
+        const wronganswer2 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatIsStoreWrong2.png", { x: 650, y: 285, width: 300, height: 220 });
+        const correctanswer = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatIsStoreCorrect.png", { x: 153, y: 150, width: 300, height: 200 });
+        background.hide();
+        answercard1.hide();
+        answercard2.hide();
+        answercard3.hide();
+        wronganswer1.hide();
+        wronganswer2.hide();
+        correctanswer.hide();
+        qCardCWhatIsStoreVoice.onended = () => {
+            background.show();
+            answercard1.show();
+            answercard2.show();
+            answercard3.show();
+            wronganswer1.show();
+            wronganswer2.show();
+            correctanswer.show();
+        }
+        Actions.Click(wronganswer1, () => {
+            notQuiteCorrect.play();
+            notQuiteCorrect.onended = () => {
+                GaaTil(sceneCityHub);
+            }
         })
+        Actions.Click(wronganswer2, () => {
+            wrongAnswerSound1.play();
+            wrongAnswerSound1.onended = () => {
+                GaaTil(sceneCityHub);
+            }
+        })
+        Actions.Click(correctanswer, () => {
+            applause.play();
+            applause.onended = () => {
+                GaaTil(sceneCityHub);
+            }
+        })
+        
 
-    } else if (tall === 9) {
+    } else if (tall === 9) {                                                                                                                                // Anchor
         const cityQuestion10 = new Blocks.Image("Bilder/Kort/City/Question/qCardCWheelsOnTheBus.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardCWheelsOnTheBusVoice.play();
         const bus = new Blocks.Image("Bilder/Objekter/bus.png", { x: 75, y: 500, width: 300, height: 200 });
-        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", { x: 475, y: 10, width: 150, height: 150 });
-        Actions.Click(continueButton, () => {
-            qCardCWheelsOnTheBusVoice.pause();
-            qCardCWheelsOnTheBusVoice.currentTime = 0;
-            GaaTil(sceneCityQ9Answer);
+        const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
+        const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
+        const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
+        const wronganswer1 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWheelsOnTheBusWrong1.png", { x: 146, y: 137, width: 310, height: 220 });
+        const wronganswer2 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWheelsOnTheBusWrong2.png", { x: 650, y: 288, width: 305, height: 220 });
+        const correctanswer = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWheelsOnTheBusCorrect.png", { x: 200, y: 510, width: 305, height: 220 });
+        background.hide();
+        answercard1.hide();
+        answercard2.hide();
+        answercard3.hide();
+        wronganswer1.hide();
+        wronganswer2.hide();
+        correctanswer.hide();
+        qCardCWheelsOnTheBusVoice.onended = () => {
+            background.show();
+            answercard1.show();
+            answercard2.show();
+            answercard3.show();
+            wronganswer1.show();
+            wronganswer2.show();
+            correctanswer.show();
+        }
+        Actions.Click(wronganswer1, () => {
+            notQuiteCorrect.play();
+            notQuiteCorrect.onended = () => {
+                GaaTil(sceneCityHub);
+            }
         })
-
+        Actions.Click(wronganswer2, () => {
+            wrongAnswerSound2.play();
+            wrongAnswerSound2.onended = () => {
+                GaaTil(sceneCityHub);
+            }
+        })
+        Actions.Click(correctanswer, () => {
+            yesCorrect.play();
+            yesCorrect.onended = () => {
+                GaaTil(sceneCityHub);
+            }
+        })
     }
 }
 
@@ -2185,206 +2436,6 @@ function sceneForestCh6Answer() {
 }
 
 // CITY - QUESTIONS                                                                                                                     // Anchor
-
-function sceneCityQ2Answer() {
-    const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: -8, y: -8, width: 1088, height: 818 });
-    const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
-    const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
-    const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
-    const wronganswer1 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCRedLightWrong1.png", { x: 680, y: 290, width: 240, height: 220 })
-    const wronganswer2 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCRedLightWrong2.png", { x: 230, y: 510, width: 240, height: 220 });
-    const correctanswer = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCRedLightCorrect.png", { x: 205, y: 147, width: 200, height: 200 });
-    Actions.Click(wronganswer1, () => {
-        notQuiteCorrect.play();
-        notQuiteCorrect.onended = () => {
-            GaaTil(sceneCityHub);
-        }
-    })
-    Actions.Click(wronganswer2, () => {
-        wrongAnswerSound2.play();
-        wrongAnswerSound2.onended = () => {
-            GaaTil(sceneCityHub);
-        }
-    })
-    Actions.Click(correctanswer, () => {
-        yesCorrect.play();
-        yesCorrect.onended = () => {
-            GaaTil(sceneCityHub);
-        }
-    })
-}
-
-function sceneCityQ3Answer() {
-    const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: -8, y: -8, width: 1088, height: 818 });
-    const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
-    const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
-    const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
-    const wronganswer1 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatColorTrafficLightWrong1.png", { x: 200, y: 517, width: 300, height: 200 });
-    const wronganswer2 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatColorTrafficLightWrong2.png", { x: 150, y: 150, width: 300, height: 200 });
-    const correctanswer = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatColorTrafficLightCorrect.png", { x: 650, y: 297, width: 300, height: 200 });
-    Actions.Click(wronganswer1, () => {
-        wrongAnswerSound1.play();
-        wrongAnswerSound1.onended = () => {
-            GaaTil(sceneCityHub);
-        }
-    })
-    Actions.Click(wronganswer2, () => {
-        wrongAnswerSound2.play();
-        wrongAnswerSound2.onended = () => {
-            GaaTil(sceneCityHub);
-        }
-    })
-    Actions.Click(correctanswer, () => {
-        yesCorrect.play();
-        yesCorrect.onended = () => {
-            GaaTil(sceneCityHub);
-        }
-    })
-}
-
-function sceneCityQ4Answer() {
-    const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground3.png", { x: -8, y: -8, width: 1088, height: 818 });
-    const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
-    const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
-    const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
-    const wronganswer1 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatIsABusWrong1.png", { x: 150, y: 150, width: 200, height: 200 });
-    const wronganswer2 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatIsABusWrong2.png", { x: 645, y: 287, width: 310, height: 220 });
-    const correctanswer = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatIsABusCorrect.png", { x: 220, y: 500, width: 230, height: 200 });
-    const plane = new Blocks.Image("Bilder/Objekter/plane.png", { x: 270, y: 200, width: 240, height: 200 });
-    const bus = new Blocks.Image("Bilder/Objekter/bus.png", { x: 350, y: 630, width: 130, height: 100 });
-    Actions.Click(wronganswer1, () => {
-        wrongAnswerSound1.play();
-        wrongAnswerSound1.onended = () => {
-            GaaTil(sceneCityHub);
-        }
-    })
-    Actions.Click(wronganswer2, () => {
-        notQuiteCorrect.play();
-        notQuiteCorrect.onended = () => {
-            GaaTil(sceneCityHub);
-        }
-    })
-    Actions.Click(correctanswer, () => {
-        yesCorrect.play();
-        yesCorrect.onended = () => {
-            GaaTil(sceneCityHub);
-        }
-    })
-}
-
-function sceneCityQ5Answer() {
-    const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground3.png", { x: -8, y: -8, width: 1088, height: 818 });
-    const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
-    const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
-    const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
-    const wronganswer1 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatIsDoctorWrong1.png", { x: 200, y: 510, width: 300, height: 220 });
-    const wronganswer2 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatIsDoctorWrong2.png", { x: 650, y: 283, width: 300, height: 230 });
-    const correctanswer = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatIsDoctorCorrect.png", { x: 145, y: 135, width: 310, height: 215 });
-    Actions.Click(wronganswer1, () => {
-        notQuiteCorrect.play();
-        notQuiteCorrect.onended = () => {
-            GaaTil(sceneCityHub);
-        }
-    })
-    Actions.Click(wronganswer2, () => {
-        wrongAnswerSound2.play();
-        wrongAnswerSound2.onended = () => {
-            GaaTil(sceneCityHub);
-        }
-    })
-    Actions.Click(correctanswer, () => {
-        applause.play();
-        applause.onended = () => {
-            GaaTil(sceneCityHub);
-        }
-    })
-
-}
-
-function sceneCityQ6Answer() {
-    const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground3.png", { x: -8, y: -8, width: 1088, height: 818 });
-    const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
-    const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
-    const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
-    const wronganswer1 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatIsDoctorWrong1.png", { x: 200, y: 510, width: 300, height: 220 });
-    const correctanswer = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatIsDoctorWrong2.png", { x: 650, y: 283, width: 300, height: 230 });
-    const wronganswer2 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatIsDoctorCorrect.png", { x: 145, y: 135, width: 310, height: 215 });
-    Actions.Click(wronganswer1, () => {
-        notQuiteCorrect.play();
-        notQuiteCorrect.onended = () => {
-            GaaTil(sceneCityHub);
-        }
-    })
-    Actions.Click(wronganswer2, () => {
-        wrongAnswerSound2.play();
-        wrongAnswerSound2.onended = () => {
-            GaaTil(sceneCityHub);
-        }
-    })
-    Actions.Click(correctanswer, () => {
-        yesCorrect.play();
-        yesCorrect.onended = () => {
-            GaaTil(sceneCityHub);
-        }
-    })
-
-}
-
-function sceneCityQ7Answer() {
-    const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground3.png", { x: -8, y: -8, width: 1088, height: 818 });
-    const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
-    const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
-    const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
-    const correctanswer = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatIsDoctorWrong1.png", { x: 200, y: 510, width: 300, height: 220 });
-    const wronganswer1 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatIsDoctorWrong2.png", { x: 650, y: 283, width: 300, height: 230 });
-    const wronganswer2 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatIsDoctorCorrect.png", { x: 145, y: 135, width: 310, height: 215 });
-    Actions.Click(wronganswer1, () => {
-        notQuiteCorrect.play();
-        notQuiteCorrect.onended = () => {
-            GaaTil(sceneCityHub);
-        }
-    })
-    Actions.Click(wronganswer2, () => {
-        wrongAnswerSound2.play();
-        wrongAnswerSound2.onended = () => {
-            GaaTil(sceneCityHub);
-        }
-    })
-    Actions.Click(correctanswer, () => {
-        yesCorrect.play();
-        yesCorrect.onended = () => {
-            GaaTil(sceneCityHub);
-        }
-    })
-}
-
-function sceneCityQ8Answer() {
-    const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground2.png", { x: -8, y: -8, width: 1088, height: 818 });
-    const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
-    const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
-    const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
-    const wronganswer1 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatIsStoreWrong1.png", { x: 200, y: 520, width: 300, height: 200 });
-    const wronganswer2 = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatIsStoreWrong2.png", { x: 650, y: 285, width: 300, height: 220 });
-    const correctanswer = new Blocks.Image("Bilder/Kort/KortSvar/City/Question/qCardCWhatIsStoreCorrect.png", { x: 153, y: 150, width: 300, height: 200 });
-    Actions.Click(wronganswer1, () => {
-        notQuiteCorrect.play();
-        notQuiteCorrect.onended = () => {
-            GaaTil(sceneCityHub);
-        }
-    })
-    Actions.Click(wronganswer2, () => {
-        wrongAnswerSound1.play();
-        wrongAnswerSound1.onended = () => {
-            GaaTil(sceneCityHub);
-        }
-    })
-    Actions.Click(correctanswer, () => {
-        applause.play();
-        applause.onended = () => {
-            GaaTil(sceneCityHub);
-        }
-    })
-}
 
 function sceneCityQ9Answer() {
     const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: -8, y: -8, width: 1088, height: 818 });
