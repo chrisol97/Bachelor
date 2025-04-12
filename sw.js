@@ -416,6 +416,7 @@ const cacheFiles = [
   "./Lydfiler/Kort/Forest/Question/qCardFMikkelRevVoice.mp3",
   "./Lydfiler/Kort/Forest/Question/qCardFOddOneOutVoice.mp3",
   "./Lydfiler/Kort/Forest/Question/qCardFOwlSoundVoice.mp3",
+  "./Lydfiler/Kort/Forest/Question/qCardFOwlSoundVoiceAnswer.mp3",
   "./Lydfiler/Kort/Forest/Question/qCardFWhatTreeLosesLeavesVoice.mp3",
   "./Lydfiler/Kort/Forest/Question/qCardFWhoEatsNutsVoice.mp3",
   "./Lydfiler/Kort/Forest/Question/qCardFWhoHowlsVoice.mp3",
