@@ -2353,7 +2353,7 @@ function sceneForestChallengeFront() {
         })
 
     } else if (tall === 2) {
-        const forestChallenge3 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFHulkBabyPoop.png", { x: 30, y: 10, width: 1020, height: 700 });
+        const forestChallenge3 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFHulkBabyPoop.png", { x: 30, y: 10, width: 1020, height: 700 });                  // Spørsmål?
         chCardFHulkBabyPoopVoice.play();
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", { x: 475, y: 10, width: 150, height: 150 });
         const hulkbaby = new Blocks.Image("Bilder/Karakterer/hulkbaby.png", { x: 50, y: 400, width: 250, height: 300 });
@@ -2397,7 +2397,7 @@ function sceneForestChallengeFront() {
         })
 
     } else if (tall === 5) {
-        const forestChallenge6 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFNameAnimals.png", { x: 30, y: 10, width: 1020, height: 700 });
+        const forestChallenge6 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFNameAnimals.png", { x: 30, y: 10, width: 1020, height: 700 });           // Spørsmål?
         chCardFNameAnimalsVoice.play();
         const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 150, y: 520, width: 150, height: 150 });
         const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 788, y: 520, width: 150, height: 150 });
@@ -2476,7 +2476,7 @@ function sceneForestChallengeFront() {
         })
 
     } else if (tall === 9) {
-        const forestChallenge10 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFTadpole.png", { x: 30, y: 10, width: 1020, height: 700 });
+        const forestChallenge10 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFTadpole.png", { x: 30, y: 10, width: 1020, height: 700 });                  // Spørsmål?
         chCardFTadpoleVoice.play();
         const tadpole1 = new Blocks.Image("Bilder/Karakterer/tadpoleBoy.png", { x: 200, y: 450, width: 200, height: 200 });
         const tadpole2 = new Blocks.Image("Bilder/Karakterer/tadpoleGirl.png", { x: 700, y: 450, width: 200, height: 200 });
@@ -2576,7 +2576,7 @@ function sceneBeachChallengeFront() {
     let tall = Math.floor(Math.random() * 7);
     //tall = 6; // For debugging
     if (tall === 0) {
-        const beachChallenge1 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBBiggestFish.png", { x: 30, y: 10, width: 1020, height: 700 });
+        const beachChallenge1 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBBiggestFish.png", { x: 30, y: 10, width: 1020, height: 700 });                     // Spørsmål?
         chCardBBiggestFishVoice.play();
         const jellyfish = new Blocks.Image("Bilder/Karakterer/jellyfish.png", { x: 731, y: 419, width: 300, height: 350 });
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", { x: 475, y: 10, width: 150, height: 150 });
@@ -2587,7 +2587,7 @@ function sceneBeachChallengeFront() {
         })
 
     } else if (tall === 1) {
-        const beachChallenge2 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBCatWater.png", { x: 30, y: 10, width: 1020, height: 700 });
+        const beachChallenge2 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBCatWater.png", { x: 30, y: 10, width: 1020, height: 700 });                        // Spørsmål?
         chCardBCatWaterVoice.play();
         const cat = new Blocks.Image("Bilder/Karakterer/catClosedMouth.png", { x: 18, y: 487, width: 350, height: 250 });
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", { x: 475, y: 620, width: 150, height: 150 });
@@ -2639,7 +2639,7 @@ function sceneBeachChallengeFront() {
         })
 
     } else if (tall === 5) {
-        const beachChallenge6 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBSunburntGiraffe.png", { x: 30, y: 10, width: 1020, height: 700 });
+        const beachChallenge6 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBSunburntGiraffe.png", { x: 30, y: 10, width: 1020, height: 700 });             // Spørsmål?
         chCardBSunburntGiraffeVoice.play();
         const giraffe = new Blocks.Image("Bilder/Karakterer/giraffeClosedMouth.png", { x: 817, y: 277, width: 220, height: 400 });
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", { x: 475, y: 10, width: 150, height: 150 });
