@@ -7,7 +7,7 @@ import * as Utils from "./barneprat/utils.mjs";
 
 if ("serviceWorker" in navigator) {
     console.log("Hey I am installing service worker");
-    await navigator.serviceWorker.register("./sw.js");
+    await navigator.serviceWorker.register("/sw.js");
     console.log("Done");
 }
 
