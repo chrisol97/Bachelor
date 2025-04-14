@@ -168,17 +168,17 @@ Start(startscreen);
 
 function startscreen() {
     const startscreenobject = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", { x: 325, y: 150, width: 400, height: 500 });
-    //const skipbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", { x: 200, y: 200, width: 200, height: 200 });                           // HUSK Å FJERNE DETTE
-    //Actions.Click(skipbutton, () => {
-        //GaaTil(sceneBeachHub);
-    //})
+    const skipbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", { x: 200, y: 200, width: 200, height: 200 });                           // HUSK Å FJERNE DETTE
+    Actions.Click(skipbutton, () => {
+        GaaTil(sceneBeachHub);
+    })
     Actions.Click(startscreenobject, () => {
         GaaTil(titlescreen);
     })
 }
 
 function titlescreen() {
-    //titlescreenmusic.play();
+    titlescreenmusic.play();
     const titlescreenbackground = new Blocks.Image("Bilder/Bakgrunner/kindergartenOutside.png", { x: -8, y: -8, width: 1088, height: 818 });
     const sign1 = new Blocks.Image("Bilder/Objekter/signHumlekollen.png", { x: 100, y: 350, width: 120, height: 150 });
     const sign2 = new Blocks.Image("Bilder/Objekter/signMarihønehula.png", { x: 475, y: 350, width: 75, height: 90 });
@@ -192,11 +192,11 @@ function titlescreen() {
     const skipbutton = new Blocks.Image("Bilder/Knapper/playButton.png", { x: 60, y: 320, width: 250, height: 150 });
     const title = new Blocks.Image("Bilder/Objekter/gameTitle.png", { x: 280, y: 20, width: 540, height: 200 });
     Actions.Click(skipbutton, () => {
-        //titlescreenmusic.pause();
+        titlescreenmusic.pause();
         GaaTil(sceneIntro5)
     })
     Actions.Click(videobutton, () => {
-        //titlescreenmusic.pause();
+        titlescreenmusic.pause();
         GaaTil(sceneIntro1);
     })
 
