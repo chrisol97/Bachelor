@@ -443,9 +443,11 @@ const cacheFiles = [
 
 self.addEventListener("install", (event) => {
   event.waitUntil(async () => {
-    const cache = self.open(cacheID);
+    console.log("Starting");
+    const cache = await self.open(cacheID);
     console.log("Adding alll files to cache")
     await cache.addAll(cacheFiles);
+    console.log("Finished");
   });
 });
 
