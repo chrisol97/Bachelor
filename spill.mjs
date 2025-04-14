@@ -28,6 +28,7 @@ let beachBackgroundMusic = new Audio("Lydfiler/Musikk/beachBackgroundMusic.mp3")
 // OBJEKTLYDER
 let flyingplanesound = new Audio("Lydfiler/Objektlyder/planesound.mp3");
 let boingsound = new Audio("Lydfiler/Objektlyder/boing.mp3");
+let raceCarSound = new Audio("Lydfiler/Objektlyder/raceCar.mp3");
 
 // KARAKTERER
 let mainCharVoiceIntro1 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro1.mp3");
