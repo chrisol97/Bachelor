@@ -168,7 +168,7 @@ Start(startscreen);
 
 function startscreen() {
     const startscreenobject = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", { x: 325, y: 150, width: 400, height: 500 });
-    const skipbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", { x: 200, y: 200, width: 200, height: 200 });                           // HUSK Å FJERNE DETTE
+    //const skipbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", { x: 200, y: 200, width: 200, height: 200 });                           // HUSK Å FJERNE DETTE
     //Actions.Click(skipbutton, () => {
         //GaaTil(sceneBeachHub);
     //})
