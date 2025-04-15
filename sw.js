@@ -59,7 +59,7 @@ const contentToCache = [
   "./Bilder/Karakterer/extraman.png",
   "./Bilder/Karakterer/fish1.png",
   "./Bilder/Karakterer/fish2.png",
-  //"./Bilder/Karakterer/frogJump.png",
+  "./Bilder/Karakterer/frogJump.png",
   //"./Bilder/Karakterer/giraffeBus.png",
   "./Bilder/Karakterer/giraffeClosedMouth.png",
   "./Bilder/Karakterer/giraffeOpenMouth.png",
