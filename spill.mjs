@@ -1319,7 +1319,7 @@ function sceneForestQuestionFront() {
         })
 
     } else if (tall === 9) {
-        const forestQuestion10 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWoodpecker.png", { x: 30, y: 10, width: 1020, height: 700 });
+        const forestQuestion10 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWoodpecker.png", { x: 30, y: 10, width: 1020, height: 700 });                                  // Funket ikke
         qCardFWoodpeckerVoice.play();
         const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground3.png", { x: -8, y: -8, width: 1088, height: 818 });
         const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
