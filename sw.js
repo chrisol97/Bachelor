@@ -70,7 +70,7 @@ const contentToCache = [
   "./Bilder/Karakterer/humanGirlClosedMouth.png",
   "./Bilder/Karakterer/humanGirlOpenMouth.png",
   "./Bilder/Karakterer/humanGirlSwimming.png",
-  //"./Bilder/Karakterer/jellyfish.png",
+  "./Bilder/Karakterer/jellyfish.png",
   "./Bilder/Karakterer/mainCharClosedMouth.png",
   "./Bilder/Karakterer/mainCharOpenMouth.png",
   "./Bilder/Karakterer/manClosedMouth.png",
