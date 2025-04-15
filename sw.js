@@ -4,9 +4,9 @@ console.log("Service worker main file");
 
 const cacheID = "sienceV2";
 const contentToCache = [
-  "./index.html",
-  "./spill.mjs",
-  /*"./gameEngine.mjs",
+  "./index.html",                       //Funker
+  "./spill.mjs",                        //Funker
+  "./gameEngine.mjs",
   "./manifest.json",
   "./style.css",
   "./barneprat/actions.mjs",
@@ -26,7 +26,7 @@ const contentToCache = [
   "./barneprat/blocks/sound.mjs",
   "./barneprat/blocks/text.mjs",
   "./barneprat/utils/utils.mjs",
-  "./barneprat/utils/_utils.mjs",
+  /*"./barneprat/utils/_utils.mjs",
   "./Bilder/Bakgrunner/beach.png",
   "./Bilder/Bakgrunner/beachBackground2.png",
   "./Bilder/Bakgrunner/beachBackground3.png",
