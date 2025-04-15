@@ -308,7 +308,7 @@ const contentToCache = [
   "./Bilder/Objekter/signMarihønehula.png",
   "./Bilder/Objekter/signMaurtua.png",
   "./Bilder/Objekter/snorkel.png",
-  //"./Bilder/Objekter/sockWithSand.png",
+  "./Bilder/Objekter/sockWithSand.png",
   "./Bilder/Objekter/sofa.png",
   "./Bilder/Objekter/starFish.png",
   "./Bilder/Objekter/stick1.png",
