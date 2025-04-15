@@ -6,7 +6,7 @@ const cacheID = "sienceV2";
 const contentToCache = [
   "./index.html",
   "./spill.mjs",
-  "./gameEngine.mjs",
+  /*"./gameEngine.mjs",
   "./manifest.json",
   "./style.css",
   "./barneprat/actions.mjs",
@@ -441,7 +441,7 @@ const contentToCache = [
   "./Lydfiler/Objektlyder/campfire.mp3",
   "./Lydfiler/Objektlyder/crash.mp3",
   "./Lydfiler/Objektlyder/planesound.mp3",
-  "./Lydfiler/Objektlyder/raceCar.mp3",
+  "./Lydfiler/Objektlyder/raceCar.mp3", */
 
 ];
 
