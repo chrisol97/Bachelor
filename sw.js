@@ -6,6 +6,7 @@ const cacheID = "sienceV2";
 const contentToCache = [
   "/index.html",
   "/spill.mjs",
+  "/sw.js",
   "/gameEngine.mjs",
   "/manifest.json",
   "/style.css",
