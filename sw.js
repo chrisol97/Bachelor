@@ -26,8 +26,8 @@ const contentToCache = [
   "./barneprat/blocks/sound.mjs",       //Funker
   "./barneprat/blocks/text.mjs",        //Funker
   "./barneprat/utils/utils.mjs",        //Funker
-  "./barneprat/utils/_utils.mjs",                           // Fra her
-  /*"./Bilder/Bakgrunner/beach.png",
+  /*"./barneprat/utils/_utils.mjs",                           // Fra her
+  "./Bilder/Bakgrunner/beach.png",
   "./Bilder/Bakgrunner/beachBackground2.png",
   "./Bilder/Bakgrunner/beachBackground3.png",
   "./Bilder/Bakgrunner/beachBackground4.png",
