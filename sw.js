@@ -26,8 +26,8 @@ const contentToCache = [
   "./barneprat/blocks/sound.mjs",       //Funker
   "./barneprat/blocks/text.mjs",        //Funker
   "./barneprat/utils/utils.mjs",        //Funker
-  "./barneprat/utils/_utils.mjs",                           // Fra her
-  /*"./Bilder/Bakgrunner/beach.png",
+  //"./barneprat/utils/_utils.mjs",                           // Er denne problemet?        // Funket ikke fra her
+  "./Bilder/Bakgrunner/beach.png",
   "./Bilder/Bakgrunner/beachBackground2.png",
   "./Bilder/Bakgrunner/beachBackground3.png",
   "./Bilder/Bakgrunner/beachBackground4.png",
@@ -39,7 +39,7 @@ const contentToCache = [
   "./Bilder/Bakgrunner/forestBackground2.png",
   "./Bilder/Bakgrunner/forestBackground3.png",
   "./Bilder/Bakgrunner/forestBackgroundRiver.png",
-  "./Bilder/Bakgrunner/grillhutInside.png",                     //Stoppet å funke ned hit
+  "./Bilder/Bakgrunner/grillhutInside.png",                     //  Stoppet å funke ned hit
   "./Bilder/Bakgrunner/grillhutOutside.png",
   "./Bilder/Bakgrunner/kindergartenOutside.png",
   "./Bilder/Bakgrunner/mapBackground.jpg",
@@ -441,7 +441,7 @@ const contentToCache = [
   "./Lydfiler/Objektlyder/campfire.mp3",
   "./Lydfiler/Objektlyder/crash.mp3",
   "./Lydfiler/Objektlyder/planesound.mp3",
-  "./Lydfiler/Objektlyder/raceCar.mp3", */
+  "./Lydfiler/Objektlyder/raceCar.mp3",
 
 ];
 
