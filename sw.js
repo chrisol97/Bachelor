@@ -6,27 +6,27 @@ const cacheID = "sienceV2";
 const contentToCache = [
   "./index.html",                       //Funker
   "./spill.mjs",                        //Funker
-  "./gameEngine.mjs",
-  "./manifest.json",
-  "./style.css",
-  "./barneprat/actions.mjs",
-  "./barneprat/blocks.mjs",
-  "./barneprat/globalTimer.mjs",
-  "./barneprat/utils.mjs",
-  "./barneprat/actions/click.mjs",
-  "./barneprat/actions/collision.mjs",
-  "./barneprat/actions/countDown.mjs",
-  "./barneprat/actions/dragNdrop.mjs",
-  "./barneprat/actions/tween.mjs",
-  "./barneprat/blocks/baseBlock.mjs",
-  "./barneprat/blocks/button.mjs",
-  "./barneprat/blocks/cellAnimation.mjs",
-  "./barneprat/blocks/emitter.mjs",
-  "./barneprat/blocks/image.mjs",
-  "./barneprat/blocks/sound.mjs",
-  "./barneprat/blocks/text.mjs",
-  "./barneprat/utils/utils.mjs",
-  /*"./barneprat/utils/_utils.mjs",
+  "./gameEngine.mjs",                   //Funker
+  "./manifest.json",                    //Funker
+  "./style.css",                        //Funker
+  "./barneprat/actions.mjs",            //Funker
+  "./barneprat/blocks.mjs",             //Funker
+  "./barneprat/globalTimer.mjs",        //Funker
+  "./barneprat/utils.mjs",              //Funker
+  "./barneprat/actions/click.mjs",      //Funker
+  "./barneprat/actions/collision.mjs",  //Funker
+  "./barneprat/actions/countDown.mjs",  //Funker
+  "./barneprat/actions/dragNdrop.mjs",  //Funker
+  "./barneprat/actions/tween.mjs",      //Funker
+  "./barneprat/blocks/baseBlock.mjs",   //Funker
+  "./barneprat/blocks/button.mjs",      //Funker
+  "./barneprat/blocks/cellAnimation.mjs",   //Funker
+  "./barneprat/blocks/emitter.mjs",     //Funker
+  "./barneprat/blocks/image.mjs",       //Funker
+  "./barneprat/blocks/sound.mjs",       //Funker
+  "./barneprat/blocks/text.mjs",        //Funker
+  "./barneprat/utils/utils.mjs",        //Funker
+  "./barneprat/utils/_utils.mjs",
   "./Bilder/Bakgrunner/beach.png",
   "./Bilder/Bakgrunner/beachBackground2.png",
   "./Bilder/Bakgrunner/beachBackground3.png",
@@ -39,7 +39,7 @@ const contentToCache = [
   "./Bilder/Bakgrunner/forestBackground2.png",
   "./Bilder/Bakgrunner/forestBackground3.png",
   "./Bilder/Bakgrunner/forestBackgroundRiver.png",
-  "./Bilder/Bakgrunner/grillhutInside.png",
+  /*"./Bilder/Bakgrunner/grillhutInside.png",
   "./Bilder/Bakgrunner/grillhutOutside.png",
   "./Bilder/Bakgrunner/kindergartenOutside.png",
   "./Bilder/Bakgrunner/mapBackground.jpg",
