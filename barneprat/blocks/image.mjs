@@ -14,7 +14,7 @@ console.log(dW, dH);
 class Image extends BaseBlock {
 
 
-    constructor(source, settings = { x: 10, y: 10, width: 100, height: 100 }, container) {
+    constructor(source, settings = { x: 0, y: 0, width: 100, height: 100 }, container) {
         super();
         this.container = container || document.body;
         this.source = source;
