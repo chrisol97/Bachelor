@@ -2,8 +2,8 @@ import * as Utils from "../utils/utils.mjs";
 import BaseBlock from "./baseBlock.mjs";
 
 // Dette er nytt - for aspect ratio
-const org_width = 500;
-const org_height = 400;
+const org_width = 1088;
+const org_height = 818;
 
 const dW = (window.innerWidth / org_width);
 const dH = (window.innerHeight / org_height);
