@@ -30,6 +30,10 @@ class Image extends BaseBlock {
         settings.width = Math.round(settings.width * dW);
         settings.height = Math.round(settings.height * dH);
 
+        this.x = Math.round(this.x * dW);
+        this.y = Math.round(this.y * dH);
+        settings.x = this.x;
+        settings.y = this.y;
         // Ned hit
 
 
