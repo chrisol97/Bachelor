@@ -171,7 +171,7 @@ function startscreen() {
     const startscreenobject = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", { x: 325, y: 150, width: 400, height: 500 });
     const skipbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", { x: 200, y: 200, width: 200, height: 200 });                           // HUSK Å FJERNE DETTE
     Actions.Click(skipbutton, () => {
-        GaaTil(sceneForestHub);
+        GaaTil(sceneOutro1);
     })
     Actions.Click(startscreenobject, () => {
         GaaTil(titlescreen);
@@ -180,7 +180,7 @@ function startscreen() {
 
 function titlescreen() {
     titlescreenmusic.play();
-    const titlescreenbackground = new Blocks.Image("Bilder/Bakgrunner/kindergartenOutside.png", { x: -8, y: -8, width: 1088, height: 818 });
+    const titlescreenbackground = new Blocks.Image("Bilder/Bakgrunner/kindergartenOutside.png", { x: 0, y: 0, width: 1088, height: 818 });
     const sign1 = new Blocks.Image("Bilder/Objekter/signHumlekollen.png", { x: 100, y: 350, width: 120, height: 150 });
     const sign2 = new Blocks.Image("Bilder/Objekter/signMarihønehula.png", { x: 475, y: 350, width: 75, height: 90 });
     const sign3 = new Blocks.Image("Bilder/Objekter/signMaurtua.png", { x: 940, y: 320, width: 100, height: 150 });
@@ -206,7 +206,7 @@ function titlescreen() {
 function sceneIntro1() {
     mainCharVoiceIntro1.play();
     flyingplanesound.play();
-    const scene1background = new Blocks.Image("Bilder/Bakgrunner/kindergartenOutside.png", { x: -8, y: -8, width: 1088, height: 818 });
+    const scene1background = new Blocks.Image("Bilder/Bakgrunner/kindergartenOutside.png", { x: 0, y: 0, width: 1088, height: 818 });
     const sign1 = new Blocks.Image("Bilder/Objekter/signHumlekollen.png", { x: 100, y: 350, width: 120, height: 150 });
     const sign2 = new Blocks.Image("Bilder/Objekter/signMarihønehula.png", { x: 475, y: 350, width: 75, height: 90 });
     const sign3 = new Blocks.Image("Bilder/Objekter/signMaurtua.png", { x: 940, y: 320, width: 100, height: 150 });
@@ -231,7 +231,7 @@ function sceneIntro1() {
 }
 
 function sceneIntro2() {
-    const background = new Blocks.Image("Bilder/Bakgrunner/sandbox.png", { x: -8, y: -8, width: 1088, height: 818 });
+    const background = new Blocks.Image("Bilder/Bakgrunner/sandbox.png", { x: 0, y: 0, width: 1088, height: 818 });
     const giraffeSandbox = new Blocks.Image("Bilder/Karakterer/giraffeClosedMouth.png", { x: 200, y: 200, width: 200, height: 400 });
     const mainChar = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", { x: 1100, y: 0, width: 200, height: 250 });
     const yellowball = new Blocks.Image("Bilder/Objekter/yellowBall1.png", { x: 550, y: 550, width: 100, height: 100 });
@@ -284,7 +284,7 @@ function sceneIntro2() {
 }
 
 function sceneIntro3() {
-    const background = new Blocks.Image("Bilder/Bakgrunner/grillhutOutside.png", { x: -8, y: -8, width: 1088, height: 818 });
+    const background = new Blocks.Image("Bilder/Bakgrunner/grillhutOutside.png", { x: 0, y: 0, width: 1088, height: 818 });
     const mainChar = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", { x: 1100, y: 460, width: 220, height: 320 });
     const catStanding = new Blocks.Image("Bilder/Karakterer/catClosedMouth.png", { x: 200, y: 500, width: 300, height: 250 });
     const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 490, y: 460, width: 220, height: 320, loop: true, auto: true });
@@ -335,7 +335,7 @@ function sceneIntro3() {
 }
 
 function sceneIntro4() {
-    const background = new Blocks.Image("Bilder/Bakgrunner/wardrobe.png", { x: -8, y: -8, width: 1088, height: 818 });
+    const background = new Blocks.Image("Bilder/Bakgrunner/wardrobe.png", { x: 0, y: 0, width: 1088, height: 818 });
     const mainChar = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", { x: 1100, y: 470, width: 220, height: 320 });
     const styrerPlaceholder = new Blocks.Image("Bilder/Karakterer/manClosedMouth.png", { x: 150, y: 300, width: 350, height: 450 });
     const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 498, y: 470, width: 220, height: 320, auto: true, loop: true });
@@ -390,7 +390,7 @@ function sceneIntro4() {
 
 function sceneIntro5() {
     mainCharVoiceIntro9.play();
-    const mapBackground = new Blocks.Image("Bilder/Bakgrunner/mapBackground.jpg", { x: -8, y: -8, width: 1088, height: 818 });
+    const mapBackground = new Blocks.Image("Bilder/Bakgrunner/mapBackground.jpg", { x: 0, y: 0, width: 1088, height: 818 });
     const beachText = new Blocks.Image("Bilder/Objekter/beachTitle.PNG", { x: 380, y: 50, width: 300, height: 70 });
     const cityText = new Blocks.Image("Bilder/Objekter/cityTitle.PNG", { x: 720, y: 550, width: 300, height: 70 });
     const forestText = new Blocks.Image("Bilder/Objekter/forestTitle.PNG", { x: 30, y: 550, width: 300, height: 70 });
@@ -430,7 +430,7 @@ function sceneIntro5() {
 
 function sceneBeachIntro1() {
     mainCharVoiceBeachIntro1.play()
-    const sceneBeachBackground = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: -8, y: -8, width: 1088, height: 818 });
+    const sceneBeachBackground = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: 0, y: 0, width: 1088, height: 818 });
     const qCardBack = new Blocks.Image("Bilder/Kort/questionCardBack.png", { x: 15, y: 200, width: 330, height: 450 });
     const chCardBack = new Blocks.Image("Bilder/Kort/challengeCardBack.png", { x: 370, y: 200, width: 330, height: 450 });
     const chanceCardBack = new Blocks.Image("Bilder/Kort/chanceCardBack.png", { x: 720, y: 200, width: 330, height: 450 });
@@ -470,7 +470,7 @@ function sceneBeachHub() {
     beachBackgroundMusic.play();
     beachBackgroundMusic.loop = true;
     beachBackgroundMusic.currentTime = 0;
-    const sceneBeachBackground = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: -8, y: -8, width: 1088, height: 818 });
+    const sceneBeachBackground = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: 0, y: 0, width: 1088, height: 818 });
     const cityButton = new Blocks.Image("Bilder/Knapper/cityButton.PNG", { x: 200, y: 20, width: 150, height: 150 });
     const forestButton = new Blocks.Image("Bilder/Knapper/forestButton.PNG", { x: 717, y: 20, width: 150, height: 150 });
     const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.png", { x: 460, y: 20, width: 150, height: 150 });
@@ -507,7 +507,7 @@ function sceneBeachHub() {
 
 function sceneForestIntro1() {
     mainCharVoiceForestIntro1.play();
-    const sceneForestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: -8, y: -8, width: 1088, height: 818 });
+    const sceneForestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
     const qCardBack = new Blocks.Image("Bilder/Kort/questionCardBack.png", { x: 15, y: 200, width: 330, height: 450 });
     const chCardBack = new Blocks.Image("Bilder/Kort/challengeCardBack.png", { x: 370, y: 200, width: 330, height: 450 });
     const chanceCardBack = new Blocks.Image("Bilder/Kort/chanceCardBack.png", { x: 720, y: 200, width: 330, height: 450 });
@@ -547,7 +547,7 @@ function sceneForestHub() {
     forestBackgroundMusic.play();
     forestBackgroundMusic.loop = true;
     forestBackgroundMusic.currentTime = 0;
-    const sceneForestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: -8, y: -8, width: 1088, height: 818 });
+    const sceneForestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
     const cityButton = new Blocks.Image("Bilder/Knapper/cityButton.PNG", { x: 200, y: 20, width: 150, height: 150 });
     const beachButton = new Blocks.Image("Bilder/Knapper/beachButton.PNG", { x: 717, y: 20, width: 150, height: 150 });
     const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.png", { x: 460, y: 20, width: 150, height: 150 });
@@ -584,7 +584,7 @@ function sceneForestHub() {
 
 function sceneCityIntro1() {
     mainCharVoiceCityIntro1.play();
-    const sceneCityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: -8, y: -8, width: 1088, height: 818 });
+    const sceneCityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
     const qCardBack = new Blocks.Image("Bilder/Kort/questionCardBack.png", { x: 15, y: 200, width: 330, height: 450 });
     const chCardBack = new Blocks.Image("Bilder/Kort/challengeCardBack.png", { x: 370, y: 200, width: 330, height: 450 });
     const chanceCardBack = new Blocks.Image("Bilder/Kort/chanceCardBack.png", { x: 720, y: 200, width: 330, height: 450 });
@@ -620,7 +620,7 @@ function sceneCityIntro1() {
 }
 
 function sceneCityHub() {                                                                                                   // Spille inn bakgrunnsmusikk?
-    const sceneCityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: -8, y: -8, width: 1088, height: 818 });
+    const sceneCityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
     const forestButton = new Blocks.Image("Bilder/Knapper/forestButton.PNG", { x: 200, y: 20, width: 150, height: 150 });
     const beachButton = new Blocks.Image("Bilder/Knapper/beachButton.PNG", { x: 717, y: 20, width: 150, height: 150 });
     const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.png", { x: 460, y: 20, width: 150, height: 150 });
@@ -648,12 +648,25 @@ function sceneCityHub() {                                                       
 }
 
 
+// ENDING                                     //TODO Spille inn lyder                                                                      Anchor
+function sceneOutro1() {
+    const background = new Blocks.Image("Bilder/Bakgrunner/kindergartenOutside.png", { x: 0, y: 0, width: 1088, height: 818 });
+    const giraffe = new Blocks.Image("Bilder/Karakterer/giraffeClosedMouth.png", { x: 42, y: 265, width: 139, height: 228 });
+    const robot = new Blocks.Image("Bilder/Karakterer/manClosedMouth.png", { x: 444, y: 349, width: 79, height: 78 });
+    const cat = new Blocks.Image("Bilder/Karakterer/catClosedMouth.png", { x: 769, y: 362, width: 79, height: 78 });
+    const mainCharTalking1 = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 476, y: 392, width: 300, height: 400, auto: true, loop: true });
+
+}
+
+
+// CARDS
+
 // CHANCE CARDS
 
 // FOREST
 
 function sceneForestChanceFront() {
-    const forestmap = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: -8, y: -8, width: 1088, height: 818 });
+    const forestmap = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
     let tall = Math.floor(Math.random() * 6);
     if (tall === 0) {
         const chanceCard0 = new Blocks.Image("Bilder/Kort/Forest/Chance/chanceCardF1.png", { x: 30, y: 10, width: 1020, height: 700 });
@@ -725,7 +738,7 @@ function sceneForestChanceFront() {
 // CITY
 
 function sceneCityChanceFront() {
-    const citymap = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: -8, y: -8, width: 1088, height: 818 });
+    const citymap = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
     let tall = Math.floor(Math.random() * 8);
     if (tall === 0) {
         const chanceCard0 = new Blocks.Image("Bilder/Kort/City/Chance/chanceCardC1.png", { x: 30, y: 10, width: 1020, height: 700 });
@@ -816,7 +829,7 @@ function sceneCityChanceFront() {
 // BEACH
 
 function sceneBeachChanceFront() {
-    const beachmap = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: -8, y: -8, width: 1088, height: 818 });
+    const beachmap = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: 0, y: 0, width: 1088, height: 818 });
     let tall = Math.floor(Math.random() * 6);
     if (tall === 0) {
         chanceCardB1Voice.play();
@@ -888,13 +901,13 @@ function sceneBeachChanceFront() {
 // FOREST
 
 function sceneForestQuestionFront() {
-    const forestbackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: -8, y: -8, width: 1088, height: 818 });
+    const forestbackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
     let tall = Math.floor(Math.random() * 10);
     //tall = 9; //For Debugging
     if (tall === 0) {
         const forestQuestion1 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFBiggestAnimal.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardFBiggestAnimalVoice.play();
-        const forestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground3.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const forestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground3.png", { x: 0, y: 0, width: 1088, height: 818 });
         const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 375, height: 275 });
         const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 375, height: 275 });
         const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 375, height: 275 });
@@ -940,7 +953,7 @@ function sceneForestQuestionFront() {
         const forestQuestion2 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFCountingSquirrels.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardFCountingSquirrelsVoice.play();
         const squirrel = new Blocks.Image("Bilder/Karakterer/squirrel.png", { x: 50, y: 400, width: 300, height: 300 });
-        const forestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground2.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const forestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground2.png", { x: 0, y: 0, width: 1088, height: 818 });
         const tree1 = new Blocks.Image("Bilder/Objekter/oakTree.png", { x: 700, y: 20, width: 400, height: 650 });
         const tree2 = new Blocks.Image("Bilder/Objekter/pineTree.png", { x: 0, y: 100, width: 500, height: 700 });
         const sq1 = new Blocks.Image("Bilder/Karakterer/squirrel.png", { x: 950, y: 100, width: 90, height: 90 });
@@ -1007,7 +1020,7 @@ function sceneForestQuestionFront() {
         const forestQuestion3 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFMikkelRev.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardFMikkelRevVoice.play();
         const letter = new Blocks.Image("Bilder/Objekter/mikkelRevLetter.png", { x: 50, y: 450, width: 350, height: 200 });
-        const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground2.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground2.png", { x: 0, y: 0, width: 1088, height: 818 });
         const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
         const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
         const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
@@ -1052,7 +1065,7 @@ function sceneForestQuestionFront() {
     } else if (tall === 3) {
         const forestQuestion4 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFOddOneOut.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardFOddOneOutVoice.play();
-        const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground3.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground3.png", { x: 0, y: 0, width: 1088, height: 818 });
         const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 375, height: 275 });
         const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 375, height: 275 });
         const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 375, height: 275 });
@@ -1097,7 +1110,7 @@ function sceneForestQuestionFront() {
     } else if (tall === 4) {
         const forestQuestion5 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFOwlSound.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardFOwlSoundVoice.play();
-        const background = new Blocks.Image("Bilder/Bakgrunner/forestBackgroundRiver.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const background = new Blocks.Image("Bilder/Bakgrunner/forestBackgroundRiver.png", { x: 0, y: 0, width: 1088, height: 818 });
         const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 375, height: 275 });
         const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 375, height: 275 });
         const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 375, height: 275 });
@@ -1150,7 +1163,7 @@ function sceneForestQuestionFront() {
     } else if (tall === 5) {
         const forestQuestion6 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWhatTreeLosesLeaves.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardFWhatTreeLosesLeavesVoice.play();
-        const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
         const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 10, y: 200, width: 500, height: 400 });
         const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 560, y: 200, width: 500, height: 400 });
         const wronganswer1 = new Blocks.Image("Bilder/Objekter/pineTree.png", { x: 140, y: 240, width: 250, height: 300 });
@@ -1184,7 +1197,7 @@ function sceneForestQuestionFront() {
     } else if (tall === 6) {
         const forestQuestion7 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWhoEatsNuts.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardFWhoEatsNutsVoice.play();
-        const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground2.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground2.png", { x: 0, y: 0, width: 1088, height: 818 });
         const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
         const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
         const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
@@ -1230,7 +1243,7 @@ function sceneForestQuestionFront() {
         const forestQuestion8 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWhoHowls.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardFWhoHowlsVoice.play();
         const moon = new Blocks.Image("Bilder/Objekter/moon.png", { x: 0, y: 400, width: 250, height: 250 });
-        const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground3.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground3.png", { x: 0, y: 0, width: 1088, height: 818 });
         const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
         const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
         const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
@@ -1276,7 +1289,7 @@ function sceneForestQuestionFront() {
         const forestQuestion9 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWhoMakesHoney.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardFWhoMakesHoneyVoice.play();
         const beeCube = new Blocks.Image("Bilder/Objekter/beeCube.png", { x: 750, y: 450, width: 200, height: 200 });
-        const forestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const forestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
         const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 375, height: 275 });
         const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 375, height: 275 });
         const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 375, height: 275 });
@@ -1321,7 +1334,7 @@ function sceneForestQuestionFront() {
     } else if (tall === 9) {
         const forestQuestion10 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWoodpecker.png", { x: 30, y: 10, width: 1020, height: 700 });                                  // Funket ikke
         qCardFWoodpeckerVoice.play();
-        const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground3.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground3.png", { x: 0, y: 0, width: 1088, height: 818 });
         const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
         const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
         const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
@@ -1369,13 +1382,13 @@ function sceneForestQuestionFront() {
 // CITY
 
 function sceneCityQuestionFront() {
-    const cityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: -8, y: -8, width: 1088, height: 818 });
+    const cityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
     let tall = Math.floor(Math.random() * 10);
     //tall = 9; // For debugging
     if (tall === 0) {
         const cityQuestion1 = new Blocks.Image("Bilder/Kort/City/Question/qCardCCountingWindows.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardCCountingWindowsVoice.play();
-        const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground2.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground2.png", { x: 0, y: 0, width: 1088, height: 818 });
         const house = new Blocks.Image("Bilder/Objekter/houseDrawing.png", { x: 580, y: 300, width: 450, height: 400 });
         const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 50, y: 10, width: 400, height: 300 });
         const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 610, y: 10, width: 400, height: 300 });
@@ -1424,7 +1437,7 @@ function sceneCityQuestionFront() {
         const cityQuestion2 = new Blocks.Image("Bilder/Kort/City/Question/qCardCRedLight.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardCRedLightVoice.play();
         const redLight = new Blocks.Image("Bilder/Objekter/redLight.png", { x: 50, y: 480, width: 200, height: 350 });
-        const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
         const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
         const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
         const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
@@ -1492,7 +1505,7 @@ function sceneCityQuestionFront() {
         const cityQuestion4 = new Blocks.Image("Bilder/Kort/City/Question/qCardCWhatColorTrafficLight.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardCWhatColorTrafficLightVoice.play();
         const car = new Blocks.Image("Bilder/Objekter/car.png", { x: 35, y: 500, width: 300, height: 200 });
-        const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
         const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
         const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
         const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
@@ -1537,7 +1550,7 @@ function sceneCityQuestionFront() {
     } else if (tall === 4) {
         const cityQuestion5 = new Blocks.Image("Bilder/Kort/City/Question/qCardCWhatIsABus.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardCWhatIsABusVoice.play();
-        const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground3.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground3.png", { x: 0, y: 0, width: 1088, height: 818 });
         const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
         const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
         const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
@@ -1588,7 +1601,7 @@ function sceneCityQuestionFront() {
     } else if (tall === 5) {
         const cityQuestio6 = new Blocks.Image("Bilder/Kort/City/Question/qCardCWhatIsDoctor.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardCWhatIsDoctorVoice.play();
-        const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground3.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground3.png", { x: 0, y: 0, width: 1088, height: 818 });
         const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
         const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
         const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
@@ -1633,7 +1646,7 @@ function sceneCityQuestionFront() {
     } else if (tall === 6) {
         const cityQuestion7 = new Blocks.Image("Bilder/Kort/City/Question/qCardCWhatIsFireman.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardCWhatIsFiremanVoice.play();
-        const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground3.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground3.png", { x: 0, y: 0, width: 1088, height: 818 });
         const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
         const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
         const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
@@ -1678,7 +1691,7 @@ function sceneCityQuestionFront() {
     } else if (tall === 7) {
         const cityQuestion8 = new Blocks.Image("Bilder/Kort/City/Question/qCardCWhatIsPolice.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardCWhatIsPoliceVoice.play();
-        const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground3.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground3.png", { x: 0, y: 0, width: 1088, height: 818 });
         const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
         const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
         const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
@@ -1726,7 +1739,7 @@ function sceneCityQuestionFront() {
         const icecream = new Blocks.Image("Bilder/Objekter/iceCream.png", { x: 50, y: 50, width: 200, height: 280 });
         const lemon = new Blocks.Image("Bilder/Objekter/lemon.png", { x: 50, y: 500, width: 200, height: 200 });
         const strawberry = new Blocks.Image("Bilder/Objekter/strawberry.png", { x: 820, y: 500, width: 200, height: 200 });
-        const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground2.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground2.png", { x: 0, y: 0, width: 1088, height: 818 });
         const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
         const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
         const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
@@ -1773,7 +1786,7 @@ function sceneCityQuestionFront() {
         const cityQuestion10 = new Blocks.Image("Bilder/Kort/City/Question/qCardCWheelsOnTheBus.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardCWheelsOnTheBusVoice.play();
         const bus = new Blocks.Image("Bilder/Objekter/bus.png", { x: 75, y: 500, width: 300, height: 200 });
-        const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
         const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
         const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
         const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
@@ -1821,7 +1834,7 @@ function sceneCityQuestionFront() {
 // BEACH
 
 function sceneBeachQuestionFront() {
-    const beachBackground = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: -8, y: -8, width: 1088, height: 818 });
+    const beachBackground = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: 0, y: 0, width: 1088, height: 818 });
     let tall = Math.floor(Math.random() * 11);
     //tall = 10; // For debugging
     if (tall === 0) {
@@ -1829,7 +1842,7 @@ function sceneBeachQuestionFront() {
         qCardBBiggestSandCastleVoice.play();
         const girl = new Blocks.Image("Bilder/Karakterer/humanGirlClosedMouth.png", { x: 96, y: 451, width: 200, height: 250 });
         const sandCastle = new Blocks.Image("Bilder/Objekter/sandcastle.png", { x: 816, y: 566, width: 250, height: 300 });
-        const background = new Blocks.Image("Bilder/Bakgrunner/beachBackground4.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const background = new Blocks.Image("Bilder/Bakgrunner/beachBackground4.png", { x: 0, y: 0, width: 1088, height: 818 });
         const correctanswer = new Blocks.Image("Bilder/Objekter/sandcastle.png", { x: 49, y: 437, width: 400, height: 300 });
         const wronganswer2 = new Blocks.Image("Bilder/Objekter/sandcastle.png", { x: 596, y: 441, width: 300, height: 250 });
         const wronganswer1 = new Blocks.Image("Bilder/Objekter/sandcastle.png", { x: 504, y: 152, width: 250, height: 200 });
@@ -1866,7 +1879,7 @@ function sceneBeachQuestionFront() {
         const beachQuestion2 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBGarbage.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardBGarbageVoice.play();
         const garbage = new Blocks.Image("Bilder/Objekter/trash.png", { x: 625, y: 471, width: 400, height: 230 });
-        const background = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const background = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: 0, y: 0, width: 1088, height: 818 });
         const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
         const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
         const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
@@ -1914,7 +1927,7 @@ function sceneBeachQuestionFront() {
     } else if (tall === 2) {
         const beachQuestion3 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBJellyfishString.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardBJellyfishStringVoice.play();
-        const background = new Blocks.Image("Bilder/Bakgrunner/beachBackground3.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const background = new Blocks.Image("Bilder/Bakgrunner/beachBackground3.png", { x: 0, y: 0, width: 1088, height: 818 });
         const jellyfish = new Blocks.Image("Bilder/Karakterer/jellyfish.png", { x: 94, y: 331, width: 400, height: 450 });
         const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 76, y: 30, width: 400, height: 300 });
         const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 595, y: 30, width: 400, height: 300 });
@@ -1962,7 +1975,7 @@ function sceneBeachQuestionFront() {
     } else if (tall === 3) {
         const beachQuestion4 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBOddOneOut.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardBOddOneOutVoice.play();
-        const background = new Blocks.Image("Bilder/Bakgrunner/beachBackground2.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const background = new Blocks.Image("Bilder/Bakgrunner/beachBackground2.png", { x: 0, y: 0, width: 1088, height: 818 });
         const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
         const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
         const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
@@ -2008,7 +2021,7 @@ function sceneBeachQuestionFront() {
         const beachQuestion5 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBSandTracks.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardBSandTracksVoice.play();
         const cat = new Blocks.Image("Bilder/Karakterer/catClosedMouth.png", { x: 690, y: 490, width: 330, height: 220 });
-        const background = new Blocks.Image("Bilder/Bakgrunner/beachBackground2.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const background = new Blocks.Image("Bilder/Bakgrunner/beachBackground2.png", { x: 0, y: 0, width: 1088, height: 818 });
         const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 50, y: 50, width: 400, height: 300 });
         const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 620, y: 50, width: 400, height: 300 });
         const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 50, y: 470, width: 400, height: 300 });
@@ -2057,7 +2070,7 @@ function sceneBeachQuestionFront() {
     } else if (tall === 5) {
         const beachQuestion6 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBShark.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardBSharkVoice.play();
-        const background = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const background = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: 0, y: 0, width: 1088, height: 818 });
         const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
         const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
         const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
@@ -2102,7 +2115,7 @@ function sceneBeachQuestionFront() {
     } else if (tall === 6) {
         const beachQuestion7 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBStarfish.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardBStarfishVoice.play();
-        const background = new Blocks.Image("Bilder/Bakgrunner/beachBackground3.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const background = new Blocks.Image("Bilder/Bakgrunner/beachBackground3.png", { x: 0, y: 0, width: 1088, height: 818 });
         const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
         const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
         const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
@@ -2147,7 +2160,7 @@ function sceneBeachQuestionFront() {
     } else if (tall === 7) {
         const beachQuestion8 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBSunscreen.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardBSunscreenVoice.play();
-        const background = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const background = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: 0, y: 0, width: 1088, height: 818 });
         const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
         const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
         const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
@@ -2202,7 +2215,7 @@ function sceneBeachQuestionFront() {
         const beachQuestion9 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBSwimSafely.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardBSwimSafelyVoice.play();
         const jellyfish = new Blocks.Image("Bilder/Karakterer/jellyfish.png", { x: 23, y: 458, width: 300, height: 350 });
-        const background = new Blocks.Image("Bilder/Bakgrunner/beachBackground3.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const background = new Blocks.Image("Bilder/Bakgrunner/beachBackground3.png", { x: 0, y: 0, width: 1088, height: 818 });
         const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
         const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
         const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
@@ -2269,7 +2282,7 @@ function sceneBeachQuestionFront() {
     } else if (tall === 10) {
         const beachQuestion11 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBWhale.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardBWhaleVoice.play();
-        const background = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const background = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: 0, y: 0, width: 1088, height: 818 });
         const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
         const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
         const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
@@ -2329,13 +2342,13 @@ function sceneBeachQuestionFront() {
 // FOREST
 
 function sceneForestChallengeFront() {
-    const forestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: -8, y: -8, width: 1088, height: 818 });
+    const forestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
     let tall = Math.floor(Math.random() * 10);
     tall = 6; // For debugging
     if (tall === 0) {                                                                   //TODO Endre lydfil
         const forestChallenge1 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFFlood.png", { x: 30, y: 10, width: 1020, height: 700 });
         chCardFFloodVoice.play();
-        const background = new Blocks.Image("Bilder/Bakgrunner/forestBackgroundRiver.png", { x: -8, y: -8, width: 1088, height: 1088 });
+        const background = new Blocks.Image("Bilder/Bakgrunner/forestBackgroundRiver.png", { x: 0, y: 0, width: 1088, height: 1088 });
         const log1 = new Blocks.Image("Bilder/Objekter/logRound1.png", { x: 637, y: 195, width: 100, height: 100 });
         const log2 = new Blocks.Image("Bilder/Objekter/logTriangle2.png", { x: 765, y: 710, width: 100, height: 100 });
         const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", { x: 475, y: 10, width: 150, height: 150 });
@@ -2362,7 +2375,7 @@ function sceneForestChallengeFront() {
         const forestChallenge2 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFGiraffeLost.png", { x: 30, y: 10, width: 1020, height: 700 });
         chCardFGiraffeLostVoice.play();
         const giraffe = new Blocks.Image("Bilder/Karakterer/giraffeClosedMouth.png", { x: 800, y: 310, width: 220, height: 400 });
-        const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
         const giraffe1 = new Blocks.Image("Bilder/Karakterer/giraffeClosedMouth.png", { x: 270, y: 170, width: 200, height: 650 });
         const rocks1 = new Blocks.Image("Bilder/Objekter/rocks1.png", { x: 700, y: 650, width: 200, height: 150 });
         const rocks2 = new Blocks.Image("Bilder/Objekter/rocks2.png", { x: 600, y: 600, width: 100, height: 100 });
@@ -2433,7 +2446,7 @@ function sceneForestChallengeFront() {
         const forestChallenge5 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFMooseLaugh.png", { x: 30, y: 10, width: 1020, height: 700 });
         chCardFMooseLaughVoice.play();
         const moose = new Blocks.Image("Bilder/Karakterer/mooseClosedMouth.png", { x: 100, y: 450, width: 350, height: 450 });
-        const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground2.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground2.png", { x: 0, y: 0, width: 1088, height: 818 });
         const moose1 = new Blocks.Image("Bilder/Karakterer/mooseClosedMouth.png", { x: 270, y: 200, width: 500, height: 800 });
         const moose2 = new Blocks.CellAnimation(["Bilder/Karakterer/mooseClosedmouth.png", "Bilder/Karakterer/mooseClosedMouth.png", "Bilder/Karakterer/mooseClosedMouth.png", "Bilder/Karakterer/mooseOpenMouth.png"], { x: 270, y: 200, width: 500, height: 800, auto: true, loop: true });
         background.hide();
@@ -2488,7 +2501,7 @@ function sceneForestChallengeFront() {
         chCardFRobotMushroomVoice.play();
         const robot = new Blocks.Image("Bilder/Karakterer/manClosedMouth.png", { x: 30, y: 410, width: 200, height: 300 });
         const mushroom1 = new Blocks.Image("Bilder/Objekter/chantarelleMushroom.png", { x: 475, y: 540, width: 150, height: 150 });
-        const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground3.png", { x: -8, y: -8, width: 1088, height: 818 });
+        const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground3.png", { x: 0, y: 0, width: 1088, height: 818 });
         const rocks1 = new Blocks.Image("Bilder/Objekter/rocks1.png", { x: 800, y: 450, width: 100, height: 100 });
         const rocks2 = new Blocks.Image("Bilder/Objekter/rocks2.png", { x: 800, y: 650, width: 200, height: 200 });
         const flower1 = new Blocks.Image("Bilder/Objekter/flower1.png", { x: 450, y: 600, width: 50, height: 50 });
@@ -2583,7 +2596,7 @@ function sceneForestChallengeFront() {
 // CITY
 
 function sceneCityChallengeFront() {
-    const cityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: -8, y: -8, width: 1088, height: 818 });
+    const cityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
     let tall = Math.floor(Math.random() * 5);
     //tall = 4; // For debugging
     if (tall === 0) {
@@ -2661,7 +2674,7 @@ function sceneCityChallengeFront() {
 // BEACH 
 
 function sceneBeachChallengeFront() {
-    const beachBackground = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: -8, y: -8, width: 1088, height: 818 });
+    const beachBackground = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: 0, y: 0, width: 1088, height: 818 });
     let tall = Math.floor(Math.random() * 7);
     //tall = 6; // For debugging
     if (tall === 0) {
@@ -2766,10 +2779,10 @@ function sceneBeachChallengeFront() {
 // ANSWERS/TASKS                                    // Anchor
 
 
-// FOREST - CHALLENGES
+// FOREST - CHALLENGES                                                  //TODO Flytte opp til randomizeren
 
 function sceneForestCh3Answer() {                                                           // Skal flyttes over til spørsmål - husk å bytte farge på kort
-    const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: -8, y: -8, width: 1088, height: 818 });
+    const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
     const answercard1 = new Blocks.Image("Bilder/Kort/challengeCardFront.png", { x: 50, y: 50, width: 400, height: 300 });
     const answercard2 = new Blocks.Image("Bilder/Kort/challengeCardFront.png", { x: 610, y: 50, width: 400, height: 300 });
     const answercard3 = new Blocks.Image("Bilder/Kort/challengeCardFront.png", { x: 610, y: 400, width: 400, height: 300 });
@@ -2786,7 +2799,7 @@ function sceneForestCh3Answer() {                                               
 }
 
 function sceneForestCh6Answer() {                                                           // SKal flyttes over til spørsmål - husk å endre farge på kortene
-    const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground3.png", { x: -8, y: -8, width: 1088, height: 818 });
+    const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground3.png", { x: 0, y: 0, width: 1088, height: 818 });
     const answercard1 = new Blocks.Image("Bilder/Kort/challengeCardFront.png", { x: 50, y: 10, width: 400, height: 300 });
     const answercard2 = new Blocks.Image("Bilder/Kort/challengeCardFront.png", { x: 610, y: 10, width: 400, height: 300 });
     const answercard3 = new Blocks.Image("Bilder/Kort/challengeCardFront.png", { x: 50, y: 330, width: 400, height: 300 });
@@ -2818,10 +2831,10 @@ function sceneForestCh6Answer() {                                               
 }
 
 
-// CITY - CHALLENGES
+// CITY - CHALLENGES                                                                //TODO Flytte opp til randomizeren
 
 function sceneCityCh1Answer() {
-    const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground2.png", { x: -8, y: -8, width: 1088, height: 818 });
+    const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground2.png", { x: 0, y: 0, width: 1088, height: 818 });
     const blocks1 = new Blocks.Image("Bilder/Kort/KortSvar/City/Challenge/chCardCBuildBuildingBlock1.png", { x: 440, y: 615, width: 200, height: 200 });
     const blocks2 = new Blocks.Image("Bilder/Kort/KortSvar/City/Challenge/chCardCBuildBuildingBlock2.png", { x: 358, y: 277, width: 200, height: 200 });
     const blocks3 = new Blocks.Image("Bilder/Kort/KortSvar/City/Challenge/chCardCBuildBuildingBlock3.png", { x: 54, y: 421, width: 200, height: 200 });
@@ -2848,7 +2861,7 @@ function sceneCityCh1Answer() {
 }
 
 function sceneCityCh2Answer() {
-    const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: -8, y: -8, width: 1088, height: 818 });
+    const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
     const cat = new Blocks.Image("Bilder/Karakterer/catClosedMouth.png", { x: 625, y: 530, width: 60, height: 50 });
     const man = new Blocks.Image("Bilder/Karakterer/manClosedMouth.png", { x: 485, y: 600, width: 50, height: 70 });
     const giraffe = new Blocks.Image("Bilder/Karakterer/giraffeClosedMouth.png", { x: 300, y: 340, width: 70, height: 140 });
@@ -2866,7 +2879,7 @@ function sceneCityCh2Answer() {
 }
 
 function sceneCityCh3Answer() {
-    const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: -8, y: -8, width: 1088, height: 818 });
+    const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
     const answercard1 = new Blocks.Image("Bilder/Kort/challengeCardFront.png", { x: 30, y: 30, width: 400, height: 300 });
     const answercard2 = new Blocks.Image("Bilder/Kort/challengeCardFront.png", { x: 630, y: 30, width: 400, height: 300 });
     const answercard3 = new Blocks.Image("Bilder/Kort/challengeCardFront.png", { x: 630, y: 370, width: 400, height: 300 });
@@ -2897,7 +2910,7 @@ function sceneCityCh3Answer() {
 }
 
 function sceneCityCh4Answer() {                                                                                                             // Bli ferdig med denne 
-    const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground2.png", { x: -8, y: -8, width: 1088, height: 818 });
+    const background = new Blocks.Image("Bilder/Bakgrunner/cityBackground2.png", { x: 0, y: 0, width: 1088, height: 818 });
     const hulkShopping = new Blocks.Image("Bilder/Karakterer/hulkShopping.png", { x: 270, y: -10, width: 600, height: 450 });
     const shoppingBag = new Blocks.Image("Bilder/Objekter/shoppingBagElement.png", { x: 292, y: 284, width: 130, height: 100 });
     const cheese = new Blocks.Image("Bilder/Objekter/cheese.png", { x: 271, y: 648, width: 90, height: 90 });
@@ -2924,10 +2937,10 @@ function sceneCityCh4Answer() {                                                 
 }
 
 
-// BEACH - CHALLENGE
+// BEACH - CHALLENGE                                        //TODO Flytte disse opp til randomizeren
 
 function sceneBeachCh1Answer() {
-    const background = new Blocks.Image("Bilder/Bakgrunner/beachBackground3.png", { x: -8, y: -8, width: 1088, height: 818 });
+    const background = new Blocks.Image("Bilder/Bakgrunner/beachBackground3.png", { x: 0, y: 0, width: 1088, height: 818 });
     const jellyfish = new Blocks.Image("Bilder/Karakterer/jellyfish.png", { x: -305, y: -10, width: 300, height: 400 });
     const wronganswer1 = new Blocks.Image("Bilder/Karakterer/fish1.png", { x: 57, y: 467, width: 130, height: 130 });
     const wronganswer2 = new Blocks.Image("Bilder/Karakterer/fish2.png", { x: 247, y: 601, width: 180, height: 180 });
@@ -2962,7 +2975,7 @@ function sceneBeachCh1Answer() {
 }
 
 function sceneBeachCh2Answer() {
-    const background = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: -8, y: -8, width: 1088, height: 818 });
+    const background = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: 0, y: 0, width: 1088, height: 818 });
     const answercard1 = new Blocks.Image("Bilder/Kort/challengeCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
     const answercard2 = new Blocks.Image("Bilder/Kort/challengeCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
     const answercard3 = new Blocks.Image("Bilder/Kort/challengeCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
@@ -2991,7 +3004,7 @@ function sceneBeachCh2Answer() {
 }
 
 function sceneBeachCh3Answer() {
-    const background = new Blocks.Image("Bilder/Bakgrunner/beachBackground3.png", { x: -8, y: -8, width: 1088, height: 818 });
+    const background = new Blocks.Image("Bilder/Bakgrunner/beachBackground3.png", { x: 0, y: 0, width: 1088, height: 818 });
     const answercard1 = new Blocks.Image("Bilder/Kort/challengeCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
     const answercard2 = new Blocks.Image("Bilder/Kort/challengeCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
     const answercard3 = new Blocks.Image("Bilder/Kort/challengeCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
@@ -3047,7 +3060,7 @@ function sceneBeachCh3Answer() {
 }
 
 function sceneBeachCh4Answer() {
-    const background = new Blocks.Image("Bilder/Bakgrunner/beachBackground3.png", { x: -8, y: -8, width: 1088, height: 818 });
+    const background = new Blocks.Image("Bilder/Bakgrunner/beachBackground3.png", { x: 0, y: 0, width: 1088, height: 818 });
     const crab = new Blocks.Image("Bilder/Objekter/crab.png", { x: 593, y: 723, width: 60, height: 60 });
     const fish1 = new Blocks.Image("Bilder/Karakterer/fish1.png", { x: 812, y: 95, width: 200, height: 200 });
     const rocks = new Blocks.Image("Bilder/Objekter/rocks2.png", { x: 136, y: 653, width: 300, height: 200 });
@@ -3063,7 +3076,7 @@ function sceneBeachCh4Answer() {
 }
 
 function sceneBeachCh5Answer() {
-    const background = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: -8, y: -8, width: 1088, height: 818 });
+    const background = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: 0, y: 0, width: 1088, height: 818 });
     const answercard1 = new Blocks.Image("Bilder/Kort/challengeCardFront.png", { x: 100, y: 100, width: 400, height: 300 });
     const answercard2 = new Blocks.Image("Bilder/Kort/challengeCardFront.png", { x: 600, y: 250, width: 400, height: 300 });
     const answercard3 = new Blocks.Image("Bilder/Kort/challengeCardFront.png", { x: 150, y: 470, width: 400, height: 300 });
@@ -3093,51 +3106,3 @@ function sceneBeachCh5Answer() {
     })
 
 }
-
-/*
-const loadingbar10 = new Blocks.Image("Bilder/Objekter/loadingbar10.png", {x: 140, y: 20, width: 800, height: 100});
-const loadingbar9 = new Blocks.Image("Bilder/Objekter/loadingbar9.png", {x: 140, y: 20, width: 800, height: 100});
-const loadingbar8 = new Blocks.Image("Bilder/Objekter/loadingbar8.png", {x: 140, y: 20, width: 800, height: 100});
-const loadingbar7 = new Blocks.Image("Bilder/Objekter/loadingbar7.png", {x: 140, y: 20, width: 800, height: 100});
-const loadingbar6 = new Blocks.Image("Bilder/Objekter/loadingbar6.png", {x: 140, y: 20, width: 800, height: 100});
-const loadingbar5 = new Blocks.Image("Bilder/Objekter/loadingbar5.png", {x: 140, y: 20, width: 800, height: 100});
-const loadingbar4 = new Blocks.Image("Bilder/Objekter/loadingbar4.png", {x: 140, y: 20, width: 800, height: 100});
-const loadingbar3 = new Blocks.Image("Bilder/Objekter/loadingbar3.png", {x: 140, y: 20, width: 800, height: 100});
-const loadingbar2 = new Blocks.Image("Bilder/Objekter/loadingbar2.png", {x: 140, y: 20, width: 800, height: 100});
-const loadingbar1 = new Blocks.Image("Bilder/Objekter/loadingbar1.png", {x: 140, y: 20, width: 800, height: 100});
-const loadingbar0 = new Blocks.Image("Bilder/Objekter/loadingbar0.png", {x: 140, y: 20, width: 800, height: 100});
-const countdown = new Actions.CountDown(11, (complete) => {
-        if (countdown.remainingTime < 10000) {
-            loadingbar10.hide();
-        }
-        if (countdown.remainingTime < 9000) {
-            loadingbar9.hide();
-        }
-        if (countdown.remainingTime < 8000) {
-            loadingbar8.hide();
-        } 
-        if (countdown.remainingTime < 7000) {
-            loadingbar7.hide();
-        }
-        if (countdown.remainingTime < 6000) {
-            loadingbar6.hide();
-        }
-        if (countdown.remainingTime < 5000) {
-            loadingbar5.hide();
-        }
-        if (countdown.remainingTime < 4000) {
-            loadingbar4.hide();
-        }
-        if (countdown.remainingTime < 3000) {
-            loadingbar3.hide();
-        }
-        if (countdown.remainingTime < 2000) {
-            loadingbar2.hide();
-        }
-        if (countdown.remainingTime < 1000) {
-            loadingbar1.hide();
-        }
-        if (complete) {
-            GaaTil(scene2);
-        }
-        }, {onTick: true, auto: true}); */
