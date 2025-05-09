@@ -1331,7 +1331,7 @@ function sceneForestQuestionFront() {
             }
         })
 
-    } else if (tall === 9) {
+    } else if (tall === 9) {                                                        // Anchor
         const forestQuestion10 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFWoodpecker.png", { x: 30, y: 10, width: 1020, height: 700 });                                  // Funket ikke
         qCardFWoodpeckerVoice.play();
         const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground3.png", { x: 0, y: 0, width: 1088, height: 818 });
@@ -2532,7 +2532,7 @@ function sceneForestChallengeFront() {
 
         })
 
-    } else if (tall === 7) {                        // Anchor
+    } else if (tall === 7) {
         const forestChallenge8 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFSongAboutTroll.png", { x: 30, y: 10, width: 1020, height: 700 });
         chCardFSongAboutTrollVoice.play();
         const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 50, y: 20, width: 150, height: 150 });
