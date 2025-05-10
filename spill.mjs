@@ -178,7 +178,7 @@ function startscreen() {                                                        
     })
 }
 
-function titlescreen() {
+function titlescreen() {                                                                            //TODO Legge inn funksjon for gruppebasert spill / mot hverandre
     titlescreenmusic.play();
     const titlescreenbackground = new Blocks.Image("Bilder/Bakgrunner/kindergartenOutside.png", { x: 0, y: 0, width: 1088, height: 818 });
     const sign1 = new Blocks.Image("Bilder/Objekter/signHumlekollen.png", { x: 100, y: 350, width: 120, height: 150 });
