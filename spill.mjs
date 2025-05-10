@@ -171,7 +171,7 @@ function startscreen() {                                                        
     const startscreenobject = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", { x: 325, y: 150, width: 400, height: 500 });
     const skipbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", { x: 200, y: 200, width: 200, height: 200 });                           // HUSK Å FJERNE DETTE
     Actions.Click(skipbutton, () => {
-        GaaTil(sceneBeachChallengeFront);
+        GaaTil(sceneForestChallengeFront);
     })
     Actions.Click(startscreenobject, () => {
         GaaTil(titlescreen);
@@ -665,7 +665,7 @@ function sceneOutro1() {
 
 // FOREST
 
-function sceneForestChanceFront() {                                                     //TODO ForestChance Sjekk alle lydfiler
+function sceneForestChanceFront() {
     const forestmap = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
     let tall = Math.floor(Math.random() * 6);                                           //TODO Sjekke at tall = antall kort
     if (tall === 0) {
@@ -737,7 +737,7 @@ function sceneForestChanceFront() {                                             
 
 // CITY
 
-function sceneCityChanceFront() {                                                   //TODO CityChance Sjekk alle lydfiler
+function sceneCityChanceFront() {
     const citymap = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
     let tall = Math.floor(Math.random() * 8);                                       //TODO Sjekk at tall = antall kort
     if (tall === 0) {
@@ -828,7 +828,7 @@ function sceneCityChanceFront() {                                               
 
 // BEACH
 
-function sceneBeachChanceFront() {                                          //TODO BeachChance Sjekk alle lydfiler
+function sceneBeachChanceFront() {
     const beachmap = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: 0, y: 0, width: 1088, height: 818 });
     let tall = Math.floor(Math.random() * 6);                               //TODO Sjekk at tall = antall kort
     if (tall === 0) {
@@ -900,7 +900,7 @@ function sceneBeachChanceFront() {                                          //TO
 
 // FOREST
 
-function sceneForestQuestionFront() {                       //TODO ForestQuestion Sjekk alle lydfiler
+function sceneForestQuestionFront() {
     const forestbackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
     let tall = Math.floor(Math.random() * 10);              //TODO Sjekke at antall tall er riktig ift randomizer
     //tall = 9; //For Debugging                             //TODO Husk å sjekke at denne er kommentert ut når du er ferdig
@@ -1479,7 +1479,7 @@ function sceneForestQuestionFront() {                       //TODO ForestQuestio
 
 // CITY
 
-function sceneCityQuestionFront() {                                                     //TODO CityQuestion Sjekk alle lydfiler
+function sceneCityQuestionFront() {
     const cityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
     let tall = Math.floor(Math.random() * 10);                                          //TODO Sjekk at tall = antall kort
     //tall = 9; // For debugging                                                        //TODO Sjekk at denne er kommentert ut når du ferdig
@@ -1583,16 +1583,16 @@ function sceneCityQuestionFront() {                                             
         const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 40, y: 554, width: 150, height: 150 });
         const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 891, y: 554, width: 150, height: 150 });
         Actions.Click(donebutton, () => {
-            qCardCRedLightVoice.pause();
-            qCardCRedLightVoice.currentTime = 0;
+            qCardCTwoThingsBakerVoice.pause();
+            qCardCTwoThingsBakerVoice.currentTime = 0;
             applause.play();
             applause.onended = () => {
                 GaaTil(sceneCityHub);
             }
         })
         Actions.Click(notdonebutton, () => {
-            qCardCRedLightVoice.pause();
-            qCardCRedLightVoice.currentTime = 0;
+            qCardCTwoThingsBakerVoice.pause();
+            qCardCTwoThingsBakerVoice.currentTime = 0;
             challengeNotCompleted1.play();
             challengeNotCompleted1.onended = () => {
                 GaaTil(sceneCityHub);
@@ -1985,7 +1985,7 @@ function sceneCityQuestionFront() {                                             
 
 // BEACH
 
-function sceneBeachQuestionFront() {                                                                //TODO BeachQuestion Sjekk alle lydfiler
+function sceneBeachQuestionFront() {
     const beachBackground = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: 0, y: 0, width: 1088, height: 818 });
     let tall = Math.floor(Math.random() * 11);                                                      //TODO Sjekk at tall = antall kort
     //tall = 10; // For debugging                                                                   //TODO Sjekk at denne er kommentert ut når du er ferdig
@@ -2597,10 +2597,10 @@ function sceneBeachQuestionFront() {                                            
 
 // FOREST
 
-function sceneForestChallengeFront() {                                                      //TODO ForestChallenge Sjekk alle lydfiler
+function sceneForestChallengeFront() {
     const forestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
     let tall = Math.floor(Math.random() * 10);                                              //TODO Husk å sjekke at antall kort = riktig tall i randomizer
-    //tall = 6; // For debugging                                                              //TODO Husk å sjekke at denne er kommentert ut når du er ferdig
+    //tall = 3; // For debugging                                                              //TODO Husk å sjekke at denne er kommentert ut når du er ferdig
     if (tall === 0) {
         const forestChallenge1 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFFlood.png", { x: 30, y: 10, width: 1020, height: 700 });
         chCardFFloodVoice.play();
@@ -2827,7 +2827,7 @@ function sceneForestChallengeFront() {                                          
 
 // CITY
 
-function sceneCityChallengeFront() {                                                //TODO CityChallenge Sjekk alle lydfiler
+function sceneCityChallengeFront() {
     const cityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
     let tall = Math.floor(Math.random() * 5);                                       //TODO Husk å sjekke at antall tall = antall kort
     //tall = 3; // For debugging                                                      //TODO Husk å sjekke at denne er kommentert ut når du er ferdig
@@ -3001,7 +3001,7 @@ function sceneCityChallengeFront() {                                            
 
 // BEACH                                                                                                                // Anchor
 
-function sceneBeachChallengeFront() {                                                                                       //TODO BeachChallenge Sjekk gjennom alle lydfiler
+function sceneBeachChallengeFront() {
     const beachBackground = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: 0, y: 0, width: 1088, height: 818 });
     let tall = Math.floor(Math.random() * 7);                                                                               //TODO Sjekk at tall = antall kort
     //tall = 2; // For debugging                                                                                              //TODO Husk å sjekke at denne er kommentert ut når du er ferdig
