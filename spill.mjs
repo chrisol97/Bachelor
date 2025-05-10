@@ -912,7 +912,7 @@ function sceneBeachChanceFront() {
 
 function sceneForestQuestionFront() {
     const forestbackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
-    let tall = Math.floor(Math.random() * 10);              //TODO FQ Sjekke at antall tall er riktig ift randomizer
+    let tall = Math.floor(Math.random() * 12);              //TODO FQ Sjekke at antall tall er riktig ift randomizer
     //tall = 9; //For Debugging                             //TODO Husk å sjekke at denne er kommentert ut når du er ferdig
     if (tall === 0) {
         const forestQuestion1 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFBiggestAnimal.png", { x: 30, y: 10, width: 1020, height: 700 });
@@ -1491,7 +1491,7 @@ function sceneForestQuestionFront() {
 
 function sceneCityQuestionFront() {
     const cityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
-    let tall = Math.floor(Math.random() * 10);                                          //TODO CQ Sjekk at tall = antall kort
+    let tall = Math.floor(Math.random() * 11);                                          //TODO CQ Sjekk at tall = antall kort
     //tall = 9; // For debugging                                                        //TODO Sjekk at denne er kommentert ut når du ferdig
     if (tall === 0) {
         const cityQuestion1 = new Blocks.Image("Bilder/Kort/City/Question/qCardCCountingWindows.png", { x: 30, y: 10, width: 1020, height: 700 });
@@ -1997,7 +1997,7 @@ function sceneCityQuestionFront() {
 
 function sceneBeachQuestionFront() {
     const beachBackground = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: 0, y: 0, width: 1088, height: 818 });
-    let tall = Math.floor(Math.random() * 11);                                                      //TODO BQ Sjekk at tall = antall kort
+    let tall = Math.floor(Math.random() * 14);                                                      //TODO BQ Sjekk at tall = antall kort
     //tall = 10; // For debugging                                                                   //TODO Sjekk at denne er kommentert ut når du er ferdig
     if (tall === 0) {
         const beachQuestion1 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBBiggestSandCastle.png", { x: 30, y: 10, width: 1020, height: 700 });
@@ -2609,7 +2609,7 @@ function sceneBeachQuestionFront() {
 
 function sceneForestChallengeFront() {
     const forestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
-    let tall = Math.floor(Math.random() * 13);
+    let tall = Math.floor(Math.random() * 14);
     //tall = 13; // For debugging                                                              //TODO Husk å sjekke at denne er kommentert ut når du er ferdig
     if (tall === 0) {
         const forestChallenge1 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFFlood.png", { x: 30, y: 10, width: 1020, height: 700 });
@@ -2978,7 +2978,7 @@ function sceneForestChallengeFront() {
 
 function sceneCityChallengeFront() {
     const cityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
-    let tall = Math.floor(Math.random() * 8);
+    let tall = Math.floor(Math.random() * 9);
     //tall = 8; // For debugging                                                      //TODO Husk å sjekke at denne er kommentert ut når du er ferdig
     if (tall === 0) {
         const cityChallenge1 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCBakeBread.png", { x: 30, y: 10, width: 1020, height: 700 });
@@ -3266,7 +3266,7 @@ function sceneCityChallengeFront() {
 
 function sceneBeachChallengeFront() {
     const beachBackground = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: 0, y: 0, width: 1088, height: 818 });
-    let tall = Math.floor(Math.random() * 10);                                                                               //TODO BC Sjekk at tall = antall kort
+    let tall = Math.floor(Math.random() * 11);                                                                               //TODO BC Sjekk at tall = antall kort
     //tall = 10; // For debugging                                                                                              //TODO Husk å sjekke at denne er kommentert ut når du er ferdig
     if (tall === 0) {
         const beachChallenge1 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBCountFish.png", { x: 30, y: 10, width: 1020, height: 700 });
