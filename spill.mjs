@@ -667,7 +667,7 @@ function sceneOutro1() {
 
 function sceneForestChanceFront() {
     const forestmap = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
-    let tall = Math.floor(Math.random() * 6);
+    let tall = Math.floor(Math.random() * 6);                                           //TODO Sjekke at tall = antall kort
     if (tall === 0) {
         const chanceCard0 = new Blocks.Image("Bilder/Kort/Forest/Chance/chanceCardF1.png", { x: 30, y: 10, width: 1020, height: 700 });
         chanceCardF1Voice.play();
@@ -902,7 +902,7 @@ function sceneBeachChanceFront() {
 
 function sceneForestQuestionFront() {
     const forestbackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
-    let tall = Math.floor(Math.random() * 10);
+    let tall = Math.floor(Math.random() * 10);              //TODO Sjekke at antall tall er riktig ift randomizer
     //tall = 9; //For Debugging
     if (tall === 0) {
         const forestQuestion1 = new Blocks.Image("Bilder/Kort/Forest/Question/qCardFBiggestAnimal.png", { x: 30, y: 10, width: 1020, height: 700 });
@@ -1372,6 +1372,42 @@ function sceneForestQuestionFront() {
         Actions.Click(correctanswer, () => {
             applause.play();
             applause.onended = () => {
+                GaaTil(sceneForestHub);
+            }
+        })
+    } else if (tall === 10) {
+        const forestQuestion11 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFHulkBabyPoop.png", { x: 30, y: 10, width: 1020, height: 700 });                  // Flyttes over til spørsmål - husk å bytte farge på kort og ta med fra bunnen + endre lydfil?
+        chCardFHulkBabyPoopVoice.play();
+        const hulkbaby = new Blocks.Image("Bilder/Karakterer/hulkbaby.png", { x: 50, y: 400, width: 250, height: 300 });
+        const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
+        const answercard1 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 50, y: 50, width: 400, height: 300 });
+        const answercard2 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 610, y: 50, width: 400, height: 300 });
+        const answercard3 = new Blocks.Image("Bilder/Kort/questionCardFront.png", { x: 610, y: 400, width: 400, height: 300 });
+        const poop = new Blocks.Image("Bilder/Objekter/poop.png", { x: 100, y: 400, width: 350, height: 300 });
+        const wronganswer1 = new Blocks.Image("Bilder/Karakterer/bearSleeping.png", { x: 130, y: 100, width: 250, height: 200 });
+        const wronganswer2 = new Blocks.Image("Bilder/Karakterer/giraffeClosedMouth.png", { x: 730, y: 430, width: 150, height: 230 });
+        const correctanswer = new Blocks.Image("Bilder/Objekter/rabbit.png", { x: 690, y: 100, width: 250, height: 200 });
+        background.hide();
+        answercard1.hide();
+        answercard2.hide();
+        answercard3.hide();
+        poop.hide();
+        wronganswer1.hide();
+        wronganswer2.hide();
+        correctanswer.hide();
+        chCardFHulkBabyPoopVoice.onended = () => {
+            background.show();
+            answercard1.show();
+            answercard2.show();
+            answercard3.show();
+            poop.show();
+            wronganswer1.show();
+            wronganswer2.show();
+            correctanswer.show();
+        }
+        Actions.Click(correctanswer, () => {
+            yesCorrect.play();
+            yesCorrect.onended = () => {
                 GaaTil(sceneForestHub);
             }
         })
@@ -2343,9 +2379,9 @@ function sceneBeachQuestionFront() {
 
 function sceneForestChallengeFront() {
     const forestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
-    let tall = Math.floor(Math.random() * 10);
+    let tall = Math.floor(Math.random() * 10);                                              //TODO Husk å sjekke at antall kort = riktig tall i randomizer
     tall = 6; // For debugging
-    if (tall === 0) {                                                                   //TODO Endre lydfil
+    if (tall === 0) {
         const forestChallenge1 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFFlood.png", { x: 30, y: 10, width: 1020, height: 700 });
         chCardFFloodVoice.play();
         const background = new Blocks.Image("Bilder/Bakgrunner/forestBackgroundRiver.png", { x: 0, y: 0, width: 1088, height: 1088 });
@@ -2371,7 +2407,7 @@ function sceneForestChallengeFront() {
             }
         })
 
-    } else if (tall === 1) {                                                            //TODO Endre lydfil
+    } else if (tall === 1) {
         const forestChallenge2 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFGiraffeLost.png", { x: 30, y: 10, width: 1020, height: 700 });
         chCardFGiraffeLostVoice.play();
         const giraffe = new Blocks.Image("Bilder/Karakterer/giraffeClosedMouth.png", { x: 800, y: 310, width: 220, height: 400 });
@@ -2408,19 +2444,7 @@ function sceneForestChallengeFront() {
             }
         })
 
-
     } else if (tall === 2) {
-        const forestChallenge3 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFHulkBabyPoop.png", { x: 30, y: 10, width: 1020, height: 700 });                  // Flyttes over til spørsmål - husk å bytte farge på kort
-        chCardFHulkBabyPoopVoice.play();
-        const continueButton = new Blocks.Image("Bilder/Knapper/continueButton.png", { x: 475, y: 10, width: 150, height: 150 });
-        const hulkbaby = new Blocks.Image("Bilder/Karakterer/hulkbaby.png", { x: 50, y: 400, width: 250, height: 300 });
-        Actions.Click(continueButton, () => {
-            chCardFHulkBabyPoopVoice.pause();
-            chCardFHulkBabyPoopVoice.currentTime = 0;
-            GaaTil(sceneForestCh3Answer);
-        })
-
-    } else if (tall === 3) {
         const forestChallenge4 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFJumpLikeRabbit.png", { x: 30, y: 10, width: 1020, height: 700 });
         chCardFJumpLikeRabbitVoice.play();
         const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 150, y: 520, width: 150, height: 150 });
@@ -2442,7 +2466,7 @@ function sceneForestChallengeFront() {
             }
         })
 
-    } else if (tall === 4) {                                                                                //TODO Endre lydfil
+    } else if (tall === 3) {
         const forestChallenge5 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFMooseLaugh.png", { x: 30, y: 10, width: 1020, height: 700 });
         chCardFMooseLaughVoice.play();
         const moose = new Blocks.Image("Bilder/Karakterer/mooseClosedMouth.png", { x: 100, y: 450, width: 350, height: 450 });
@@ -2474,7 +2498,7 @@ function sceneForestChallengeFront() {
         }, { onTick: true, auto: false });
 
 
-    } else if (tall === 5) {
+    } else if (tall === 4) {
         const forestChallenge6 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFNameAnimals.png", { x: 30, y: 10, width: 1020, height: 700 });
         chCardFNameAnimalsVoice.play();
         const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 150, y: 520, width: 150, height: 150 });
@@ -2496,7 +2520,7 @@ function sceneForestChallengeFront() {
             }
         })
 
-    } else if (tall === 6) {                                                        //TODO Endre lydfil
+    } else if (tall === 5) {
         const forestChallenge7 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFRobotMushroom.png", { x: 30, y: 10, width: 1020, height: 700 });
         chCardFRobotMushroomVoice.play();
         const robot = new Blocks.Image("Bilder/Karakterer/manClosedMouth.png", { x: 30, y: 410, width: 200, height: 300 });
@@ -2532,7 +2556,7 @@ function sceneForestChallengeFront() {
 
         })
 
-    } else if (tall === 7) {
+    } else if (tall === 6) {
         const forestChallenge8 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFSongAboutTroll.png", { x: 30, y: 10, width: 1020, height: 700 });
         chCardFSongAboutTrollVoice.play();
         const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 50, y: 20, width: 150, height: 150 });
@@ -2555,7 +2579,7 @@ function sceneForestChallengeFront() {
         })
 
 
-    } else if (tall === 8) {
+    } else if (tall === 7) {
         const forestChallenge9 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFStretchLikeTree.png", { x: 30, y: 10, width: 1020, height: 700 });
         chCardFStretchLikeTreeVoice.play();
         const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 150, y: 520, width: 150, height: 150 });
@@ -2577,7 +2601,7 @@ function sceneForestChallengeFront() {
             }
         })
 
-    } else if (tall === 9) {
+    } else if (tall === 8) {
         const forestChallenge10 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFTadpole.png", { x: 30, y: 10, width: 1020, height: 700 });                  // Flyttes over til spørsmål - husk å endre farge på kortene
         chCardFTadpoleVoice.play();
         const tadpole1 = new Blocks.Image("Bilder/Karakterer/tadpoleBoy.png", { x: 200, y: 450, width: 200, height: 200 });
@@ -2780,23 +2804,6 @@ function sceneBeachChallengeFront() {
 
 
 // FOREST - CHALLENGES                                                  //TODO Flytte opp til randomizeren
-
-function sceneForestCh3Answer() {                                                           // Skal flyttes over til spørsmål - husk å bytte farge på kort
-    const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
-    const answercard1 = new Blocks.Image("Bilder/Kort/challengeCardFront.png", { x: 50, y: 50, width: 400, height: 300 });
-    const answercard2 = new Blocks.Image("Bilder/Kort/challengeCardFront.png", { x: 610, y: 50, width: 400, height: 300 });
-    const answercard3 = new Blocks.Image("Bilder/Kort/challengeCardFront.png", { x: 610, y: 400, width: 400, height: 300 });
-    const poop = new Blocks.Image("Bilder/Objekter/poop.png", { x: 100, y: 400, width: 350, height: 300 });
-    const wronganswer1 = new Blocks.Image("Bilder/Karakterer/bearSleeping.png", { x: 130, y: 100, width: 250, height: 200 });
-    const wronganswer2 = new Blocks.Image("Bilder/Karakterer/giraffeClosedMouth.png", { x: 730, y: 430, width: 150, height: 230 });
-    const correctanswer = new Blocks.Image("Bilder/Objekter/rabbit.png", { x: 690, y: 100, width: 250, height: 200 });
-    Actions.Click(correctanswer, () => {
-        yesCorrect.play();
-        yesCorrect.onended = () => {
-            GaaTil(sceneForestHub);
-        }
-    })
-}
 
 function sceneForestCh6Answer() {                                                           // SKal flyttes over til spørsmål - husk å endre farge på kortene
     const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground3.png", { x: 0, y: 0, width: 1088, height: 818 });
