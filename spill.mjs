@@ -24,6 +24,7 @@ const Start = (maal) => {
 let titlescreenmusic = new Audio("Lydfiler/Musikk/titlescreenmusic.mp3");
 let forestBackgroundMusic = new Audio("Lydfiler/Musikk/forestBackgroundMusic.mp3");
 let beachBackgroundMusic = new Audio("Lydfiler/Musikk/beachBackgroundMusic.mp3");
+let cityBackgroundMusic = new Audio("Lydfiler/Musikk/cityBackgroundMusic.mp3");
 
 // OBJEKTLYDER
 let flyingplanesound = new Audio("Lydfiler/Objektlyder/planesound.mp3");
@@ -171,7 +172,7 @@ function startscreen() {                                                        
     const startscreenobject = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", { x: 325, y: 150, width: 400, height: 500 });
     const skipbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", { x: 200, y: 200, width: 200, height: 200 });                           // HUSK Å FJERNE DETTE
     Actions.Click(skipbutton, () => {
-        GaaTil(sceneForestChallengeFront);
+        GaaTil(sceneCityHub);
     })
     Actions.Click(startscreenobject, () => {
         GaaTil(titlescreen);
@@ -450,7 +451,7 @@ function sceneBeachIntro1() {
         qCardBack.show();
         chCardBack.show();
         chanceCardBack.show();
-        mainCharVoiceCardsExpl1.play();                                                                             //TODO Endre forklaring av regler?
+        mainCharVoiceCardsExpl1.play();                                                                             //TODO Endre forklaring av regler? Flytte? 
     }
     mainCharVoiceCardsExpl1.onended = () => {
         cityButton.show();
@@ -458,7 +459,7 @@ function sceneBeachIntro1() {
         kindergartenButton.show();
         mainCharTalking.hide();
         mainCharTalking2.show();
-        mainCharVoiceCardsExpl2.play();                                                                             //TODO Endre forklaring av regler?
+        mainCharVoiceCardsExpl2.play();                                                                             //TODO Endre forklaring av regler? Flytte? 
     }
     mainCharVoiceCardsExpl2.onended = () => {
         GaaTil(sceneBeachHub)
@@ -527,7 +528,7 @@ function sceneForestIntro1() {
         qCardBack.show();
         chCardBack.show();
         chanceCardBack.show();
-        mainCharVoiceCardsExpl1.play();                                                             //TODO Endre forklaring av regler?
+        mainCharVoiceCardsExpl1.play();                                                             //TODO Endre forklaring av regler? Flytte? 
     }
     mainCharVoiceCardsExpl1.onended = () => {
         cityButton.show();
@@ -535,7 +536,7 @@ function sceneForestIntro1() {
         kindergartenButton.show();
         mainCharTalking.hide();
         mainCharTalking2.show();
-        mainCharVoiceCardsExpl2.play();                                                             //TODO Endre forklaring av regler?
+        mainCharVoiceCardsExpl2.play();                                                             //TODO Endre forklaring av regler? Flytte? 
     }
     mainCharVoiceCardsExpl2.onended = () => {
         GaaTil(sceneForestHub)
@@ -604,7 +605,7 @@ function sceneCityIntro1() {
         qCardBack.show();
         chCardBack.show();
         chanceCardBack.show();
-        mainCharVoiceCardsExpl1.play();                                                 //TODO Endre forklaring av regler?
+        mainCharVoiceCardsExpl1.play();                                                 //TODO Endre forklaring av regler? Flytte?
     }
     mainCharVoiceCardsExpl1.onended = () => {
         forestButton.show();
@@ -612,14 +613,17 @@ function sceneCityIntro1() {
         kindergartenButton.show();
         mainCharTalking.hide();
         mainCharTalking2.show();
-        mainCharVoiceCardsExpl2.play();                                                 //TODO Endre forklaring av regler?
+        mainCharVoiceCardsExpl2.play();                                                 //TODO Endre forklaring av regler? Flytte? 
     }
     mainCharVoiceCardsExpl2.onended = () => {
         GaaTil(sceneCityHub)
     }
 }
 
-function sceneCityHub() {                                                                                                   //TODO Spille inn bakgrunnsmusikk
+function sceneCityHub() {
+    cityBackgroundMusic.play();
+    cityBackgroundMusic.loop = true;
+    cityBackgroundMusic.currentTime = 0;
     const sceneCityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
     const forestButton = new Blocks.Image("Bilder/Knapper/forestButton.PNG", { x: 200, y: 20, width: 150, height: 150 });
     const beachButton = new Blocks.Image("Bilder/Knapper/beachButton.PNG", { x: 717, y: 20, width: 150, height: 150 });
@@ -628,21 +632,27 @@ function sceneCityHub() {                                                       
     const chCardBack = new Blocks.Image("Bilder/Kort/challengeCardBack.png", { x: 370, y: 200, width: 330, height: 450 });
     const chanceCardBack = new Blocks.Image("Bilder/Kort/chanceCardBack.png", { x: 720, y: 200, width: 330, height: 450 });
     Actions.Click(forestButton, () => {
+        cityBackgroundMusic.pause();
         GaaTil(sceneForestHub);
     });
     Actions.Click(beachButton, () => {
+        cityBackgroundMusic.pause();
         GaaTil(sceneBeachHub);
     });
     Actions.Click(kindergartenButton, () => {
+        cityBackgroundMusic.pause();
         GaaTil(sceneOutro1);
     });
     Actions.Click(qCardBack, () => {
+        cityBackgroundMusic.pause();
         GaaTil(sceneCityQuestionFront);
     });
     Actions.Click(chCardBack, () => {
+        cityBackgroundMusic.pause();
         GaaTil(sceneCityChallengeFront);
     });
     Actions.Click(chanceCardBack, () => {
+        cityBackgroundMusic.pause();
         GaaTil(sceneCityChanceFront);
     });
 }

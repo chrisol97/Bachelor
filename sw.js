@@ -438,6 +438,7 @@ const contentToCache = [
   "./Lydfiler/Kort/Responses/wrongAnswerSound2.mp3",
   "./Lydfiler/Kort/Responses/yesCorrect.mp3",
   "./Lydfiler/Musikk/beachBackgroundMusic.mp3",
+  "./Lydfiler/Musikk/cityBackgroundMusic.mp3",
   "./Lydfiler/Musikk/forestBackgroundMusic.mp3",
   "./Lydfiler/Musikk/maybetitlescreenmusic.mp3",
   "./Lydfiler/Musikk/titlescreenmusic.mp3",
