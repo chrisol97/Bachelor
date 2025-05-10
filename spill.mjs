@@ -88,9 +88,12 @@ let qCardFWhoMakesHoneyVoice = new Audio("Lydfiler/Kort/Forest/Question/qCardFWh
 let qCardFWoodpeckerVoice = new Audio("Lydfiler/Kort/Forest/Question/qCardFWoodpeckerVoice.mp3");
 
 // CHALLENGE
+let chCardFClapToScareMooseVoice = new Audio("Lydfiler/Kort/Forest/Challenge/chCardFClapToScareMooseVoice.mp3");
 let chCardFFloodVoice = new Audio("Lydfiler/Kort/Forest/Challenge/chCardFFloodVoice.mp3");
 let chCardFGiraffeLostVoice = new Audio("Lydfiler/Kort/Forest/Challenge/chCardFGiraffeLostVoice.mp3");
+let chCardFHideAndSeekTrollVoice = new Audio("Lydfiler/Kort/Forest/Challenge/chCardFHideAndSeekTrollVoice.mp3");
 let chCardFHulkBabyPoopVoice = new Audio("Lydfiler/Kort/Forest/Challenge/chCardFHulkBabyPoopVoice.mp3");
+let chCardFJumpLikeFrogVoice = new Audio("Lydfiler/Kort/Forest/Challenge/chCardFJumpLikeFrogVoice.mp3");
 let chCardFJumpLikeRabbitVoice = new Audio("Lydfiler/Kort/Forest/Challenge/chCardFJumpLikeRabbitVoice.mp3");
 let chCardFMooseLaughVoice = new Audio("Lydfiler/Kort/Forest/Challenge/chCardFMooseLaughVoice.mp3");
 let chCardFNameAnimalsVoice = new Audio("Lydfiler/Kort/Forest/Challenge/chCardFNameAnimalsVoice.mp3");
@@ -2610,7 +2613,7 @@ function sceneBeachQuestionFront() {
 function sceneForestChallengeFront() {
     const forestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
     let tall = Math.floor(Math.random() * 14);
-    //tall = 13; // For debugging                                                              //TODO Husk å sjekke at denne er kommentert ut når du er ferdig
+    tall = 9; // For debugging                                                              //TODO Husk å sjekke at denne er kommentert ut når du er ferdig
     if (tall === 0) {
         const forestChallenge1 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFFlood.png", { x: 30, y: 10, width: 1020, height: 700 });
         chCardFFloodVoice.play();
@@ -2833,21 +2836,21 @@ function sceneForestChallengeFront() {
 
     } else if (tall === 8) {
         const forestChallenge9 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFClapToScareMoose.png", { x: 30, y: 10, width: 1020, height: 700 });
-        applause.play();                                //TODO Bytt ut med/ spill inn chCardFClapToScareMoose.mp3
+        chCardFClapToScareMooseVoice.play();
         const moose = new Blocks.Image("Bilder/Karakterer/mooseClosedMouth.png", { x: 316, y: 552, width: 250, height: 350 });
         const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 40, y: 554, width: 150, height: 150 });
         const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 891, y: 554, width: 150, height: 150 });
         Actions.Click(donebutton, () => {
-            applause.pause();
-            applause.currentTime = 0;
+            chCardFClapToScareMooseVoice.pause();
+            chCardFClapToScareMooseVoice.currentTime = 0;
             challengeCompleted1.play();
             challengeCompleted1.onended = () => {
                 GaaTil(sceneForestHub);
             }
         })
         Actions.Click(notdonebutton, () => {
-            applause.pause();
-            applause.currentTime = 0;
+            chCardFClapToScareMooseVoice.pause();
+            chCardFClapToScareMooseVoice.currentTime = 0;
             challengeNotCompleted1.play();
             challengeNotCompleted1.onended = () => {
                 GaaTil(sceneForestHub);
@@ -2856,21 +2859,21 @@ function sceneForestChallengeFront() {
 
     } else if (tall === 9) {
         const forestChallenge10 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFHideAndSeekTroll.png", { x: 30, y: 10, width: 1020, height: 700 });
-        applause.play();                                //TODO Bytt ut med/ spill inn chCardFHideAndSeekTroll.mp3
+        chCardFHideAndSeekTrollVoice.play();
         const troll = new Blocks.Image("Bilder/Karakterer/troll.png", { x: 206, y: 523, width: 250, height: 300 });
         const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 40, y: 554, width: 150, height: 150 });
         const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 891, y: 554, width: 150, height: 150 });
         Actions.Click(donebutton, () => {
-            applause.pause();
-            applause.currentTime = 0;
+            chCardFHideAndSeekTrollVoice.pause();
+            chCardFHideAndSeekTrollVoice.currentTime = 0;
             challengeCompleted2.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
             challengeCompleted2.onended = () => {
                 GaaTil(sceneForestHub);
             }
         })
         Actions.Click(notdonebutton, () => {
-            applause.pause();
-            applause.currentTime = 0;
+            chCardFHideAndSeekTrollVoice.pause();
+            chCardFHideAndSeekTrollVoice.currentTime = 0;
             challengeNotCompleted1.play();
             challengeNotCompleted1.onended = () => {
                 GaaTil(sceneForestHub);
@@ -2879,22 +2882,21 @@ function sceneForestChallengeFront() {
 
     } else if (tall === 10) {
         const forestChallenge11 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFJumpLikeFrog.png", { x: 30, y: 10, width: 1020, height: 700 });
-        applause.play();                                //TODO Bytt ut med/ spill inn chCardFJumpLikeFrog.mp3
+        chCardFJumpLikeFrogVoice.play();
         const frog = new Blocks.Image("Bilder/Karakterer/frogJump.png", { x: 211, y: 507, width: 200, height: 200 });
-        Actions.Drag(frog);
         const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 40, y: 554, width: 150, height: 150 });
         const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 891, y: 554, width: 150, height: 150 });
         Actions.Click(donebutton, () => {
-            applause.pause();
-            applause.currentTime = 0;
+            chCardFJumpLikeFrogVoice.pause();
+            chCardFJumpLikeFrogVoice.currentTime = 0;
             challengeCompleted1.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
             challengeCompleted1.onended = () => {
                 GaaTil(sceneForestHub);
             }
         })
         Actions.Click(notdonebutton, () => {
-            applause.pause();
-            applause.currentTime = 0;
+            chCardFJumpLikeFrogVoice.pause();
+            chCardFJumpLikeFrogVoice.currentTime = 0;
             challengeNotCompleted1.play();
             challengeNotCompleted1.onended = () => {
                 GaaTil(sceneForestHub);
