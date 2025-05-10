@@ -172,7 +172,7 @@ function startscreen() {                                                        
     const startscreenobject = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", { x: 325, y: 150, width: 400, height: 500 });
     const skipbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", { x: 200, y: 200, width: 200, height: 200 });                           // HUSK Å FJERNE DETTE
     Actions.Click(skipbutton, () => {
-        GaaTil(sceneCityHub);
+        GaaTil(sceneBeachHub);
     })
     Actions.Click(startscreenobject, () => {
         GaaTil(titlescreen);
@@ -2609,8 +2609,8 @@ function sceneBeachQuestionFront() {
 
 function sceneForestChallengeFront() {
     const forestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
-    let tall = Math.floor(Math.random() * 10);                                              //TODO FC Husk å sjekke at antall kort = riktig tall i randomizer
-    //tall = 3; // For debugging                                                              //TODO Husk å sjekke at denne er kommentert ut når du er ferdig
+    let tall = Math.floor(Math.random() * 13);
+    //tall = 13; // For debugging                                                              //TODO Husk å sjekke at denne er kommentert ut når du er ferdig
     if (tall === 0) {
         const forestChallenge1 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFFlood.png", { x: 30, y: 10, width: 1020, height: 700 });
         chCardFFloodVoice.play();
@@ -2675,7 +2675,7 @@ function sceneForestChallengeFront() {
         })
 
     } else if (tall === 2) {
-        const forestChallenge4 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFJumpLikeRabbit.png", { x: 30, y: 10, width: 1020, height: 700 });
+        const forestChallenge3 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFJumpLikeRabbit.png", { x: 30, y: 10, width: 1020, height: 700 });
         chCardFJumpLikeRabbitVoice.play();
         const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 150, y: 520, width: 150, height: 150 });
         const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 788, y: 520, width: 150, height: 150 });
@@ -2697,7 +2697,7 @@ function sceneForestChallengeFront() {
         })
 
     } else if (tall === 3) {
-        const forestChallenge5 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFMooseLaugh.png", { x: 30, y: 10, width: 1020, height: 700 });
+        const forestChallenge4 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFMooseLaugh.png", { x: 30, y: 10, width: 1020, height: 700 });
         chCardFMooseLaughVoice.play();
         const moose = new Blocks.Image("Bilder/Karakterer/mooseClosedMouth.png", { x: 100, y: 450, width: 350, height: 450 });
         const background = new Blocks.Image("Bilder/Bakgrunner/forestBackground2.png", { x: 0, y: 0, width: 1088, height: 818 });
@@ -2729,7 +2729,7 @@ function sceneForestChallengeFront() {
 
 
     } else if (tall === 4) {
-        const forestChallenge6 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFNameAnimals.png", { x: 30, y: 10, width: 1020, height: 700 });
+        const forestChallenge5 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFNameAnimals.png", { x: 30, y: 10, width: 1020, height: 700 });
         chCardFNameAnimalsVoice.play();
         const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 150, y: 520, width: 150, height: 150 });
         const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 788, y: 520, width: 150, height: 150 });
@@ -2751,7 +2751,7 @@ function sceneForestChallengeFront() {
         })
 
     } else if (tall === 5) {
-        const forestChallenge7 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFRobotMushroom.png", { x: 30, y: 10, width: 1020, height: 700 });
+        const forestChallenge6 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFRobotMushroom.png", { x: 30, y: 10, width: 1020, height: 700 });
         chCardFRobotMushroomVoice.play();
         const robot = new Blocks.Image("Bilder/Karakterer/manClosedMouth.png", { x: 30, y: 410, width: 200, height: 300 });
         const mushroom1 = new Blocks.Image("Bilder/Objekter/chantarelleMushroom.png", { x: 475, y: 540, width: 150, height: 150 });
@@ -2787,7 +2787,7 @@ function sceneForestChallengeFront() {
         })
 
     } else if (tall === 6) {
-        const forestChallenge8 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFSongAboutTroll.png", { x: 30, y: 10, width: 1020, height: 700 });
+        const forestChallenge7 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFSongAboutTroll.png", { x: 30, y: 10, width: 1020, height: 700 });
         chCardFSongAboutTrollVoice.play();
         const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 50, y: 20, width: 150, height: 150 });
         const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 883, y: 20, width: 150, height: 150 });
@@ -2810,7 +2810,7 @@ function sceneForestChallengeFront() {
 
 
     } else if (tall === 7) {
-        const forestChallenge9 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFStretchLikeTree.png", { x: 30, y: 10, width: 1020, height: 700 });
+        const forestChallenge8 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFStretchLikeTree.png", { x: 30, y: 10, width: 1020, height: 700 });
         chCardFStretchLikeTreeVoice.play();
         const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 150, y: 520, width: 150, height: 150 });
         const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 788, y: 520, width: 150, height: 150 });
@@ -2831,16 +2831,155 @@ function sceneForestChallengeFront() {
             }
         })
 
+    } else if (tall === 8) {
+        const forestChallenge9 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFClapToScareMoose.png", { x: 30, y: 10, width: 1020, height: 700 });
+        applause.play();                                //TODO Bytt ut med/ spill inn chCardFClapToScareMoose.mp3
+        const moose = new Blocks.Image("Bilder/Karakterer/mooseClosedMouth.png", { x: 316, y: 552, width: 250, height: 350 });
+        const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 40, y: 554, width: 150, height: 150 });
+        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 891, y: 554, width: 150, height: 150 });
+        Actions.Click(donebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeCompleted1.play();
+            challengeCompleted1.onended = () => {
+                GaaTil(sceneForestHub);
+            }
+        })
+        Actions.Click(notdonebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeNotCompleted1.play();
+            challengeNotCompleted1.onended = () => {
+                GaaTil(sceneForestHub);
+            }
+        })
+
+    } else if (tall === 9) {
+        const forestChallenge10 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFHideAndSeekTroll.png", { x: 30, y: 10, width: 1020, height: 700 });
+        applause.play();                                //TODO Bytt ut med/ spill inn chCardFHideAndSeekTroll.mp3
+        const troll = new Blocks.Image("Bilder/Karakterer/troll.png", { x: 206, y: 523, width: 250, height: 300 });
+        const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 40, y: 554, width: 150, height: 150 });
+        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 891, y: 554, width: 150, height: 150 });
+        Actions.Click(donebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeCompleted2.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
+            challengeCompleted2.onended = () => {
+                GaaTil(sceneForestHub);
+            }
+        })
+        Actions.Click(notdonebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeNotCompleted1.play();
+            challengeNotCompleted1.onended = () => {
+                GaaTil(sceneForestHub);
+            }
+        })
+
+    } else if (tall === 10) {
+        const forestChallenge11 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFJumpLikeFrog.png", { x: 30, y: 10, width: 1020, height: 700 });
+        applause.play();                                //TODO Bytt ut med/ spill inn chCardFJumpLikeFrog.mp3
+        const frog = new Blocks.Image("Bilder/Karakterer/frogJump.png", { x: 211, y: 507, width: 200, height: 200 });
+        Actions.Drag(frog);
+        const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 40, y: 554, width: 150, height: 150 });
+        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 891, y: 554, width: 150, height: 150 });
+        Actions.Click(donebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeCompleted1.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
+            challengeCompleted1.onended = () => {
+                GaaTil(sceneForestHub);
+            }
+        })
+        Actions.Click(notdonebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeNotCompleted1.play();
+            challengeNotCompleted1.onended = () => {
+                GaaTil(sceneForestHub);
+            }
+        })
+
+    } else if (tall === 11) {
+        const forestChallenge12 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFPickingMushrooms.png", { x: 30, y: 10, width: 1020, height: 700 });
+        applause.play();                                //TODO Bytt ut med/ spill inn chCardFPickingMushrooms.mp3
+        const mushroom1 = new Blocks.Image("Bilder/Objekter/chantarelleMushroom.png", { x: 321, y: 634, width: 200, height: 200 });
+        const mushroom2 = new Blocks.Image("Bilder/Objekter/fluesopp.png", { x: 552, y: 635, width: 200, height: 200 });
+        const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 40, y: 554, width: 150, height: 150 });
+        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 891, y: 554, width: 150, height: 150 });
+        Actions.Click(donebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeCompleted2.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
+            challengeCompleted2.onended = () => {
+                GaaTil(sceneForestHub);
+            }
+        })
+        Actions.Click(notdonebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeNotCompleted1.play();
+            challengeNotCompleted1.onended = () => {
+                GaaTil(sceneForestHub);
+            }
+        })
+
+    } else if (tall === 12) {
+        const forestChallenge13 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFWalkLikeABear.png", { x: 30, y: 10, width: 1020, height: 700 });
+        applause.play();                                //TODO Bytt ut med/ spill inn chCardFWalkLikeABear.mp3
+        const bear = new Blocks.Image("Bilder/Karakterer/bearSleeping.png", { x: 325, y: 605, width: 400, height: 200 });
+        const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 40, y: 554, width: 150, height: 150 });
+        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 891, y: 554, width: 150, height: 150 });
+        Actions.Click(donebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeCompleted2.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
+            challengeCompleted2.onended = () => {
+                GaaTil(sceneForestHub);
+            }
+        })
+        Actions.Click(notdonebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeNotCompleted1.play();
+            challengeNotCompleted1.onended = () => {
+                GaaTil(sceneForestHub);
+            }
+        })
+
+    } else if (tall === 13) {
+        const forestChallenge14 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFWoodpeckerDance.png", { x: 30, y: 10, width: 1020, height: 700 });
+        applause.play();                                //TODO Bytt ut med/ spill in chCardFWoodpeckerDance.mp3
+        const woodpecker = new Blocks.Image("Bilder/Karakterer/woodPecker.png", { x: 422, y: 543, width: 200, height: 300 });
+        const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 40, y: 554, width: 150, height: 150 });
+        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 891, y: 554, width: 150, height: 150 });
+        Actions.Click(donebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeCompleted2.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
+            challengeCompleted2.onended = () => {
+                GaaTil(sceneForestHub);
+            }
+        })
+        Actions.Click(notdonebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeNotCompleted1.play();
+            challengeNotCompleted1.onended = () => {
+                GaaTil(sceneForestHub);
+            }
+        })
     }
-}                                                                       //TODO Legge inn flere utfordringer - fysiske - ligger i bachelordokument
+}
 
 
 // CITY
 
 function sceneCityChallengeFront() {
     const cityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
-    let tall = Math.floor(Math.random() * 5);                                       //TODO CC Husk å sjekke at antall tall = antall kort
-    //tall = 3; // For debugging                                                      //TODO Husk å sjekke at denne er kommentert ut når du er ferdig
+    let tall = Math.floor(Math.random() * 8);
+    //tall = 8; // For debugging                                                      //TODO Husk å sjekke at denne er kommentert ut når du er ferdig
     if (tall === 0) {
         const cityChallenge1 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCBakeBread.png", { x: 30, y: 10, width: 1020, height: 700 });
         chCardCBakeBreadVoice.play();
@@ -3004,17 +3143,131 @@ function sceneCityChallengeFront() {
             }
         })
 
+    } else if (tall === 4) {
+        const cityChallenge5 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCBalanceBus.png", { x: 30, y: 10, width: 1020, height: 700 });
+        applause.play();                            //TODO Bytt ut med/spill inn chCardCBalanseBus.mp3
+        const busdriver = new Blocks.Image("Bilder/Karakterer/giraffeBus.png", { x: 616, y: 576, width: 260, height: 231 });
+        const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 40, y: 554, width: 150, height: 150 });
+        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 891, y: 554, width: 150, height: 150 });
+        Actions.Click(donebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeCompleted2.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
+            challengeCompleted2.onended = () => {
+                GaaTil(sceneCityHub);
+            }
+        })
+        Actions.Click(notdonebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeNotCompleted1.play();
+            challengeNotCompleted1.onended = () => {
+                GaaTil(sceneCityHub);
+            }
+        })
+
+    } else if (tall === 5) {
+        const cityChallenge6 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCCrossTheRoad.png", { x: 30, y: 10, width: 1020, height: 700 });
+        applause.play();                                //TODO Bytt ut med/ spill inn chCardCCrossTheRoad.mp3
+        const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 40, y: 554, width: 150, height: 150 });
+        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 891, y: 554, width: 150, height: 150 });
+        Actions.Click(donebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeCompleted2.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
+            challengeCompleted2.onended = () => {
+                GaaTil(sceneCityHub);
+            }
+        })
+        Actions.Click(notdonebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeNotCompleted1.play();
+            challengeNotCompleted1.onended = () => {
+                GaaTil(sceneCityHub);
+            }
+        })
+
+    } else if (tall === 6) {
+        const cityChallenge7 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCHeadShoulderKneesToes.png", { x: 30, y: 10, width: 1020, height: 700 });
+        applause.play();                                //TODO Bytt ut med/ spill inn chCardCHeadShoulderKneesToes.mp3
+        const doctor = new Blocks.Image("Bilder/Karakterer/catDoctor.png", { x: 398, y: 607, width: 260, height: 220 });
+        const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 40, y: 554, width: 150, height: 150 });
+        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 891, y: 554, width: 150, height: 150 });
+        Actions.Click(donebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeCompleted2.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
+            challengeCompleted2.onended = () => {
+                GaaTil(sceneCityHub);
+            }
+        })
+        Actions.Click(notdonebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeNotCompleted1.play();
+            challengeNotCompleted1.onended = () => {
+                GaaTil(sceneCityHub);
+            }
+        })
+
+    } else if (tall === 7) {
+        const cityChallenge8 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCHulkMuscle.png", { x: 30, y: 10, width: 1020, height: 700 });
+        applause.play();                                    //TODO Bytt ut med/spill inn chCardCHulkMuscle.mp3
+        const hulk = new Blocks.Image("Bilder/Karakterer/hulkOpenMouth.png", { x: 529, y: 546, width: 300, height: 300 });
+        const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 40, y: 554, width: 150, height: 150 });
+        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 891, y: 554, width: 150, height: 150 });
+        Actions.Click(donebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeCompleted2.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
+            challengeCompleted2.onended = () => {
+                GaaTil(sceneCityHub);
+            }
+        })
+        Actions.Click(notdonebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeNotCompleted1.play();
+            challengeNotCompleted1.onended = () => {
+                GaaTil(sceneCityHub);
+            }
+        })
+
+    } else if (tall === 8) {
+        const cityChallenge9 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCPutOutFire.png", { x: 30, y: 10, width: 1020, height: 700 });
+        applause.play();                                //TODO Bytt ut med/ spill inn chCardCPutOutFire.mp3
+        const fireman = new Blocks.Image("Bilder/Karakterer/catFireman.png", { x: 387, y: 588, width: 300, height: 220 });
+        const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 40, y: 554, width: 150, height: 150 });
+        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 891, y: 554, width: 150, height: 150 });
+        Actions.Click(donebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeCompleted2.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
+            challengeCompleted2.onended = () => {
+                GaaTil(sceneCityHub);
+            }
+        })
+        Actions.Click(notdonebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeNotCompleted1.play();
+            challengeNotCompleted1.onended = () => {
+                GaaTil(sceneCityHub);
+            }
+        })
+
     }
 
-}                                                                                                                       //TODO Legge inn flere utfordringer - fysiske - ligger i bachelordokument
+}
 
 
 // BEACH                                                                                                                // Anchor
 
 function sceneBeachChallengeFront() {
     const beachBackground = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: 0, y: 0, width: 1088, height: 818 });
-    let tall = Math.floor(Math.random() * 7);                                                                               //TODO BC Sjekk at tall = antall kort
-    //tall = 2; // For debugging                                                                                              //TODO Husk å sjekke at denne er kommentert ut når du er ferdig
+    let tall = Math.floor(Math.random() * 10);                                                                               //TODO BC Sjekk at tall = antall kort
+    //tall = 10; // For debugging                                                                                              //TODO Husk å sjekke at denne er kommentert ut når du er ferdig
     if (tall === 0) {
         const beachChallenge1 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBCountFish.png", { x: 30, y: 10, width: 1020, height: 700 });
         chCardBCountFishVoice.play();
@@ -3121,8 +3374,8 @@ function sceneBeachChallengeFront() {
         Actions.Click(donebutton, () => {
             chCardBWalkLikeCrabVoice.pause();
             chCardBWalkLikeCrabVoice.currentTime = 0;
-            challengeCompleted2.play();
-            challengeCompleted2.onended = () => {
+            challengeCompleted1.play();
+            challengeCompleted1.onended = () => {
                 GaaTil(sceneBeachHub);
             }
         })
@@ -3134,5 +3387,168 @@ function sceneBeachChallengeFront() {
                 GaaTil(sceneBeachHub);
             }
         })
+
+    } else if (tall === 4) {
+        const beachChallenge5 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBHowToApplySunscreen.png", { x: 30, y: 10, width: 1020, height: 700 });
+        applause.play();                                            //TODO Bytt ut med/ spill inn chCardBHowToApplySunscreen.mp3
+        const sunscreen = new Blocks.Image("Bilder/Objekter/sunscreen.png", { x: 442, y: 601, width: 200, height: 221 });
+        const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 40, y: 554, width: 150, height: 150 });
+        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 891, y: 554, width: 150, height: 150 });
+        Actions.Click(donebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeCompleted2.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
+            challengeCompleted2.onended = () => {
+                GaaTil(sceneBeachHub);
+            }
+        })
+        Actions.Click(notdonebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeNotCompleted1.play();
+            challengeNotCompleted1.onended = () => {
+                GaaTil(sceneBeachHub);
+            }
+        })
+
+    } else if (tall === 5) {
+        const beachChallenge6 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBHowToSwim.png", { x: 30, y: 10, width: 1020, height: 700 });
+        applause.play();                                //TODO Bytt ut med/ spill inn chCardBHowToSwim.mp3
+        const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 40, y: 554, width: 150, height: 150 });
+        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 891, y: 554, width: 150, height: 150 });
+        Actions.Click(donebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeCompleted1.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
+            challengeCompleted1.onended = () => {
+                GaaTil(sceneBeachHub);
+            }
+        })
+        Actions.Click(notdonebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeNotCompleted1.play();
+            challengeNotCompleted1.onended = () => {
+                GaaTil(sceneBeachHub);
+            }
+        })
+
+    } else if (tall === 6) {
+        const beachChallenge7 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBPickUpShells.png", { x: 30, y: 10, width: 1020, height: 700 });
+        applause.play();                                            //TODO Bytt ut med/spill inn chCardBPickUpShells.mp3
+        const shells = new Blocks.Image("Bilder/Objekter/shell.png", { x: 623, y: 507, width: 260, height: 199 });
+        const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 40, y: 554, width: 150, height: 150 });
+        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 891, y: 554, width: 150, height: 150 });
+        Actions.Click(donebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeCompleted1.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
+            challengeCompleted1.onended = () => {
+                GaaTil(sceneBeachHub);
+            }
+        })
+        Actions.Click(notdonebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeNotCompleted1.play();
+            challengeNotCompleted1.onended = () => {
+                GaaTil(sceneBeachHub);
+            }
+        })
+
+    } else if (tall === 7) {
+        const beachChallenge8 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBRowRowRowBoat.png", { x: 30, y: 10, width: 1020, height: 700 });
+        applause.play();                                                        //TODO Bytt ut med/spill inn chCardBRowRowRowBoat.mp3
+        const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 40, y: 554, width: 150, height: 150 });
+        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 891, y: 554, width: 150, height: 150 });
+        Actions.Click(donebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeCompleted1.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
+            challengeCompleted1.onended = () => {
+                GaaTil(sceneBeachHub);
+            }
+        })
+        Actions.Click(notdonebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeNotCompleted1.play();
+            challengeNotCompleted1.onended = () => {
+                GaaTil(sceneBeachHub);
+            }
+        })
+
+    } else if (tall === 8) {
+        const beachChallenge9 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBSandInSock.png", { x: 30, y: 10, width: 1020, height: 700 });
+        applause.play();                                            //TODO Bytt ut med/spill inn chCardBSandInSock.mp3
+        const sandSock = new Blocks.Image("Bilder/Objekter/sockWithSand.png", { x: 434, y: 559, width: 250, height: 228 });
+        const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 40, y: 554, width: 150, height: 150 });
+        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 891, y: 554, width: 150, height: 150 });
+        Actions.Click(donebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeCompleted1.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
+            challengeCompleted1.onended = () => {
+                GaaTil(sceneBeachHub);
+            }
+        })
+        Actions.Click(notdonebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeNotCompleted1.play();
+            challengeNotCompleted1.onended = () => {
+                GaaTil(sceneBeachHub);
+            }
+        })
+
+    } else if (tall === 9) {
+        const beachChallenge10 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBSingWithFish.png", { x: 30, y: 10, width: 1020, height: 700 });
+        applause.play();                                                //TODO Bytt ut med/spill in chCardBSingWithFish.mp3
+        const fish1 = new Blocks.Image("Bilder/Karakterer/fish1.png", { x: 564, y: 600, width: 200, height: 200 });
+        const fish2 = new Blocks.Image("Bilder/Karakterer/fish2.png", { x: 321, y: 600, width: 200, height: 200 });
+        const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 40, y: 554, width: 150, height: 150 });
+        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 891, y: 554, width: 150, height: 150 });
+        Actions.Click(donebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeCompleted1.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
+            challengeCompleted1.onended = () => {
+                GaaTil(sceneBeachHub);
+            }
+        })
+        Actions.Click(notdonebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeNotCompleted1.play();
+            challengeNotCompleted1.onended = () => {
+                GaaTil(sceneBeachHub);
+            }
+        })
+
+    } else if (tall === 10) {
+        const beachChallenge11 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBTeachSeagullFly.png", { x: 30, y: 10, width: 1020, height: 700 });
+        applause.play();                                                //TODO Bytt ut med/spill inn chCardBTeachSeagullFly.mp3
+        const seagull1 = new Blocks.Image("Bilder/Objekter/seagull.png", { x: 383, y: 638, width: 121, height: 100 });
+        const seagull2 = new Blocks.Image("Bilder/Objekter/seagull.png", { x: 506, y: 601, width: 121, height: 100 });
+        const seagull3 = new Blocks.Image("Bilder/Objekter/seagull.png", { x: 635, y: 638, width: 121, height: 100 });
+        const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 40, y: 554, width: 150, height: 150 });
+        const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 891, y: 554, width: 150, height: 150 });
+        Actions.Click(donebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeCompleted1.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
+            challengeCompleted1.onended = () => {
+                GaaTil(sceneBeachHub);
+            }
+        })
+        Actions.Click(notdonebutton, () => {
+            applause.pause();
+            applause.currentTime = 0;
+            challengeNotCompleted1.play();
+            challengeNotCompleted1.onended = () => {
+                GaaTil(sceneBeachHub);
+            }
+        })
+
     }
-}                                                                                                                                           //TODO Legge inn flere utfordringer - fysiske - ligger i bachelordokument
+}                                                                                                                                           //TODO Legge inn flere utfordringer - fysiske - kortene ligger i Challenges-mappa
