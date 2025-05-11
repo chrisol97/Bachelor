@@ -97,12 +97,14 @@ let chCardFJumpLikeFrogVoice = new Audio("Lydfiler/Kort/Forest/Challenge/chCardF
 let chCardFJumpLikeRabbitVoice = new Audio("Lydfiler/Kort/Forest/Challenge/chCardFJumpLikeRabbitVoice.mp3");
 let chCardFMooseLaughVoice = new Audio("Lydfiler/Kort/Forest/Challenge/chCardFMooseLaughVoice.mp3");
 let chCardFNameAnimalsVoice = new Audio("Lydfiler/Kort/Forest/Challenge/chCardFNameAnimalsVoice.mp3");
+let chCardFPickingMushroomsVoice = new Audio("Lydfiler/Kort/Forest/Challenge/chCardFPickingMushroomsVoice.mp3");
 let chCardFRobotMushroomVoice = new Audio("Lydfiler/Kort/Forest/Challenge/chCardFRobotMushroomVoice.mp3");
 let chCardFSongAboutTrollVoice = new Audio("Lydfiler/Kort/Forest/Challenge/chCardFSongAboutTrollVoice.mp3");
 let chCardFStretchLikeTreeVoice = new Audio("Lydfiler/Kort/Forest/Challenge/chCardFStretchLikeTreeVoice.mp3");
 let chCardFTadpoleVoice = new Audio("Lydfiler/Kort/Forest/Challenge/chCardFTadpoleVoice.mp3");
 let chCardFMooseLaughVoiceComplete = new Audio("Lydfiler/Kort/Forest/Challenge/chCardFMooseLaughVoiceComplete.mp3");
 let chCardFRobotMushroomVoiceComplete = new Audio("Lydfiler/Kort/Forest/Challenge/chCardFRobotMushroomVoiceComplete.mp3");
+let chCardFWalkLikeABearVoice = new Audio("Lydfiler/Kort/Forest/Challenge/chCardFWalkLikeABearVoice.mp3");
 
 // CITY
 
@@ -130,6 +132,7 @@ let qCardCWheelsOnTheBusVoice = new Audio("Lydfiler/Kort/City/Question/qCardCWhe
 
 // CHALLENGE
 let chCardCBakeBreadVoice = new Audio("Lydfiler/Kort/City/Challenge/chCardCBakeBreadVoice.mp3");
+let chCardCBalanceBusVoice = new Audio("Lydfiler/Kort/City/Challenge/chCardCBalanceBusVoice.mp3");
 let chCardCBuildBuildingVoice = new Audio("Lydfiler/Kort/City/Challenge/chCardCBuildBuildingVoice.mp3");
 let chCardCCatHidingVoice = new Audio("Lydfiler/Kort/City/Challenge/chCardCCatHidingVoice.mp3");
 let chCardCCountCarsVoice = new Audio("Lydfiler/Kort/City/Challenge/chCardCCountCarsVoice.mp3");
@@ -182,7 +185,7 @@ function startscreen() {                                                        
     })
 }
 
-function titlescreen() {                                                                            //TODO Legge inn funksjon for gruppebasert spill / mot hverandre
+function titlescreen() {                                                                            //TODO Legge inn funksjon for gruppebasert spill / mot hverandre ? 
     titlescreenmusic.play();
     const titlescreenbackground = new Blocks.Image("Bilder/Bakgrunner/kindergartenOutside.png", { x: 0, y: 0, width: 1088, height: 818 });
     const sign1 = new Blocks.Image("Bilder/Objekter/signHumlekollen.png", { x: 100, y: 350, width: 120, height: 150 });
@@ -193,7 +196,7 @@ function titlescreen() {                                                        
     const cattitlescreen = new Blocks.Image("Bilder/Karakterer/catClosedMouth.png", { x: 600, y: 490, width: 350, height: 300 });
     const mantitlescreen = new Blocks.Image("Bilder/Karakterer/manClosedMouth.png", { x: 780, y: 330, width: 50, height: 100 });
     const mainchartitlescreen = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", { x: 200, y: 440, width: 200, height: 350 });
-    const videobutton = new Blocks.Image("Bilder/Knapper/videoButton.png", { x: 765, y: 320, width: 250, height: 150 });
+    const rulesbutton = new Blocks.Image("Bilder/Knapper/rulesButton.png", { x: 765, y: 320, width: 250, height: 150 });                        //TODO Bytt ut med "Regel-knapp"
     const skipbutton = new Blocks.Image("Bilder/Knapper/playButton.png", { x: 60, y: 320, width: 250, height: 150 });
     const title = new Blocks.Image("Bilder/Objekter/gameTitle.png", { x: 280, y: 20, width: 540, height: 200 });
     Actions.Click(skipbutton, () => {
@@ -667,8 +670,15 @@ function sceneOutro1() {
     const giraffe = new Blocks.Image("Bilder/Karakterer/giraffeClosedMouth.png", { x: 42, y: 265, width: 139, height: 228 });
     const robot = new Blocks.Image("Bilder/Karakterer/manClosedMouth.png", { x: 444, y: 349, width: 79, height: 78 });
     const cat = new Blocks.Image("Bilder/Karakterer/catClosedMouth.png", { x: 769, y: 362, width: 79, height: 78 });
+    const mainChar = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", { x: 476, y: 392, width: 300, height: 400 });
     const mainCharTalking1 = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 476, y: 392, width: 300, height: 400, auto: true, loop: true });
-
+    const giraffeTalking = new Blocks.CellAnimation(["Bilder/Karakterer/giraffeClosedMouth.png", "Bilder/Karakterer/giraffeClosedMouth.png", "Bilder/Karakterer/giraffeClosedMouth.png", "Bilder/Karakterer/giraffeOpenMouth.png"], { x: 42, y: 265, width: 139, height: 228, loop: true, auto: true });
+    const robotTalking = new Blocks.CellAnimation(["Bilder/Karakterer/manClosedMouth.png", "Bilder/Karakterer/manClosedMouth.png", "Bilder/Karakterer/manClosedMouth.png", "Bilder/Karakterer/manOpenMouth.png"], { x: 444, y: 349, width: 79, height: 78, loop: true, auto: true });
+    const catTalking = new Blocks.CellAnimation(["Bilder/Karakterer/catClosedMouth.png", "Bilder/Karakterer/catClosedMouth.png", "Bilder/Karakterer/catClosedMouth.png", "Bilder/Karakterer/catOpenMouth.png"], { x: 769, y: 362, width: 79, height: 78, auto: true, loop: true });
+    mainChar.hide();
+    giraffeTalking.hide();
+    robotTalking.hide();
+    catTalking.hide();
 }
 
 
@@ -2001,7 +2011,7 @@ function sceneCityQuestionFront() {
 function sceneBeachQuestionFront() {
     const beachBackground = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: 0, y: 0, width: 1088, height: 818 });
     let tall = Math.floor(Math.random() * 14);
-    //tall = 10; // For debugging                                                                   //TODO Sjekk at denne er kommentert ut når du er ferdig
+    //tall = 11; // For debugging                                                                   //TODO Sjekk at denne er kommentert ut når du er ferdig
     if (tall === 0) {
         const beachQuestion1 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBBiggestSandCastle.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardBBiggestSandCastleVoice.play();
@@ -2613,7 +2623,7 @@ function sceneBeachQuestionFront() {
 function sceneForestChallengeFront() {
     const forestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
     let tall = Math.floor(Math.random() * 14);
-    //tall = 9; // For debugging                                                              //TODO Husk å sjekke at denne er kommentert ut når du er ferdig
+    //tall = 12; // For debugging                                                              //TODO Husk å sjekke at denne er kommentert ut når du er ferdig
     if (tall === 0) {
         const forestChallenge1 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFFlood.png", { x: 30, y: 10, width: 1020, height: 700 });
         chCardFFloodVoice.play();
@@ -2811,7 +2821,6 @@ function sceneForestChallengeFront() {
             }
         })
 
-
     } else if (tall === 7) {
         const forestChallenge8 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFStretchLikeTree.png", { x: 30, y: 10, width: 1020, height: 700 });
         chCardFStretchLikeTreeVoice.play();
@@ -2820,8 +2829,8 @@ function sceneForestChallengeFront() {
         Actions.Click(donebutton, () => {
             chCardFStretchLikeTreeVoice.pause();
             chCardFStretchLikeTreeVoice.currentTime = 0;
-            applause.play();
-            applause.onended = () => {
+            challengeCompleted1.play();
+            challengeCompleted1.onended = () => {
                 GaaTil(sceneForestHub);
             }
         })
@@ -2905,22 +2914,22 @@ function sceneForestChallengeFront() {
 
     } else if (tall === 11) {
         const forestChallenge12 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFPickingMushrooms.png", { x: 30, y: 10, width: 1020, height: 700 });
-        applause.play();                                //TODO Bytt ut med/ spill inn chCardFPickingMushrooms.mp3
+        chCardFPickingMushroomsVoice.play();
         const mushroom1 = new Blocks.Image("Bilder/Objekter/chantarelleMushroom.png", { x: 321, y: 634, width: 200, height: 200 });
         const mushroom2 = new Blocks.Image("Bilder/Objekter/fluesopp.png", { x: 552, y: 635, width: 200, height: 200 });
         const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 40, y: 554, width: 150, height: 150 });
         const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 891, y: 554, width: 150, height: 150 });
         Actions.Click(donebutton, () => {
-            applause.pause();
-            applause.currentTime = 0;
+            chCardFPickingMushroomsVoice.pause();
+            chCardFPickingMushroomsVoice.currentTime = 0;
             challengeCompleted2.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
             challengeCompleted2.onended = () => {
                 GaaTil(sceneForestHub);
             }
         })
         Actions.Click(notdonebutton, () => {
-            applause.pause();
-            applause.currentTime = 0;
+            chCardFPickingMushroomsVoice.pause();
+            chCardFPickingMushroomsVoice.currentTime = 0;
             challengeNotCompleted1.play();
             challengeNotCompleted1.onended = () => {
                 GaaTil(sceneForestHub);
@@ -2929,21 +2938,21 @@ function sceneForestChallengeFront() {
 
     } else if (tall === 12) {
         const forestChallenge13 = new Blocks.Image("Bilder/Kort/Forest/Challenge/chCardFWalkLikeABear.png", { x: 30, y: 10, width: 1020, height: 700 });
-        applause.play();                                //TODO Bytt ut med/ spill inn chCardFWalkLikeABear.mp3
+        chCardFWalkLikeABearVoice.play();
         const bear = new Blocks.Image("Bilder/Karakterer/bearSleeping.png", { x: 325, y: 605, width: 400, height: 200 });
         const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 40, y: 554, width: 150, height: 150 });
         const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 891, y: 554, width: 150, height: 150 });
         Actions.Click(donebutton, () => {
-            applause.pause();
-            applause.currentTime = 0;
+            chCardFWalkLikeABearVoice.pause();
+            chCardFWalkLikeABearVoice.currentTime = 0;
             challengeCompleted2.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
             challengeCompleted2.onended = () => {
                 GaaTil(sceneForestHub);
             }
         })
         Actions.Click(notdonebutton, () => {
-            applause.pause();
-            applause.currentTime = 0;
+            chCardFWalkLikeABearVoice.pause();
+            chCardFWalkLikeABearVoice.currentTime = 0;
             challengeNotCompleted1.play();
             challengeNotCompleted1.onended = () => {
                 GaaTil(sceneForestHub);
@@ -3147,21 +3156,21 @@ function sceneCityChallengeFront() {
 
     } else if (tall === 4) {
         const cityChallenge5 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCBalanceBus.png", { x: 30, y: 10, width: 1020, height: 700 });
-        applause.play();                            //TODO Bytt ut med/spill inn chCardCBalanseBus.mp3
+        chCardCBalanceBusVoice.play();
         const busdriver = new Blocks.Image("Bilder/Karakterer/giraffeBus.png", { x: 616, y: 576, width: 260, height: 231 });
         const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 40, y: 554, width: 150, height: 150 });
         const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 891, y: 554, width: 150, height: 150 });
         Actions.Click(donebutton, () => {
-            applause.pause();
-            applause.currentTime = 0;
+            chCardCBalanceBusVoice.pause();
+            chCardCBalanceBusVoice.currentTime = 0;
             challengeCompleted2.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
             challengeCompleted2.onended = () => {
                 GaaTil(sceneCityHub);
             }
         })
         Actions.Click(notdonebutton, () => {
-            applause.pause();
-            applause.currentTime = 0;
+            chCardCBalanceBusVoice.pause();
+            chCardCBalanceBusVoice.currentTime = 0;
             challengeNotCompleted1.play();
             challengeNotCompleted1.onended = () => {
                 GaaTil(sceneCityHub);
