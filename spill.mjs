@@ -31,7 +31,7 @@ let flyingplanesound = new Audio("Lydfiler/Objektlyder/planesound.mp3");
 let boingsound = new Audio("Lydfiler/Objektlyder/boing.mp3");
 let raceCarSound = new Audio("Lydfiler/Objektlyder/raceCar.mp3");
 
-// KARAKTERER
+// KARAKTERER                                                                                               //TODO Legge inn nye intro-lyder (mainCharVoiceIntroRulesX) (de er lagt inn i sw.js) / slette gamle intro-lyder (mainCharVoiceIntroX) (husk å fjern fra sw.js)
 let mainCharVoiceIntro1 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro1.mp3");
 let mainCharVoiceIntro2 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro2.mp3");
 let mainCharVoiceIntro3 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro3.mp3");
@@ -45,8 +45,8 @@ let mainCharVoiceIntro10 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro10.m
 let mainCharVoiceBeachIntro1 = new Audio("Lydfiler/Karakterer/mainCharVoiceBeachIntro1.mp3");
 let mainCharVoiceForestIntro1 = new Audio("Lydfiler/Karakterer/mainCharVoiceForestIntro1.mp3");
 let mainCharVoiceCityIntro1 = new Audio("Lydfiler/Karakterer/mainCharVoiceCityIntro1.mp3");
-let mainCharVoiceCardsExpl1 = new Audio("Lydfiler/Karakterer/mainCharVoiceCardsExpl1.mp3");
-let mainCharVoiceCardsExpl2 = new Audio("Lydfiler/Karakterer/mainCharVoiceCardsExpl2.mp3");
+let mainCharVoiceCardsExpl1 = new Audio("Lydfiler/Karakterer/mainCharVoiceCardsExpl1.mp3");                     //TODO Kan slettes
+let mainCharVoiceCardsExpl2 = new Audio("Lydfiler/Karakterer/mainCharVoiceCardsExpl2.mp3");                     //TODO Kan slettes
 let giraffeVoiceIntro1 = new Audio("Lydfiler/Karakterer/giraffeVoiceIntro1.mp3");
 let catVoiceIntro1 = new Audio("Lydfiler/Karakterer/catVoiceIntro1.mp3");
 let styrerVoiceIntro1 = new Audio("Lydfiler/Karakterer/styrerVoiceIntro1.mp3");
@@ -54,14 +54,16 @@ let ouchCatMainChar = new Audio("Lydfiler/Karakterer/ouchCatMainChar.mp3");
 
 // KORT
 
-// RESPONSES
+// RESPONSES                                                                                                    //TODO Spiller inn flere, husk å legg de inn på forskjellige steder så det blir litt spredt (de er lagt inn i sw.js (challengeCompleted3 & challengeNotCompleted2))
 let applause = new Audio("Lydfiler/Kort/Responses/applause.mp3");
 let notQuiteCorrect = new Audio("Lydfiler/Kort/Responses/notQuiteCorrect.mp3");
 let wrongAnswerSound1 = new Audio("Lydfiler/Kort/Responses/wrongAnswerSound1.mp3");
 let wrongAnswerSound2 = new Audio("Lydfiler/Kort/Responses/wrongAnswerSound2.mp3");
 let challengeCompleted1 = new Audio("Lydfiler/Kort/Responses/challengeCompleted1.mp3");
 let challengeCompleted2 = new Audio("Lydfiler/Kort/Responses/challengeCompleted2.mp3");
+let challengeCompleted3 = new Audio("Lydfiler/Kort/Responses/challengeCompleted3.mp3");
 let challengeNotCompleted1 = new Audio("Lydfiler/Kort/Responses/challengeNotCompleted1.mp3");
+let challengeNotCompleted2 = new Audio("Lydfiler/Kort/Responses/challengeNotCompleted2.mp3");
 let yesCorrect = new Audio("Lydfiler/Kort/Responses/yesCorrect.mp3");
 
 // FOREST
@@ -222,7 +224,7 @@ function titlescreen() {                                                        
 
 }
 
-function sceneIntro1() {
+function sceneIntro1() {                                                                                                        //TODO Skal fjernes etter nye regler kommer inn
     mainCharVoiceIntro1.play();
     flyingplanesound.play();
     const scene1background = new Blocks.Image("Bilder/Bakgrunner/kindergartenOutside.png", { x: 0, y: 0, width: 1088, height: 818 });
@@ -249,7 +251,7 @@ function sceneIntro1() {
 
 }
 
-function sceneIntro2() {
+function sceneIntro2() {                                                                                                            //TODO Skal fjernes etter nye regler kommer inn
     const background = new Blocks.Image("Bilder/Bakgrunner/sandbox.png", { x: 0, y: 0, width: 1088, height: 818 });
     const giraffeSandbox = new Blocks.Image("Bilder/Karakterer/giraffeClosedMouth.png", { x: 200, y: 200, width: 200, height: 400 });
     const mainChar = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", { x: 1100, y: 0, width: 200, height: 250 });
@@ -302,7 +304,7 @@ function sceneIntro2() {
     })
 }
 
-function sceneIntro3() {
+function sceneIntro3() {                                                                                                                //TODO Skal fjernes etter nye regler kommer inn
     const background = new Blocks.Image("Bilder/Bakgrunner/grillhutOutside.png", { x: 0, y: 0, width: 1088, height: 818 });
     const mainChar = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", { x: 1100, y: 460, width: 220, height: 320 });
     const catStanding = new Blocks.Image("Bilder/Karakterer/catClosedMouth.png", { x: 200, y: 500, width: 300, height: 250 });
@@ -353,7 +355,7 @@ function sceneIntro3() {
     })
 }
 
-function sceneIntro4() {
+function sceneIntro4() {                                                                                                                    //TODO Skal fjernes etter nye regler kommer inn
     const background = new Blocks.Image("Bilder/Bakgrunner/wardrobe.png", { x: 0, y: 0, width: 1088, height: 818 });
     const mainChar = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", { x: 1100, y: 470, width: 220, height: 320 });
     const styrerPlaceholder = new Blocks.Image("Bilder/Karakterer/manClosedMouth.png", { x: 150, y: 300, width: 350, height: 450 });
@@ -422,7 +424,7 @@ function sceneIntro5() {
     forestText.hide();
     kindergartenText.hide();
     mainCharVoiceIntro9.onended = () => {
-        mainCharVoiceIntro10.play();                                                                            //TODO Ha forklaring av reglene her i steden?
+        mainCharVoiceIntro10.play();                                                                            //TODO Spiller inn nye regel-forklaringslyder 11-05, legg dem inn i dette området
         beachText.show();
         cityText.show();
         forestText.show();
@@ -447,7 +449,7 @@ function sceneIntro5() {
 
 // BEACH - POTENSIELT I EGET .MJS-FIL
 
-function sceneBeachIntro1() {
+function sceneBeachIntro1() {                                                                                                       //TODO Slettes etter reglene er lagt inn
     mainCharVoiceBeachIntro1.play()
     const sceneBeachBackground = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: 0, y: 0, width: 1088, height: 818 });
     const qCardBack = new Blocks.Image("Bilder/Kort/questionCardBack.png", { x: 15, y: 200, width: 330, height: 450 });
@@ -469,7 +471,7 @@ function sceneBeachIntro1() {
         qCardBack.show();
         chCardBack.show();
         chanceCardBack.show();
-        mainCharVoiceCardsExpl1.play();                                                                             //TODO Endre forklaring av regler? Flytte? 
+        mainCharVoiceCardsExpl1.play();
     }
     mainCharVoiceCardsExpl1.onended = () => {
         cityButton.show();
@@ -477,7 +479,7 @@ function sceneBeachIntro1() {
         kindergartenButton.show();
         mainCharTalking.hide();
         mainCharTalking2.show();
-        mainCharVoiceCardsExpl2.play();                                                                             //TODO Endre forklaring av regler? Flytte? 
+        mainCharVoiceCardsExpl2.play();
     }
     mainCharVoiceCardsExpl2.onended = () => {
         GaaTil(sceneBeachHub)
@@ -524,7 +526,7 @@ function sceneBeachHub() {
 
 // FOREST - POTENSIELT I EGEN .MJS-FIL
 
-function sceneForestIntro1() {
+function sceneForestIntro1() {                                                                                                              //TODO Slettes etter reglene er lagt inn
     mainCharVoiceForestIntro1.play();
     const sceneForestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
     const qCardBack = new Blocks.Image("Bilder/Kort/questionCardBack.png", { x: 15, y: 200, width: 330, height: 450 });
@@ -546,7 +548,7 @@ function sceneForestIntro1() {
         qCardBack.show();
         chCardBack.show();
         chanceCardBack.show();
-        mainCharVoiceCardsExpl1.play();                                                             //TODO Endre forklaring av regler? Flytte? 
+        mainCharVoiceCardsExpl1.play();
     }
     mainCharVoiceCardsExpl1.onended = () => {
         cityButton.show();
@@ -554,7 +556,7 @@ function sceneForestIntro1() {
         kindergartenButton.show();
         mainCharTalking.hide();
         mainCharTalking2.show();
-        mainCharVoiceCardsExpl2.play();                                                             //TODO Endre forklaring av regler? Flytte? 
+        mainCharVoiceCardsExpl2.play();
     }
     mainCharVoiceCardsExpl2.onended = () => {
         GaaTil(sceneForestHub)
@@ -601,7 +603,7 @@ function sceneForestHub() {
 
 // CITY - POTENSIELT I EGEN .MJS-FIL
 
-function sceneCityIntro1() {
+function sceneCityIntro1() {                                                                                                                        //TODO Slettes etter reglene er lagt inn
     mainCharVoiceCityIntro1.play();
     const sceneCityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
     const qCardBack = new Blocks.Image("Bilder/Kort/questionCardBack.png", { x: 15, y: 200, width: 330, height: 450 });
@@ -623,7 +625,7 @@ function sceneCityIntro1() {
         qCardBack.show();
         chCardBack.show();
         chanceCardBack.show();
-        mainCharVoiceCardsExpl1.play();                                                 //TODO Endre forklaring av regler? Flytte?
+        mainCharVoiceCardsExpl1.play();
     }
     mainCharVoiceCardsExpl1.onended = () => {
         forestButton.show();
@@ -631,7 +633,7 @@ function sceneCityIntro1() {
         kindergartenButton.show();
         mainCharTalking.hide();
         mainCharTalking2.show();
-        mainCharVoiceCardsExpl2.play();                                                 //TODO Endre forklaring av regler? Flytte? 
+        mainCharVoiceCardsExpl2.play();
     }
     mainCharVoiceCardsExpl2.onended = () => {
         GaaTil(sceneCityHub)
