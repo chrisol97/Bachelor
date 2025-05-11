@@ -176,7 +176,7 @@ let chCardBMermaidCatVoice = new Audio("Lydfiler/Kort/Beach/Challenge/chCardBMer
 let chCardBPickUpShellsVoice = new Audio("Lydfiler/Kort/Beach/Challenge/chCardBPickUpShellsVoice.mp3");
 let chCardBRowRowRowBoatVoice = new Audio("Lydfiler/Kort/Beach/Challenge/chCardBRowRowRowBoatVoice.mp3");
 let chCardBSandInSockVoice = new Audio("Lydfiler/Kort/Beach/Challenge/chCardBSandInSockVoice.mp3");
-let chCardBSingWithFishVoice = new Audio("Lydfiler/Kort/Beach/Challenge/chCardBSingWithFish.mp3");
+let chCardBSingWithFishVoice = new Audio("Lydfiler/Kort/Beach/Challenge/chCardBSingWithFishVoice.mp3");
 let chCardBSongAboutOceanVoice = new Audio("Lydfiler/Kort/Beach/Challenge/chCardBSongAboutOceanVoice.mp3");
 let chCardBSunburntGiraffeVoice = new Audio("Lydfiler/Kort/Beach/Challenge/chCardBSunburntGiraffeVoice.mp3");
 let chCardBTeachSeagullFlyVoice = new Audio("Lydfiler/Kort/Beach/Challenge/chCardBTeachSeagullFlyVoice.mp3");
@@ -3377,6 +3377,8 @@ function sceneBeachChallengeFront() {
         const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 43, y: 547, width: 150, height: 150 });
         const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 885, y: 547, width: 150, height: 150 });
         Actions.Click(donebutton, () => {
+            chCardBSongAboutOceanVoice.pause();
+            chCardBSongAboutOceanVoice.currentTime = 0;
             challengeCompleted1.play();
             challengeCompleted1.onended = () => {
                 GaaTil(sceneBeachHub);
@@ -3550,7 +3552,7 @@ function sceneBeachChallengeFront() {
 
     } else if (tall === 10) {
         const beachChallenge11 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBTeachSeagullFly.png", { x: 30, y: 10, width: 1020, height: 700 });
-        chCardBTeachSeagullFlyVoice.play();                                                //TODO Bytt ut med/spill inn chCardBTeachSeagullFly.mp3
+        chCardBTeachSeagullFlyVoice.play();
         const seagull1 = new Blocks.Image("Bilder/Objekter/seagull.png", { x: 383, y: 638, width: 121, height: 100 });
         const seagull2 = new Blocks.Image("Bilder/Objekter/seagull.png", { x: 506, y: 601, width: 121, height: 100 });
         const seagull3 = new Blocks.Image("Bilder/Objekter/seagull.png", { x: 635, y: 638, width: 121, height: 100 });
