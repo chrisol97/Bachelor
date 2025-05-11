@@ -170,9 +170,16 @@ let qCardBWhaleVoice = new Audio("Lydfiler/Kort/Beach/Question/qCardBWhaleVoice.
 let chCardBBiggestFishVoice = new Audio("Lydfiler/Kort/Beach/Challenge/chCardBBiggestFishVoice.mp3");
 let chCardBCatWaterVoice = new Audio("Lydfiler/Kort/Beach/Challenge/chCardBCatWaterVoice.mp3");
 let chCardBCountFishVoice = new Audio("Lydfiler/Kort/Beach/Challenge/chCardBCountFishVoice.mp3");
+let chCardBHowToApplySunscreenVoice = new Audio("Lydfiler/Kort/Beach/Challenge/chCardBHowToApplySunscreenVoice.mp3");
+let chCardBHowToSwimVoice = new Audio("Lydfiler/Kort/Beach/Challenge/chCardBHowToSwimVoice.mp3");
 let chCardBMermaidCatVoice = new Audio("Lydfiler/Kort/Beach/Challenge/chCardBMermaidCatVoice.mp3");
+let chCardBPickUpShellsVoice = new Audio("Lydfiler/Kort/Beach/Challenge/chCardBPickUpShellsVoice.mp3");
+let chCardBRowRowRowBoatVoice = new Audio("Lydfiler/Kort/Beach/Challenge/chCardBRowRowRowBoatVoice.mp3");
+let chCardBSandInSockVoice = new Audio("Lydfiler/Kort/Beach/Challenge/chCardBSandInSockVoice.mp3");
+let chCardBSingWithFishVoice = new Audio("Lydfiler/Kort/Beach/Challenge/chCardBSingWithFish.mp3");
 let chCardBSongAboutOceanVoice = new Audio("Lydfiler/Kort/Beach/Challenge/chCardBSongAboutOceanVoice.mp3");
 let chCardBSunburntGiraffeVoice = new Audio("Lydfiler/Kort/Beach/Challenge/chCardBSunburntGiraffeVoice.mp3");
+let chCardBTeachSeagullFlyVoice = new Audio("Lydfiler/Kort/Beach/Challenge/chCardBTeachSeagullFlyVoice.mp3");
 let chCardBWalkLikeCrabVoice = new Audio("Lydfiler/Kort/Beach/Challenge/chCardBWalkLikeCrabVoice.mp3");
 
 
@@ -3252,7 +3259,7 @@ function sceneCityChallengeFront() {
 
     } else if (tall === 8) {
         const cityChallenge9 = new Blocks.Image("Bilder/Kort/City/Challenge/chCardCPutOutFire.png", { x: 30, y: 10, width: 1020, height: 700 });
-        chCardCPutOutFireVoice.play();                                //TODO Bytt ut med/ spill inn chCardCPutOutFire.mp3
+        chCardCPutOutFireVoice.play();
         const fireman = new Blocks.Image("Bilder/Karakterer/catFireman.png", { x: 387, y: 588, width: 300, height: 220 });
         const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 40, y: 554, width: 150, height: 150 });
         const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 891, y: 554, width: 150, height: 150 });
@@ -3406,21 +3413,21 @@ function sceneBeachChallengeFront() {
 
     } else if (tall === 4) {
         const beachChallenge5 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBHowToApplySunscreen.png", { x: 30, y: 10, width: 1020, height: 700 });
-        applause.play();                                            //TODO Bytt ut med/ spill inn chCardBHowToApplySunscreen.mp3
+        chCardBHowToApplySunscreenVoice.play();
         const sunscreen = new Blocks.Image("Bilder/Objekter/sunscreen.png", { x: 442, y: 601, width: 200, height: 221 });
         const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 40, y: 554, width: 150, height: 150 });
         const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 891, y: 554, width: 150, height: 150 });
         Actions.Click(donebutton, () => {
-            applause.pause();
-            applause.currentTime = 0;
+            chCardBHowToApplySunscreenVoice.pause();
+            chCardBHowToApplySunscreenVoice.currentTime = 0;
             challengeCompleted2.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
             challengeCompleted2.onended = () => {
                 GaaTil(sceneBeachHub);
             }
         })
         Actions.Click(notdonebutton, () => {
-            applause.pause();
-            applause.currentTime = 0;
+            chCardBHowToApplySunscreenVoice.pause();
+            chCardBHowToApplySunscreenVoice.currentTime = 0;
             challengeNotCompleted1.play();
             challengeNotCompleted1.onended = () => {
                 GaaTil(sceneBeachHub);
@@ -3429,20 +3436,20 @@ function sceneBeachChallengeFront() {
 
     } else if (tall === 5) {
         const beachChallenge6 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBHowToSwim.png", { x: 30, y: 10, width: 1020, height: 700 });
-        applause.play();                                //TODO Bytt ut med/ spill inn chCardBHowToSwim.mp3
+        chCardBHowToSwimVoice.play();
         const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 40, y: 554, width: 150, height: 150 });
         const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 891, y: 554, width: 150, height: 150 });
         Actions.Click(donebutton, () => {
-            applause.pause();
-            applause.currentTime = 0;
+            chCardBHowToSwimVoice.pause();
+            chCardBHowToSwimVoice.currentTime = 0;
             challengeCompleted1.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
             challengeCompleted1.onended = () => {
                 GaaTil(sceneBeachHub);
             }
         })
         Actions.Click(notdonebutton, () => {
-            applause.pause();
-            applause.currentTime = 0;
+            chCardBHowToSwimVoice.pause();
+            chCardBHowToSwimVoice.currentTime = 0;
             challengeNotCompleted1.play();
             challengeNotCompleted1.onended = () => {
                 GaaTil(sceneBeachHub);
@@ -3451,21 +3458,21 @@ function sceneBeachChallengeFront() {
 
     } else if (tall === 6) {
         const beachChallenge7 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBPickUpShells.png", { x: 30, y: 10, width: 1020, height: 700 });
-        applause.play();                                            //TODO Bytt ut med/spill inn chCardBPickUpShells.mp3
+        chCardBPickUpShellsVoice.play();
         const shells = new Blocks.Image("Bilder/Objekter/shell.png", { x: 623, y: 507, width: 260, height: 199 });
         const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 40, y: 554, width: 150, height: 150 });
         const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 891, y: 554, width: 150, height: 150 });
         Actions.Click(donebutton, () => {
-            applause.pause();
-            applause.currentTime = 0;
+            chCardBPickUpShellsVoice.pause();
+            chCardBPickUpShellsVoice.currentTime = 0;
             challengeCompleted1.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
             challengeCompleted1.onended = () => {
                 GaaTil(sceneBeachHub);
             }
         })
         Actions.Click(notdonebutton, () => {
-            applause.pause();
-            applause.currentTime = 0;
+            chCardBPickUpShellsVoice.pause();
+            chCardBPickUpShellsVoice.currentTime = 0;
             challengeNotCompleted1.play();
             challengeNotCompleted1.onended = () => {
                 GaaTil(sceneBeachHub);
@@ -3474,20 +3481,20 @@ function sceneBeachChallengeFront() {
 
     } else if (tall === 7) {
         const beachChallenge8 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBRowRowRowBoat.png", { x: 30, y: 10, width: 1020, height: 700 });
-        applause.play();                                                        //TODO Bytt ut med/spill inn chCardBRowRowRowBoat.mp3
+        chCardBRowRowRowBoatVoice.play();
         const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 40, y: 554, width: 150, height: 150 });
         const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 891, y: 554, width: 150, height: 150 });
         Actions.Click(donebutton, () => {
-            applause.pause();
-            applause.currentTime = 0;
+            chCardBRowRowRowBoatVoice.pause();
+            chCardBRowRowRowBoatVoice.currentTime = 0;
             challengeCompleted1.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
             challengeCompleted1.onended = () => {
                 GaaTil(sceneBeachHub);
             }
         })
         Actions.Click(notdonebutton, () => {
-            applause.pause();
-            applause.currentTime = 0;
+            chCardBRowRowRowBoatVoice.pause();
+            chCardBRowRowRowBoatVoice.currentTime = 0;
             challengeNotCompleted1.play();
             challengeNotCompleted1.onended = () => {
                 GaaTil(sceneBeachHub);
@@ -3496,21 +3503,21 @@ function sceneBeachChallengeFront() {
 
     } else if (tall === 8) {
         const beachChallenge9 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBSandInSock.png", { x: 30, y: 10, width: 1020, height: 700 });
-        applause.play();                                            //TODO Bytt ut med/spill inn chCardBSandInSock.mp3
+        chCardBSandInSockVoice.play();
         const sandSock = new Blocks.Image("Bilder/Objekter/sockWithSand.png", { x: 434, y: 559, width: 250, height: 228 });
         const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 40, y: 554, width: 150, height: 150 });
         const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 891, y: 554, width: 150, height: 150 });
         Actions.Click(donebutton, () => {
-            applause.pause();
-            applause.currentTime = 0;
+            chCardBSandInSockVoice.pause();
+            chCardBSandInSockVoice.currentTime = 0;
             challengeCompleted1.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
             challengeCompleted1.onended = () => {
                 GaaTil(sceneBeachHub);
             }
         })
         Actions.Click(notdonebutton, () => {
-            applause.pause();
-            applause.currentTime = 0;
+            chCardBSandInSockVoice.pause();
+            chCardBSandInSockVoice.currentTime = 0;
             challengeNotCompleted1.play();
             challengeNotCompleted1.onended = () => {
                 GaaTil(sceneBeachHub);
@@ -3519,22 +3526,22 @@ function sceneBeachChallengeFront() {
 
     } else if (tall === 9) {
         const beachChallenge10 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBSingWithFish.png", { x: 30, y: 10, width: 1020, height: 700 });
-        applause.play();                                                //TODO Bytt ut med/spill in chCardBSingWithFish.mp3
+        chCardBSingWithFishVoice.play();
         const fish1 = new Blocks.Image("Bilder/Karakterer/fish1.png", { x: 564, y: 600, width: 200, height: 200 });
         const fish2 = new Blocks.Image("Bilder/Karakterer/fish2.png", { x: 321, y: 600, width: 200, height: 200 });
         const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 40, y: 554, width: 150, height: 150 });
         const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 891, y: 554, width: 150, height: 150 });
         Actions.Click(donebutton, () => {
-            applause.pause();
-            applause.currentTime = 0;
+            chCardBSingWithFishVoice.pause();
+            chCardBSingWithFishVoice.currentTime = 0;
             challengeCompleted1.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
             challengeCompleted1.onended = () => {
                 GaaTil(sceneBeachHub);
             }
         })
         Actions.Click(notdonebutton, () => {
-            applause.pause();
-            applause.currentTime = 0;
+            chCardBSingWithFishVoice.pause();
+            chCardBSingWithFishVoice.currentTime = 0;
             challengeNotCompleted1.play();
             challengeNotCompleted1.onended = () => {
                 GaaTil(sceneBeachHub);
@@ -3543,23 +3550,23 @@ function sceneBeachChallengeFront() {
 
     } else if (tall === 10) {
         const beachChallenge11 = new Blocks.Image("Bilder/Kort/Beach/Challenge/chCardBTeachSeagullFly.png", { x: 30, y: 10, width: 1020, height: 700 });
-        applause.play();                                                //TODO Bytt ut med/spill inn chCardBTeachSeagullFly.mp3
+        chCardBTeachSeagullFlyVoice.play();                                                //TODO Bytt ut med/spill inn chCardBTeachSeagullFly.mp3
         const seagull1 = new Blocks.Image("Bilder/Objekter/seagull.png", { x: 383, y: 638, width: 121, height: 100 });
         const seagull2 = new Blocks.Image("Bilder/Objekter/seagull.png", { x: 506, y: 601, width: 121, height: 100 });
         const seagull3 = new Blocks.Image("Bilder/Objekter/seagull.png", { x: 635, y: 638, width: 121, height: 100 });
         const donebutton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 40, y: 554, width: 150, height: 150 });
         const notdonebutton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 891, y: 554, width: 150, height: 150 });
         Actions.Click(donebutton, () => {
-            applause.pause();
-            applause.currentTime = 0;
+            chCardBTeachSeagullFlyVoice.pause();
+            chCardBTeachSeagullFlyVoice.currentTime = 0;
             challengeCompleted1.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
             challengeCompleted1.onended = () => {
                 GaaTil(sceneBeachHub);
             }
         })
         Actions.Click(notdonebutton, () => {
-            applause.pause();
-            applause.currentTime = 0;
+            chCardBTeachSeagullFlyVoice.pause();
+            chCardBTeachSeagullFlyVoice.currentTime = 0;
             challengeNotCompleted1.play();
             challengeNotCompleted1.onended = () => {
                 GaaTil(sceneBeachHub);
