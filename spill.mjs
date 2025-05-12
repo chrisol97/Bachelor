@@ -218,8 +218,8 @@ function sceneIntro1() {
     const sign3 = new Blocks.Image("Bilder/Objekter/signMaurtua.png", { x: 940, y: 320, width: 100, height: 150 });
     const flyingplane = new Blocks.Image("Bilder/Objekter/plane.png", { x: -250, y: 0, width: 220, height: 150 });
     Actions.Tween(flyingplane, 6.5, 0);
-    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 520, y: 400, width: 250, height: 400, loop: true, auto: true });
-    const countdown = new Actions.CountDown(6, (complete) => {
+    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 560, y: 400, width: 250, height: 400, loop: true, auto: true });
+    const countdown = new Actions.CountDown(10, (complete) => {
         if (complete) {
             flyingplanesound.pause();
             flyingplane.hide();
@@ -234,7 +234,7 @@ function sceneIntro1() {
 function sceneIntro2() {
     mainCharVoiceIntroRules2.play();
     const background = new Blocks.Image("Bilder/Bakgrunner/boardGameBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
-    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 515, y: 550, width: 250, height: 350, loop: true, auto: true });
+    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 555, y: 550, width: 250, height: 350, loop: true, auto: true });
     const giraffe = new Blocks.Image("Bilder/Karakterer/giraffeClosedMouth.png", { x: 69, y: 321, width: 100, height: 160 });
     const jellyfish = new Blocks.Image("Bilder/Karakterer/jellyfish.png", { x: 946, y: 246, width: 102, height: 122 });
     const cat = new Blocks.Image("Bilder/Karakterer/catClosedMouth.png", { x: 208, y: 643, width: 142, height: 122 });
@@ -314,7 +314,7 @@ function sceneIntro3() {
     const qCardBack = new Blocks.Image("Bilder/Kort/questionCardBack.png", { x: 15, y: 200, width: 330, height: 450 });
     const chCardBack = new Blocks.Image("Bilder/Kort/challengeCardBack.png", { x: 370, y: 200, width: 330, height: 450 });
     const chanceCardBack = new Blocks.Image("Bilder/Kort/chanceCardBack.png", { x: 720, y: 200, width: 330, height: 450 });
-    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 515, y: 550, width: 250, height: 350, loop: true, auto: true });
+    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 555, y: 550, width: 250, height: 350, loop: true, auto: true });
     qCardBack.hide();
     chCardBack.hide();
     chanceCardBack.hide();
@@ -348,12 +348,12 @@ function sceneIntro4() {
     const beachButton = new Blocks.Image("Bilder/Knapper/beachButton.PNG", { x: 717, y: 20, width: 150, height: 150 });
     const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.png", { x: 460, y: 20, width: 150, height: 150 });
     const cityButton = new Blocks.Image("Bilder/Knapper/cityButton.PNG", { x: 460, y: 180, width: 150, height: 150 });
-    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 515, y: 550, width: 250, height: 350, loop: true, auto: true });
+    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 555, y: 550, width: 250, height: 350, loop: true, auto: true });
     forestButton.hide();
     beachButton.hide();
     kindergartenButton.hide();
     cityButton.hide();
-    const countdownForest = new Actions.CountDown(14, (completeForest) => {
+    const countdownForest = new Actions.CountDown(15, (completeForest) => {
         if (completeForest) {
             forestButton.show();
         }
@@ -363,12 +363,12 @@ function sceneIntro4() {
             beachButton.show();
         }
     }, { onTick: true, auto: true });
-    const countdownCity = new Actions.CountDown(18, (completeCity) => {
+    const countdownCity = new Actions.CountDown(17, (completeCity) => {
         if (completeCity) {
             cityButton.show();
         }
     }, { onTick: true, auto: true });
-    const countdownKindergarten = new Actions.CountDown(20, (completeKindergarten) => {
+    const countdownKindergarten = new Actions.CountDown(19, (completeKindergarten) => {
         if (completeKindergarten) {
             kindergartenButton.show();
         }
@@ -381,7 +381,7 @@ function sceneIntro4() {
 function sceneIntro5() {
     mainCharVoiceIntroRules6.play();
     const background = new Blocks.Image("Bilder/Bakgrunner/boardGameBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
-    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 415, y: 350, width: 450, height: 550, loop: true, auto: true });
+    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 455, y: 350, width: 450, height: 550, loop: true, auto: true });
     const beachText = new Blocks.Image("Bilder/Objekter/beachTitle.PNG", { x: 700, y: 534, width: 300, height: 70 });
     const cityText = new Blocks.Image("Bilder/Objekter/cityTitle.PNG", { x: 393, y: 161, width: 300, height: 70 });
     const forestText = new Blocks.Image("Bilder/Objekter/forestTitle.PNG", { x: 90, y: 534, width: 300, height: 70 });
