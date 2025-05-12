@@ -219,7 +219,7 @@ function sceneIntro1() {
     const flyingplane = new Blocks.Image("Bilder/Objekter/plane.png", { x: -250, y: 0, width: 220, height: 150 });
     Actions.Tween(flyingplane, 7.5, 0);
     const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 560, y: 400, width: 250, height: 400, loop: true, auto: true });
-    const countdown = new Actions.CountDown(6.5, (complete) => {
+    const countdown = new Actions.CountDown(6.1, (complete) => {
         if (complete) {
             flyingplanesound.pause();
             flyingplane.hide();
