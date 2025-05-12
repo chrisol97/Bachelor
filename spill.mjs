@@ -31,7 +31,7 @@ let flyingplanesound = new Audio("Lydfiler/Objektlyder/planesound.mp3");
 let boingsound = new Audio("Lydfiler/Objektlyder/boing.mp3");
 let raceCarSound = new Audio("Lydfiler/Objektlyder/raceCar.mp3");
 
-// KARAKTERER                                                                                               //TODO Legge inn nye intro-lyder (mainCharVoiceIntroRulesX) (de er lagt inn i sw.js) / slette gamle intro-lyder (mainCharVoiceIntroX) (husk å fjern fra sw.js)
+// KARAKTERER                                                                                               //TODO Legge inn nye intro-lyder (de er lagt inn) (mainCharVoiceIntroRulesX) (de er lagt inn i sw.js) / slette gamle intro-lyder (mainCharVoiceIntroX) (husk å fjern fra sw.js)
 let mainCharVoiceIntro1 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro1.mp3");
 let mainCharVoiceIntro2 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro2.mp3");
 let mainCharVoiceIntro3 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro3.mp3");
@@ -42,6 +42,12 @@ let mainCharVoiceIntro7 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro7.mp3
 let mainCharVoiceIntro8 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro8.mp3");
 let mainCharVoiceIntro9 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro9.mp3");
 let mainCharVoiceIntro10 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro10.mp3");
+let mainCharVoiceIntroRules1 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntroRules1.mp3");
+let mainCharVoiceIntroRules2 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntroRules2.mp3");
+let mainCharVoiceIntroRules3 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntroRules3.mp3");
+let mainCharVoiceIntroRules4 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntroRules4.mp3");
+let mainCharVoiceIntroRules5 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntroRules5.mp3");
+let mainCharVoiceIntroRules6 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntroRules6.mp3");
 let mainCharVoiceBeachIntro1 = new Audio("Lydfiler/Karakterer/mainCharVoiceBeachIntro1.mp3");
 let mainCharVoiceForestIntro1 = new Audio("Lydfiler/Karakterer/mainCharVoiceForestIntro1.mp3");
 let mainCharVoiceCityIntro1 = new Audio("Lydfiler/Karakterer/mainCharVoiceCityIntro1.mp3");
@@ -192,7 +198,7 @@ function startscreen() {                                                        
     const startscreenobject = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", { x: 325, y: 150, width: 400, height: 500 });
     const skipbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", { x: 200, y: 200, width: 200, height: 200 });                           // HUSK Å FJERNE DETTE
     Actions.Click(skipbutton, () => {
-        GaaTil(sceneBeachHub);
+        GaaTil(sceneIntro5);
     })
     Actions.Click(startscreenobject, () => {
         GaaTil(titlescreen);
@@ -224,7 +230,206 @@ function titlescreen() {                                                        
 
 }
 
-function sceneIntro1() {                                                                                                        //TODO Skal fjernes etter nye regler kommer inn
+function sceneIntro1() {
+    flyingplanesound.play();
+    mainCharVoiceIntroRules1.play();
+    const background = new Blocks.Image("Bilder/Bakgrunner/kindergartenOutside.png", { x: 0, y: 0, width: 1088, height: 818 });
+    const sign1 = new Blocks.Image("Bilder/Objekter/signHumlekollen.png", { x: 100, y: 350, height: 120, height: 150 });
+    const sign2 = new Blocks.Image("Bilder/Objekter/signMarihønehula.png", { x: 475, y: 350, width: 75, height: 90 });
+    const sign3 = new Blocks.Image("Bilder/Objekter/signMaurtua.png", { x: 940, y: 320, width: 100, height: 150 });
+    const flyingplane = new Blocks.Image("Bilder/Objekter/plane.png", { x: -250, y: 0, width: 220, height: 150 });
+    Actions.Tween(flyingplane, 6.5, 0);
+    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 420, y: 400, width: 250, height: 400, loop: true, auto: true });
+    const countdown = new Actions.CountDown(6, (complete) => {
+        if (complete) {
+            flyingplanesound.pause();
+            flyingplane.hide();
+        }
+    }, { onTick: true, auto: true });
+    mainCharVoiceIntroRules1.onended = () => {
+        GaaTil(sceneIntro2);
+    }
+
+}
+
+function sceneIntro2() {
+    mainCharVoiceIntroRules2.play();
+    const background = new Blocks.Image("Bilder/Bakgrunner/boardGameBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
+    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 415, y: 550, width: 250, height: 350, loop: true, auto: true });
+    const giraffe = new Blocks.Image("Bilder/Karakterer/giraffeClosedMouth.png", { x: 69, y: 321, width: 100, height: 160 });
+    const jellyfish = new Blocks.Image("Bilder/Karakterer/jellyfish.png", { x: 946, y: 246, width: 102, height: 122 });
+    const cat = new Blocks.Image("Bilder/Karakterer/catClosedMouth.png", { x: 208, y: 643, width: 142, height: 122 });
+    const forestCoin1 = new Blocks.Image("Bilder/Objekter/forestCoin.png", { x: 362, y: 666, width: 100, height: 100 });
+    const forestCoin2 = new Blocks.Image("Bilder/Objekter/forestCoin.png", { x: 82, y: 536, width: 100, height: 100 });
+    const forestCoin3 = new Blocks.Image("Bilder/Objekter/forestCoin.png", { x: 174, y: 312, width: 100, height: 100 });
+    const beachCoin1 = new Blocks.Image("Bilder/Objekter/beachCoin.png", { x: 778, y: 282, width: 100, height: 100 });
+    const beachCoin2 = new Blocks.Image("Bilder/Objekter/beachCoin.png", { x: 733, y: 704, width: 100, height: 100 });
+    const beachCoin3 = new Blocks.Image("Bilder/Objekter/beachCoin.png", { x: 828, y: 524, width: 100, height: 100 });
+    const cityCoin1 = new Blocks.Image("Bilder/Objekter/cityCoin.png", { x: 500, y: 172, width: 100, height: 100 });
+    const cityCoin2 = new Blocks.Image("Bilder/Objekter/cityCoin.png", { x: 697, y: 96, width: 100, height: 100 });
+    const cityCoin3 = new Blocks.Image("Bilder/Objekter/cityCoin.png", { x: 252, y: 69, width: 100, height: 100 });
+    /*const beachText = new Blocks.Image("Bilder/Objekter/beachTitle.PNG", { x: 700, y: 534, width: 300, height: 70 });
+    const cityText = new Blocks.Image("Bilder/Objekter/cityTitle.PNG", { x: 393, y: 161, width: 300, height: 70 });
+    const forestText = new Blocks.Image("Bilder/Objekter/forestTitle.PNG", { x: 90, y: 534, width: 300, height: 70 });*/                        //TODO Bruk på en annen scene
+    giraffe.hide();
+    jellyfish.hide();
+    cat.hide();
+    forestCoin1.hide();
+    forestCoin2.hide();
+    forestCoin3.hide();
+    beachCoin1.hide();
+    beachCoin2.hide();
+    beachCoin3.hide();
+    cityCoin1.hide();
+    cityCoin2.hide();
+    cityCoin3.hide();
+    const countdownGiraffe = new Actions.CountDown(11, (completeGiraffe) => {
+        if (completeGiraffe) {
+            giraffe.show();
+        }
+    }, { onTick: true, auto: true });
+    const countdownJellyfish = new Actions.CountDown(12, (completeJellyfish) => {
+        if (completeJellyfish) {
+            jellyfish.show();
+        }
+    }, { onTick: true, auto: true });
+    const countdownCat = new Actions.CountDown(14, (completeCat) => {
+        if (completeCat) {
+            cat.show();
+        }
+    }, { onTick: true, auto: true });
+
+    mainCharVoiceIntroRules2.onended = () => {
+        mainCharVoiceIntroRules3.play();
+        const countdownCoin1 = new Actions.CountDown(6, (completeCoin) => {
+            if (completeCoin) {
+                forestCoin1.show();
+                forestCoin2.show();
+                forestCoin3.show();
+                beachCoin1.show();
+                beachCoin2.show();
+                beachCoin3.show();
+                cityCoin1.show();
+                cityCoin2.show();
+                cityCoin3.show();
+            }
+        }, { onTick: true, auto: true });
+        mainCharVoiceIntroRules3.onended = () => {
+            GaaTil(sceneIntro3);
+        }
+    }
+}
+
+function sceneIntro3() {
+    mainCharVoiceIntroRules4.play();
+    const background = new Blocks.Image("Bilder/Bakgrunner/boardGameBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
+    const giraffe = new Blocks.Image("Bilder/Karakterer/giraffeClosedMouth.png", { x: 69, y: 321, width: 100, height: 160 });
+    const jellyfish = new Blocks.Image("Bilder/Karakterer/jellyfish.png", { x: 946, y: 246, width: 102, height: 122 });
+    const cat = new Blocks.Image("Bilder/Karakterer/catClosedMouth.png", { x: 208, y: 643, width: 142, height: 122 });
+    const forestCoin1 = new Blocks.Image("Bilder/Objekter/forestCoin.png", { x: 362, y: 666, width: 100, height: 100 });
+    const forestCoin2 = new Blocks.Image("Bilder/Objekter/forestCoin.png", { x: 82, y: 536, width: 100, height: 100 });
+    const forestCoin3 = new Blocks.Image("Bilder/Objekter/forestCoin.png", { x: 174, y: 312, width: 100, height: 100 });
+    const beachCoin1 = new Blocks.Image("Bilder/Objekter/beachCoin.png", { x: 778, y: 282, width: 100, height: 100 });
+    const beachCoin2 = new Blocks.Image("Bilder/Objekter/beachCoin.png", { x: 733, y: 704, width: 100, height: 100 });
+    const beachCoin3 = new Blocks.Image("Bilder/Objekter/beachCoin.png", { x: 828, y: 524, width: 100, height: 100 });
+    const cityCoin1 = new Blocks.Image("Bilder/Objekter/cityCoin.png", { x: 500, y: 172, width: 100, height: 100 });
+    const cityCoin2 = new Blocks.Image("Bilder/Objekter/cityCoin.png", { x: 697, y: 96, width: 100, height: 100 });
+    const cityCoin3 = new Blocks.Image("Bilder/Objekter/cityCoin.png", { x: 252, y: 69, width: 100, height: 100 });
+    const qCardBack = new Blocks.Image("Bilder/Kort/questionCardBack.png", { x: 15, y: 200, width: 330, height: 450 });
+    const chCardBack = new Blocks.Image("Bilder/Kort/challengeCardBack.png", { x: 370, y: 200, width: 330, height: 450 });
+    const chanceCardBack = new Blocks.Image("Bilder/Kort/chanceCardBack.png", { x: 720, y: 200, width: 330, height: 450 });
+    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 415, y: 550, width: 250, height: 350, loop: true, auto: true });
+    qCardBack.hide();
+    chCardBack.hide();
+    chanceCardBack.hide();
+    const countdownqCard = new Actions.CountDown(6, (completeQCard) => {
+        if (completeQCard) {
+            qCardBack.show();
+        }
+    }, { onTick: true, auto: true });
+    const countdownChCard = new Actions.CountDown(6.5, (completeChCard) => {
+        if (completeChCard) {
+            chCardBack.show();
+        }
+    }, { onTick: true, auto: true });
+    const countdownchanceCard = new Actions.CountDown(7, (completeChanceCard) => {
+        if (completeChanceCard) {
+            chanceCardBack.show();
+        }
+    }, { onTick: true, auto: true });
+    mainCharVoiceIntroRules4.onended = () => {
+        GaaTil(sceneIntro4);
+    }
+}
+
+function sceneIntro4() {
+    mainCharVoiceIntroRules5.play();
+    const background = new Blocks.Image("Bilder/Bakgrunner/boardGameBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
+    const giraffe = new Blocks.Image("Bilder/Karakterer/giraffeClosedMouth.png", { x: 69, y: 321, width: 100, height: 160 });
+    const jellyfish = new Blocks.Image("Bilder/Karakterer/jellyfish.png", { x: 946, y: 246, width: 102, height: 122 });
+    const cat = new Blocks.Image("Bilder/Karakterer/catClosedMouth.png", { x: 208, y: 643, width: 142, height: 122 });
+    const forestButton = new Blocks.Image("Bilder/Knapper/forestButton.PNG", { x: 200, y: 20, width: 150, height: 150 });
+    const beachButton = new Blocks.Image("Bilder/Knapper/beachButton.PNG", { x: 717, y: 20, width: 150, height: 150 });
+    const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.png", { x: 460, y: 20, width: 150, height: 150 });
+    const cityButton = new Blocks.Image("Bilder/Knapper/cityButton.PNG", { x: 460, y: 180, width: 150, height: 150 });
+    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 415, y: 550, width: 250, height: 350, loop: true, auto: true });
+    forestButton.hide();
+    beachButton.hide();
+    kindergartenButton.hide();
+    cityButton.hide();
+    const countdownForest = new Actions.CountDown(10.5, (completeForest) => {
+        if (completeForest) {
+            forestButton.show();
+        }
+    }, { onTick: true, auto: true });
+    const countdownBeach = new Actions.CountDown(11, (completeBeach) => {
+        if (completeBeach) {
+            beachButton.show();
+        }
+    }, { onTick: true, auto: true });
+    const countdownCity = new Actions.CountDown(11.5, (completeCity) => {
+        if (completeCity) {
+            cityButton.show();
+        }
+    }, { onTick: true, auto: true });
+    const countdownKindergarten = new Actions.CountDown(12, (completeKindergarten) => {
+        if (completeKindergarten) {
+            kindergartenButton.show();
+        }
+    }, { onTick: true, auto: true });
+    mainCharVoiceIntroRules5.onended = () => {
+        GaaTil(sceneIntro5);
+    }
+}
+
+function sceneIntro5() {
+    mainCharVoiceIntroRules6.play();
+    const background = new Blocks.Image("Bilder/Bakgrunner/boardGameBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
+    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 315, y: 350, width: 450, height: 550, loop: true, auto: true });
+    const beachText = new Blocks.Image("Bilder/Objekter/beachTitle.PNG", { x: 700, y: 534, width: 300, height: 70 });
+    const cityText = new Blocks.Image("Bilder/Objekter/cityTitle.PNG", { x: 393, y: 161, width: 300, height: 70 });
+    const forestText = new Blocks.Image("Bilder/Objekter/forestTitle.PNG", { x: 90, y: 534, width: 300, height: 70 });
+    beachText.hide();
+    cityText.hide();
+    forestText.hide();
+    mainCharVoiceIntroRules6.onended = () => {
+        mainCharTalking.hide();
+        beachText.show();
+        cityText.show();
+        forestText.show();
+    }
+    Actions.Click(beachText, () => {
+        GaaTil(sceneBeachHub);
+    });
+    Actions.Click(cityText, () => {
+        GaaTil(sceneCityHub);
+    });
+    Actions.Click(forestText, () => {
+        GaaTil(sceneForestHub);
+    });
+}
+
+/*function sceneIntro1() {                                                                                                        //TODO Skal fjernes etter nye regler kommer inn
     mainCharVoiceIntro1.play();
     flyingplanesound.play();
     const scene1background = new Blocks.Image("Bilder/Bakgrunner/kindergartenOutside.png", { x: 0, y: 0, width: 1088, height: 818 });
@@ -248,9 +453,9 @@ function sceneIntro1() {                                                        
         mainCharVoiceIntro1.pause();
         GaaTil(sceneIntro2);
     })
-
+ 
 }
-
+ 
 function sceneIntro2() {                                                                                                            //TODO Skal fjernes etter nye regler kommer inn
     const background = new Blocks.Image("Bilder/Bakgrunner/sandbox.png", { x: 0, y: 0, width: 1088, height: 818 });
     const giraffeSandbox = new Blocks.Image("Bilder/Karakterer/giraffeClosedMouth.png", { x: 200, y: 200, width: 200, height: 400 });
@@ -270,7 +475,7 @@ function sceneIntro2() {                                                        
         mainChar.hide();
         mainCharTalking.show();
         mainCharVoiceIntro2.play();
-
+ 
     }
     mainCharVoiceIntro2.onended = () => {
         mainCharTalking.hide();
@@ -278,7 +483,7 @@ function sceneIntro2() {                                                        
         giraffeSandbox.hide();
         giraffeTalking.show();
         giraffeVoiceIntro1.play();
-
+ 
     }
     giraffeVoiceIntro1.onended = () => {
         giraffeTalking.hide();
@@ -286,14 +491,14 @@ function sceneIntro2() {                                                        
         mainChar.hide();
         mainCharTalking.show();
         mainCharVoiceIntro3.play();
-
+ 
     }
     mainCharVoiceIntro3.onended = () => {
         mainCharTalking.hide();
         mainChar.show();
         Actions.Tween(mainChar, -10, 6);
         continueButton.show();
-
+ 
     }
     Actions.Click(continueButton, () => {
         boingsound.pause();
@@ -303,7 +508,7 @@ function sceneIntro2() {                                                        
         GaaTil(sceneIntro3);
     })
 }
-
+ 
 function sceneIntro3() {                                                                                                                //TODO Skal fjernes etter nye regler kommer inn
     const background = new Blocks.Image("Bilder/Bakgrunner/grillhutOutside.png", { x: 0, y: 0, width: 1088, height: 818 });
     const mainChar = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", { x: 1100, y: 460, width: 220, height: 320 });
@@ -321,7 +526,7 @@ function sceneIntro3() {                                                        
         mainChar.hide();
         mainCharTalking.show();
         mainCharVoiceIntro4.play();
-
+ 
     }
     mainCharVoiceIntro4.onended = () => {
         mainCharTalking.hide();
@@ -329,7 +534,7 @@ function sceneIntro3() {                                                        
         catStanding.hide();
         catTalking.show();
         catVoiceIntro1.play();                                                                                          // Malene?
-
+ 
     }
     catVoiceIntro1.onended = () => {                                                                                    // Malene?
         catTalking.hide();
@@ -337,14 +542,14 @@ function sceneIntro3() {                                                        
         mainChar.hide();
         mainCharTalking.show();
         mainCharVoiceIntro5.play();
-
+ 
     }
     mainCharVoiceIntro5.onended = () => {
         mainCharTalking.hide();
         mainChar.show();
         Actions.Tween(mainChar, 10, 0);
         continueButton.show();
-
+ 
     }
     Actions.Click(continueButton, () => {
         ouchCatMainChar.pause();
@@ -354,7 +559,7 @@ function sceneIntro3() {                                                        
         GaaTil(sceneIntro4);
     })
 }
-
+ 
 function sceneIntro4() {                                                                                                                    //TODO Skal fjernes etter nye regler kommer inn
     const background = new Blocks.Image("Bilder/Bakgrunner/wardrobe.png", { x: 0, y: 0, width: 1088, height: 818 });
     const mainChar = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", { x: 1100, y: 470, width: 220, height: 320 });
@@ -408,7 +613,7 @@ function sceneIntro4() {                                                        
         GaaTil(sceneIntro5);
     })
 }
-
+ 
 function sceneIntro5() {
     mainCharVoiceIntro9.play();
     const mapBackground = new Blocks.Image("Bilder/Bakgrunner/mapBackground.jpg", { x: 0, y: 0, width: 1088, height: 818 });
@@ -445,7 +650,7 @@ function sceneIntro5() {
     Actions.Click(kindergartenText, () => {
         GaaTil(sceneKindergartenIntro1);
     })
-}
+}*/
 
 // BEACH - POTENSIELT I EGET .MJS-FIL
 
