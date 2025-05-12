@@ -239,7 +239,7 @@ function sceneIntro1() {
     const sign3 = new Blocks.Image("Bilder/Objekter/signMaurtua.png", { x: 940, y: 320, width: 100, height: 150 });
     const flyingplane = new Blocks.Image("Bilder/Objekter/plane.png", { x: -250, y: 0, width: 220, height: 150 });
     Actions.Tween(flyingplane, 6.5, 0);
-    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 420, y: 400, width: 250, height: 400, loop: true, auto: true });
+    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 490, y: 400, width: 250, height: 400, loop: true, auto: true });
     const countdown = new Actions.CountDown(6, (complete) => {
         if (complete) {
             flyingplanesound.pause();
@@ -255,7 +255,7 @@ function sceneIntro1() {
 function sceneIntro2() {
     mainCharVoiceIntroRules2.play();
     const background = new Blocks.Image("Bilder/Bakgrunner/boardGameBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
-    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 415, y: 550, width: 250, height: 350, loop: true, auto: true });
+    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 485, y: 550, width: 250, height: 350, loop: true, auto: true });
     const giraffe = new Blocks.Image("Bilder/Karakterer/giraffeClosedMouth.png", { x: 69, y: 321, width: 100, height: 160 });
     const jellyfish = new Blocks.Image("Bilder/Karakterer/jellyfish.png", { x: 946, y: 246, width: 102, height: 122 });
     const cat = new Blocks.Image("Bilder/Karakterer/catClosedMouth.png", { x: 208, y: 643, width: 142, height: 122 });
@@ -268,9 +268,6 @@ function sceneIntro2() {
     const cityCoin1 = new Blocks.Image("Bilder/Objekter/cityCoin.png", { x: 500, y: 172, width: 100, height: 100 });
     const cityCoin2 = new Blocks.Image("Bilder/Objekter/cityCoin.png", { x: 697, y: 96, width: 100, height: 100 });
     const cityCoin3 = new Blocks.Image("Bilder/Objekter/cityCoin.png", { x: 252, y: 69, width: 100, height: 100 });
-    /*const beachText = new Blocks.Image("Bilder/Objekter/beachTitle.PNG", { x: 700, y: 534, width: 300, height: 70 });
-    const cityText = new Blocks.Image("Bilder/Objekter/cityTitle.PNG", { x: 393, y: 161, width: 300, height: 70 });
-    const forestText = new Blocks.Image("Bilder/Objekter/forestTitle.PNG", { x: 90, y: 534, width: 300, height: 70 });*/                        //TODO Bruk på en annen scene
     giraffe.hide();
     jellyfish.hide();
     cat.hide();
@@ -283,17 +280,17 @@ function sceneIntro2() {
     cityCoin1.hide();
     cityCoin2.hide();
     cityCoin3.hide();
-    const countdownGiraffe = new Actions.CountDown(11, (completeGiraffe) => {
+    const countdownGiraffe = new Actions.CountDown(16, (completeGiraffe) => {
         if (completeGiraffe) {
             giraffe.show();
         }
     }, { onTick: true, auto: true });
-    const countdownJellyfish = new Actions.CountDown(12, (completeJellyfish) => {
+    const countdownJellyfish = new Actions.CountDown(18, (completeJellyfish) => {
         if (completeJellyfish) {
             jellyfish.show();
         }
     }, { onTick: true, auto: true });
-    const countdownCat = new Actions.CountDown(14, (completeCat) => {
+    const countdownCat = new Actions.CountDown(22, (completeCat) => {
         if (completeCat) {
             cat.show();
         }
@@ -301,7 +298,7 @@ function sceneIntro2() {
 
     mainCharVoiceIntroRules2.onended = () => {
         mainCharVoiceIntroRules3.play();
-        const countdownCoin1 = new Actions.CountDown(6, (completeCoin) => {
+        const countdownCoin1 = new Actions.CountDown(10, (completeCoin) => {
             if (completeCoin) {
                 forestCoin1.show();
                 forestCoin2.show();
@@ -338,21 +335,21 @@ function sceneIntro3() {
     const qCardBack = new Blocks.Image("Bilder/Kort/questionCardBack.png", { x: 15, y: 200, width: 330, height: 450 });
     const chCardBack = new Blocks.Image("Bilder/Kort/challengeCardBack.png", { x: 370, y: 200, width: 330, height: 450 });
     const chanceCardBack = new Blocks.Image("Bilder/Kort/chanceCardBack.png", { x: 720, y: 200, width: 330, height: 450 });
-    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 415, y: 550, width: 250, height: 350, loop: true, auto: true });
+    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 485, y: 550, width: 250, height: 350, loop: true, auto: true });
     qCardBack.hide();
     chCardBack.hide();
     chanceCardBack.hide();
-    const countdownqCard = new Actions.CountDown(6, (completeQCard) => {
+    const countdownqCard = new Actions.CountDown(9, (completeQCard) => {
         if (completeQCard) {
             qCardBack.show();
         }
     }, { onTick: true, auto: true });
-    const countdownChCard = new Actions.CountDown(6.5, (completeChCard) => {
+    const countdownChCard = new Actions.CountDown(10, (completeChCard) => {
         if (completeChCard) {
             chCardBack.show();
         }
     }, { onTick: true, auto: true });
-    const countdownchanceCard = new Actions.CountDown(7, (completeChanceCard) => {
+    const countdownchanceCard = new Actions.CountDown(11, (completeChanceCard) => {
         if (completeChanceCard) {
             chanceCardBack.show();
         }
@@ -372,27 +369,27 @@ function sceneIntro4() {
     const beachButton = new Blocks.Image("Bilder/Knapper/beachButton.PNG", { x: 717, y: 20, width: 150, height: 150 });
     const kindergartenButton = new Blocks.Image("Bilder/Knapper/kindergartenButton.png", { x: 460, y: 20, width: 150, height: 150 });
     const cityButton = new Blocks.Image("Bilder/Knapper/cityButton.PNG", { x: 460, y: 180, width: 150, height: 150 });
-    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 415, y: 550, width: 250, height: 350, loop: true, auto: true });
+    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 485, y: 550, width: 250, height: 350, loop: true, auto: true });
     forestButton.hide();
     beachButton.hide();
     kindergartenButton.hide();
     cityButton.hide();
-    const countdownForest = new Actions.CountDown(10.5, (completeForest) => {
+    const countdownForest = new Actions.CountDown(12, (completeForest) => {
         if (completeForest) {
             forestButton.show();
         }
     }, { onTick: true, auto: true });
-    const countdownBeach = new Actions.CountDown(11, (completeBeach) => {
+    const countdownBeach = new Actions.CountDown(14, (completeBeach) => {
         if (completeBeach) {
             beachButton.show();
         }
     }, { onTick: true, auto: true });
-    const countdownCity = new Actions.CountDown(11.5, (completeCity) => {
+    const countdownCity = new Actions.CountDown(16, (completeCity) => {
         if (completeCity) {
             cityButton.show();
         }
     }, { onTick: true, auto: true });
-    const countdownKindergarten = new Actions.CountDown(12, (completeKindergarten) => {
+    const countdownKindergarten = new Actions.CountDown(18, (completeKindergarten) => {
         if (completeKindergarten) {
             kindergartenButton.show();
         }
@@ -405,7 +402,7 @@ function sceneIntro4() {
 function sceneIntro5() {
     mainCharVoiceIntroRules6.play();
     const background = new Blocks.Image("Bilder/Bakgrunner/boardGameBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
-    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 315, y: 350, width: 450, height: 550, loop: true, auto: true });
+    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 385, y: 350, width: 450, height: 550, loop: true, auto: true });
     const beachText = new Blocks.Image("Bilder/Objekter/beachTitle.PNG", { x: 700, y: 534, width: 300, height: 70 });
     const cityText = new Blocks.Image("Bilder/Objekter/cityTitle.PNG", { x: 393, y: 161, width: 300, height: 70 });
     const forestText = new Blocks.Image("Bilder/Objekter/forestTitle.PNG", { x: 90, y: 534, width: 300, height: 70 });
