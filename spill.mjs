@@ -175,10 +175,10 @@ Start(startscreen);
 
 function startscreen() {                                                                            //Anchor
     const startscreenobject = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", { x: 340, y: 150, width: 400, height: 500 });
-    /*const skipbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", { x: 200, y: 200, width: 200, height: 200 });                           // HUSK Å FJERNE DETTE
+    const skipbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", { x: 200, y: 200, width: 200, height: 200 });                           // HUSK Å FJERNE DETTE
     Actions.Click(skipbutton, () => {
-        GaaTil(sceneIntro5);
-    })*/
+        GaaTil(sceneExitCity);
+    })
     Actions.Click(startscreenobject, () => {
         GaaTil(titlescreen);
     })
@@ -427,7 +427,7 @@ function sceneBeachHub() {
     });
     Actions.Click(kindergartenButton, () => {
         beachBackgroundMusic.pause();
-        GaaTil(sceneOutro1);
+        GaaTil(sceneExitBeach);
     });
     Actions.Click(qCardBack, () => {
         beachBackgroundMusic.pause();
@@ -466,7 +466,7 @@ function sceneForestHub() {
     });
     Actions.Click(kindergartenButton, () => {
         forestBackgroundMusic.pause();
-        GaaTil(sceneOutro1);
+        GaaTil(sceneExitForest);
     });
     Actions.Click(qCardBack, () => {
         forestBackgroundMusic.pause();
@@ -505,7 +505,7 @@ function sceneCityHub() {
     });
     Actions.Click(kindergartenButton, () => {
         cityBackgroundMusic.pause();
-        GaaTil(sceneOutro1);
+        GaaTil(sceneExitCity);
     });
     Actions.Click(qCardBack, () => {
         cityBackgroundMusic.pause();
@@ -539,6 +539,81 @@ function sceneOutro1() {
     catTalking.hide();
 }
 
+// SCENE "OUTSIDE" OF GAME
+
+function sceneExitBeach() {
+    applause.play();                                                                                                //TODO Endre til riktig lydfil
+    const sceneBeachBackground = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: 0, y: 0, width: 1088, height: 818 });
+    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 455, y: 350, width: 450, height: 550, loop: true, auto: true })
+    const mainChar = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", { x: 318, y: 350, width: 450, height: 550 });
+    const yesButton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 187, y: 180, width: 150, height: 150 });
+    const noButton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 745, y: 180, width: 150, height: 150 });
+    yesButton.hide();
+    noButton.hide();
+    mainChar.hide();
+    applause.onended = () => {                                                                                      //TODO Endre til riktig lydfil
+        mainCharTalking.hide();
+        mainChar.show();
+        yesButton.show();
+        noButton.show();
+    }
+    Actions.Click(yesButton, () => {
+        GaaTil(sceneOutro1);
+    });
+    Actions.Click(noButton, () => {
+        GaaTil(sceneBeachHub);
+    });
+
+}
+
+function sceneExitForest() {
+    applause.play();                                                                                                //TODO Endre til riktig lydfil
+    const sceneForestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
+    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 455, y: 350, width: 450, height: 550, loop: true, auto: true })
+    const mainChar = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", { x: 318, y: 350, width: 450, height: 550 });
+    const yesButton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 187, y: 180, width: 150, height: 150 });
+    const noButton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 745, y: 180, width: 150, height: 150 });
+    yesButton.hide();
+    noButton.hide();
+    mainChar.hide();
+    applause.onended = () => {                                                                                      //TODO Endre til riktig lydfil
+        mainCharTalking.hide();
+        mainChar.show();
+        yesButton.show();
+        noButton.show();
+    }
+    Actions.Click(yesButton, () => {
+        GaaTil(sceneOutro1);
+    });
+    Actions.Click(noButton, () => {
+        GaaTil(sceneForestHub);
+    });
+
+}
+
+function sceneExitCity() {
+    applause.play();                                                                                                //TODO Endre til riktig lydfil
+    const sceneCityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
+    const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 455, y: 350, width: 450, height: 550, loop: true, auto: true })
+    const mainChar = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", { x: 318, y: 350, width: 450, height: 550 });
+    const yesButton = new Blocks.Image("Bilder/Knapper/correctButton.png", { x: 187, y: 180, width: 150, height: 150 });
+    const noButton = new Blocks.Image("Bilder/Knapper/wrongButton.png", { x: 745, y: 180, width: 150, height: 150 });
+    yesButton.hide();
+    noButton.hide();
+    mainChar.hide();
+    applause.onended = () => {                                                                                      //TODO Endre til riktig lydfil
+        mainCharTalking.hide();
+        mainChar.show();
+        yesButton.show();
+        noButton.show();
+    }
+    Actions.Click(yesButton, () => {
+        GaaTil(sceneOutro1);
+    });
+    Actions.Click(noButton, () => {
+        GaaTil(sceneCityHub);
+    });
+}
 
 // CARDS
 
