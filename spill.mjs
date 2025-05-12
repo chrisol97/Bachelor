@@ -186,7 +186,7 @@ function startscreen() {                                                        
 
 function titlescreen() {                                                                            //TODO Legge inn funksjon for gruppebasert spill / mot hverandre ? 
     titlescreenmusic.play();
-    const titlescreenbackground = new Blocks.Image("Bilder/Bakgrunner/kindergartenOutside.png", { x: 0, y: 0, width: 1095, height: 825 });
+    const titlescreenbackground = new Blocks.Image("Bilder/Bakgrunner/kindergartenOutside.png", { x: 0, y: 0, width: 1100, height: 830 });
     const sign1 = new Blocks.Image("Bilder/Objekter/signHumlekollen.png", { x: 100, y: 350, width: 120, height: 150 });
     const sign2 = new Blocks.Image("Bilder/Objekter/signMarihønehula.png", { x: 475, y: 350, width: 75, height: 90 });
     const sign3 = new Blocks.Image("Bilder/Objekter/signMaurtua.png", { x: 940, y: 320, width: 100, height: 150 });
