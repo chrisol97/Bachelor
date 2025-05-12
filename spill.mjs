@@ -29,7 +29,7 @@ let cityBackgroundMusic = new Audio("Lydfiler/Musikk/cityBackgroundMusic.mp3");
 // OBJEKTLYDER
 let flyingplanesound = new Audio("Lydfiler/Objektlyder/planesound.mp3");
 
-// KARAKTERER                                                                                               //TODO Legge inn nye intro-lyder (de er lagt inn) (mainCharVoiceIntroRulesX) (de er lagt inn i sw.js) / slette gamle intro-lyder (mainCharVoiceIntroX) (husk å fjern fra sw.js)
+// KARAKTERER
 let mainCharVoiceIntroRules1 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntroRules1.mp3");
 let mainCharVoiceIntroRules2 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntroRules2.mp3");
 let mainCharVoiceIntroRules3 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntroRules3.mp3");
@@ -39,7 +39,7 @@ let mainCharVoiceIntroRules6 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro
 
 // KORT
 
-// RESPONSES                                                                                                    //TODO Spiller inn flere, husk å legg de inn på forskjellige steder så det blir litt spredt (de er lagt inn i sw.js (challengeCompleted3 & challengeNotCompleted2))
+// RESPONSES
 let applause = new Audio("Lydfiler/Kort/Responses/applause.mp3");
 let notQuiteCorrect = new Audio("Lydfiler/Kort/Responses/notQuiteCorrect.mp3");
 let wrongAnswerSound1 = new Audio("Lydfiler/Kort/Responses/wrongAnswerSound1.mp3");
@@ -202,7 +202,7 @@ function titlescreen() {                                                        
         titlescreenmusic.pause();
         GaaTil(sceneIntro5)
     })
-    Actions.Click(rulesbutton, () => {                                      //TODO Endre hvor denne går hen
+    Actions.Click(rulesbutton, () => {
         titlescreenmusic.pause();
         GaaTil(sceneIntro1);
     })
@@ -2616,8 +2616,8 @@ function sceneForestChallengeFront() {
         Actions.Click(notdonebutton, () => {
             chCardFNameAnimalsVoice.pause();
             chCardFNameAnimalsVoice.currentTime = 0;
-            challengeNotCompleted1.play();
-            challengeNotCompleted1.onended = () => {
+            challengeNotCompleted2.play();
+            challengeNotCompleted2.onended = () => {
                 GaaTil(sceneForestHub);
             }
         })
@@ -2666,8 +2666,8 @@ function sceneForestChallengeFront() {
         Actions.Click(donebutton, () => {
             chCardFSongAboutTrollVoice.pause();
             chCardFSongAboutTrollVoice.currentTime = 0;
-            challengeCompleted1.play();
-            challengeCompleted1.onended = () => {
+            challengeCompleted3.play();
+            challengeCompleted3.onended = () => {
                 GaaTil(sceneForestHub);
             }
         })
@@ -2696,8 +2696,8 @@ function sceneForestChallengeFront() {
         Actions.Click(notdonebutton, () => {
             chCardFStretchLikeTreeVoice.pause();
             chCardFStretchLikeTreeVoice.currentTime = 0;
-            challengeNotCompleted1.play();
-            challengeNotCompleted1.onended = () => {
+            challengeNotCompleted2.play();
+            challengeNotCompleted2.onended = () => {
                 GaaTil(sceneForestHub);
             }
         })
@@ -2711,8 +2711,8 @@ function sceneForestChallengeFront() {
         Actions.Click(donebutton, () => {
             chCardFClapToScareMooseVoice.pause();
             chCardFClapToScareMooseVoice.currentTime = 0;
-            challengeCompleted1.play();
-            challengeCompleted1.onended = () => {
+            challengeCompleted2.play();
+            challengeCompleted2.onended = () => {
                 GaaTil(sceneForestHub);
             }
         })
@@ -2734,16 +2734,16 @@ function sceneForestChallengeFront() {
         Actions.Click(donebutton, () => {
             chCardFHideAndSeekTrollVoice.pause();
             chCardFHideAndSeekTrollVoice.currentTime = 0;
-            challengeCompleted2.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
-            challengeCompleted2.onended = () => {
+            challengeCompleted3.play();
+            challengeCompleted3.onended = () => {
                 GaaTil(sceneForestHub);
             }
         })
         Actions.Click(notdonebutton, () => {
             chCardFHideAndSeekTrollVoice.pause();
             chCardFHideAndSeekTrollVoice.currentTime = 0;
-            challengeNotCompleted1.play();
-            challengeNotCompleted1.onended = () => {
+            challengeNotCompleted2.play();
+            challengeNotCompleted2.onended = () => {
                 GaaTil(sceneForestHub);
             }
         })
@@ -2757,7 +2757,7 @@ function sceneForestChallengeFront() {
         Actions.Click(donebutton, () => {
             chCardFJumpLikeFrogVoice.pause();
             chCardFJumpLikeFrogVoice.currentTime = 0;
-            challengeCompleted1.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
+            challengeCompleted1.play();
             challengeCompleted1.onended = () => {
                 GaaTil(sceneForestHub);
             }
@@ -2781,7 +2781,7 @@ function sceneForestChallengeFront() {
         Actions.Click(donebutton, () => {
             chCardFPickingMushroomsVoice.pause();
             chCardFPickingMushroomsVoice.currentTime = 0;
-            challengeCompleted2.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
+            challengeCompleted2.play();
             challengeCompleted2.onended = () => {
                 GaaTil(sceneForestHub);
             }
@@ -2789,8 +2789,8 @@ function sceneForestChallengeFront() {
         Actions.Click(notdonebutton, () => {
             chCardFPickingMushroomsVoice.pause();
             chCardFPickingMushroomsVoice.currentTime = 0;
-            challengeNotCompleted1.play();
-            challengeNotCompleted1.onended = () => {
+            challengeNotCompleted2.play();
+            challengeNotCompleted2.onended = () => {
                 GaaTil(sceneForestHub);
             }
         })
@@ -2804,8 +2804,8 @@ function sceneForestChallengeFront() {
         Actions.Click(donebutton, () => {
             chCardFWalkLikeABearVoice.pause();
             chCardFWalkLikeABearVoice.currentTime = 0;
-            challengeCompleted2.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
-            challengeCompleted2.onended = () => {
+            challengeCompleted3.play();
+            challengeCompleted3.onended = () => {
                 GaaTil(sceneForestHub);
             }
         })
@@ -2827,16 +2827,16 @@ function sceneForestChallengeFront() {
         Actions.Click(donebutton, () => {
             chCardFWoodpeckerDanceVoice.pause();
             chCardFWoodpeckerDanceVoice.currentTime = 0;
-            challengeCompleted2.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
-            challengeCompleted2.onended = () => {
+            challengeCompleted1.play();
+            challengeCompleted1.onended = () => {
                 GaaTil(sceneForestHub);
             }
         })
         Actions.Click(notdonebutton, () => {
             chCardFWoodpeckerDanceVoice.pause();
             chCardFWoodpeckerDanceVoice.currentTime = 0;
-            challengeNotCompleted1.play();
-            challengeNotCompleted1.onended = () => {
+            challengeNotCompleted2.play();
+            challengeNotCompleted2.onended = () => {
                 GaaTil(sceneForestHub);
             }
         })
@@ -2858,8 +2858,8 @@ function sceneCityChallengeFront() {
         Actions.Click(donebutton, () => {
             chCardCBakeBreadVoice.pause();
             chCardCBakeBreadVoice.currentTime = 0;
-            challengeCompleted1.play();
-            challengeCompleted1.onended = () => {
+            challengeCompleted2.play();
+            challengeCompleted2.onended = () => {
                 GaaTil(sceneCityHub);
             }
         })
@@ -3022,7 +3022,7 @@ function sceneCityChallengeFront() {
         Actions.Click(donebutton, () => {
             chCardCBalanceBusVoice.pause();
             chCardCBalanceBusVoice.currentTime = 0;
-            challengeCompleted2.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
+            challengeCompleted2.play();
             challengeCompleted2.onended = () => {
                 GaaTil(sceneCityHub);
             }
@@ -3044,16 +3044,16 @@ function sceneCityChallengeFront() {
         Actions.Click(donebutton, () => {
             chCardCCrossTheRoadVoice.pause();
             chCardCCrossTheRoadVoice.currentTime = 0;
-            challengeCompleted2.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
-            challengeCompleted2.onended = () => {
+            challengeCompleted3.play();
+            challengeCompleted3.onended = () => {
                 GaaTil(sceneCityHub);
             }
         })
         Actions.Click(notdonebutton, () => {
             chCardCCrossTheRoadVoice.pause();
             chCardCCrossTheRoadVoice.currentTime = 0;
-            challengeNotCompleted1.play();
-            challengeNotCompleted1.onended = () => {
+            challengeNotCompleted2.play();
+            challengeNotCompleted2.onended = () => {
                 GaaTil(sceneCityHub);
             }
         })
@@ -3067,8 +3067,8 @@ function sceneCityChallengeFront() {
         Actions.Click(donebutton, () => {
             chCardCHeadShoulderKneesToesVoice.pause();
             chCardCHeadShoulderKneesToesVoice.currentTime = 0;
-            challengeCompleted2.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
-            challengeCompleted2.onended = () => {
+            challengeCompleted1.play();
+            challengeCompleted1.onended = () => {
                 GaaTil(sceneCityHub);
             }
         })
@@ -3090,7 +3090,7 @@ function sceneCityChallengeFront() {
         Actions.Click(donebutton, () => {
             chCardCHulkMuscleVoice.pause();
             chCardCHulkMuscleVoice.currentTime = 0;
-            challengeCompleted2.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
+            challengeCompleted2.play();
             challengeCompleted2.onended = () => {
                 GaaTil(sceneCityHub);
             }
@@ -3098,8 +3098,8 @@ function sceneCityChallengeFront() {
         Actions.Click(notdonebutton, () => {
             chCardCHulkMuscleVoice.pause();
             chCardCHulkMuscleVoice.currentTime = 0;
-            challengeNotCompleted1.play();
-            challengeNotCompleted1.onended = () => {
+            challengeNotCompleted2.play();
+            challengeNotCompleted2.onended = () => {
                 GaaTil(sceneCityHub);
             }
         })
@@ -3113,8 +3113,8 @@ function sceneCityChallengeFront() {
         Actions.Click(donebutton, () => {
             chCardCPutOutFireVoice.pause();
             chCardCPutOutFireVoice.currentTime = 0;
-            challengeCompleted2.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
-            challengeCompleted2.onended = () => {
+            challengeCompleted3.play();
+            challengeCompleted3.onended = () => {
                 GaaTil(sceneCityHub);
             }
         })
@@ -3226,8 +3226,8 @@ function sceneBeachChallengeFront() {
         Actions.Click(donebutton, () => {
             chCardBSongAboutOceanVoice.pause();
             chCardBSongAboutOceanVoice.currentTime = 0;
-            challengeCompleted1.play();
-            challengeCompleted1.onended = () => {
+            challengeCompleted2.play();
+            challengeCompleted2.onended = () => {
                 GaaTil(sceneBeachHub);
             }
         })
@@ -3246,16 +3246,16 @@ function sceneBeachChallengeFront() {
         Actions.Click(donebutton, () => {
             chCardBWalkLikeCrabVoice.pause();
             chCardBWalkLikeCrabVoice.currentTime = 0;
-            challengeCompleted1.play();
-            challengeCompleted1.onended = () => {
+            challengeCompleted3.play();
+            challengeCompleted3.onended = () => {
                 GaaTil(sceneBeachHub);
             }
         })
         Actions.Click(notdonebutton, () => {
             chCardBWalkLikeCrabVoice.pause();
             chCardBWalkLikeCrabVoice.currentTime = 0;
-            challengeNotCompleted1.play();
-            challengeNotCompleted1.onended = () => {
+            challengeNotCompleted2.play();
+            challengeNotCompleted2.onended = () => {
                 GaaTil(sceneBeachHub);
             }
         })
@@ -3269,8 +3269,8 @@ function sceneBeachChallengeFront() {
         Actions.Click(donebutton, () => {
             chCardBHowToApplySunscreenVoice.pause();
             chCardBHowToApplySunscreenVoice.currentTime = 0;
-            challengeCompleted2.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
-            challengeCompleted2.onended = () => {
+            challengeCompleted1.play();
+            challengeCompleted1.onended = () => {
                 GaaTil(sceneBeachHub);
             }
         })
@@ -3291,16 +3291,16 @@ function sceneBeachChallengeFront() {
         Actions.Click(donebutton, () => {
             chCardBHowToSwimVoice.pause();
             chCardBHowToSwimVoice.currentTime = 0;
-            challengeCompleted1.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
-            challengeCompleted1.onended = () => {
+            challengeCompleted2.play();
+            challengeCompleted2.onended = () => {
                 GaaTil(sceneBeachHub);
             }
         })
         Actions.Click(notdonebutton, () => {
             chCardBHowToSwimVoice.pause();
             chCardBHowToSwimVoice.currentTime = 0;
-            challengeNotCompleted1.play();
-            challengeNotCompleted1.onended = () => {
+            challengeNotCompleted2.play();
+            challengeNotCompleted2.onended = () => {
                 GaaTil(sceneBeachHub);
             }
         })
@@ -3314,8 +3314,8 @@ function sceneBeachChallengeFront() {
         Actions.Click(donebutton, () => {
             chCardBPickUpShellsVoice.pause();
             chCardBPickUpShellsVoice.currentTime = 0;
-            challengeCompleted1.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
-            challengeCompleted1.onended = () => {
+            challengeCompleted3.play();
+            challengeCompleted3.onended = () => {
                 GaaTil(sceneBeachHub);
             }
         })
@@ -3336,7 +3336,7 @@ function sceneBeachChallengeFront() {
         Actions.Click(donebutton, () => {
             chCardBRowRowRowBoatVoice.pause();
             chCardBRowRowRowBoatVoice.currentTime = 0;
-            challengeCompleted1.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
+            challengeCompleted1.play();
             challengeCompleted1.onended = () => {
                 GaaTil(sceneBeachHub);
             }
@@ -3344,8 +3344,8 @@ function sceneBeachChallengeFront() {
         Actions.Click(notdonebutton, () => {
             chCardBRowRowRowBoatVoice.pause();
             chCardBRowRowRowBoatVoice.currentTime = 0;
-            challengeNotCompleted1.play();
-            challengeNotCompleted1.onended = () => {
+            challengeNotCompleted2.play();
+            challengeNotCompleted2.onended = () => {
                 GaaTil(sceneBeachHub);
             }
         })
@@ -3359,8 +3359,8 @@ function sceneBeachChallengeFront() {
         Actions.Click(donebutton, () => {
             chCardBSandInSockVoice.pause();
             chCardBSandInSockVoice.currentTime = 0;
-            challengeCompleted1.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
-            challengeCompleted1.onended = () => {
+            challengeCompleted2.play();
+            challengeCompleted2.onended = () => {
                 GaaTil(sceneBeachHub);
             }
         })
@@ -3383,16 +3383,16 @@ function sceneBeachChallengeFront() {
         Actions.Click(donebutton, () => {
             chCardBSingWithFishVoice.pause();
             chCardBSingWithFishVoice.currentTime = 0;
-            challengeCompleted1.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
-            challengeCompleted1.onended = () => {
+            challengeCompleted3.play();
+            challengeCompleted3.onended = () => {
                 GaaTil(sceneBeachHub);
             }
         })
         Actions.Click(notdonebutton, () => {
             chCardBSingWithFishVoice.pause();
             chCardBSingWithFishVoice.currentTime = 0;
-            challengeNotCompleted1.play();
-            challengeNotCompleted1.onended = () => {
+            challengeNotCompleted2.play();
+            challengeNotCompleted2.onended = () => {
                 GaaTil(sceneBeachHub);
             }
         })
@@ -3408,7 +3408,7 @@ function sceneBeachChallengeFront() {
         Actions.Click(donebutton, () => {
             chCardBTeachSeagullFlyVoice.pause();
             chCardBTeachSeagullFlyVoice.currentTime = 0;
-            challengeCompleted1.play();                 //TODO Spille inn flere responser på utfordring gjennomført/ikke gjennomført?
+            challengeCompleted1.play();
             challengeCompleted1.onended = () => {
                 GaaTil(sceneBeachHub);
             }
