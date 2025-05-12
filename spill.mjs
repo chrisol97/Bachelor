@@ -181,10 +181,10 @@ function startscreen() {                                                        
     /*const skipbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", { x: 200, y: 200, width: 200, height: 200 });                           // HUSK Å FJERNE DETTE
     Actions.Click(skipbutton, () => {
         GaaTil(sceneOutro1);
-    })
+    })*/
     Actions.Click(startscreenobject, () => {
         GaaTil(titlescreen);
-    })*/
+    })
 }
 
 function titlescreen() {                                                                            //TODO Legge inn funksjon for gruppebasert spill / mot hverandre ? 
@@ -525,7 +525,7 @@ function sceneCityHub() {
 }
 
 
-// ENDING                                     //TODO Outro Spille inn lyder
+// ENDING
 function sceneOutro1() {
     mainCharVoiceOutro1.play();
     const background = new Blocks.Image("Bilder/Bakgrunner/kindergartenOutside.png", { x: 0, y: 0, width: 1088, height: 818 });
@@ -634,7 +634,7 @@ function sceneExitCity() {
 
 function sceneForestChanceFront() {
     const forestmap = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
-    let tall = Math.floor(Math.random() * 6);                                           //TODO Sjekke at tall = antall kort
+    let tall = Math.floor(Math.random() * 6);
     if (tall === 0) {
         const chanceCard0 = new Blocks.Image("Bilder/Kort/Forest/Chance/chanceCardF1.png", { x: 30, y: 10, width: 1020, height: 700 });
         chanceCardF1Voice.play();
@@ -706,7 +706,7 @@ function sceneForestChanceFront() {
 
 function sceneCityChanceFront() {
     const citymap = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
-    let tall = Math.floor(Math.random() * 8);                                       //TODO Sjekk at tall = antall kort
+    let tall = Math.floor(Math.random() * 8);
     if (tall === 0) {
         const chanceCard0 = new Blocks.Image("Bilder/Kort/City/Chance/chanceCardC1.png", { x: 30, y: 10, width: 1020, height: 700 });
         chanceCardC1Voice.play();
@@ -797,7 +797,7 @@ function sceneCityChanceFront() {
 
 function sceneBeachChanceFront() {
     const beachmap = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: 0, y: 0, width: 1088, height: 818 });
-    let tall = Math.floor(Math.random() * 6);                               //TODO Sjekk at tall = antall kort
+    let tall = Math.floor(Math.random() * 6);
     if (tall === 0) {
         chanceCardB1Voice.play();
         const chanceCard0 = new Blocks.Image("Bilder/Kort/Beach/Chance/chanceCardB1.png", { x: 30, y: 10, width: 1020, height: 700 });
