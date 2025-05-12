@@ -36,6 +36,9 @@ let mainCharVoiceIntroRules3 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntro
 let mainCharVoiceIntroRules4 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntroRules4.mp3");
 let mainCharVoiceIntroRules5 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntroRules5.mp3");
 let mainCharVoiceIntroRules6 = new Audio("Lydfiler/Karakterer/mainCharVoiceIntroRules6.mp3");
+let mainCharVoiceKindergartenButton = new Audio("Lydfiler/Karakterer/mainCharVoiceKindergartenButton.mp3");
+let mainCharVoiceOutro1 = new Audio("Lydfiler/Karakterer/mainCharVoiceOutro1.mp3");
+let goodbyeOutroVoice = new Audio("Lydfiler/Karakterer/goodbyeOutroVoice.mp3");
 
 // KORT
 
@@ -177,7 +180,7 @@ function startscreen() {                                                        
     const startscreenobject = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", { x: 340, y: 150, width: 400, height: 500 });
     const skipbutton = new Blocks.Image("Bilder/Knapper/continueButton.png", { x: 200, y: 200, width: 200, height: 200 });                           // HUSK Å FJERNE DETTE
     Actions.Click(skipbutton, () => {
-        GaaTil(sceneExitCity);
+        GaaTil(sceneOutro1);
     })
     Actions.Click(startscreenobject, () => {
         GaaTil(titlescreen);
@@ -399,7 +402,7 @@ function sceneIntro6() {
     Actions.Click(cityText, () => {
         GaaTil(sceneCityHub);
     });
-    Actions.Click(forestTextText, () => {
+    Actions.Click(forestText, () => {
         GaaTil(sceneForestHub);
     });
 
@@ -524,25 +527,33 @@ function sceneCityHub() {
 
 // ENDING                                     //TODO Outro Spille inn lyder
 function sceneOutro1() {
+    mainCharVoiceOutro1.play();
     const background = new Blocks.Image("Bilder/Bakgrunner/kindergartenOutside.png", { x: 0, y: 0, width: 1088, height: 818 });
     const giraffe = new Blocks.Image("Bilder/Karakterer/giraffeClosedMouth.png", { x: 42, y: 265, width: 139, height: 228 });
     const robot = new Blocks.Image("Bilder/Karakterer/manClosedMouth.png", { x: 444, y: 349, width: 79, height: 78 });
     const cat = new Blocks.Image("Bilder/Karakterer/catClosedMouth.png", { x: 769, y: 362, width: 79, height: 78 });
-    const mainChar = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", { x: 476, y: 392, width: 300, height: 400 });
     const mainCharTalking1 = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 476, y: 392, width: 300, height: 400, auto: true, loop: true });
-    const giraffeTalking = new Blocks.CellAnimation(["Bilder/Karakterer/giraffeClosedMouth.png", "Bilder/Karakterer/giraffeClosedMouth.png", "Bilder/Karakterer/giraffeClosedMouth.png", "Bilder/Karakterer/giraffeOpenMouth.png"], { x: 42, y: 265, width: 139, height: 228, loop: true, auto: true });
-    const robotTalking = new Blocks.CellAnimation(["Bilder/Karakterer/manClosedMouth.png", "Bilder/Karakterer/manClosedMouth.png", "Bilder/Karakterer/manClosedMouth.png", "Bilder/Karakterer/manOpenMouth.png"], { x: 444, y: 349, width: 79, height: 78, loop: true, auto: true });
-    const catTalking = new Blocks.CellAnimation(["Bilder/Karakterer/catClosedMouth.png", "Bilder/Karakterer/catClosedMouth.png", "Bilder/Karakterer/catClosedMouth.png", "Bilder/Karakterer/catOpenMouth.png"], { x: 769, y: 362, width: 79, height: 78, auto: true, loop: true });
-    mainChar.hide();
-    giraffeTalking.hide();
-    robotTalking.hide();
-    catTalking.hide();
+    mainCharVoiceOutro1.onended = () => {
+        GaaTil(sceneOutro2);
+    }
+}
+
+function sceneOutro2() {
+    goodbyeOutroVoice.play();
+    const background = new Blocks.Image("Bilder/Bakgrunner/kindergartenOutside.png", { x: 0, y: 0, width: 1088, height: 818 });
+    const giraffeTalking = new Blocks.CellAnimation(["Bilder/Karakterer/giraffeClosedMouth.png", "Bilder/Karakterer/giraffeClosedMouth.png", "Bilder/Karakterer/giraffeClosedMouth.png", "Bilder/Karakterer/giraffeOpenMouth.png"], { x: 385, y: 249, width: 250, height: 500, auto: true, loop: true });
+    const manTalking = new Blocks.CellAnimation(["Bilder/Karakterer/manClosedMouth.png", "Bilder/Karakterer/manClosedMouth.png", "Bilder/Karakterer/manClosedMouth.png", "Bilder/Karakterer/manOpenMouth.png"], { x: 120, y: 415, width: 300, height: 350, auto: true, loop: true });
+    const catTalking = new Blocks.CellAnimation(["Bilder/Karakterer/catClosedMouth.png", "Bilder/Karakterer/catClosedMouth.png", "Bilder/Karakterer/catClosedMouth.png", "Bilder/Karakterer/catOpenMouth.png"], { x: 738, y: 492, width: 350, height: 300, auto: true, loop: true });
+    const mainCharTalking1 = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 476, y: 392, width: 300, height: 400, auto: true, loop: true });
+    goodbyeOutroVoice.onended = () => {
+        GaaTil(startscreen);
+    }
 }
 
 // SCENE "OUTSIDE" OF GAME
 
 function sceneExitBeach() {
-    applause.play();                                                                                                //TODO Endre til riktig lydfil
+    mainCharVoiceKindergartenButton.play();
     const sceneBeachBackground = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: 0, y: 0, width: 1088, height: 818 });
     const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 455, y: 350, width: 450, height: 550, loop: true, auto: true })
     const mainChar = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", { x: 318, y: 350, width: 450, height: 550 });
@@ -551,7 +562,7 @@ function sceneExitBeach() {
     yesButton.hide();
     noButton.hide();
     mainChar.hide();
-    applause.onended = () => {                                                                                      //TODO Endre til riktig lydfil
+    mainCharVoiceKindergartenButton.onended = () => {
         mainCharTalking.hide();
         mainChar.show();
         yesButton.show();
@@ -567,7 +578,7 @@ function sceneExitBeach() {
 }
 
 function sceneExitForest() {
-    applause.play();                                                                                                //TODO Endre til riktig lydfil
+    mainCharVoiceKindergartenButton.play();
     const sceneForestBackground = new Blocks.Image("Bilder/Bakgrunner/forestBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
     const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 455, y: 350, width: 450, height: 550, loop: true, auto: true })
     const mainChar = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", { x: 318, y: 350, width: 450, height: 550 });
@@ -576,7 +587,7 @@ function sceneExitForest() {
     yesButton.hide();
     noButton.hide();
     mainChar.hide();
-    applause.onended = () => {                                                                                      //TODO Endre til riktig lydfil
+    mainCharVoiceKindergartenButton.onended = () => {
         mainCharTalking.hide();
         mainChar.show();
         yesButton.show();
@@ -592,7 +603,7 @@ function sceneExitForest() {
 }
 
 function sceneExitCity() {
-    applause.play();                                                                                                //TODO Endre til riktig lydfil
+    mainCharVoiceKindergartenButton.play();
     const sceneCityBackground = new Blocks.Image("Bilder/Bakgrunner/cityBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
     const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 455, y: 350, width: 450, height: 550, loop: true, auto: true })
     const mainChar = new Blocks.Image("Bilder/Karakterer/mainCharClosedMouth.png", { x: 318, y: 350, width: 450, height: 550 });
@@ -601,7 +612,7 @@ function sceneExitCity() {
     yesButton.hide();
     noButton.hide();
     mainChar.hide();
-    applause.onended = () => {                                                                                      //TODO Endre til riktig lydfil
+    mainCharVoiceKindergartenButton.onended = () => {
         mainCharTalking.hide();
         mainChar.show();
         yesButton.show();
