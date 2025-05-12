@@ -219,7 +219,7 @@ function sceneIntro1() {
     const flyingplane = new Blocks.Image("Bilder/Objekter/plane.png", { x: -250, y: 0, width: 220, height: 150 });
     Actions.Tween(flyingplane, 6.5, 0);
     const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 560, y: 400, width: 250, height: 400, loop: true, auto: true });
-    const countdown = new Actions.CountDown(10, (complete) => {
+    const countdown = new Actions.CountDown(8, (complete) => {
         if (complete) {
             flyingplanesound.pause();
             flyingplane.hide();
@@ -368,7 +368,7 @@ function sceneIntro4() {
             cityButton.show();
         }
     }, { onTick: true, auto: true });
-    const countdownKindergarten = new Actions.CountDown(19, (completeKindergarten) => {
+    const countdownKindergarten = new Actions.CountDown(18, (completeKindergarten) => {
         if (completeKindergarten) {
             kindergartenButton.show();
         }
