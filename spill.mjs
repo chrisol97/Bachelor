@@ -200,7 +200,7 @@ function titlescreen() {                                                        
     const title = new Blocks.Image("Bilder/Objekter/gameTitle.png", { x: 280, y: 20, width: 540, height: 200 });
     Actions.Click(skipbutton, () => {
         titlescreenmusic.pause();
-        GaaTil(sceneIntro5)
+        GaaTil(sceneIntro6)
     })
     Actions.Click(rulesbutton, () => {
         titlescreenmusic.pause();
@@ -382,29 +382,28 @@ function sceneIntro5() {
     mainCharVoiceIntroRules6.play();
     const background = new Blocks.Image("Bilder/Bakgrunner/boardGameBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
     const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 455, y: 350, width: 450, height: 550, loop: true, auto: true });
+    mainCharVoiceIntroRules6.onended = () => {
+        GaaTil(sceneIntro6);
+    }
+
+}
+
+function sceneIntro6() {
+    const background = new Blocks.Image("Bilder/Bakgrunner/boardGameBackground.png", { x: 0, y: 0, width: 1088, height: 818 });
     const beachText = new Blocks.Image("Bilder/Objekter/beachTitle.PNG", { x: 700, y: 534, width: 300, height: 70 });
     const cityText = new Blocks.Image("Bilder/Objekter/cityTitle.PNG", { x: 393, y: 161, width: 300, height: 70 });
     const forestText = new Blocks.Image("Bilder/Objekter/forestTitle.PNG", { x: 90, y: 534, width: 300, height: 70 });
-    beachText.hide();
-    cityText.hide();
-    forestText.hide();
-    mainCharVoiceIntroRules6.onended = () => {
-        mainCharTalking.hide();
-        beachText.show();
-        cityText.show();
-        forestText.show();
-    }
     Actions.Click(beachText, () => {
         GaaTil(sceneBeachHub);
-    });
+    })
     Actions.Click(cityText, () => {
         GaaTil(sceneCityHub);
     });
-    Actions.Click(forestText, () => {
+    Actions.Click(forestTextText, () => {
         GaaTil(sceneForestHub);
     });
-}
 
+}
 // BEACH - POTENSIELT I EGET .MJS-FIL
 
 function sceneBeachHub() {
