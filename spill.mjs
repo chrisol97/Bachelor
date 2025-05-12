@@ -217,7 +217,7 @@ function sceneIntro1() {
     const sign2 = new Blocks.Image("Bilder/Objekter/signMarihønehula.png", { x: 475, y: 350, width: 75, height: 90 });
     const sign3 = new Blocks.Image("Bilder/Objekter/signMaurtua.png", { x: 940, y: 320, width: 100, height: 150 });
     const flyingplane = new Blocks.Image("Bilder/Objekter/plane.png", { x: -250, y: 0, width: 220, height: 150 });
-    Actions.Tween(flyingplane, 6.5, 0);
+    Actions.Tween(flyingplane, 7.5, 0);
     const mainCharTalking = new Blocks.CellAnimation(["Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharClosedMouth.png", "Bilder/Karakterer/mainCharOpenMouth.png"], { x: 560, y: 400, width: 250, height: 400, loop: true, auto: true });
     const countdown = new Actions.CountDown(6.5, (complete) => {
         if (complete) {
