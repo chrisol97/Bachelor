@@ -1931,7 +1931,7 @@ function sceneCityQuestionFront() {
 function sceneBeachQuestionFront() {
     const beachBackground = new Blocks.Image("Bilder/Bakgrunner/beach.png", { x: 0, y: 0, width: 1088, height: 818 });
     let tall = Math.floor(Math.random() * 14);
-    tall = 9; // For debugging                                                                   //TODO Sjekk at denne er kommentert ut når du er ferdig
+    //tall = 9; // For debugging                                                                   //TODO Sjekk at denne er kommentert ut når du er ferdig
     if (tall === 0) {
         const beachQuestion1 = new Blocks.Image("Bilder/Kort/Beach/Question/qCardBBiggestSandCastle.png", { x: 30, y: 10, width: 1020, height: 700 });
         qCardBBiggestSandCastleVoice.play();
