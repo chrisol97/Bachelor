@@ -2969,7 +2969,7 @@ function sceneCityChallengeFront() {
             hulk.show();
             mainChar.show();
         }
-        Actions.Click(cat, () => {
+        Actions.Click(cat_1, () => {
             applause.play();
             applause.onended = () => {
                 GaaTil(sceneCityHub);
